@@ -9,45 +9,29 @@
 	class ColorTextPattern{
 		
 		public static $SCRIPT_TYPE;
-		public static $CODE_STYLE;
+		public static $CODE_STYLE = "code";
 		
-		public static $DEFAULT;
-		public static $COMMENT;
-		public static $CHAR_ESCAPE;
-		public static $STRING;
-		public static $NUMBER;
-		public static $CONSTANT;
-		public static $OPERATOR;
-		public static $PUNCTUATION;
-		public static $FUNCTION;
-		public static $RESERVED;
-		public static $COMMON;
-		public static $DATA_TYPE;
+		public static $DEFAULT = "default";
+		public static $COMMENT = "comment";
+		public static $CHAR_ESCAPE = "charEscape";
+		public static $STRING = "string";
+		public static $NUMBER = "number";
+		public static $CONSTANT = "constant";
+		public static $OPERATOR = "operator";
+		public static $PUNCTUATION = "punctuation";
+		public static $FUNCTION = "function";
+		public static $RESERVED = "reserved";
+		public static $COMMON = "common";
+		public static $DATA_TYPE = "dataType";
 		
-		protected static $CLASS_KEYWORD; //Special keyword "class" because css uses this
-		protected static $SPAN_KEYWORD; //we might need this
+		public static $CLASS_KEYWORD = "&#99;lass"; //Special keyword "class" because css uses this
+		public static $SPAN_KEYWORD; //we might need this
 		
 		protected $_code;
 		protected $_numLines;
 		
 		public function ColorTextPattern($code, $type){
-			$this->SCRIPT_TYPE = $type;
-			$this->CODE_STYLE = "code";
-			
-			$this->DEFAULT = "default";
-			$this->COMMENT = "comment";
-			$this->CHAR_ESCAPE = "charEscape";
-			$this->STRING = "string";
-			$this->NUMBER = "number";
-			$this->CONSTANT = "constant";
-			$this->OPERATOR = "operator";
-			$this->PUNCTUATION = "punctuation";
-			$this->FUNCTION = "function";
-			$this->RESERVED = "reserved";
-			$this->COMMON = "common";
-			$this->DATA_TYPE = "dataType";
-			
-			$this->CLASS_KEYWORD = "&#99;lass"; //"&#99;&#108;&#97;&#115;&#115;"; //"class"
+			self::$SCRIPT_TYPE = $type;
 			
 			$this->_code = " " . $code . " "; //need this space so that color coding can be made at first char of string
 			$this->_numLines = 0;
@@ -64,7 +48,7 @@
 		
 		protected function replaceSpecials($code, $inverse = false){
 			$needle = array("class", chr(58)/*:*/, chr(34)/*"*/, chr(39)/*'*/, chr(9)/*tab*/, chr(62)/*>*/, chr(60)/*<*/, chr(92)/*\*/, chr(61)/*=*/, chr(91)/*[*/, chr(93)/*]*/);
-			$haystack = array($this->CLASS_KEYWORD, '&#58;', '&#34;', '&#39;', '   ', '&#62;', '&#60;', '&#92;', '&#61;', '&#91;', '&#93;');
+			$haystack = array(self::$CLASS_KEYWORD, '&#58;', '&#34;', '&#39;', '   ', '&#62;', '&#60;', '&#92;', '&#61;', '&#91;', '&#93;');
 			
 			if($inverse == true){
 				$code = str_replace(array('&#59;'), array(chr(59)/*;*/), $code);
@@ -174,8 +158,8 @@
 			//$code = utf8_encode(html_entity_decode($code)); 
 			//$code = html_entity_decode($code);
 			$code = $this->replaceSpecials($code, true);
-			return "<div class='" . $this->CODE_STYLE . " " . $this->SCRIPT_TYPE . "'><div class='lineCol'>" . $lineNumbers . "</div><div id='codeLines' name='codeLines' class='content'><p class='" . $this->DEFAULT . "'>" . $code . "</p></div></div>"; //after space added at constructor
-			//return "<p class='" . $this->DEFAULT . "'>" . substr($this->_code, 1) . "</p>"; //after space added at constructor
+			return "<div class='" . self::$CODE_STYLE . " " . self::$SCRIPT_TYPE . "'><div class='lineCol'>" . $lineNumbers . "</div><div id='codeLines' name='codeLines' class='content'><p class='" . self::$DEFAULT . "'>" . $code . "</p></div></div>"; //after space added at constructor
+			//return "<p class='" . self::$DEFAULT . "'>" . substr($this->_code, 1) . "</p>"; //after space added at constructor
 			//return substr($this->_code, 1); //after space added at constructor
 		}
 		

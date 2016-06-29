@@ -18,8 +18,8 @@
 			$code = str_replace('\\\\', chr(92), $code);
 			ColorTextPattern::ColorTextPattern($code, $type);
 			
-			//$this->CLASS_NAMES = array("Factory", "Text", "JSONLoader", "int", "Boolean", "String","void");
-			//$this->COMMON_NAMES = array("this", "addChild", "removeChild");
+			//parent::$CLASS_NAMES = array("Factory", "Text", "JSONLoader", "int", "Boolean", "String","void");
+			//parent::$COMMON_NAMES = array("this", "addChild", "removeChild");
 		}
 		
 		public function format(){
@@ -35,7 +35,7 @@
 			
 			$code = $this->_code;
 			$constants = "([_A-Z]+[A-Z0-9_]*)|(true|false|null|undefined|(v|V)oid)";
-			$special = "((public\s+(" . $this->CLASS_KEYWORD . "|interface))|(" . $this->CLASS_KEYWORD . "|interface))" . "|public|extends";
+			$special = "((public\s+(" . parent::$CLASS_KEYWORD . "|interface))|(" . parent::$CLASS_KEYWORD . "|interface))" . "|public|extends";
 			$specialChar = "*"; //special because it is used as both comment and multiply operator
 			$reserved = "and|or|not|namespace|include|package|final|new|for|each|while|do|else|if|import|static|const|var|private|protected|override|function|return|to|native|is|in|as|try|catch|switch|case|break|default";
 			$futureReserved = "abstract|boolean|byte|cast|char|debugger|double|enum|export|float|goto|intrinsic|long|prototype|short|synchronized|throws|transient|virtual|volatile";
@@ -53,24 +53,24 @@
 			$code = ColorTextPattern::replaceInPattern($code, "/[^\/]\*[^\/]([^\/]\*[^\/])*\*?/", "*", "&#42;"); //need to replace * to distinguish from block comments /* */
 			$code = ColorTextPattern::replaceInPattern($code, "/((&#34;)(.*?)(&#34;))|((&#39;)(.*?)(&#39;))/", "/", "&#47;"); //replace comments in strings
 			
-			$code = ColorTextPattern::colorCodePattern($code, "/[^#|^\w]\d+([\dA-Fa-fxX])*/", $this->NUMBER, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($types) . ")(\W)/", $this->DATA_TYPE, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($reserved) . ")(\W)/", $this->RESERVED, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($futureReserved) . ")(\W)/", $this->RESERVED, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/\Wpackage<\/span>\s+.*?{/", $this->FUNCTION, 16, 1); //span gets appended when reserved words like package are colored
-			$code = ColorTextPattern::colorCodePattern($code, "/\Winterface\s+.*?{/", $this->FUNCTION, 11, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/\W" . $this->CLASS_KEYWORD . "\s+.*?{/", $this->FUNCTION, 10, 1); //need to check no line feed
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)import<\/span>\s+.*?(&#59;|&#10;)/", $this->COMMON, 15, 5);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($constants) . ")(\W)/", $this->CONSTANT, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonMethods) . ")(\W)/", $this->COMMON, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonKeywords) . ")(\W)/", $this->COMMON, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/\Wfunction<\/span>\s+.*?\(/", $this->FUNCTION, 17, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $special . ")(\W)/", $this->RESERVED, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/" . $this->getRepeatPattern($operators) . "/", $this->OPERATOR);
-			$code = ColorTextPattern::colorCodePattern($code, "/(&#58;)|(&#59;)|\./", $this->PUNCTUATION); //";", ":", etc
-			$code = ColorTextPattern::colorCodePattern($code, "/([^\\\\](&#34;)[^\\\\]*?(&#34;))|([^\\\\](&#39;)[^\\\\]*?(&#39;))/", $this->STRING, 1); //Need to disable comments inside strings
-			$code = ColorTextPattern::colorCodePattern($code, "/((&#92;)(\w|\s|\d|(&#34;)|(&#39;)))/", $this->CHAR_ESCAPE);
-			$code = ColorTextPattern::colorCodePattern($code, "/(\/\*[^*]*(\*\/)+((\*\/)+)*)|((\/\/).*?(&#10;){1})|((\/\/).*$)/", $this->COMMENT);
+			$code = ColorTextPattern::colorCodePattern($code, "/[^#|^\w]\d+([\dA-Fa-fxX])*/", parent::$NUMBER, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($types) . ")(\W)/", parent::$DATA_TYPE, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($reserved) . ")(\W)/", parent::$RESERVED, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($futureReserved) . ")(\W)/", parent::$RESERVED, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/\Wpackage<\/span>\s+.*?{/", parent::$FUNCTION, 16, 1); //span gets appended when reserved words like package are colored
+			$code = ColorTextPattern::colorCodePattern($code, "/\Winterface\s+.*?{/", parent::$FUNCTION, 11, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/\W" . parent::$CLASS_KEYWORD . "\s+.*?{/", parent::$FUNCTION, 10, 1); //need to check no line feed
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)import<\/span>\s+.*?(&#59;|&#10;)/", parent::$COMMON, 15, 5);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($constants) . ")(\W)/", parent::$CONSTANT, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonMethods) . ")(\W)/", parent::$COMMON, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonKeywords) . ")(\W)/", parent::$COMMON, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/\Wfunction<\/span>\s+.*?\(/", parent::$FUNCTION, 17, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $special . ")(\W)/", parent::$RESERVED, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/" . $this->getRepeatPattern($operators) . "/", parent::$OPERATOR);
+			$code = ColorTextPattern::colorCodePattern($code, "/(&#58;)|(&#59;)|\./", parent::$PUNCTUATION); //";", ":", etc
+			$code = ColorTextPattern::colorCodePattern($code, "/([^\\\\](&#34;)[^\\\\]*?(&#34;))|([^\\\\](&#39;)[^\\\\]*?(&#39;))/", parent::$STRING, 1); //Need to disable comments inside strings
+			$code = ColorTextPattern::colorCodePattern($code, "/((&#92;)(\w|\s|\d|(&#34;)|(&#39;)))/", parent::$CHAR_ESCAPE);
+			$code = ColorTextPattern::colorCodePattern($code, "/(\/\*[^*]*(\*\/)+((\*\/)+)*)|((\/\/).*?(&#10;){1})|((\/\/).*$)/", parent::$COMMENT);
 			
 			$this->_code = $code;
 		}

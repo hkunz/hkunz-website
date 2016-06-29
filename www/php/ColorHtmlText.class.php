@@ -11,13 +11,10 @@
 
 	class ColorHtmlText extends ColorTextPattern{
 		
-		public static $CLASS_NAME;
-		public static $TAG_NAME;
+		public static $CLASS_NAME = "className";
+		public static $TAG = "tag";
 		
 		public function ColorHtmlText($code, $type = "html"){
-			
-			$this->CLASS_NAME = "className";
-			$this->TAG = "tag";
 			
 			$code = str_replace('\"', chr(34), $code); //If code comes from TextInput/TextArea it returns \" for "
 			$code = str_replace("\'", chr(39), $code);
@@ -49,16 +46,16 @@
 			$code = ColorTextPattern::replaceInPattern($code, "/[^\/]\*[^\/]([^\/]\*[^\/])*\*?/", "*", "&#42;"); //need to replace * to distinguish from block comments /* */
 			//$code = ColorTextPattern::replaceInPattern($code, "/((&#34;)(.*?)(&#34;))|((&#39;)(.*?)(&#39;))/", "/", "&#47;"); //replace comments in strings
 
-			//$code = ColorTextPattern::colorCodePattern($code, "/#[\da-fA-F]{3,6}/", $this->CONSTANT);
-			//$code = ColorTextPattern::colorCodePattern($code, "/[^#|^\w]\d\d*/", $this->NUMBER, 1);
-			//$code = ColorTextPattern::colorCodePattern($code, "/(\W):#\d+([\dA-Fa-fxX])*/", $this->NUMBER, 1);
-			//$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($reserved) . ")(\W)/", $this->RESERVED, 1, 1);
-			//$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonMethods) . ")(\W)/", $this->COMMON, 1, 1);
-			//$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonKeywords, '(\s|-)+') . ")(\W)/", $this->COMMON, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/(&#60;).*?(&#62;)/", $this->TAG);
-			$code = ColorTextPattern::colorCodePattern($code, "/([^\\\\](&#34;)[^\\\\]*?(&#34;))|([^\\\\](&#39;)[^\\\\]*?(&#39;))/", $this->STRING, 1); //Need to disable comments inside strings
-			$code = ColorTextPattern::colorCodePattern($code, "/((&#92;)(\w|\s|\d|(&#34;)|(&#39;)))/", $this->CHAR_ESCAPE);
-			$code = ColorTextPattern::colorCodePattern($code, "/(&#60;)!--.*?--(&#62;)/", $this->COMMENT);
+			//$code = ColorTextPattern::colorCodePattern($code, "/#[\da-fA-F]{3,6}/", parent::$CONSTANT);
+			//$code = ColorTextPattern::colorCodePattern($code, "/[^#|^\w]\d\d*/", parent::$NUMBER, 1);
+			//$code = ColorTextPattern::colorCodePattern($code, "/(\W):#\d+([\dA-Fa-fxX])*/", parent::$NUMBER, 1);
+			//$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($reserved) . ")(\W)/", parent::$RESERVED, 1, 1);
+			//$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonMethods) . ")(\W)/", parent::$COMMON, 1, 1);
+			//$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . parent::$getRepeatPattern($commonKeywords, '(\s|-)+') . ")(\W)/", parent::$COMMON, 1, 1);
+			$code = ColorTextPattern::colorCodePattern($code, "/(&#60;).*?(&#62;)/", self::$TAG);
+			$code = ColorTextPattern::colorCodePattern($code, "/([^\\\\](&#34;)[^\\\\]*?(&#34;))|([^\\\\](&#39;)[^\\\\]*?(&#39;))/", parent::$STRING, 1); //Need to disable comments inside strings
+			$code = ColorTextPattern::colorCodePattern($code, "/((&#92;)(\w|\s|\d|(&#34;)|(&#39;)))/", parent::$CHAR_ESCAPE);
+			$code = ColorTextPattern::colorCodePattern($code, "/(&#60;)!--.*?--(&#62;)/", parent::$COMMENT);
 			
 			$this->_code = $code;
 		}
