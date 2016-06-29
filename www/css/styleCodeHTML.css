@@ -1,0 +1,11 @@
+.html .default {color:#fff;}
+.html .reserved {color:#FFFF79;} /*yellow*/
+.html .tag {color:#7A93C6;} /*blue: HTML tag enclosing <tag...> or </tag>*/
+.html .common {color:#7A93C6;} /*blue: other common reserved keywords: color*/
+.html .operator {color:#FFFF79;} /*yellow: operators: +,-,*,/,!,<,>,[,],new,etc*/
+.html .punctuation {color:#FFFF79;} /*yellow: punctuations: semi-colon,colon,period,etc*/
+.html .number {color:#DE50DA;} /*pink: numbers*/
+.html .constant {color:#DE50DA;} /*pink: like &nbsp; etc*/
+.html .string {color:#5ED02F;} /*green*/
+.html .charEscape {color:#DE50DA;} /*pink: character escape: \r,\n,\t,\\,\",\',etc*/
+.html .comment {color:#999;} /*grey: <!-- comment --> */

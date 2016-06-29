@@ -1,0 +1,198 @@
+@import url("styleCodeAS.css");
+@import url("styleCodeCSS.css");
+@import url("styleCodeHTML.css");
+
+html,body,div,object,span,h1,h2,h3,h4,h5,h6,p,iframe,blockquote,q,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,samp,small,strike,strong,sub,sup,tt,var,b,i,u,dd,dl,dt,ol,ul,li,form,fieldset,hr,label,legend,caption,table,thead,tbody,tfoot,tr,th,td {border:0;margin:0;outline:0;padding:0;vertical-align:baseline;}
+html {height:100%;}
+
+@font-face{
+	font-family:'PTSansNarrowRegular';
+	src:url('fonts/PTN57F-webfont.eot');
+	src:local('PTN57F-webfont'),url('fonts/PTN57F-webfont.woff') format('woff'),url('fonts/PTN57F-webfont.ttf') format('truetype'),url('fonts/PTN57F-webfont.svg#webfontuO1SqMUG') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'PTSansNarrowBold';
+	src:url('fonts/PTN77F-webfont.eot');
+	src:local('PTN77F-webfont'),url('fonts/PTN77F-webfont.woff') format('woff'),url('fonts/PTN77F.ttf') format('truetype'),url('fonts/PTN77F-webfont.svg#webfontuO1SqMUG') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'Anonymous';
+	src:url('fonts/Anonymous-webfont.eot');
+	src:local('Anonymous-webfont'),url('fonts/Anonymous-webfont.woff') format('woff'),url('fonts/Anonymous.ttf') format('truetype'),url('fonts/Anonymous-webfont.svg#webfontuO1SqMUG') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+.PTSansNarrowRegular{
+	font-weight:normal;
+	font-style:normal;
+	line-height:normal;
+	font-family:'PTSansNarrowRegular',arial,sans-serif;
+	font-size-adjust:0.54;
+}
+
+.PTSansNarrowBold{
+	font-weight:normal;
+	font-style:normal;
+	line-height:normal;
+	font-family:'PTSansNarrowBold',arial,sans-serif;
+	font-size-adjust:0.54;
+}
+
+.Anonymous{
+	font-weight:normal;
+	font-style:normal;
+	line-height:normal;
+	font-family:'Anonymous',Consolas,Monaco,'Courier New',Courier,monospace;
+	font-size-adjust:0.54;
+}
+
+.GenericMono{
+	font-weight:normal;
+	font-style:normal;
+	line-height:1.3em;
+	font-family:Consolas,Monaco,'Courier New',Courier,monospace;
+	font-size-adjust:0.54;
+	overflow:auto;
+	/*
+	white-space:pre-wrap;
+	word-wrap:break-word;
+	*/
+}
+
+body {min-height:100%;background:white;color:black;background:#fffffe;font-weight:inherit;font-style:normal;font-size:100%;font-family:'PTSansNarrowRegular',arial,sans-serif;letter-spacing:0;font-size-adjust:0.54;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-style:normal;line-height:normal;font-family:'PTSansNarrowBold',arial,sans-serif;font-size-adjust:0.54;}
+
+h1 {font-size: 30px;}
+h2 {font-size: 26px;}
+h3 {font-size: 22px;}
+h4 {font-size: 18px;color:#333;}
+h5 {font-size: 14px;}
+h6 {font-size: 10px;}
+p {color:#000;font-size:15px;line-height:normal;}
+
+*:focus {outline:0;}
+a {color:#ff0000;cursor:pointer;text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+h3.heading {color:#363620;}
+h4.heading {color:#444;margin-bottom:15px;margin-top:15px;padding:5px;background-color:#ddd;}
+
+div.postHeader {background-color:#eee;}
+div p.postDate {font-size:10px;color:#aaa;margin-bottom:10px;border-bottom:1px #aaa dotted;}
+
+ul.menu {}
+ul.menu li.menuHeader {color:#000;border-bottom:1px dotted #ccc;margin-bottom:0px;background-color:#ffe;list-style-type:none;text-transform:uppercase;}
+ul.menu li.menuHeader a {text-decoration:none;}
+ul.menu li.menuLeaf {color:#f77;width:100%;display:block;margin-right:10px;}
+ul.menu li.menuLeaf p {font-size:14px;padding-left:10px;}
+ul.menu li.menuLeaf a p:link {color:yellow;}
+ul.menu li.menuLeaf a p:hover {color:#f00;background-color:#F0EFC4;text-decoration:none;}
+ul.menu li.menuLeaf a p:active {}
+ul.menu li.menuLeaf a p:visited {}
+
+a.basicLink:link {color:red;}
+a.basicLink:hover {text-decoration:underline;}
+a.basicLink:active {}
+a.basicLink:visited {}
+
+table {border-spacing:0;border-collapse:separate;}
+caption,th,td {text-align:center;vertical-align:middle;font-weight:normal;}
+blockquote,q {quotes:"" "";}
+blockquote:before,blockquote:after,q:before,q:after {content:"";}
+option,select {min-width:2em;}
+ol li {list-style:decimal;}
+ul li {list-style:disc;}
+ins {text-decoration:none;}
+del {text-decoration:line-through;}
+
+div.flashContent {margin-left:auto;margin-right:auto;width:450px;height:auto;}
+div.showTell {width:auto;height:auto;margin-left:auto;margin-right:auto;}
+div.showTell img {border:1px dotted #CCC9BB;margin-bottom:20px;margin-top:15px;}
+
+.inline {display:inline-block;}
+.loadingImg {width:126px;height:22px;background:url('img/loading.gif') transparent top left no-repeat;}
+
+textarea {width:440px;height:90px;overflow:auto;background-color:#eff;border:2px solid #CCC9BB;margin-right:50px;background:url('img/bg/TopShade.png') repeat-x;}
+textarea.codeText {font-size:12px;font-weight:normal;font-style:normal;line-height:1.3em;font-family:Consolas,Monaco,'Courier New',Courier,monospace;font-size-adjust:0.54;overflow:auto;}
+textarea.default {}
+
+#top {width:100%;}
+#top .nav {height:40px;background:url('img/bg/Footer.png') #fff repeat-x;border-bottom:3px solid #fff;}
+#container {width:100%;background:url('img/bg/TopShade.png') repeat-x;}
+#header {width:100%;background-color:transparent;margin-right;padding-top:10px;}
+#header .headerContent {width:900px;height:170px;background:url('img/header/MainPicture.png');margin:auto;} /*height:142px*/
+/*
+#header .headerContent .left {width:108px;height:100%;background:url('img/header/LogoChunk1.png') left center no-repeat;float:left;}
+#header .headerContent .middle {width:603px;height:100%;background:url('img/header/LogoChunk2.jpg') no-repeat;float:left;}
+#header .headerContent .right {width:180px;height:100%;background:url('img/header/LogoChunk1.png') right center no-repeat;float:left;}
+#header .headerTop {width:300px;height:14px;background:url('img/header/LogoChunk1.png') left top no-repeat;}
+#header .headerBottom {width:300px;height:14px;background:url('img/header/LogoChunk1.png') left bottom no-repeat;}
+*/
+#bottomShade {width:100%;height:auto;background:url('img/bg/BottomShade.png') bottom left repeat-x;vertical-align:bottom;padding-bottom:25px;}
+#outer {width:800px;height:100%;background-color:transparent;margin:auto;} /*#EAE9D4*/
+#inner {width:100%;height:100%;margin:auto;}
+#inner .bodyContent {width:100%;height:100%;}
+
+.hkunz {color:#f00;font-weight:normal;font-style:normal;line-height:normal;font-family:'PTSansNarrowBold',arial,sans-serif;font-size-adjust:0.54;}
+.hkunz span {color:#000;}
+
+.block {margin-bottom:10px;}
+
+/* Box Module */
+/*
+.box {display:inline-block;}
+.box .top {width:100%;height:35px;}
+.box .top .left {width:35px;height:100%;background:url('img/box/BoxEdges.png') top left no-repeat;float:left;}
+.box .top .middle {width:480px;height:100%;background:url('img/box/BoxShadeTB.png') top repeat-x;float:left;}
+.box .top .right {width:35px;height:100%;background:url('img/box/BoxEdges.png') top right no-repeat;float:left;}
+.box .center {width:100%;height:500px;} /*adjust height here/
+.box .center .left {width:35px;height:100%;background:url('img/box/BoxShadeLR.png') left repeat-y;float:left;}
+.box .center .middle {width:480px;height:100%;background-color:#fff;float:left;}
+.box .center .middle .content {padding:10px;}
+.box .center .right {width:35px;height:100%;background:url('img/box/BoxShadeLR.png') right repeat-y;float:left;}
+.box .bottom {width:100%;height:35px;}
+.box .bottom .left {width:35px;height:100%;background:url('img/box/BoxEdges.png') bottom left no-repeat;float:left}
+.box .bottom .middle {width:480px;height:100%;background:url('img/box/BoxShadeTB.png') bottom repeat-x;float:left}
+.box .bottom .right {width:35px;height:100%;background:url('img/box/BoxEdges.png') bottom right no-repeat;float:left}
+*/
+
+.box {width:550px;display:inline-block;}
+.box .top {width:100%;height:35px;}
+.box .top .left {width:35px;height:100%;background:url('img/box/BoxEdges.png') top left no-repeat;float:left;}
+.box .top .middle {width:480px;height:100%;background:url('img/box/BoxShadeTB.png') top repeat-x;float:left;}
+.box .top .right {width:35px;height:100%;background:url('img/box/BoxEdges.png') top right no-repeat;float:left;}
+.box .center {width:100%;height:auto;}
+.box .center .left {width:100%;height:100%;background:url('img/box/BoxShadeLR.png') left repeat-y;float:left;}
+.box .center .middle {width:470px;height:100%;background-color:white;float:left;margin-left:20px;padding-left:20px;}
+.box .center .right {width:100%;height:100%;background:url('img/box/BoxShadeLR.png') right repeat-y;float:right;}
+.box .bottom {width:100%;height:35px;}
+.box .bottom .left {width:35px;height:100%;background:url('img/box/BoxEdges.png') bottom left no-repeat;float:left}
+.box .bottom .middle {width:480px;height:100%;background:url('img/box/BoxShadeTB.png') bottom repeat-x;float:left}
+.box .bottom .right {width:35px;height:100%;background:url('img/box/BoxEdges.png') bottom right no-repeat;float:left}
+
+#inner .bodyContent .sidebar {display:inline-block;vertical-align:top;}
+#inner .bodyContent .sidebar .box {width:215px;}
+#inner .bodyContent .sidebar .box .center .middle {width:130px;}
+#inner .bodyContent .sidebar .box .top .middle {width:145px;}
+#inner .bodyContent .sidebar .box .bottom .middle {width:145px;}
+#inner .bodyContent .sidebar .box .center {height:auto;}
+
+#footer {width:100%;border-top:3px solid #fff;}
+#footer .content {height:150px;background:url('img/bg/Footer.png') #fff repeat-x;padding-top:10px;}
+#footer .content p {font-size:13px;color:#9B7C18;text-align:center;}
+
+/*
+.button {display:block;float:left;clear:left;width:auto;height:30px;background:url('img/buttonR.png') right top no-repeat;padding:0 19px 0 0;line-height:28px;font-weight: normal;font-style: normal;font-family: 'PTSansNarrowRegular', helvetica, arial, sans-serif;font-size-adjust: 0.54;text-transform:uppercase;font-size:14px;text-decoration:none;color:#fff;word-spacing:0px}
+.button:hover {text-decoration:none;}
+.button span {display:inline-block;width:auto;height:30px;background:url('img/buttonL.png') left top no-repeat;padding:0 10px 0 20px;white-space:nowrap}
+*/
+/* favicon: http://www.html-kit.com/favicon/ 
+http://www.chami.com/tips/internet/110599i.html
+*/

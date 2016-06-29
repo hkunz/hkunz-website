@@ -1,0 +1,18 @@
+.code {width:95%;max-height:400px;background-color:#00003E;border:2px solid #eee;overflow:auto;margin-top:10px;margin-bottom:20px;}
+.code p {font-size:12px;font-weight:normal;font-style:normal;line-height:1.3em;font-family:Consolas,Monaco,'Courier New',Courier,monospace;font-size-adjust:0.54;white-space:pre;} /*white-space:pre-wrap;word-wrap:break-word;*/
+.code .lineCol {min-width:15px;height:auto;background-color:#DCDCDC;float:left;padding-right:7px;padding-left:7px;padding-top:10px;padding-bottom:10px;}
+.code .lineCol p {text-align:right;color:#747479;}
+.code .content {float:left;width:350px;height:100%;padding-top:10px;padding-left:3px;}
+
+.actionscript .default {color:#fff;}
+.actionscript .reserved {color:#FFFF79;} /*yellow: reserved words like class,new,break,if,else,default,etc */
+.actionscript .common {color:#7A93C6;} /*blue: other common reserved keywords*/
+.actionscript .dataType {color:#7A93C6;} /*blue: data types: Boolean, int, Class, Number, Object, Array, etc*/
+.actionscript .function {color:#FF5E03;} /*orange: function names including constructor/destructor*/
+.actionscript .operator {color:#FFFF79;} /*yellow: operators: +,-,*,/,!,<,>,[,],new,etc*/
+.actionscript .punctuation {color:#FFFF79;} /*yellow: punctuations: semi-colon,colon,period,etc*/
+.actionscript .number {color:#DE50DA;} /*pink: numbers*/
+.actionscript .constant {color:#DE50DA;} /*pink: all caps values, values inside [xxx]*/
+.actionscript .string {color:#5ED02F;} /*green*/
+.actionscript .charEscape {color:#DE50DA;} /*pink: character escape: \r,\n,\t,\\,\",\',etc*/
+.actionscript .comment {color:#999;} /*grey*/

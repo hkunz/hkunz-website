@@ -1,0 +1,12 @@
+.css .default {color:#fff;}
+.css .reserved {color:#FFFF79;} /*yellow*/
+.css .className {color:#FF5E03;} /*orange: values preceeded by a dot like .myclass*/
+.css .tag {color:#FF5E03;} /*orange: HTML tags*/
+.css .common {color:#7A93C6;} /*blue: other common reserved keywords: color*/
+.css .operator {color:#FFFF79;} /*yellow: operators: +,-,*,/,!,<,>,[,],new,etc*/
+.css .punctuation {color:#FFFF79;} /*yellow: punctuations: semi-colon,colon,period,etc*/
+.css .number {color:#DE50DA;} /*pink: numbers*/
+.css .constant {color:#DE50DA;} /*pink*/
+.css .string {color:#5ED02F;} /*green*/
+.css .charEscape {color:#DE50DA;} /*pink: character escape: \r,\n,\t,\\,\",\',etc*/
+.css .comment {color:#999;} /*grey*/
