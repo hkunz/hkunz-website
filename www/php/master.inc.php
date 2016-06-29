@@ -124,7 +124,7 @@
 		<div id="footer" name="footer">
 			<div class="content">
 				<p><span class="hkunz">hkunz<span>.com</p>
-				<p>Harry Kunz &#169;2010</p>
+				<p>Harry Kunz &#169;2016</p>
 				<p>ABN: 72 721 734 033</p>
 			</div>
 		</div> <!-- [#footer] -->
