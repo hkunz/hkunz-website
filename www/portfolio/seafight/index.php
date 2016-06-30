@@ -6,6 +6,9 @@
 
 <div>
 	<p class="block">The <?php echo $link;?> game client written in <a href='https://en.wikipedia.org/wiki/ActionScript' target='_blank'>ActionScript 3.0</a> communicating with a Java based game server.</p>
+	<?php echo createImageLightbox("img/sf-logo.gif", 460); ?>
+	<?php echo createImageLightbox("img/bigpoint-logo.png", 460); ?>
+	<p class="block">Seafight ingame view within the safe-haven</>
 	<?php echo createImageLightbox("img/sf-view.png", 460); ?>
 	<p class="block">My typical work day facing my favorite terminal emulator! :)</p>
 	<?php echo createImageLightbox("img/sf-typical-work-day.png", 460); ?>
