@@ -73,6 +73,7 @@
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/stockchart/' title=''><p>StockChart</p></a></li>"; ?>
 														<?php echo "<li class='menuHeader'><a href='" . $root . "generators/' title=''><h5>Generators</h5></a></li>"; ?>
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "generators/htmlcss/CodeHighlighter.php' title=''><p>Code Highlighter</p></a></li>"; ?>
+														<?php echo "<li class='menuLeaf'><a href='" . $root . "generators/flash/DotMatrix.php' title=''><p>Dot-Matrix</p></a></li>"; ?>
 														<?php echo "<li class='menuHeader'><a href='" . $root . "tutorials/' title=''><h5>Flash Tutorials</h5></a></li>"; ?>
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "'><p>None</p></a></li>"; ?>
 														<?php echo "<li class='menuHeader'><a href='" . $root . "sourcefiles/' title=''><h5>Source Files</h5></a></li>"; ?>

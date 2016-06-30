@@ -3,7 +3,7 @@
 ?>
 
 <div>
-	<p><a class='basicLink' href='flash/'>Flash generators</a></p>
+	<p><a class='basicLink' href='flash/DotMatrix.php'>Dot-Matrix Generator</a></p>
 	<p><a class='basicLink' href='htmlcss/CodeToHtmlCss.php/'>CodeToHtmlCss Generator</a></p>
 </div>
 	

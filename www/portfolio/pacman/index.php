@@ -1,9 +1,10 @@
 <?php
 	ob_start();
+	$link = "<a class='basicLink' href='https://github.com/hkunz/pacman-prototype' target='_blank'>github</a>"
 ?>
 
 <div>
-	<p>Check out this pacman prototype game i made. This game has no ending as this is still a prototype. It is slightly different from the original version in that when you eat a ghost it goes around at random locations for 5 seconds and then re-spawns itself.<br /></p>
+	<p>Check out this pacman prototype game i made. Source code at <?php echo $link;?>. This game has no ending as this is still a prototype. It is slightly different from the original version in that when you eat a ghost it goes around at random locations for 5 seconds and then re-spawns itself.<br /><br /></p>
 	<div><div id='flashContent' name='flashContent' class='flashContent'></div></div>
 </div>
 
