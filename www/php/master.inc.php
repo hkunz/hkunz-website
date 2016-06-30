@@ -22,9 +22,11 @@
 		echo "<link rel='shortcut icon' href='" . $root . "favicon.ico' />";
 		echo "<link rel='icon' href='" . $root . "animated_favicon1.gif' />";
 		echo "<link rel='stylesheet' href='" . $root . "css/style.css' type='text/css' media='screen, projection' />";
+		echo "<link rel='stylesheet' href='" . $root . "css/styleLightbox.css' type='text/css' media='screen, projection' />";
 		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/jquery.js'></script>";
 		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/swfobject.js'></script>";
 		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/globals.js'></script>";
+		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/lightbox.js'></script>";
 		echo $headers; //other headers
 	?>
 </head>
