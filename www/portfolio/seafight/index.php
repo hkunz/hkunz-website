@@ -5,8 +5,10 @@
 
 <div>
 	<p class="block">Kiosk application for our client <?php echo $link;?>. This application was creeated with mostly pure <a href='https://en.wikipedia.org/wiki/ActionScript' target='_blank'>ActionScript 3.0</a> incorporating a custom made <a href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a>. My lead was <a href="https://www.linkedin.com/in/simon-rodwell-8715101">Simon Rodwell</a> who as of this writing now works for Amazon</p>
-	<div class="showTell"><img class="" src="img/sf-view.png" width="450"/></div>
+	<div class="showTell"><img class="" src="img/sf-view.png" width="460"/></div>
 	<p class="block"></p>
+	<p class="block">My typical work day facing my favorite terminal emulator! :)</p>
+	<div class="showTell"><img class="" src="img/sf-typical-work-day.png" width="460"/></div>
 </div>
 
 <?php

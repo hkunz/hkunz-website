@@ -74,6 +74,8 @@
                <?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/cbakiosk/' title=''><p>CBA Kiosk</p></a></li>"; ?>
 
                <?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/seafight/' title=''><p>Seafight</p></a></li>"; ?>
+
+               <?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/createswf/' title=''><p>CreateSWF</p></a></li>"; ?>
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/pacman/' title=''><p>Pac-Man</p></a></li>"; ?>
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/skinzone/' title=''><p>SkinZone</p></a></li>"; ?>
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/stockchart/' title=''><p>StockChart</p></a></li>"; ?>
