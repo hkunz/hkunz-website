@@ -53,7 +53,7 @@
 			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($reserved) . ")(\W)/", parent::$RESERVED, 1, 1);
 			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonMethods) . ")(\W)/", parent::$COMMON, 1, 1);
 			$code = ColorTextPattern::colorCodePattern($code, "/(\W)(" . $this->getRepeatPattern($commonKeywords, '(\s|-)+') . ")(\W)/", parent::$COMMON, 1, 1);
-			$code = ColorTextPattern::colorCodePattern($code, "/\.(\d|\w)+([\w\d])*/", parent::$CLASS_NAME);
+			$code = ColorTextPattern::colorCodePattern($code, "/\.(\d|\w)+([\w\d])*/", self::$CLASS_NAME);
 			$code = ColorTextPattern::colorCodePattern($code, "/(\s)(" . $this->getRepeatPattern($tags) . ")(\s)/", self::$TAG, 1, 1);
 			$code = ColorTextPattern::colorCodePattern($code, "/([^\\\\](&#34;)[^\\\\]*?(&#34;))|([^\\\\](&#39;)[^\\\\]*?(&#39;))/", parent::$STRING, 1); //Need to disable comments inside strings
 			$code = ColorTextPattern::colorCodePattern($code, "/((&#92;)(\w|\s|\d|(&#34;)|(&#39;)))/", parent::$CHAR_ESCAPE);
