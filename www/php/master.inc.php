@@ -69,6 +69,8 @@
 														<?php echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>"; ?>
 														<?php echo "<li class='menuHeader'><a href='" . $root . "portfolio/' title=''><h5>Portfolio</h5></a></li>"; ?>
 
+               <?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/lexmark/' title=''><p>Lexmark Pro-905</p></a></li>"; ?>
+
                <?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/cbakiosk/' title=''><p>CBA Kiosk</p></a></li>"; ?>
 
                <?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/seafight/' title=''><p>Seafight</p></a></li>"; ?>
