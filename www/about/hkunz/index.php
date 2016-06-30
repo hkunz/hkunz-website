@@ -4,7 +4,7 @@
 ?>
 
 <div>
-	<p class="block">My name is <b>Harry Kunz</b>, i'm a Senior Software Developer. I love using the console, can't live without it. You can view all my projects under <a class='basicLink' href='https://github.com/hkunz/'><b>Github</b></a>. Please feel free to connect with me on <a class='basicLink' href='https://de.linkedin.com/in/hkunz'><b>Linked-In</b></a></p>
+	<p class="block">My name is <b>Harry Kunz</b>, i'm a Senior Software Developer and Active Investor in the financial markets. I love using the console, can't live without it. You can view all my projects under <a class='basicLink' href='https://github.com/hkunz/'><b>Github</b></a>. Please feel free to connect with me on <a class='basicLink' href='https://de.linkedin.com/in/hkunz'><b>Linked-In</b></a></p>
         <?php echo createImageLightbox("img/hkunz-about.jpg", 460); ?>
 	<p class="block">* <b>7 years</b> Financial Markets Experience:<br/>
 * <b>7 years</b> software development experience<br/>
