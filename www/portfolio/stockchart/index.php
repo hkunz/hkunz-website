@@ -1,6 +1,6 @@
 <?php
   ob_start();
-  $link = "<a class='basicLink' href='https://github.com/hkunz/pacman-prototype' target='_blank'>github</a>";
+  $link = "<a class='basicLink' href='https://github.com/hkunz/stock-chart' target='_blank'>github</a>";
   $swflink = "<a class='basicLink' href='http://www.hkunz.com/portfolio/stockchart/StockTrade.php' target='_blank'>here</a>";
 ?>
 
