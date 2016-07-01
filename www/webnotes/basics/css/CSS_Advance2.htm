@@ -1,0 +1,240 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+
+<html>
+<!--
+	DISCUSSIONS:
+    CSS Image Gallery
+	CSS Image Opacity
+	CSS Media Types
+-->
+<head>
+<title>(3/3) CSS Tutorials</title>
+<style type="text/css">
+<!--
+h2{background:lime;}
+body{font-family:Arial;background-color:#FFFF99;}
+
+/* For Image Gallery */
+div.img
+  {
+  margin: 2px;
+  border: 1px solid #0000ff;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+  }
+div.img img
+  {
+  display: inline;
+  margin: 3px;
+  border: 1px solid #ffffff;
+  }
+div.img a:hover img
+  {
+  border: 1px solid #0000ff;
+  }
+div.desc
+  {
+  text-align: center;
+  font-weight: normal;
+  width: 120px;
+  margin: 2px;
+  }
+  
+/* CSS Image Opacity/Transparency */
+img.transparent
+{
+-moz-opacity:0.4;filter:alpha(opacity=40);cursor:hand"
+}
+
+/* Text in Transparent Box */
+div.background
+  {
+  width: 500px;
+  height: 250px;
+  background: url(Images/klematis_small.jpg) repeat;
+  border: 2px solid black;
+  }
+div.transbox
+  {
+  width: 400px;
+  height: 180px;
+  margin: 30px 50px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  /* for IE */
+  filter:alpha(opacity=60);
+  /* CSS3 standard */
+  opacity:0.6;
+  /* for Mozilla */
+  -moz-opacity:0.6;
+  }
+div.transbox p
+  {
+  margin: 30px 40px;
+  font-weight: bold;
+  color: #000000;
+  }
+
+-->
+</style>
+</head>
+<body>
+<h2>CSS Image Gallery</h2>
+<div class="img">
+  <a target="_blank" href="klematis_big.htm">
+  <img src="Images/klematis_small.jpg" alt="Klematis" width="110"
+  height="90" />
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="img">
+  <a target="_blank" href="klematis2_big.htm">
+  <img src="Images/klematis2_small.jpg" alt="Klematis" width="110"
+  height="90" />
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="img">
+  <a target="_blank" href="klematis3_big.htm">
+  <img src="Images/klematis3_small.jpg" alt="Klematis" width="110"
+  height="90" />
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="img">
+  <a target="_blank" href="klematis4_big.htm">
+  <img src="Images/klematis4_small.jpg" alt="Klematis" width="110"
+  height="90" />
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div><br /><br /><br /><br /><br /><br /><br /><br /><br /><hr />
+
+<h2>CSS Image Opacity/Transparency</h2>
+
+<div>
+<img class="transparent" src="Images/klematis_small.jpg" width="150" height="113" alt="klematis"
+onmouseover="this.style.MozOpacity=1;this.filters.alpha.opacity=100"
+onmouseout="this.style.MozOpacity=0.4;this.filters.alpha.opacity=40" />
+
+<img class="transparent" src="Images/klematis2_small.jpg" width="150" height="113" alt="klematis"
+onmouseover="this.style.MozOpacity=1;this.filters.alpha.opacity=100"
+onmouseout="this.style.MozOpacity=0.4;this.filters.alpha.opacity=40" />
+</div>
+<hr />
+<h2>Text in Transparent Box</h2>
+<div class="background">
+<div class="transbox">
+<p>This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+This is some text that is placed in the transparent box.
+</p>
+</div>
+</div><hr />
+
+<h2>CSS2 Media Types</h2>
+<p>Media Types allow you to specify how documents will be presented in different media. The document can be displayed differently on the screen, on the paper, with an aural browser, etc.</p><hr />
+
+<h3>Media Types</h3>
+
+<p>Some CSS properties are only designed for a certain media. For example the "voice-family" property is designed for aural user agents. Some other properties can be used for different media types. For example, the "font-size" property can be used for both screen and print media, but perhaps with different values. A document usually needs a larger font-size on a screen than on paper, and sans-serif fonts are easier to read on the screen, while serif fonts are easier to read on paper.</p>
+
+<h3>The @media Rule</h3>
+
+<p>The @media rule allows different style rules for different media in the same style sheet.</p>
+<p>The style in the example below tells the browser to display a 14 pixels Verdana font on the screen. But if the page is printed, it will be in a 10 pixels Times font. Notice that the font-weight is set to bold, both on screen and on paper:</p>
+<pre>
+@media screen
+{
+p.test {font-family:verdana,sans-serif; font-size:14px}
+}
+
+@media print
+{
+p.test {font-family:times,serif; font-size:10px}
+}
+
+@media screen,print
+{
+p.test {font-weight:bold}
+}
+</pre><hr />
+
+<h3>Different Media Types</h3>
+
+<p><b>Note:</b> The media type names are not case-sensitive.
+</p>
+<table class="ex" border="1" cellpadding="3" cellspacing="0" width="700px">
+  <tbody><tr>
+    <th align="left" valign="top" width="20%">Media Type</th>
+    <th align="left" valign="top" width="80%">Description</th>
+  </tr>
+  <tr>
+
+    <td valign="top">all</td>
+    <td valign="top">
+Used for all media type devices</td>
+  </tr>
+  <tr>
+    <td valign="top">aural</td>
+    <td valign="top">
+Used for speech and sound synthesizers</td>
+
+  </tr>
+  <tr>
+    <td valign="top">braille</td>
+    <td valign="top">
+Used for braille tactile feedback devices</td>
+  </tr>
+  <tr>
+    <td valign="top">embossed</td>
+
+    <td valign="top">
+Used for paged braille printers</td>
+  </tr>
+  <tr>
+    <td valign="top">handheld</td>
+    <td valign="top">
+Used for small or handheld devices</td>
+  </tr>
+
+  <tr>
+    <td valign="top">print</td>
+    <td valign="top">
+Used for printers</td>
+  </tr>
+  <tr>
+    <td valign="top">projection</td>
+    <td valign="top">
+
+Used for projected presentations, like slides</td>
+  </tr>
+  <tr>
+    <td valign="top">screen</td>
+    <td valign="top">
+Used for computer screens</td>
+  </tr>
+  <tr>
+
+    <td valign="top">tty</td>
+    <td valign="top">
+Used for media using a fixed-pitch character grid, like teletypes and terminals</td>
+  </tr>
+  <tr>
+    <td valign="top">tv</td>
+    <td valign="top">
+Used for television-type devices</td>
+  </tr>
+</tbody></table> 
+<br>
+<hr />
+
+
+
+</body>
+</html>

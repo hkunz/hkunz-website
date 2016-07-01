@@ -1,0 +1,173 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- DISCUSSIONS:
+     HTML Forms
+     HTML Images
+     HTML Background
+     HTML Colors
+     HTML Colorvalues
+     HTML Colornames -->
+
+<head>
+    <title>(2/3) HTML Tutorials</title>
+    <style type="text/css">
+        h2 {background:lime}
+    </style>
+</head>
+
+<body bgcolor="#CCFF99" text="#5F0000">
+<!-- 
+<body bgcolor="#000000">
+<body bgcolor="rgb(0,0,0)">
+<body bgcolor="black">
+
+The bgcolor, background, and the text attributes in the <body> tag are deprecated in the
+latest versions of HTML (HTML 4 and XHTML). The World Wide Web Consortium (W3C) has removed
+these attributes from its recommendations. Style sheets (CSS) should be used instead.
+-->
+
+<!--
+input type=""
+can also take values: 
+image
+file
+hidden
+reset.
+-->
+
+<h2>The Text Input Field (&lt;input type="text">)</h2>
+<form action="">
+    <p>Username: <input type="text" size="35" name="txt_fname" value='The text in Password field is "Hello"'></p>
+    <p>Password: <input type="Password" name="txt_pass" value="Hello"> Default text input: size="20"</p>
+</form>
+<hr/>
+
+<h2>The Radio Button Group Input (&lt;input type="radio">)</h2>
+<form>
+    <input type="radio" name="sex" value="male" id="male_id"><label for="male_id">Male</label><br>
+    <!-- <lebel> tag is used with the id attribute. label tags make it possible to also click the Label -->
+    <!-- In the Male radio button the "Male text can also be clicked to select the radio button -->
+    <input type="radio" name="sex" value="female" checked="checked">Female<br>  
+</form>
+<hr/>
+
+<h2>The Check Box Group Input (&lt;input type="checkbox">)</h2>
+<form>
+    <input type="checkbox" name="vehicle" value="Bike">I have a bike:<br>
+    <input type="checkbox" name="vehicle" value="Car" checked="checked">I have a car:<br> 
+    <input type="checkbox" name="vehicle" value="Airplane">I have an airplane:<br>
+</form>
+<hr/>
+
+<h2>The Button Input Object (&lt;input type="button">)</h2>
+<form action="">
+    <input type="button" value="This is a button">
+</form>
+
+<h3>Submitting Information through the Submit Button (&lt;input type="submit">)</h3>
+<form name="input" action="http://www.w3schools.com/html/html_form_action.asp" method="get">
+Username: 
+<input type="text" name="user">
+<input type="submit" value="Submit this info">
+</form>
+<hr/>
+
+<h2>The Combo Box (Drop-Down Box) Selection Input Field (w/ &lt;select> and &lt;option> tags)</h2>
+<form action="">
+    <select name="cars">
+        <option value="mitsu">Mitsubishi</option>
+        <option value="toyo">Toyota</option>
+        <option value="merc" selected="selected">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+
+<h3>A Drop-Down Box (w/ &lt;optgroup> tag)</h3>
+    <select>
+        <optgroup label="Swedish Cars">
+            <option value ="volvo">Volvo</option>
+            <option value ="saab">Saab</option>
+        </optgroup>
+        <optgroup label="German Cars">
+            <option value ="merc">Mercedes</option>
+            <option value ="audi">Audi</option>
+        </optgroup>
+    </select>
+</form>
+<hr/>
+
+<h2>The Textarea Input Field (&lt;textarea> tag)</h2>
+<textarea rows="10" cols="30" align="left">
+    This is a textarea denoted by the &lt;textarea> tag with attributes rows="10" and cols="30"
+    This field behaves like the &lt;pre> text where number of spaces and enters are NOT ignored.
+</textarea>
+<hr/>
+
+<h2>The Fieldset Group Field Input (&lt;fieldset> tag)</h2>
+<fieldset>
+    <legend>
+        This is a Fieldset (This text is the Legend):
+    </legend>
+    <form action="">
+        Name <input type="text" size="100">
+        Age <input type="text" size="5">
+    </form>
+</fieldset>
+<hr/>
+
+<form action="MAILTO:someone@w3schools.com" method="post" enctype="text/plain">
+<h2>This form sends an e-mail to W3Schools.</h2>
+    Name:<br>
+        <input type="text" name="name" value="yourname" size="20"><br>
+    Mail:<br>
+        <input type="text" name="mail" value="yourmail" size="20"><br>
+    Comment:<br>
+        <input type="text" name="comment" value="yourcomment" size="40"><br><br>
+        <input type="submit" value="Send"><input type="reset" value="Reset">
+    </form>
+<hr/>
+
+<h2>Images using the &lt;img> tag</h2>
+<p>basic format: &lt;img src="URL" alt="Text if image not loaded"</p>
+<p>a URL is usually a path to a server that contains the picture to be loaded into the page.
+It starts with "http://" enclosed in quotations</p>
+<img src="images/mario.jpg" alt="Mario Picture" width="300" height="200">
+<img src="images/nopicture.jpg" alt="Alternate text appears when no picture is available" width="300" height="200">
+
+<p>An image w/ align="middle" <img src="Images/Hacker.gif" align="middle" width="48" height="48"> in the text.
+    The attribute <b>align=""</b> can take values <b>top, middle, and bottom</b></p>
+
+<p><img src="Images/Hacker.gif" align="left"><big>An image with align="left" makes the image float at the left
+    of the paragraph as if the image becomes the border of the text. This effect is similar to the text wrapping
+    format "square" of pictures in Microsoft Office Applications. When align="right" the picture becomes the border
+    at the right of the text like in the planted picture below. there is NO value "center" for the align attribute
+</big></p>
+<hr/>
+
+<h2>Using the "usemap" Attribute to place several button hit areas in a picture</h2>
+<img src="images/planets.gif" width="145" height="126" align="right" usemap="#planetmap">
+
+<map id="planetmap" name="planetmap">
+    <!-- shape="rect": coords="x1,y1,x2,y2" thus a rectangular button hit area-->
+    <!-- shape="circle": coords="x-center,y-center,radius" thus a circular hit area -->
+    <area shape="rect" coords="0,0,82,126" alt="The Sun" href="images/sun.gif">
+    <area shape="circle" coords="90,58,3" alt="Planet Mercury" href="images/mercury.gif">
+    <area shape="circle" coords="124,58,8" alt="Planet Venus" href="images/venus.gif">
+    <!-- href attribute can also be used to refer to other html pages like HTML_Notes1.htm-->
+</map>
+
+<p><big><b>Note: </b>The "usemap" attribute in the img element refers to the "id" or "name" (browser dependant) attribute in 
+the map element, therefore we have added both the "id" and "name" attributes to the map element.</big></p>
+
+<p>Move the mouse over the image, and look at the status bar to see how the
+    coordinates change.</p>
+<p><a href="CSS_Notes.htm"><img src="images/planets.gif" ismap width="146" height="126"></a></p>
+
+<h2>SUMMARY OF HTML_Notes1.htm and HTML_Notes2.htm</h2>
+<p><a href="http://www.w3schools.com/html/html_quick.asp" target="_blank">Here</a> is an HTML quick list</p>
+
+
+
+</body>
+</html>

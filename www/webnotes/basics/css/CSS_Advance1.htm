@@ -1,0 +1,266 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<!-- 
+	DISCUSSIONS:
+	CSS Dimension
+	CSS Classification
+	CSS Positioning
+	CSS Pseudo-class
+	CSS Pseudo-element
+-->
+<head>
+<title>(2/3) CSS Tutorials</title>
+<style type="text/css">
+<!--
+    h2,h5,h6 {background:lime;}
+    body{font-family:Arial;background-color:#FFFF99;}
+    
+    /* ORDER MUST BE STRICTLY FOLLOWED FOR a:link,a:visited;a:hover;a:active;*/
+    a.OtherSource:link {color:red} /* Unvisited Link */
+    a.OtherSource:visited{color:orange} /* Visited Link*/
+    a.OtherSource:hover {color:yellow;background:black} /* Mouse Over Link */
+    a.OtherSource:active {color:blue;background:red} /* Selected Link */
+    
+	span{display:block}
+	
+	/* START: For the 4 links */
+	ul.links{
+        width:100%;
+        padding:0;
+        margin:0;
+        list-style-type:none;
+    }
+    a.links {
+        width:6em;
+        text-decoration:none;
+        color:white;
+        background-color:purple;
+        padding:0.2em 0.6em;
+        border-right:1px solid white;
+    }
+    a:hover {background-color:#ff3300}
+    li.links {display:inline}
+    /* END: For the 4 links */
+    
+    #overflow_scroll{
+        background-color:#00FFFF;
+        width:500px;
+        height:60px;
+        overflow: scroll;
+    /* START: Used in Pseudo-Class Examples */
+    }
+    span > div > p:first-child{
+        text-indent:25px
+    }
+    i:first-child em{
+        font-weight:bold
+    }
+    a.aboutFC:first-child{
+        text-decoration:none
+    }
+    q:lang(no){
+        quotes: "~" "~"
+    }
+    /* END: Used in Pseudo-Class Examples */
+    
+    /* for Pseudo-ELements Section */
+    p.firstline:first-line {color:#0000ff;font-variant:small-caps}
+    p.firstline:first-letter {color:#ff0000;font-size:xx-large}
+    h2:before{content: url(Hacker.gif);}
+    h2:after{
+        content: url(tick.wav);
+    }
+-->
+</style>
+
+</head>
+<body>
+
+<h2>CSS Dimension</h2>
+<p>The CSS dimension properties allow you to control the height and width of an element. It also allows you to increase the space between two lines.</p>
+<ul type="square">
+  <li>width/height: auto/30px/50%;</li>
+  <li>max-width/height: 10px/20%; - ex.setting the width and height(margin) of text</li>
+  <li>min-width: 1000px/200%; - ex.for text so that it has a nowrap-like effect</li>
+  <li>line-height: 2/30px/90%; - can be set through number value or pixel value or percent value</li>
+</ul>
+
+<b>Visit <a class="OtherSource" href="http://www.w3schools.com/css/css_dimension.asp">THIS LINK</a> for a list of CSS Dimension Properties and possible property values</b><hr />
+
+<h2>CSS Classification</h2>
+<p>The CSS classification properties allow you to control how to display an element, set where an image will appear in another element, position an element relative to its normal position, position an element using an absolute value, and how to control the visibility of an element.</p>
+<ul type="square">
+  <li style="display:none">display: none; this is not displayed on the page</li>
+  <li><b>disply:none;</b> - there is a hidden line suppo - this line is inline even if it's &lt;p&gt;</span>
+  <span><b>display:block;</b> - this line is connected to the previous but blocked</span>
+  <li><div style="width=100px;float:right;border:5px dotted red;margin:0 0 15px 20px;padding:15px;text-align:center"><img src="Images/venus.gif" /><br />Planet Venus</div><b>float:right</b> - this makes the image float at right of this text no matter how long the text.</li>
+  <li style="max-width:200px"><span style="float:left;width:0.7em;font-size:400%;font-family:algerian,courier;line-height:80%">T</span>he "T" is set to have a size that is 0.7 times that of the current font</li>
+</ul>
+
+<ul class="links">
+<li class="links"><a class="links" href="#">Link one</a></li>
+<li class="links"><a class="links" href="#">Link two</a></li>
+<li class="links"><a class="links" href="#">Link three</a></li>
+<li class="links"><a class="links" href="#">Link four</a></li>
+</ul><br />
+
+<ul>
+  <li>This text is in normal/default position</li>
+  <li style="position:relative; left:-20px"><b>position:relative; left:-20px;</b></li>
+  <li style="position:absolute;left:100px"><b>position:absolute;left:100px;top:150px;</b></li>
+  <li><br />&lt;br /&gt; (because of the absolute pos of the above) <span style="visibility:hidden">This text is invisible</span></li>
+  <li style="visiblility:visible"><b>visiblility:visible/hidden;collapse(table);</b> - The blank line above has a hidden text</b></li>
+</ul>
+<p>float:left;<b>clear:both</b> (Venus picture)</p>
+<img src="Images/venus.gif" style="float:left;clear:both">
+<img src="Images/venus.gif" style="float:left;clear:both">
+<img src="Images/venus.gif" style="float:left;clear:both">
+<img src="Images/venus.gif" style="float:left;clear:both">
+<hr />
+
+<p>Move the mouse over the words to see the cursor change:</p>
+
+<span style="cursor:auto">Auto</span>
+<span style="cursor:crosshair">Crosshair</span>
+<span style="cursor:default">Default</span>
+<span style="cursor:pointer">Pointer</span>
+<span style="cursor:move">Move</span>
+<span style="cursor:e-resize">e-resize</span>
+<span style="cursor:ne-resize">ne-resize</span>
+<span style="cursor:nw-resize">nw-resize</span>
+<span style="cursor:n-resize">n-resize</span>
+<span style="cursor:se-resize">se-resize</span>
+<span style="cursor:sw-resize">sw-resize</span>
+<span style="cursor:s-resize">s-resize</span>
+<span style="cursor:w-resize">w-resize</span>
+<span style="cursor:text">text</span>
+<span style="cursor:wait">wait</span>
+<span style="cursor:help">help</span><br /><br /><br />
+
+<b>Visit <a class="OtherSource" href="http://www.w3schools.com/css/css_classification.asp">THIS LINK</a> for a list of CSS Classification Properties and possible property values</b><hr />
+
+<h2>CSS Positioning</h2>
+<p>The CSS positioning properties allow you to specify the left, right, top, and bottom position of an element. It also allows you to set the shape of an element, place an element behind another, and to specify what should happen when an element's content is too big to fit in a specified area.</p>
+
+<ul type="square">
+  <li><b>position:relative;</b>left:-20px;</li>
+  <li><b>position:absolute;</b>left:100px;top:150px;</li>
+  <li><b>position:fixed;</b>top:30px;right:5px;</li>
+  <li>position:absolute;<b>clip:rect(0px 50px 200px 0px);</b> - use it to cut images</li>
+  <li id="overflow_scroll">background-color:#00FFFF;width:150px;height:150px;<b>overflow: scroll</b>/hidden/auto<br /></li>
+  <li>This uses <b>vertical-align:text-bottom;</b>
+<img class="top" border="0" src="Images/venus.gif" width="95" height="84" style="vertical-align:text-bottom" />to place image in paragraph. Other values: text-bottom/text/top.</li>
+  <li>position:absolute;left:0px;top:0px;<b>z-index:-1;</b> (-1,[0-default],1) Z-index can be used to place an element "behind" another element.</li>
+</ul>
+
+<b>Visit <a class="OtherSource" href="http://www.w3schools.com/css/css_positioning.asp">THIS LINK</a> for a list of CSS Positioning Properties and possible property values</b><hr />
+
+<h2>CSS Pseudo-Classes</h2>
+<p><b>CSS pseudo-classes are used to add special effects to some selectors.</b></p>
+<hr />
+<h3>Syntax</h3>
+<p>The syntax of pseudo-classes: <code><big><b style="color:red">selector:pseudo-class {property: value}</b></big></code></p>
+<p>CSS classes can also be used with pseudo-classes: <code><big><b style="color:red">selector.class:pseudo-class {property: value}</b></big></code></p><hr />
+
+<h3>Anchor Pseudo-Classes</h3>
+<ul type="square">
+  <li><code><big>a:link {color: #FF0000}</big></code>     /* unvisited link  */ </li>
+  <li><code><big>a:visited {color: #00FF00}</big></code>  /* visited link    */ </li>
+  <li><code><big>a:hover {color: #FF00FF}</big></code>    /* mouse over link */ </li>
+  <li><code><big>a:active {color: #0000FF}</big></code>   /* selected link   */ </li>
+</ul><hr />
+
+<h3>:first-child Pseudo-class</h3>
+
+<span>
+<div>
+<!-- If another tag intervenes then :first-child will not work -->
+<p>
+First paragraph in <code><big><b style="color:red">span > div > p:first-child{text-indent:25px}</b></big></code>
+This paragraph will be indented.
+</p>
+<p>
+Second paragraph in div. This paragraph and other suceeding paragraphs will not be indented.
+</p>
+</div>
+</span>
+
+<div><i>This is the first <em>em</em> element in the paragraph. And this is the second <em>em</em> element.</i></div>
+
+<p>
+This Link <a class="aboutFC" href="http://www.w3schools.com">W3Schools</a> is the first-child and
+this Link <a class="aboutFC" href="http://www.w3schools.com">W3Schools</a> is not.
+</p>
+<hr />
+
+<h3>:lang Pseudo-class</h3>
+<p>The short quote: <q lang="no">da di, da da, da du</q> uses CSS <code><big style="color:red">q:lang(no){quotes: "~" "~"}</big></code></p>
+
+<table width="700px" border="1" frame="box" padding="1">
+  <tr>
+    <th>Pseudo-Class</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td align="center">
+      :active<br />
+      :focus<br />
+      :hover<br />
+      :link<br />
+      :visited<br />
+      :first-child<br />
+      :lang
+    </td>
+    <td>
+      Adds special style to an activated element<br />
+      Adds special style to an element while the element has focus<br />
+      Adds special style to an element when you mouse over  it<br />
+      Adds special style to an unvisited link<br />
+      Adds special style to a visited link<br />
+      Adds special style to an element that is the first child of some other element<br />
+      Allows the author to specify a language to use in a specified element
+    </td>
+  </tr>
+</table>
+  
+<b>Visit <a class="OtherSource" href="http://www.w3schools.com/css/css_pseudo_classes.asp">THIS LINK</a> for a list of CSS Pseudo-Classes Properties and possible property values</b><hr />
+
+<h2>Pseudo-Element</h2>
+<h3>Syntax</h3>
+<p><code><big>selector:pseudo-element {property: value}<br />
+selector.class:pseudo-element {property: value}</big></code></p><hr />
+
+<p class="firstline" style="max-width:500px">Only the first line of this text is formatted according to the <code><big style="color:red">p:first-line{...}</big></code> pseudo element within a paragraph. Since it has been defined within the <code><big style="color:red">class="firstline"</big></code> therefore the code becomes <code><big style="color:red">p.firstline:first-line{...}</big></code></p>
+<p>The first letter in the paragraph above uses <code><big style="color:red">p.firstline:first-letter{...}</big></code></p>
+
+<table width="700px" border="1" frame="box" padding="1">
+  <tr>
+    <th>Pseudo-Element</th>
+    <th>Purpose</th>
+  </tr>
+  <tr>
+    <td>
+        <ul type="square">
+		  <li>:first-letter</li>
+		  <li>:first-line</li>
+		  <li>:before</li>
+		  <li>:after</li>
+        </ul>
+    </td>
+    <td>
+       <ul type="none">
+          <li>Adds special style to the first letter of a text</li>
+          <li>Adds special style to the first line of a text</li>
+          <li>Inserts some content before an element</li>
+          <li>Inserts some content after an element</li>
+       </ul>
+    </td>
+  </tr>
+</table><br />
+
+<b>Visit <a class="OtherSource" href="http://www.w3schools.com/css/css_pseudo_elements.asp">THIS LINK</a> for a list of CSS Pseudo-Element Properties and possible property values</b><hr />
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- if this DTD is enabled the page displays incorrectly the <code> sections
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+
+<head>
+<title>SQL MIN Function</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:blue;color:white;}
+table{background-color:#FFFF99}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#CCFFFF">
+<h2>SQL MIN Function</h2>
+
+<p>The MIN function returns the lowest value in a column.&nbsp;NULL values are not included in the
+calculation.</p>
+
+<h3>Syntax</h3>
+<table class="ex" border="1" cellpadding="3" cellspacing="0" width="100%"> 
+  <tbody><tr>
+    <td valign="top">
+
+    <pre>SELECT MIN(column) FROM table</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<p><b>Example</b></p>
+<table class="ex" border="1" cellspacing="0" width="100%">
+<tbody><tr><td><pre>SELECT MIN(Age) FROM Persons</pre></td>
+</tr></tbody></table>
+<p><b>Result:</b></p>
+
+<table class="ex" border="1" cellspacing="0" width="50%">
+<tbody><tr><td><pre>19</pre></td>
+</tr></tbody></table>
+<p>
+<b>Note: </b>The MIN and MAX functions can also be used on text columns, to find the
+highest or lowest value in alphabetical order.</p>
+<hr />
+
+</body>
+</html>

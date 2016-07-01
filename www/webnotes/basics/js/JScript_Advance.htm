@@ -1,0 +1,315 @@
+<!--
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<!-- 
+     DISCUSSIONS: 
+     JS Browser
+     JS Cookies
+     JS Validation
+     JS Animation
+     JS Image Maps
+     JS Timing
+     JS Create Object
+-->
+<head>
+<title>(3/3) JavaScript Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:lime}
+h3{color:green;text-decoration:underline;}
+h2:first-letter{float: top;width: 0.7em; font-size: 200%; font-family: algerian;}
+code{font-size:18;color:red;}
+-->
+</style>
+
+<script type="text/javascript">
+//JavaScripts in the head section will be executed when CALLED.
+//place functions within this section
+
+//Used in Section: Check if Required Field is empty
+function validate_required(field,alerttxt){
+  with (field){
+    if (value==null||value==""){
+      alert(alerttxt)
+      return false
+    }
+    else {return true}
+  }
+}
+function validate_form_1(thisform){
+  with (thisform){
+    if (validate_required(email,"Email must be filled out!")==false){
+      email.focus()
+      return false
+    }
+  }
+}
+
+//Used in the Section: Check if the Filled-in Field has Valid Syntax
+function validate_email(field,alerttxt){
+  with (field){
+    apos=value.indexOf("@")
+    dotpos=value.lastIndexOf(".")
+    if (apos<1||dotpos-apos<2){
+      alert(alerttxt)
+      return false
+    }else {return true}
+  }
+}
+function validate_form_2(thisform){
+  with (thisform){
+    if (validate_email(email,"Not a valid e-mail address!")==false){
+      email.focus();return false
+    }
+  }
+}
+function mouseOver(){
+  document.b1.src ="Images/b_blue.gif"
+}
+function mouseOut(){
+  document.b1.src ="Images/b_pink.gif"
+}
+
+//Used in Section: Image Map
+function writeText(txt){
+  document.getElementById("desc").innerHTML=txt
+}
+
+//Used in Section: Timing Events
+function timedMsg(){ //Example 1
+  var t=setTimeout("alert('3 seconds is up!')",3000)
+}
+function timedText() //Example 2
+{
+var t1=setTimeout("document.getElementById('txt1').value='1 seconds!'",1000)
+var t2=setTimeout("document.getElementById('txt1').value='2 seconds!'",2000)
+var t3=setTimeout("document.getElementById('txt1').value='3 seconds!'",3000)
+var t1=setTimeout("document.getElementById('txt1').value='4 seconds!'",4000)
+var t2=setTimeout("document.getElementById('txt1').value='5 seconds!'",5000)
+}
+
+var c=0
+var t
+function timedCount(){ //Example 3
+  document.getElementById('txt2').value=c
+  c=c+1
+  tt=setTimeout("timedCount()",1000)
+}
+function stopCount(){ //Example 3
+  clearTimeout(tt)
+}
+function startTime(){ //Example 4
+  var today=new Date()
+  var h=today.getHours()
+  var m=today.getMinutes()
+  var s=today.getSeconds()
+  m=checkTime(m) // add a zero in front of numbers<10
+  s=checkTime(s) // add a zero in front of numbers<10
+  document.getElementById('txt3').innerHTML=h+":"+m+":"+s
+  t=setTimeout('startTime()',500)
+}
+function checkTime(i){
+  if (i<10){
+    i="0" + i
+  }
+  return i
+}
+</script>
+</head>
+
+<body bgcolor="#CCFFCC" onLoad="startTime(),mouseOut()"> 
+<!--onLoad="mouseOut()" so that in Section Animated Buttons, the button is displayed  -->
+
+<h2>Browser Detection</h2>
+<p>The JavaScript Navigator object contains all information about the visitor's browser.</p><hr />
+<script type="text/javascript">
+    //JavaScripts in the body section will be executed WHILE the page loads.
+document.write("<h3>Detect the visitor's browser and browser version</h3>")
+    var browser=navigator.appName
+    var b_version=navigator.appVersion
+    var version=parseFloat(b_version)
+    document.write("Browser name: <b>"+ browser + "</b><br />")
+    document.write("Browser version: <b>"+ version + "</b><br />")
+	document.write("<p>*Browser like <b>Netscape</b> and <b>Microsoft Internet Explorer</b> both with versions equal or higher than <b>version 4</b> are good enough browsers")
+document.write("<hr /><h3>More details about the visitor's browser</h3>")
+    document.write("Browser: <b>" + navigator.appName + "</b><br />")
+    document.write("Browserversion: <b>" + navigator.appVersion + "</b><br />")
+    document.write("Code: <b>" + navigator.appCodeName + "</b><br />")
+	document.write("Platform: <b>" + navigator.platform + "</b><br />")
+	document.write("Cookies enabled: <b>" + navigator.cookieEnabled + "</b><br />")
+	document.write("Browser's user agent header: <b>" + navigator.userAgent + "</b><br /><hr />")
+document.write("<h3>All details about the visitor's browser</h3>")
+	var x = navigator
+    document.write("<b>navigator.<i>property</i></b><br />")
+	document.write("appCodeName: <b>" + x.appCodeName + "</b><br />")
+	document.write("appMinorVersion: <b>" + x.appMinorVersion + "</b><br />")
+	document.write("appName: <b>" + x.appName + "</b><br />")
+	document.write("appVersion: <b>" + x.appVersion + "</b><br />")
+	document.write("cookieEnabled: <b>" + x.cookieEnabled + "</b><br />")
+	document.write("cpuClass: <b>" + x.cpuClass + "</b><br />")
+	document.write("onLine: <b>" + x.onLine + "</b><br />")
+	document.write("platform: <b>" + x.platform + "</b><br />")
+	document.write("userAgent &#40;UA&#41;: <b>" + x.userAgent + "</b><br />")
+	document.write("browserLanguage: <b>" + x.browserLanguage + "</b><br />")
+	document.write("systemLanguage: <b>" + x.systemLanguage + "</b><br />")
+	document.write("userLanguage: <b>" + x.userLanguage + "</b><br /><hr />")
+</script>
+<p><b>IMPORTANT! </b>The version number is WRONG in IE 5.0 or later! Microsoft starts the appVersion string with the number 4.0. in IE 5.0 and IE 6.0!!! Why did they do that??? However, JavaScript is the same in IE6, IE5 and IE4, so for most scripts it is ok.</p><hr />
+
+<h2>JScript Cookies</h2>
+<script type="text/javascript">
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+180)
+document.write(exdate + "<br />")
+document.write(exdate.toGMTString() + "<br />")
+</script>
+<hr /><div>Click <a href="Cookies.htm">THIS LINK</a> for a sample cookies demonstration</div><hr />
+
+<h2>Form Validation</h2>
+<p>JavaScript can be used to validate input data in HTML forms before sending off the 
+content to a server.</p>
+<p>Form data that typically are checked by a JavaScript could be:</p>
+
+<ul>
+	<li>has the user left required fields empty?</li>
+	<li>has the user entered a valid e-mail address?</li>
+	<li>has the user entered a valid date?</li>
+	<li>has the user entered text in a numeric field?</li>
+</ul>
+<hr />
+<h3>Check if Required Field is empty</h3>
+<form action="submitpage.htm"
+onsubmit="return validate_form_1(this)"
+method="post">
+Email: <input type="text" name="email" size="30">
+<input type="submit" value="Submit"> 
+</form><hr />
+
+<h3>Check if Filled-in Field has Valid Syntax</h3>
+<form action="submitpage.htm"
+onsubmit="return validate_form_2(this);"
+method="post">
+Email: <input type="text" name="email" size="30">
+<input type="submit" value="Submit"> 
+</form><hr />
+
+<h2>Animated Buttons</h2>
+<p>It is possible to use JavaScript to create animated images.<br />
+The trick is to let a JavaScript change between different images on different events.<p><hr />
+<a href="http://www.w3schools.com" target="_blank">
+<img border="0" alt="Visit W3Schools!"
+src="b_pink.gif" name="b1"
+onmouseOver="mouseOver()"
+onmouseOut="mouseOut()" /></a><hr />
+
+<h2>Image Map</h2>
+<p>An image-map is an image with clickable regions.</p>
+<p>A simple example can be found in XHTML/<b>HTML_Notes2.htm</b></p><hr />
+
+<img src ="Images/planets.gif" width ="145" height ="126" alt="Planets" usemap="#planetmap" />
+<map id ="planetmap" name="planetmap">
+ <!-- shape="rect": coords="x1,y1,x2,y2" thus a rectangular button hit area-->
+ <!-- shape="circle": coords="x-center,y-center,radius" thus a circular hit area -->
+<area shape ="rect" coords ="0,0,82,126"
+onMouseOver="writeText('The Sun and the gas giant planets like Jupiter are by far the largest objects in our Solar System.')"
+href ="sun.htm" target ="_blank" alt="Sun" />
+
+<area shape ="circle" coords ="90,58,3"
+onMouseOver="writeText('The planet Mercury is very difficult to study from the Earth because it is always so close to the Sun.')"
+href ="mercur.htm" target ="_blank" alt="Mercury" />
+
+<area shape ="circle" coords ="124,58,8"
+onMouseOver="writeText('Until the 1960s, Venus was often considered a  twin sister to the Earth because Venus is the nearest planet to us, and because the two planets seem to share many characteristics.')"
+href ="venus.htm" target ="_blank" alt="Venus" />
+</map> 
+
+<b style="color:blue"><p id="desc">Move Mouse over a planet and its description appears here!</p></b>
+<!-- Text description gets displayed here. JScript: document.getElementById("desc").innerHTML=txt --> 
+<hr />
+
+<h2>Timing Events</h2>
+<p>With JavaScript, it is possible to execute some code NOT immediately after a 
+function is called, but after a specified time interval. This is called timing 
+events.</p>
+<p>It's very easy to time events in JavaScript. The two key methods that are used 
+are:</p>
+<ul>
+	<li><b>setTimeout()</b> - executes a code some time in the future</li>
+
+	<li><b>clearTimeout()</b> - cancels the setTimeout()</li>
+</ul>
+<p><b>Note:</b> The setTimeout() and clearTimeout() are both methods of the HTML 
+DOM Window object.</p><hr />
+<h3>Syntax</h3>
+<code>var t=<b>setTimeout</b>("<i>javascript statement</i>",<i>milliseconds</i>)<br />
+<b>clearTimeout</b>(<i>setTimeout_variable i.e. t</i>)</code><hr />
+<b>Example 1: </b>
+<input type="button" value="Click for a message in 3 seconds" onClick="timedMsg()" />
+<code>var t=<b>setTimeout</b>("alert('3 seconds is up!')",3000)</code>
+<hr />
+<b>Example 2: </b>
+
+  <input type="button" value="Display timed text!" onClick="timedText()">
+  <input type="text" value="0 seconds!" id="txt1">
+<hr />
+<b>Example 3: </b>
+<input type="button" value="Start count!" onClick="timedCount()">
+<input type="text" id="txt2">
+<input type="button" value="Stop count!" onClick="stopCount()"><code> <b>clearTimeout</b>(tt)</code><hr />
+<b>Example 4: </b>
+<b><code style="color:blue" id="txt3"></code></b>
+<hr />
+
+<h2>JavaScript Create Your Own Objects</h2>
+<p><b>Objects are useful to organize information.</b></p>
+<p>JavaScript has several <b>built-in objects</b>, like String, Date, Array, and more.<br />
+In addition to these built-in objects, you can also create your own.<br />
+An object is just a special kind of data, with a collection of properties and methods.<br />
+Properties are the values associated with the object.<br />
+Methods are the actions that can be performed on objects. </p>
+<hr />
+<h3>Syntax</h3>
+<script type="text/javascript">
+document.write("<b>objName</b>.<i>propertyName</i><br />")
+document.write("<b>objName</b>.<i>methodName</i><br />")
+</script><hr />
+<h3>Create a Direct Instance of an Object</h3>
+<code>personObj=<b>new Object()</b><br />
+personObj.firstname="John"<br />
+personObj.lastname="Doe"<br />
+personObj.age=50<br />
+personObj.eyecolor="blue"<br /></code>
+<p>The following adds the method <code>eat()</code> to the personObj:<br />
+<code>personObj.eat=eat</code></p><hr />
+
+<h3>Create a template of an object (Class)</h3>
+<pre><code>function <b>person</b>(firstname,lastname,age,eyecolor){
+  <b>this</b>.firstname=firstname
+  <b>this</b>.lastname=lastname
+  <b>this</b>.age=age
+  <b>this</b>.eyecolor=eyecolor
+
+  <b>this</b>.<b>newlastname</b>=<b>newlastname</b><span style="color:black"> -&gt; methods are also added in the function</span>
+}</code></pre>
+<p>Notice that the template is just a function. Inside the function you need to assign things to this.propertyName.
+The reason for all the "this" stuff in is that you're going to have more than one person at a time
+(which person you're dealing with must be clear). That's what "this" is: the instance of the object at hand.</p>
+<p>Instantiatinig from the object:<br /><code>
+myFather=new <b>person</b>("John","Doe",50,"blue")<br />
+myMother=new <b>person</b>("Sally","Rally",48,"green")</code></p>
+
+<p>Note that methods are just functions attached to objects. Then we will have to write the newlastname() function:<br />
+<code>function <b>newlastname</b>(new_lastname){<br />
+&nbsp;&nbsp;this.lastname=new_lastname<br />
+}</code></p>
+<p>The <code><b>newlastname()</b></code> function defines the person's new last name and assigns that to the person.
+JavaScript knows which person you're talking about by using "this.". So, now you can write:<br />
+<code>myMother.<b>newlastname</b>("Doe")</code></p><hr />
+
+
+</body>
+</html>

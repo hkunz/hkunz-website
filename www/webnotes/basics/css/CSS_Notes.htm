@@ -1,0 +1,310 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!--
+Cascading Style Sheets (CSS) are a collection of formatting rules
+that control the appearance of content on a web page. When you use
+CSS to format a page, you separate content from presentation.
+The content of your page--the HTML code--resides in the HTML file
+itself, while the CSS rules that define the presentation of the code
+reside in another file (an external style sheet) or in another part
+of the HTML document (usually the <head> section).
+
+A CSS formatting rule consists of two parts--the selector and the
+declaration. The selector is a term (such as P, H1, a class name,
+or an id) that identifies the formatted element, and the declaration
+defines what the style elements are.
+-->
+<html>
+<!--
+     DISCUSSIONS:
+     CSS Introduction
+     CSS Syntax
+     CSS How To
+     CSS Background
+     CSS Text
+     CSS Font
+     CSS Border
+     CSS Outline
+     CSS Margin
+     CSS Padding
+     CSS List
+     CSS Table
+-->
+<head>
+<title>(1/3) CSS Tutorials</title>
+<style type="text/css">
+/* Note: A browser normally ignores unknown tags. This means that an old browser that does not support styles,
+will ignore the <style> tag, but the content of the <style> tag will be displayed on the page.
+It is possible to prevent an old browser from displaying the content by hiding it in the HTML comment element:  */
+<!--
+    a {text-decoration: none} /* CSS for removing all decoration (like underline) from a LINK */
+    body{
+        background-color: #FFFF99;
+        /*
+        background-image: url('venus.gif');
+        background-repeat: repeat; 
+        background-repeat: repeat-y; - repeats background only vertically
+        background-repeat: repeat-x; - repeats background only horizontally
+        background-repeat: no-repeat; - no repetition of background image
+        background-position: center; - positions the background image in the center
+        background-position: 40% 20%; - positioning the background image using %
+        background-position: 50px 100px; - positioning the background image using px 
+        background-attachment: fixed;
+        background: #00ff00 url('venus.gif') no-repeat fixed center; - multiple background properties in one declaration
+        */
+    }
+    h2,h5,h6 {background:lime;}
+    body{font-family:Arial;}
+    NewTag{color:maroon;font-family:impact;}     /*  used in the section: Tag Selector [2 Types]  */
+    i.orangy{color:#FF8C00;}					 /*  used in the section: The Class Selector      */
+    i.pinkish{color:#FF00FF;} 					 /*  used in the section: The Class Selector      */
+    .fonty{font-family:"Cooper Black";} 	     /*  used in the section: The Class Selector      */
+    .greenish{color:lime} 						 /*  used in the section: The Class Selector      */
+    
+    input[type="text"]{                          /*  used in the section: Add styles to Sel...    */
+        background-color: rgb(0,0,255);          /*  blue rgb(0,0,255) background for the textbox */
+        } 
+    p#sample1_id{
+        color:red;
+        font-style:italic; /* values: italic, opaque, normal, inherit */
+        outline-style:dotted;
+        outline-color:orange;
+        outline-width:thin; /* values: thick, thin, medium(default), inherit */
+        text-transform:capitalize; /* values: uppercase, lowercase, capitalize, inherit, none */
+    }
+    #sample2_id{
+        color:brown;
+        font-size:16px;
+        font-weight:bolder;
+        text-align:center;
+        font-variant:small-caps; /* values: inherit, normal, small-caps - different from text transform */
+        /* text-decoration:overline; - values: blink, inherit, line-through, none, overline, underline */
+    }
+    /* used in the section: Add Styles to Links*/
+    a:link {color:red} /* Link is red if not visited yet */
+    a:visited{color:orange} /* Link is orange when already visited */
+    a:hover {color:yellow;background:black} /* on mouse over */
+    a:active {color:blue;background:red} /* when clicked but if release outside remains like THIS!!*/
+    
+    span.hilyt{
+        background-color:yellow;
+    }
+    .letter_space1{letter-spacing:-2px}
+    .letter_space2{letter-spacing:0.3cm}
+    p.line_height1{line-height:80%;color:brown}
+    p.line_height2{line-height:200%}
+    .text_indent{text-indent: 1cm}
+    p.uppercase {text-transform: uppercase}
+    p.lowercase {text-transform: lowercase}
+    p.capitalize {text-transform: capitalize}
+    p.word_space{word-spacing:30px}
+    p.continueline{white-space: nowrap}
+    -->
+</style>
+
+</head>
+<body>
+
+
+<h2>&nbsp;What is CSS?</h2>
+<ul type="square">
+  <li><b>CSS</b> stands for <b>C</b>ascading <b>S</b>tyle <b>S</b>heets</li>
+  <li>Styles define <b> how to display</b> HTML elements</li>
+  <li>Styles are normally stored in <b>Style Sheets</b> </li>
+  <li>Styles were added to HTML 4.0 <b>to solve a problem</b></li>
+  <li><b>External Style Sheets</b> can save you a lot of work</li>
+  <li>External Style Sheets are stored in <b>CSS files</b></li>
+  <li>Multiple style definitions will <b>cascade</b> into one</li>
+</ul>
+
+<h3>Multiple Styles Will Cascade Into One</h3>
+Generally speaking we can say that all the styles will "cascade" into a new "virtual" style sheet by the following rules, where number four has the highest priority:
+<pre>
+   1. Browser default
+   2. External style sheet
+   3. Internal style sheet (inside the <head> tag)
+   4. Inline style (inside an HTML element)
+</pre>Learn about <b>External</b>, Internal, and Inline Styles in section <b>HTML Styles</b> within <b>AdvanceHTML.htm</b>
+<hr />
+
+
+<h2>CSS Syntax</h2>
+<p>The CSS syntax is made up of three parts:<br />
+<code><big>selector {property: value}</big></code></p>
+<p><b>Note: </b>If  the value is multiple words, put quotes around the value:<br />
+<code><big>p,h2,table {font-family: "sans serif";color:red}</big></code><br /><br />
+Separate multiple properties by a semicolon (;). Selectors can be grouped by separating by commas</p><hr />
+
+<h3>Tag Selector [ 2 Types ]</h3>
+<p>The header <b>"CSS Syntax"</b> uses the existing tag &lt;h2&gt; as selector with style:<br /><code><big>h6 {background:lime}</big></code></p>
+<NewTag>This text uses a custom-made &lt;NewTag&gt; tag as selector with style:<br /><code><big>NewTag {color:maroon;font-family:impact}</big></code></NewTag><hr />
+
+<h3>Class Selector</h3>
+<p>With the <b>class selector</b> you can define different styles for the same type of HTML element.<br />
+<i class="orangy">This text uses the <b>orangy class</b> declared in the styles for &lt;i&gt; element</i><br />
+<code><big style="color:#FF8C00">i.orangy{color:#FF8C00}</big></code><br />
+<i class="pinkish">This text uses the <b>pinkish class</b> declared in the styles for &lt;i&gt; element</i><br />
+<code><big style="color:#FF00FF">i.pinkish{color:#FF00FF}</big></code><br />
+<u class="fonty">This text uses <big><code>class="fonty"</code></big> that can be used for any tag/element</u><br />
+<code><big>.fonty{font-family:"Cooper Black"}</big></code></p>
+<p class="fonty greenish">Combining two classes, <code><big style="color:black">&lt;x class="fonty greenish"&gt; </big></code>where x is any tag/element<br />
+<code><big style="color:black">.fonty{font-family:"Cooper Black"} and .greenish{color:lime}</big></code></p><hr />
+
+<h3>ID Selector</h3>
+
+<p id="sample1_id">This text uses CSS defined by the id name "sample1_id" which only matches the &lt;p&gt; tag<br />
+<code><big>&lt;p id="sample1_id"&gt; - CSS: p#sample1_id{...}</big></code></p>
+<p id="sample2_id">This text uses CSS defined by the id name "sample2_id" which matches with any tag<br />
+<code><big style="text-decoration:none">&lt;x id="sample2_id"&gt; CSS: #sample2_id{...}</big></code></p>
+<hr />
+
+<h3>Add Styles to Elements with Particular Attributes</h3>
+<p>This textbox's background color is described by the input tag's attribute type="text"<br />
+<code><big>input[type="text"] {background-color: blue}</big></code>&nbsp;<input type="text" /><hr />
+
+<h2>Add Styles to Links</h2>
+<a href="http://www.SOmeWebSite.com" target="_blank">This is Link One</a><br />
+<a href="http://www.AnotherWebsite.com" target="_blank">This is Link Two</a>
+<ul type="square">
+  <li><code><big>a:link {color:red}</big></code> - Link is red if not visited yet</li>
+  <li><code><big>a:visited{color:orange}</big></code> - Link is orange when already visited</li>
+  <li><code><big>a:hover {color:yellow;background:black}</big></code> - on mouse over</li>
+  <li><code><big>a:active {color:blue;background:red}</big></code> - when clicked but if release outside remains like THIS!!</li>
+</ul><hr />
+
+<h2>CSS Background</h2>
+<p>The CSS background properties define the background effects of an element. See the upper portion of this page's source code in the body's CSS section to see some of the different background formatting possibilities.</p><hr />
+<b>Visit <a href="http://www.w3schools.com/css/css_background.asp">THIS LINK</a> for a list of CSS Background Properties and possible property values</b>
+<h2>CSS Text</h2>
+<h3>Letter Spacing</h3>
+<p><span class="hilyt">This text is highlighted.</span> This text is not highlighted.<span class="hilyt"> But this text is</span>. And this ones not.</p>
+<p class="letter_space1">This text has a letter spacing of -4px<br /><span class="letter_space2">This text has a <code><big style="letter-spacing:0px;color:red">letter-spacing:0.3cm</big></code></span></p><hr />
+
+<h3>Line Height and Indention</h3>
+<p class="text_indent">
+This paragraph is indented at first line -&gt; text-indent: 1cm;<br />
+This is a paragraph with a standard line-height.<br />
+The default line height in most browsers is about 110% to 120%.</p>
+<p class="line_height1 text_indent">
+&lt;p class=line_height1&gt;<br />
+This uses CSS property <code><big style="color:red">line-height:90%;</big></code><br />
+This is a paragraph with a smaller line-height.
+</p>
+<p class="line_height2 text_indent">
+&lt;p class=line_height2&gt;<br />
+This uses CSS property <code><big style="color:red">line-height:200%</big></code><br />
+This is a paragraph with a bigger line-height.
+</p><hr />
+
+
+<p class="uppercase"><b>Controlling the letters in a text</b><span style="text-transform:none;color:red"> <code><big>(text-transform:uppercase;)</big></code></p>
+<p class="lowercase">Controlling the letters in a text<code><big> (text-transform:lowercase;)</big></code></p>
+<p class="capitalize">Controlling the letters in a texth<code><big> (text-transform:capitalize;)</big></code></p><hr />
+
+<p class="word_space">White spaces increased by CSS property <b><code><big style="word-spacing:0px;color:red">word-spacing:30px</big></code></b></p>
+<p class="continueline"><code><big><span style="color:red">white-space: nowrap; </span>the line is not wrapped<br /> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</big></code></p>
+<b>Visit <a href="http://www.w3schools.com/css/css_text.asp">THIS LINK</a> for a list of CSS Text Properties and possible property values</b><hr />
+
+<h2>CSS Fonts</h2>
+<p>The CSS font properties define the font in text. They allow you to change the font family, boldness, size, and the style of a text. Here is a sample list of CSS Font properties with values:</p>
+<ul type="square">
+  <li>font-family: times;</li>
+  <li>font-size: 130%;</li>
+  <li>font-size-adjust: 0.60;</li>
+  <li>font-style: italic;</li>
+  <li>font-variant: small-caps;</li>
+  <li>font-weight: bold;</li>
+  <li>font-stretch:ultra-condensed</li>
+  <li>font: italic small-caps 900 12px arial; - font is used for multiple properties</li>
+</ul>
+
+
+<b>Visit <a href="http://www.w3schools.com/css/css_font.asp">THIS LINK</a> for a list of CSS Font Properties and possible property values</b><hr />
+
+
+<h2>CSS Border</h2>
+<p>The CSS border properties define the borders around an element. They allow you to specify the style and color of an element's border. In HTML we use tables to create borders around a text, but with the CSS border properties we can create borders with nice effects, and it can be applied to any element.</p>
+<ul type="square">
+  <li>border: medium double rgb(250,0,255);</li>
+  <li>border-style: solid double groove;</li>
+  <li>border-top: medium solid #ff0000;</li>
+  <li>border-left: medium solid #ff0000;</li>
+  <li>border-style: dotted/dashed/solid/double/groove/ridge/inset/outset;</li>
+  <li>border-top-style: dotted/dashed/solid/double/groove/ridge/inset/outset;</li>
+  <li>border-style: solid; border-width: 5px 10px 1px medium;</li>
+  <li>border-style: solid; border-top-width: 10px;</li>
+  <li>border-style: solid; border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);</li>
+  <li>border-style: solid; border-top-color: #ff0000;</li>
+</ul>
+
+<b>Visit <a href="http://www.w3schools.com/css/css_border.asp">THIS LINK</a> for a list of CSS Border Properties and possible property values</b><hr />
+
+<h2>CSS Outline</h2>
+<p>The CSS outline properties is used to draw a line around an element, outside the border edge. An outline is a line that is drawn around elements, outside the border edge, to make the element "stand out". The CSS outline properties sets the outlines around elements. You can specify the style, color, and width of the outline.<br /><b>Note: </b>Outlines do not take up space, and they do not have to be rectangular.</p>
+<ul type="square">
+  <li>border: red solid thin; outline: green dotted thick;</li>
+  <li>outline-style: dotted/dashed/solid/double/groove/ridge/inset/outset;</li>
+  <li>border: red solid thin; outline-style: solid; outline-color: #00ff00;</li>
+  <li>border: red solid thin; outline-style: solid; outline-width: thick/2px;</li>
+</ul>
+
+<b>Visit <a href="http://www.w3schools.com/css/css_outline.asp">THIS LINK</a> for a list of CSS Outline Properties and possible property values</b><hr />
+
+<h2>CSS Margin</h2>
+<p>The CSS margin properties define the space around elements. It is possible to use negative values to overlap content. The top, right, bottom, and left margin can be changed independently using separate properties. A shorthand margin property can also be used to change all of the margins at once.<br />
+
+<b>Note: </b>Netscape and IE give the body tag a default margin of 8px. Opera does not! Instead, Opera applies a default padding of 8px, so if one wants to adjust the margin for an entire page and have it display correctly in Opera, the body padding must be set as well!</p>
+
+<ul type="square">
+  <li>margin: 1cm 2cm 5cm 2cm; - top,right,bottom,left;</li>
+  <li>margin-top: 25%;</li>
+  <li>margin-bottom: 2cm;</li>
+</ul>
+
+<b>Visit <a href="http://www.w3schools.com/css/css_margin.asp">THIS LINK</a> for a list of CSS Margin Properties and possible property values</b><hr />
+
+
+<h2>CSS Padding</h2>
+<p>The CSS padding properties define the space between the element border and the element content. Negative values are not allowed. The top, right, bottom, and left padding can be changed independently using separate properties. A shorthand padding property is also created to control multiple sides at once.</p>
+
+<ul type="square">
+  <li>padding: 1.5cm;</li>
+  <li>padding: 0.5cm 2.5cm; - top and bottom</li>
+  <li>padding-top: 1cm; - margin of top side 1cm from text</li>
+  <li>padding-left: 10%;</li>
+</ul>
+
+<b>Visit <a href="http://www.w3schools.com/css/css_padding.asp">THIS LINK</a> for a list of CSS Padding Properties and possible property values</b><hr />
+
+<h2>CSS List</h2>
+<p>The CSS list properties allow you to place the list-item marker, change between different list-item markers, or set an image as the list-item marker.</p>
+
+<ul type="square" style="list-style-type:katakana-iroha">
+  <li>list-style-type: disc/circle/square/decimal; - use as class within &lt;ul&gt; tag</li>
+  <li>list-style-type: decimal-leading-zero;</li>
+  <li>list-style-type: lower-roman/upper-roman/lower-alpha/upper-alpha/lower-greek/lower-latin/upper-latin;</li>
+  <li>list-style-type: hebrew/armenian/georgian/cjk-ideographic/hiragana/katakana/hiragana-iroha/katakana-iroha;</li>
+  <li>list-style-image: url('venus.gif'); - image as list bullets</li>
+  <li>list-style-position: inside/outside;</li>
+  <li>list-style: square inside url('venus.gif')</li>
+</ul>
+
+<b>Visit <a href="http://www.w3schools.com/css/css_list.asp">THIS LINK</a> for a list of CSS List Properties and possible property values</b><hr />
+
+<h2>CSS Table</h2>
+<p>The CSS table properties allow you to set the layout of a table.</p>
+<ul type="square">
+  <li>table-layout: automatic/fixed;</li>
+  <li>border-collapse: separate; empty-cells: show;</li>
+  <li>border-collapse: collapse/separate;</li>
+  <li>border-collapse: separate; border-spacing: 10px;</li>
+  <li>border-collapse: separate; border-spacing: 10px 50px;</li>
+  <li>for &lt;caption&gt; of table: caption{caption-side:bottom}</li>
+</ul>
+
+<b>Visit <a href="http://www.w3schools.com/css/css_table.asp">THIS LINK</a> for a list of CSS Table Properties and possible property values</b><hr />
+
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!-- if this DTD is enabled the page displays incorrectly the <code> sections
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<!-- 
+    DISCUSSIONS: 
+	XML Introduction
+	XML How to use
+	XML Syntax
+	XML Elements
+	XML Attributes
+	XML Validation
+	XML Validator	
+	XML Browsers
+	XML Viewing
+	XML CSS
+	XML XSL
+	XML Data Island
+	XML in Real Life
+	XML Parser
+-->
+<head>
+<title>(1/X) XML Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:lime}
+h2:first-letter{float: top;width: 0.7em; font-size: 200%; font-family: algerian;}
+code{font-size:18;color:red;}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#CCFFCC">
+
+<h2>XML Introduction</h2>
+XML is not a replacement for HTML.<br />
+XML and HTML were designed with different goals:
+<p><b>XML was designed to describe data and to focus on what data is.<br />
+HTML was designed to display data and to focus on how data looks.</b></p>
+HTML is about displaying information, while XML is about describing information.<br />
+The Extensible Markup Language (XML) became a W3C Recommendation 10. February 1998.
+<hr />
+<h3>What is XML?</h3>
+<ul>
+  <li>XML stands for E<b>X</b>tensible <b>M</b>arkup <b>L</b>anguage</li>
+  <li>XML is a <b>markup language</b> much like HTML</li>
+  <li>XML was designed to <b> describe data</b></li>
+  <li>XML tags are not predefined. You must <b> define your own tags</b></li>
+  <li>XML uses a  <b>Document Type Definition</b> (DTD) or an <b>XML Schema</b> 
+  to describe the data</li>
+  <li>XML with a DTD or XML Schema is designed to be <b>self-descriptive</b></li>
+  <li>XML is a W3C Recommendation</li>
+</ul>
+<hr />
+
+<h2>How can XML be Used?</h2>
+It is important to understand that XML was designed to store, carry, and exchange data. XML was not designed to display data.
+<br /><b>*XML can Separate Data from HTML.</b><br />
+- With XML, your data is stored outside your HTML.<br />
+<b>*XML is Used to Exchange Data</b><br />
+- With XML, financial information can be exchanged over the Internet.<br />
+- Expect to see a lot about XML and B2B (Business To Business) in the near future.<br />
+<b>*With XML, data can be exchanged between incompatible systems.</b><br />
+<b>*XML Can be Used to Create New Languages</b><br />
+- XML is the mother of WAP and WML.<br />
+- The Wireless Markup Language (WML), used to markup Internet applications for handheld devices like mobile phones, is written in XML. <hr />
+
+<h2>Syntax Rules</h2>
+The syntax rules of XML are very simple and very strict. The rules are very easy to learn, and very easy to use.
+Because of this, creating software that can read and manipulate XML is very easy.
+<hr />
+The first line of the XML document:<br />
+<code>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</code>
+<p>The first line in the document - the XML declaration - defines the XML version and the character encoding used in the document. In this case the document conforms to the 1.0 specification of XML and uses the ISO-8859-1 (Latin-1/West European) character set.</p>
+
+<pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt; - <code style="font-size:12">the XML declaration</code>
+&lt;note&gt; - <code style="font-size:12">describes the root element of the document (like it was saying: "this document is a note")</code>
+&lt;to&gt;Tove&lt;/to&gt; - <code style="font-size:12">next 4 lines describe 4 child elements of the root</code> 
+&lt;from&gt;Jani&lt;/from&gt;
+&lt;heading&gt;Reminder&lt;/heading&gt;
+&lt;body&gt;Don't forget me this weekend!&lt;/body&gt;
+&lt;/note&gt; - <code style="font-size:12">defines the end of the root element</code></pre>
+<hr />
+
+<h3>XML Documents Must Have a Root Element</h3>
+All XML documents must contain a single tag pair to define a root element.<hr />
+<pre>&lt;root&gt;
+  &lt;child&gt;
+    &lt;subchild&gt;.....&lt;/subchild&gt;
+  &lt;/child&gt;
+&lt;/root&gt; </pre>
+
+<hr />
+
+<h2>Displaying XML with XSL</h2>
+
+<p><b>XSL </b>- e<b>X</b>tensible <b>S</b>tylesheet <b>L</b>anguage<br />
+- is far more sophisticated than CSS. One way to use XSL is to transform XML into HTML before it is displayed by the browser</p>
+<pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="simple.xsl"?&gt;
+&lt;breakfast_menu&gt;
+  &lt;food&gt;
+    &lt;name&gt;Belgian Waffles&lt;/name&gt;
+    &lt;price&gt;$5.95&lt;/price&gt;
+
+    &lt;description&gt;
+       two of our famous Belgian Waffles
+    &lt;/description&gt;
+    &lt;calories&gt;650&lt;/calories&gt;
+  &lt;/food&gt;
+&lt;/breakfast_menu&gt;</pre>
+<p>If you want to learn more about XSL, please visit our&nbsp;<a href="http://www.w3schools.com/xsl/default.asp">XSL tutorial</a>. </p><hr />
+
+<h2>XML Data Island</h2>
+<p>With Internet Explorer, the unofficial <b>&lt;xml></b> tag can be used to create an XML data island.
+An <b>XML data island</b> is XML data embedded into an HTML page.</p>
+<hr />
+
+<h3>Bind<b> Data Island to HTML Elements</b></h3>
+<p>In the next example, we will embed an XML file called "cd_catalog.xml" 
+into an HTML file. </p>
+<p><a target="_blank" href="http://www.w3schools.com/xml/cd_catalog.xml">View "cd_catalog.xml"</a>.</p>
+<p>The HTML file looks like this:</p>
+
+<table class="ex" border="1" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td>
+      <pre>&lt;html&gt;
+&lt;body&gt;
+
+&lt;xml id="cdcat" src="cd_catalog.xml"&gt;&lt;/xml&gt;
+
+&lt;table border="1" datasrc="#cdcat"&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;span datafld="ARTIST"&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;&lt;span datafld="TITLE"&gt;&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </td>
+  </tr>
+</tbody></table>
+<p>Example explained:</p>
+<p>The datasrc attribute of the &lt;table&gt; tag binds the HTML table element to 
+the XML data island. The datasrc attribute refers to the id attribute of the 
+data island.</p>
+
+<p>&lt;td&gt; tags cannot be bound to data, so we are using &lt;span&gt; tags. The 
+&lt;span&gt; tag allows the datafld attribute to refer to the XML element to 
+be displayed. In this case, it is datafld="ARTIST" for the &lt;ARTIST&gt; element 
+and datafld="TITLE" for the &lt;TITLE&gt; element in 
+the XML file. As the XML is read, additional rows are created for each &lt;CD&gt; 
+element.</p>
+<hr />
+
+<h2>XML in Real Life</h2>
+<p class="intro">A real-life example of how XML can be used to carry information.</p>
+<hr>
+<h3>Example: XML News</h3>
+<p><b>XMLNews is a specification for exchanging news and
+other information.</b></p>
+
+<p>Using such a standard makes it easier for both news producers and
+news consumers to produce, receive, and archive any kind of news information across different hardware, software, and programming languages.</p>
+<p>An example XMLNews document:</p>
+<table class="ex" border="1" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td>
+      <pre>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+
+&lt;nitf&gt;
+
+&lt;head&gt;
+
+&lt;title&gt;Colombia Earthquake&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;headline&gt;
+  &lt;hl1&gt;143 Dead in Colombia Earthquake&lt;/hl1&gt;
+
+&lt;/headline&gt;
+&lt;byline&gt;
+  &lt;bytag&gt;By Jared Kotler, Associated Press Writer&lt;/bytag&gt;
+&lt;/byline&gt;
+&lt;dateline&gt;
+  &lt;location&gt;Bogota, Colombia&lt;/location&gt;
+
+  &lt;date&gt;Monday January 25 1999 7:28 ET&lt;/date&gt;
+&lt;/dateline&gt;
+
+&lt;/body&gt;
+
+&lt;/nitf&gt;</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<br />
+<hr />
+
+<h2>XML Parser</h2>
+
+<h3>Parsing XML Documents</h3>
+To read and update, create and manipulate an XML document, you will need an XML parser.<hr />
+<p>To manipulate an XML document, you need an XML parser. The parser loads the 
+document into your computer's memory. Once the document is loaded, its data can 
+be manipulated using the DOM. The DOM treats the XML document as a tree.</p>
+<p>To learn more about the XML DOM, please read our <a href="http://www.w3schools.com/dom/default.asp">
+XML DOM tutorial</a>.</p>
+<p>There are some differences between Microsoft's XML parser and the XML parser 
+used in Mozilla browsers. In this tutorial we will show you how to create cross 
+browser scripts that will work in both Internet Explorer and Mozilla browsers.</p>
+Read more about parsing in&nbsp;<a href="http://www.w3schools.com/xml/xml_parser.asp">XML_Parser</a>
+<hr />
+
+
+</body>
+</html>

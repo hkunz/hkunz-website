@@ -1,0 +1,148 @@
+<!--
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<!-- 
+     DISCUSSIONS:
+	JS Objects Intro
+	JS String
+	JS Date
+	JS Array
+	JS Boolean
+	JS Math
+	JS HTML DOM
+-->
+<head>
+<title>(2/3) JavaScript Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:lime}
+h2:first-letter{float: top;width: 0.7em; font-size: 200%; font-family: algerian;}
+pre{font-size:18;color:red;}
+code{font-size:18;}
+
+-->
+</style>
+
+<script type="text/javascript">
+
+</script>
+
+</head>
+
+<body bgcolor="#FFFFCC">
+
+<h2>Objects Introduction</h2>
+<p>JavaScript is an Object Oriented Programming (OOP) language. An OOP language allows you to define your own objects and make your own variable types.</p>
+<b>Object </b>- is just a special kind of data. It has properties and methods.<br />
+<b>Properties </b>- are the values associated with an object. (i.e.:<code><b>length property</b> of the <b>String object</b></code>)
+<pre>
+&lt;script type="text/javascript">
+  var <b>txt</b>="Hello World!"
+  document.write(txt.<b>length</b>)
+&lt;/script><span style="color:black">
+Output: <b>12</b> (number of characters returned)</span>
+</pre>
+<b>Methods</b> - are the actions that can be performed on objects. (i.e.:<code><b>toUpperCase() method</b> of the <b>String object</code>)</b>
+<pre>
+&lt;script type="text/javascript">
+  var <b>txt</b>="Hello World!"
+  document.write(<b>txt.toUpperCase()</b>)
+&lt;/script><span style="color:black">
+Output: <b>HELLO WORLD!</b> (txt in uppercase returned)</span>
+</pre><hr />
+
+<h2>String</h2>
+<p><pre><b>var txt="Harry Roland Kunz"</b></pre></p>
+<script type="text/javascript">
+
+var txt="Harry Roland Kunz"
+
+document.write("<p><code><b style='color:blue'>txt.big() </b>- </code>" + txt.big() + " </p>")
+document.write("<p><code><b style='color:blue'>txt.small() </b>- </code>" + txt.small() + "</p>")
+
+document.write("<p><code><b style='color:blue'>txt.bold() </b>- </code>" + txt.bold() + "</p>")
+document.write("<p><code><b style='color:blue'>txt.italics() </b>- </code>" + txt.italics() + "</p>")
+
+document.write("<p><code><b style='color:blue'>txt.blink() </b>- </code>" + txt.blink() + " (does not work in IE)</p>")
+document.write("<p><code><b style='color:blue'>txt.fixed() </b>- </code>" + txt.fixed() + "</p>")
+document.write("<p><code><b style='color:blue'>txt.strike() </b>- </code>" + txt.strike() + "</p>")
+
+document.write("<p><code><b style='color:blue'>txt.fontcolor(\"brown\") </b>- </code>" + txt.fontcolor("brown") + "</p>")
+document.write("<p><code><b style='color:blue'>txt.fontsize(5) </b>- </code>" + txt.fontsize(5) + "</p>")
+
+document.write("<p><code><b style='color:blue'>txt.toLowerCase() </b>- </code>" + txt.toLowerCase() + "</p>")
+document.write("<p><code><b style='color:blue'>txt.toUpperCase() </b>- </code>" + txt.toUpperCase() + "</p>")
+
+document.write("<p><code><b style='color:blue'>txt.sub() </b>- </code>" + txt.sub() + "</p>")
+document.write("<p><code><b style='color:blue'>txt.sup() </b>- </code>" + txt.sup() + "</p>")
+
+document.write("<p><code><b style='color:#0099FF'>txt = txt.replace(/ Roland Kunz/,\"\'s Link: Complete String Object Reference.\")</b>")
+txt = txt.replace(/ Roland Kunz/,"\'s Link: Complete String Object Reference.")
+document.write("<p><code><b style='color:blue'>txt.link(\"JScript_Ref/jsref_obj_string.asp.htm\") </b>- </code>" + txt.link("JScript_Ref/jsref_obj_string.asp.htm") + "</p><br />")
+
+</script>
+<hr />
+<p><b><code>indexOf() method - </code></b>returns the position of the first occurrence of a specified string value in a string.</p>
+<pre>
+&lt;script type="text/javascript">
+  var str="Hello world!"
+  document.write(str.<b>indexOf</b>("Hello") + "&lt;br />")  <span style="color:black"><b>Output: </b>0</span>
+  document.write(str.<b>indexOf</b>("World") + "&lt;br />")  <span style="color:black"><b>Output:</b>-1</span>
+  document.write(str.<b>indexOf</b>("world"))             <span style="color:black"><b>Output: </b>6</span>
+&lt;/script>
+</pre>
+<p><b><code>match() method - </code></b>searches for a specified string value within a string and returns the string value if found</p>
+<pre>
+&lt;script type="text/javascript">
+var str="Hello world!"
+  document.write(str.<b>match</b>("world") + "&lt;br />")    <span style="color:black"><b>Output: </b>world</span>
+  document.write(str.<b>match</b>("World") + "&lt;br />")    <span style="color:black"><b>Output: </b>null</span>
+  document.write(str.<b>match</b>("worlld") + "&lt;br />")   <span style="color:black"><b>Output: </b>null</span>
+  document.write(str.<b>match</b>("world!"))              <span style="color:black"><b>Output: </b>world!</span>
+&lt;/script>
+</pre>
+<a href="JScript_Ref/jsref_obj_string.asp.htm">Click this link for a COmplete String Object Reference</a>
+<hr />
+<h2>Date</h2>
+<pre>
+&lt;script type="text/javascript">
+  document.write(<b>Date()</b>)<br /><span style="color:black"><b>Output:</b><script type="text/javascript">document.write(Date())</script></span>
+  var minutes = 1000*60
+  var hours = minutes*60
+  var days = hours*24
+  var years = days*365
+  var <b style="color:blue">d</b> = <b>new Date()</b>
+  var t = <b style="color:blue">d</b>.<b>getTime()</b>
+  var y = t/years
+document.write("It's been: " + y + " years since 1970/01/01!")<br /><span style="color:black"><b>Output: </b><script type="text/javascript">
+  var minutes = 1000*60
+  var hours = minutes*60
+  var days = hours*24
+  var years = days*365
+  var d = new Date()
+  var t = d.getTime()
+  var y = t/years
+document.write("It's been: " + y + " years since 1970/01/01!")</script></span>
+</pre>
+</script>
+<pre>
+&lt;script type="text/javascript">
+var <b style="color:blue">d</b> = new Date()
+<b style="color:blue">d</b><b>.setFullYear</b>(1992,10,3)
+document.write(<b style="color:blue">d</b>)
+&lt;/script><br /><span style="color:black"><b>Output: </b><script type="text/javascript">
+  var d = new Date()
+  d.setFullYear(1992,10,3)
+  document.write(d)
+</script>
+document.write (<b style="color:blue">d</b><b>.toUTCString()</b>)
+<b>Output: </b><script type="text/javascript">document.write (d.toUTCString())</script>
+</pre>
+
+
+</body>
+</html>

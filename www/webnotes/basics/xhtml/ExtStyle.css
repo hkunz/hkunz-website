@@ -1,0 +1,20 @@
+/* CSS Document used by HTML_Advance.htm*/
+h3{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFF00;
+	background-color: #0000FF;
+}
+#font1{
+	font-family: "Courier New", Courier, monospace;
+	font-size:18px;
+	font-style:italic;
+	color: red;
+}
+font2{
+	font-family: "Monotype Corsiva";
+	font-size:25px;
+	font-weight:bold;
+	color:lime;
+	text-decoration: blink;
+}
+

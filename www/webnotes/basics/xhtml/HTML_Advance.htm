@@ -1,0 +1,404 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<!-- DISCUSSIONS:
+     HTML Layout
+	 <div> and <span> tags
+     HTML Fonts 
+     HTML 4.0 Why
+     HTML Styles
+     HTML Head
+     HTML Meta
+     HTML URLs
+     HTML Scripts
+     HTML Attributes
+     HTML Events
+     HTML URL-encode
+     HTML Webserver
+     HTML Summary
+     Lists -->
+<head>
+    <!-- The head element contains general information, also called meta-information, about a document.
+    Meta means "information about".You can say that meta-data means information about data,
+    or meta-information means information about information.
+    The only tags allowed in this element are: <base>, <link>, <meta>, <title>, <style>, and <script>.-->
+<title>(3/3) HTML Tutorials</title>
+<base target="_blank"> <!-- the <base> tag lets all the LINKS in this page open in a new window. -->
+   
+<style type="text/css">
+	h2 {background:lime}
+    h4 {color: red}
+    p {margin-left: 50px}
+</style>
+
+<link rel="stylesheet" style="text/css" href="ExtStyle.css">
+
+</head>
+<body bgcolor="#F0E68C">
+
+<h2>HTML Layout</h2>
+	<!--NOTE: paragraphs have a margin of 50px from left because of a style given to it defined in the <head> section -->
+<p>One very common practice with HTML, is to use HTML tables to format the layout of an HTML page.</p>
+<div>
+<table border="0" width="100%" cellpadding="10">
+<tr>
+    <td width="50%" valign="top" bgcolor="white">This is some text. This is some text. This is some text. This is some text. This is some text.</td>
+    <td width="50%" valign="top" bgcolor="lightblue">Another text. Another text. Another text. Another text. Another text. Another text. Another text.</td>
+</tr>
+</table>
+</div>
+<hr/>
+
+<h2>The &lt;div> and &lt;span> Tags</h2>
+<div><p>The <b>&lt;div></b> tag defines a division/section in a document. its align="" attribute has been deprecated.<br/>
+<b>Note: </b>Browsers usually place a line break before and after the div element.<br/>
+<b>Tip: </b>Use the &lt;div> tag to group block-elements to format them with styles.</p></div>
+<div>This paragraph starts with a &lt;div> tag. <span style="color:#0000FF;">This is within a pair of &lt;span> tags with style attribute color blue.</span> This ends with a &lt;div> tag.</div>
+<div><b>Tip: </b>Use the &lt;span> tag to group inline-elements to format them with styles</div>
+<hr/>
+<h2>The &lt;font> tag (Deprecated; Avoid its Use)</h2>
+<p><font size="5" face="Times">This text uses attribute size="5" face="Times"</font></p>
+<p><a href="http://www.w3schools.com/html/html_fonts.asp">Visit THIS LINK to learn more about &lt;font> Tags</a></p>
+<hr/>
+
+<h2>HTML Styles</h2>
+<b>&lt;style></b> - defines a style definition<br/>
+<p><b><u>FORMATTING BY STYLE SHEET WITHIN DOCUMENT</u></b></p>
+<a href="http://" style="text-decoration:none">This <b>LINK</b> has NO LINE!!</a><br/>
+<h4>This header gets its formatting from a Style Sheet within the &lt;head> section</h3>
+<p><b><u>FORMATTING BY EXTERNAL STYLE SHEET</u></b></p>
+<b id="font1">This text gets its formatting from an External Style Sheet called <big>&quot;ExtStyle.css&quot;</big></b><br/>
+<font2>This text gets its formatting from the same External Style Sheet. It uses a custom tag &lt;font2> selector.</font2>
+<p><b><u>FORMATTING BY INLINE STYLES</u></b></p>
+<p style="font-family:courier">This text uses attribute <b>style</b>="font-family:courier"</p>
+<p style="font-size:150%">This text uses attribute <b>style</b>="font-size:150%"</p>
+<p style="color:red">This text uses attribute <b>style</b>="color:red"</p>
+<p style="font-family:verdana;font-size:80%;color:green">This text uses attribute <b>style</b>="font-family:verdana;font-size:80%;color:green"</p></p>
+<hr/>
+
+<h2>HTML Meta Element</h2>
+<div>Most often the meta element is used to provide information that is relevant
+to browsers or search engines like describing the content of your document.</div>
+<p><b>Note: </b>Meta Elements can only appear within the head element.<br/>
+<b>Note: </b>Metadata is always passed as name/value pairs.<br/>
+*Some <b>examples</b> are given inside <b>this page's source codes</b> within comment tags.</p>
+<!--
+	Define keywords for search engines:
+	    <meta name="keywords" lang="fr" content="HTML, DHTML, CSS, XML, XHTML, JavaScript, VBScript" />
+		PS: lang - language (i.e. fr-french, en-english)
+	
+	Define a description of your web page:
+        <meta name="description" lang="en-us" content="Free Web tutorials on HTML, CSS, XML, and XHTML" />
+    
+    Define a description of your web page:
+        <meta name="description" lang="en" content="Free Web tutorials on HTML, CSS, XML, and XHTML" />
+-->
+<!--
+	<meta http-equiv="Refresh" content="5;url=http://www.w3schools.com" />
+      - This redirects a user to the URL after 5seconds; used when a website has transferred location
+-->
+<!-- 
+    <meta name="description" content="HTML examples" />
+	<meta name="keywords" content="HTML, DHTML, CSS, XML, XHTML, JavaScript, VBScript" />
+	  - The meta attributes of this document describe the document and its keywords.
+-->
+<!--
+	<meta name="author" content="Jan Egil Refsnes" />
+	<meta name="revised" content="Jan Egil Refsnes,6/10/99" />
+	<meta name="generator" content="Microsoft FrontPage 5.0" />
+	  - The meta attributes of this document identify the author and the editor software.
+-->
+
+<div>Or Check out <a href="http://www.w3schools.com/tags/tag_meta.asp">THIS LINK </a>to learn more about the &lt;meta> element</div>
+<hr/>
+
+<h2>Uniform Resource Locator (URL)</h2>
+<div><b>URL</b> - is used to address a document (or other data) on the World Wide Web.<br/>
+A full Web address like this: <b>http://www.w3schools.com/html/lastpage.htm</b><br/>
+follows these syntax rules: <b>scheme://host.domain:port/path/filename</b></div><br />
+
+<b>scheme</b> - is defining the type of Internet service. The most common type is <b>http</b>.<br/>
+<b>host</b> - is defining the domain host. If omitted, the default host for http is <b>www</b>.<br/>
+<b>domain</b> - is defining the Internet domain name like <b>w3schools.com</b>.<br/>
+<b>:port</b> - is defining the port number at the host. The port number is normally omitted. The default port number for <b>http</b> is <b>80</b>.<br/>
+<b>path</b> - is defining a <b>path</b> (a sub directory) at the server. If the path is omitted, the resource (the document) must be located at the root directory of the Web site.<br />
+<b>filename</b> - is defining the name of a document. The default filename might be default.asp, or index.html or something else depending on the settings of the Web server.<br />
+
+<br /><big>URL SCHEMES: some of the most common schemes</big>
+<table frame="box" width="400" bgcolor="lightgray" style="font-size:120%">
+  <tr>
+    <th align="left"><b>Schemes</b>
+    <th align="center"><b>Access</b>
+  </tr>
+  <tr>
+	<td align="right"> 
+		file<br /> 	    
+		ftp<br /> 	    
+		http<br /> 	    
+		gopher<br /> 	    
+		news<br /> 	    
+		telnet<br /> 	    
+		WAIS<br />	    
+	</td>
+    <td>
+		- a file on your local PC<br />
+		- a file on an FTP server<br />
+		- a file on a World Wide Web Server<br />
+		- a file on a Gopher server<br />
+		- a Usenet newsgroup<br />
+		- a Telnet connection<br />
+		- a file on a WAIS server<br />
+	</td>
+</tr>
+</table>
+<br />
+<big><b>Accessing a Newsgroup</b></big><br />
+The following HTML code cretes a link to the "news:alt.html":<a href="news:alt.html"> HTML Newsgroup</a><br />
+<br /><big><b>Downloading with FTP</b></big><br />
+<!-- The WinZip below is just an example, it doesn't work -->
+The following HTML code creates a link to "ftp://www.w3schools.com/ftp/winzip.exe"  :<a href="ftp://www.w3schools.com/ftp/winzip.exe"> Download WinZip</a> to download a file like that.<br />
+<br /><big><b>Link to your Mail system</b></big><br />
+The following HTML code creates a link to you own mail system:
+<a href="mailto:har_rki219_mc2e@yahoo.com">har_rki219_mc2e@yahoo.com</a>
+<hr />
+
+<h2>HTML Scripts</h2>
+
+<script type="text/javascript">
+<!--
+document.write("If this text is displayed, your browser supports scripting! If it does not support scripting, the browser would usually just display the script as text on the page to avoid this,the <big><b>&lt;!--</b></big> and <big>//--&gt;</big> tags have been used to sandwich the script so that if scripting is not supported, the script would simply become a comment and thus not be put as text on the page.")
+//-->
+</script>
+<br /><br />
+<noscript>
+    <big><b>The text within the &lt;noscript> element is displayed if JavaScript is not supported.</b></big><br />
+</noscript>
+
+<big><b>VBScript:</b></big><br />
+<script type="text/vbscript">
+<!--
+document.write("VBSCRIPT SUPPORTED! : attribute type=&quot;text/vbscript&quot;")
+'-->
+</script>
+
+<p><b>NOTE: </b>if there is no "VBSCRIPT SUPPORTED!" text after the <b>"VBScript:"</b> above then it is not supported</p>
+<hr />
+
+<h2><a href="http://www.w3schools.com/tags/tag_object.asp">Learn about &lt;object> tag</a></h2>
+<hr />
+
+<h2 id="HTML_Attributes" name="HTML_Attributes">HTML Attributes</h2>
+The attributes listed here are the core and language attributes that are standard for all tags (with a few exceptions):</p>
+<h4><big>Core Attributes:</big><span style="color:black"> (Not valid in base, head, html, meta, param, script, style, and title elements)</span></h4>
+<table class="ex" cellspacing="0" border="1" width="500">
+<tr>
+<th align="left" width="20%" valign="top">Attribute</th>
+<th align="left" width="35%" valign="top">Value</th>
+<th align="left" width="45%" valign="top">Description</th>
+</tr>
+<tr>
+<td valign="top">class</td>
+<td valign="top"><i>class_rule </i>or<i> style_rule</i></td>
+<td valign="top">The class of the element</td>
+</tr>
+<tr>
+<td valign="top">id</td>
+<td valign="top"><i>id_name</i></td>
+<td valign="top">A unique id for the element</td>
+</tr>
+<tr>
+<td valign="top">style</td>
+<td valign="top"><i>style_definition</i></td>
+<td valign="top">An inline style definition</td>
+</tr>
+<tr>
+<td valign="top">title</td>
+<td valign="top"><i>tooltip_text&nbsp;</i></td>
+<td valign="top">A text to display in a tool tip</td>
+</tr>
+</table>
+<br />
+
+<h4><big>Language Attributes: </big><span style="color:black">(Not valid in base, br, frame, frameset, hr, iframe, param, and script elements)</span></h4>
+
+<table class="ex" cellspacing="0" border="1" width="500">
+<tr>
+<th align="left" width="20%" valign="top">Attribute</th>
+<th align="left" width="35%" valign="top">Value</th>
+
+<th align="left" width="45%" valign="top">Description</th>
+</tr>
+<tr>
+<td valign="top">dir</td>
+<td valign="top">ltr | rtl</td>
+<td valign="top">Sets the text direction</td>
+</tr>
+<tr>
+<td valign="top">lang</td>
+<td valign="top"><i>language_code</i></td>
+<td valign="top">Sets the language code</td>
+</tr>
+</table>
+<br />
+
+<h4><big>Keyboard Attributes:</big></h4>
+<table class="ex" cellspacing="0" border="1" width="700">
+<tr>
+<th align="left" width="20%" valign="top">Attribute</th>
+<th align="left" width="35%" valign="top">Value</th>
+<th align="left" width="45%" valign="top">Description</th>
+</tr>
+<tr>
+<td valign="top">accesskey</td>
+<td valign="top"><i>character</i></td>
+<td valign="top">Sets a keyboard shortcut to access an element
+</td>
+</tr>
+<tr>
+<td valign="top">tabindex</td>
+<td valign="top"><i>number</i></td>
+<td valign="top">Sets the tab order of an element
+</td>
+</tr>
+</table>
+<br />
+<hr />
+
+<h2 id="HTML_Events" name="HTML_Events">HTML Events</h2>
+<p>New to HTML 4.0 is the ability to let HTML events trigger actions in the browser, like starting a JavaScript when a user clicks on an HTML element. Below is a list of attributes that can be inserted into HTML tags to define event actions.</p>
+<h4><big>Window Events: </big><span style="color:black">(Only valid in body and frameset elements)</span></h4>
+
+<table class="ex" cellspacing="0" border="1" width="500">
+<th align="left" valign="top" width="25%">Attribute</th>
+<th align="left" valign="top" width="15%">Value</th>
+<th align="left" valign="top" width="60%">Description</th>
+</tr>
+<tr>
+<td valign="top">onload</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">Script to be run when a document loads</td>
+</tr>
+<tr>
+<td valign="top">onunload</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">Script to be run when a document unloads</td>
+</tr>
+</table>
+
+<h4><big>Form Element Events: </big><span style="color:black">(Only valid in form elements)</span></h4>
+<table class="ex" cellspacing="0" border="1" width="500">
+<tbody><tr>
+<th align="left" valign="top" width="25%">Attribute</th>
+<th align="left" valign="top" width="15%">Value</th>
+<th align="left" valign="top" width="60%">Description</th>
+</tr>
+<tr>
+<td valign="top">onchange</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">Script to be run when the element changes</td>
+</tr>
+<tr>
+<td valign="top">onsubmit</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">Script to be run when the form is submitted</td>
+</tr>
+<tr>
+<td valign="top">onreset</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">Script to be run when the form is reset</td>
+</tr>
+<tr>
+<td valign="top">onselect</td>
+<td valign="top"><i>script&nbsp;</i></td>
+<td valign="top">Script to be run when the element is selected</td>
+</tr>
+<tr>
+<td valign="top">onblur</td>
+<td valign="top"><i>script&nbsp;</i></td>
+<td valign="top">Script to be run when the element loses focus</td>
+</tr>
+<tr>
+<td valign="top">onfocus</td>
+<td valign="top"><i>script&nbsp;</i></td>
+<td valign="top">Script to be run when the element gets focus</td>
+</tr>
+</tbody></table>
+
+<h4><big>Keyboard Events: </big><span style="color:black">(Not valid in base, bdo, br, frame, frameset, head, html, iframe, meta, param, script, style, and title elements)</span></h4>
+<table class="ex" border="1" cellspacing="0" width="500">
+<tbody><tr>
+<th align="left" valign="top" width="25%">Attribute</th>
+<th align="left" valign="top" width="15%">Value</th>
+<th align="left" valign="top" width="60%">Description</th>
+</tr>
+<tr>
+<td valign="top">onkeydown</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do when key is pressed</td>
+</tr>
+<tr>
+<td valign="top">onkeypress</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do when key is pressed and released</td>
+</tr>
+<tr>
+<td valign="top">onkeyup</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do when key is released</td>
+</tr>
+</tbody></table>
+
+<h4><big>Mouse Events: </big><span style="color:black">(Not valid in base, bdo, br, frame, frameset, head, html, iframe, meta, param, script, style, title elements)</span></h4>
+<table class="ex" border="1" cellspacing="0" width="600">
+<tbody><tr>
+<th align="left" valign="top" width="25%">Attribute</th>
+<th align="left" valign="top" width="15%">Value</th>
+<th align="left" valign="top" width="60%">Description</th>
+</tr>
+<tr>
+<td valign="top">onclick</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do on a mouse click</td>
+</tr>
+<tr>
+<td valign="top">ondblclick</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do on a mouse double-click</td>
+</tr>
+<tr>
+<td valign="top">onmousedown</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do when mouse button is pressed</td>
+</tr>
+<tr>
+<td valign="top">onmousemove</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do when mouse pointer moves</td>
+</tr>
+<tr>
+<td valign="top">onmouseout</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">What to do when mouse pointer moves out of an element</td>
+</tr>
+<tr>
+<td valign="top">onmouseover</td>
+<td valign="top"><i>script</i></td>
+<td valign="top">What to do when mouse pointer moves over an element</td>
+</tr>
+<tr>
+<td valign="top">onmouseup</td>
+<td valign="top"><i>script</i>&nbsp;</td>
+<td valign="top">What to do when mouse button is released</td>
+</tr>
+</tbody></table>
+<hr />
+
+<h2><a href="http://www.w3schools.com/html/html_webserver.asp">Click here to Learn more about Web Servers</a></h2>
+<hr />
+
+<h2><a href="http://www.w3schools.com/hosting/default.asp">Click here for Web Hosting Tutorials</a></h2>
+<hr />
+</body>
+</html>
+

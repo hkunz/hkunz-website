@@ -1,0 +1,216 @@
+<!-- if this DTD is enabled the page displays incorrectly the <code> sections
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<!-- 
+    DISCUSSIONS: 
+	ASP Introduction
+	ASP Install
+	ASP Syntax
+	ASP Variables
+	ASP Procedures
+	ASP Forms
+	ASP Cookies
+	ASP Session
+	ASP Application
+	ASP #include
+	ASP Global.asa
+	ASP Send e-mail
+-->
+<head>
+<title>(1/X) ASP Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:lime}
+h2:first-letter{float: top;width: 0.7em; font-size: 200%; font-family: algerian;}
+code{font-size:18;color:red;}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#CCFFCC">
+
+<h2>ASP Introduction</h2>
+An ASP file can contain text, HTML tags and scripts. Scripts in an ASP file are executed on the server
+<hr />
+<h3>What is ASP?</h3>
+<ul>
+
+<li>ASP stands for <b>A</b>ctive <b>S</b>erver <b>P</b>ages</li> 
+<li>ASP is a program that runs inside <b> IIS</b></li>
+<li>IIS stands for <b>I</b>nternet <b>I</b>nformation <b>S</b>ervices</li>
+
+<li>IIS comes as a free component with <b>Windows 2000</b></li>
+<li>IIS is also a part of the <b>Windows NT 4.0 Option Pack</b></li>
+<li>The Option Pack can be <b>downloaded</b> from Microsoft</li>
+<li><b>PWS</b> is a smaller - but fully functional - version of IIS</li>
+<li>PWS can be found on your <b>Windows 95/98 CD</b></li>
+
+</ul>
+
+<h3>ASP Compatibility</h3>
+<ul>
+<li>ASP is a Microsoft Technology</li>
+<li>To run IIS you must have Windows NT 4.0 or later</li>
+<li>To run PWS you must have Windows 95 or later</li>
+<li>ChiliASP is a technology that runs ASP without Windows OS</li>
+<li>InstantASP is another technology that runs ASP without Windows</li>
+</ul>
+
+<h3>What is an ASP File?</h3>
+<ul>
+<li>An ASP file is just the same as an HTML file</li> 
+<li>An ASP file can contain text, HTML, XML, and scripts</li> 
+<li>Scripts in an ASP file are executed on the server</li> 
+<li>An ASP file has the file extension ".asp"</li> 
+</ul>
+
+<h3>How Does ASP Differ from HTML?</h3>
+<ul>
+  <li>When a browser requests an HTML file, the server returns the file</li>
+
+  <li>When a browser requests an ASP file, IIS passes the request to the ASP
+    engine. The ASP engine reads the ASP file, line by line, and executes the scripts in the file. Finally, the ASP file is returned to the browser as plain HTML</li>
+</ul>
+<hr>
+
+<h3>What can ASP do for you?</h3>
+<ul>
+  <li>Dynamically edit, change or add any content of a Web page</li>
+  <li>Respond to user queries or data submitted from HTML forms</li>
+  <li>Access any data or databases and return the results to a browser</li>
+
+  <li>Customize a Web page to make it more
+    useful for individual users</li>
+<li>The advantages of using ASP instead of CGI and Perl, are those of simplicity
+and speed</li>
+<li>Provide security since your ASP code can not be viewed from the browser</li>
+<li>Clever ASP programming can minimize the network traffic</li>
+</ul>
+<p>Important: Because the scripts are executed on the server,
+the browser that displays the ASP file does not need to support scripting at 
+all!</p><hr />
+
+<h2>ASP Syntax</h2>
+<h3>Write Output to a Browser</h3>
+<code>
+&lt;%<br />
+<b>response.write</b>("Hello World!")<br />
+%&gt;
+</code>
+<br />or<br />
+<code>
+&lt;%="Hello World!"%&gt;
+</code>
+<br />You can use several scripting languages in ASP. However, the <b>default scripting language</b> is <b>VBScript</b>.<hr />
+To <b>set JavaScript</b> as the <b>default scripting language</b> for a particular page you must insert a language specification at the top of the page:<br />
+<code><b>&lt;%@ language="javascript"%&gt;</b><br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;%<br />
+Response.Write("Hello World!")<br />
+%&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br /></code>
+<p><b>Note: </b>Unlike VBScript - JavaScript is case sensitive. You will have to write your ASP code with uppercase letters and lowercase letters when the language requires it.</p><hr />
+<h3>Other Scripting Languages</h3>
+ASP is shipped with VBScript and JScript (Microsoft's implementation of JavaScript). If you want to script in another language, like PERL, REXX, or Python, you will have to install script engines for them.<hr />
+
+<h2>Variables</h2>
+
+<h3>Simple Variables</h3>
+<code>&lt;%<br />
+<b>dim</b>&nbsp;<span style="color:blue">name</span><br />
+<span style="color:blue">name</span>="Donald Duck"<br />
+response.write("My name is: " <b>&amp;</b>&nbsp;<span style="color:blue">name</span>)<br />
+%&gt;<br /></code>
+<hr />
+
+<h3>Arrays</h3>
+<code>&lt;%<br />
+<b>Dim</b> famname(3),<b>i</b><br />
+famname(0) = "Jan Egil"<br />
+famname(1) = "Tove"<br />
+famname(2) = "Hege"<br />
+famname(3) = "Stale"<br />
+<br />
+For <b>i</b> = 0 to 3<br />
+&nbsp;&nbsp;response.write(famname(<b>i</b>) &amp; "&lt;br /&gt;")<br />
+Next<br />
+%&gt;<br /></code><hr />
+
+<h3>Looping Through Headers</h3>
+<code>&lt;%<br />
+dim i<br />
+for i=1 to 6<br />
+&nbsp;&nbsp;response.write(&quot;&lt;h&quot; &amp; i &amp; &quot;>Header &quot; &amp; i &amp; &quot;&lt;/h&quot; &amp; i &amp; &quot;>&quot;)<br />
+next<br />
+%&gt;</code><hr />
+<h3>Time based message (VBScript)</h3>
+<code>&lt;%<br />
+dim h<br />
+h=hour(now())<br />
+<br />
+response.write("&lt;p&gt;" &amp; now())<br />
+response.write(" (Norwegian Time) &lt;/p&gt;")<br />
+If h&lt;12 then<br />
+&nbsp;&nbsp;response.write("Good Morning!")<br />
+else<br />
+&nbsp;&nbsp;response.write("Good day!")<br />
+end if<br />
+%&gt;<br /></code>
+<b>Sample Output:</b><br />
+<code style="color:black">7/13/2007 8:50:36 AM (Norwegian Time)<br />
+Good Morning!</code>
+<hr />
+<h3>Time based message (JScript)</h3>
+<code>
+<%@ language="javascript" %>
+&lt;html><br />
+&lt;body><br />
+&lt;%<br />
+var d=new Date()<br />
+var h=d.getHours()<br />
+<br />
+Response.Write("&lt;p>")<br />
+Response.Write(d + " (Norwegian Time)")<br />
+Response.Write("&lt;/p>")<br />
+if (h&lt;12){<br />
+&nbsp;&nbsp;<b>R</b>esponse.Write("Good Morning!")<br />
+}else{<br />
+&nbsp;&nbsp;</b>R</b>esponse.Write("Good day!")<br />
+}<br />
+%&gt;<br />
+&lt;/body><br />
+&lt;/html><br /></code>
+<b>Sample Output:</b><br />
+<code style="color:black">Fri Jul 13 09:35:10 EDT 2007 (Norwegian Time)<br />
+Good Morning!</code>
+<hr />
+<h3>Lifetime of Variables </h3>
+<p>A variable declared outside a procedure can be accessed and changed by any
+script in the ASP file. </p>
+<p>A variable declared inside a procedure is created and destroyed every time
+the procedure is executed. No scripts outside the procedure can access
+or change the variable. </p>
+<hr />
+<p>To declare variables accessible to more than one ASP file, declare them as session
+variables
+or application variables.</p>
+<p><b>Session variables</b> are used to store information about ONE single
+user, and are available to all pages in one application. Typically information
+stored in session variables are name, id, and preferences.</p>
+<p><b>Application</b> variables are also available to all pages in one application. 
+Application variables are used to store information about ALL users in a 
+specific application.</p><hr />
+
+<h2>Procedures</h2>
+
+
+
+</body>
+</html>

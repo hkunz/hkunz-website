@@ -1,0 +1,598 @@
+<!-- if this DTD is enabled the page displays incorrectly the <code> sections
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<!-- 
+     DISCUSSIONS:
+     JS HOME
+     JS Introduction
+     JS How To
+     JS Where To
+     JS Variables
+     JS If...Else
+     JS Switch
+     JS Operators
+     JS Popup Boxes
+     JS Functions
+     JS For Loop
+     JS While Loop
+     JS Break Loops
+     JS For...In
+     JS Events
+     JS Try...Catch
+     JS Throw
+     JS onerror
+     JS Special Text
+     JS Guidelines
+-->
+<head>
+<title>(1/3) JavaScript Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:lime}
+h2:first-letter{float: top;width: 0.7em; font-size: 200%; font-family: algerian;}
+code{font-size:18;color:red;}
+-->
+</style>
+
+<script type="text/javascript">
+//JavaScripts in the head section will be executed when CALLED.
+
+    function MyMessage(){ 
+		alert("This alert box was called with the onload event in the <body> tag")
+    }
+
+//These function are used in the section Popup Boxes
+    function disp_alert(){
+        alert('This alert box was called by the "Display Alert Box" Button in Section Popup Boxes\nThis line break was created with the "\\n"')
+    }
+    function disp_confirm(){
+        bool_contain = confirm("Press a button")
+        if(bool_contain == true){
+            document.write("You pressed the OK button")
+        }
+        else{
+            document.write("You pressed the CANCEL button")
+        }
+    }
+    function disp_prompt(){
+        var name = prompt("Enter your name","Harry Roland Kunz")
+        if(name!=null && name!=""){
+            document.write("Hello "+name+"!! What's up man?")
+        }
+    }
+    function multiply_funct(num1,num2){
+        return num1*num2
+    }
+//Theses function are used in "try...catch" and "thrwo" statements 
+    function try_catch(){
+      var txt=""
+      try{
+        adddlert("Welcome guest!") //alert wrong spelling is intended to demonstrate the try...catch block.
+      }
+      catch(err){
+        txt="There was an error on this page.(wrong spelling: 'adddlert')\n\n"
+        txt+="Click OK to continue viewing this page,\nor Cancel to return to the home page."
+        if(!confirm(txt)){
+          document.location.href="http://www.w3schools.com/"
+        }
+      }
+    }
+    function throw_funct(){
+      var x=prompt("Enter a number between 0 and 10:","")
+      try{ 
+        if(x>10) throw "Err1" 
+        else if(x<-10) throw "Err2"
+        else if(isNaN(x)) throw "Err3"
+      } 
+      catch(er){
+        if(er=="Err1") alert("Error! The value is too high")
+        if(er == "Err2") alert("Error! The value is too low") 
+        if(er == "Err3") alert("Error! The value is not a number") 
+      }
+    }
+
+</script>
+
+</head>
+
+<body bgcolor="#CCFFCC" onload="MyMessage()">
+
+<script type="text/javascript">
+    //JavaScripts in the body section will be executed WHILE the page loads. (This is a comment)
+</script>
+
+<h2>Introduction</h2>
+<p>JavaScript is used in millions of Web pages to improve the design, validate forms, detect browsers,
+create cookies, and much more.JavaScript is the most popular scripting language on the internet,
+and works in all major browsers, such as Internet Explorer, Mozilla, Firefox, Netscape, and Opera.</p>
+
+
+<ul type="disc">
+    <li>JavaScript was designed to add interactivity to HTML pages</li>
+    <li>JavaScript is a scripting language</li>
+    <li>A scripting language is a lightweight programming language</li>
+    <li>A JavaScript consists of lines of executable computer code</li>
+    <li>A JavaScript is usually embedded directly into HTML pages</li>
+    <li>JavaScript is an interpreted language (means that scripts execute without preliminary compilation)</li>
+    <li>Everyone can use JavaScript without purchasing a license</li>
+</ul><hr />
+
+<h2>What can a JavaScript Do?</h2>
+
+<ul type="disc">
+    <li><b>JavaScript gives HTML designers a programming tool</b> - HTML authors are normally not programmers, but JavaScript is a scripting language with a very simple syntax! Almost anyone can put small "snippets" of code into their HTML pages</li>
+    <li><b>JavaScript can put dynamic text into an HTML page</b> - A JavaScript statement like this: <code>document.write("&lt;h1>" + name + "&lt;/h1>")</code> can write a variable text into an HTML page</li>
+    <li><b>JavaScript can react to events</b> - A JavaScript can be set to execute when something happens, like when a page has finished loading or when a user clicks on an HTML element</li>
+    <li><b>JavaScript can read and write HTML elements</b> - A JavaScript can read and change the content of an HTML element</li>
+    <li><b>JavaScript can be used to validate data</b> - A JavaScript can be used to validate form data before it is submitted to a server. This saves the server from extra processing</li>
+    <li><b>JavaScript can be used to detect the visitor's browser</b> - A JavaScript can be used to detect the visitor's browser, and - depending on the browser - load another page specifically designed for that browser</li>
+    <li><b>JavaScript can be used to create cookies</b> - A JavaScript can be used to store and retrieve information on the visitor's computer</li>
+</ul><hr />
+
+<h2>&nbsp;document.write("...") JScript Command</h2>
+
+<p>JavaScript commands are written within the <b>&lt;script></b> and <b>&lt;/script></b> tags.
+The type attribute is used to define the scripting language:<br /><code>&lt;script type="text/javascript"&gt;</code>Script here within tags<code>&lt;/script></code></p>
+
+<hr />
+<script type="text/javascript">
+    document.write("<h3>This text is printed w/ a standard JavaScript command that uses a &lt;h3> tag header format: <br /><code>document.write(&quot;&lt;h3>...&lt;h3>&quot;)</code> </h3>")
+</script>
+<hr />
+
+<script type="text/javascript">
+<!--
+	document.write("Browsers that do not support JavaScript will display the script as page content.<br />To prevent them from doing this, we may use the HTML comment tag (green):<br /><code>&lt;script><br /><span style='color:green'>&nbsp;&lt;!--</span><br /><span style='color:black;margin-left:30px'>Place JavaScript here</span><br /><span style='color:green'>&nbsp;//--&gt;</span><br />&lt;/script></code><br />as used in this command. The two forward slashes at the end of comment line (//) are a JavaScript comment symbol.<br/>This prevents the JavaScript compiler from compiling the line.<br/><br/>")
+//-->
+</script>
+
+<hr />
+<script src="ExtScript.js"></script>
+</p>The above bold text was retrieved from an external file<br />
+It uses the code: <code>&lt;script src="ExtScript.js">&lt;/script></code></p>
+<hr />
+
+<h2>Variables</h2>
+
+<script type="text/javascript">
+    var MyName = "Harry Roland Kunz"
+    document.write("The variable is <b>MyName</b> which is equated to the string ")
+    document.write("<b>" + MyName + "</b>" + " with the code:<br />")
+    document.write("<code>var MyName = &quot;Harry Roland Kunz&quot;</code><br />")
+    document.write("<br/>My Name is <b>" + MyName + "</b> from Germany")
+</script><hr />
+<h3>Lifetime of a Variable</h3>
+<p>When you declare a variable within a function, the variable can only be accessed within that function. When you exit the function, the variable is destroyed. These variables are called local variables. You can have local variables with the same name in different functions, because each is recognized only by the function in which it is declared.</p>
+
+If you declare a variable outside a function, all the functions on your page can access it. The lifetime of these variables starts when they are declared, and ends when the page is closed.
+<hr />
+<h2>The "if.. / ..else" Statement</h2>
+<!-- IF statements do not necessarily need the ELSE statement -->
+<script type="text/javascript">
+    var d = new Date()
+    var time = d.getHours()
+    document.write("<code>var d = new Date&#40;&#41;</code><br />")
+    document.write("<code>var <span style='color:blue'>time</span> = d.getHours&#40;&#41;</code><br />")
+    document.write("<h4>TIME: "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds()+"</h4>")
+       document.write("<code><span style='color:black'>if</span>&#40;<span style='color:blue'>time</span>&lt;10&#41;{<br /><span style='margin-left:30px'>document.write&#40;&lt;b>Good Morning!&lt;/b>&#41;</span><br />}</code><br />")
+       document.write("<code><span style='color:black'>else</span>{<br /><span style='margin-left:30px'>document.write&#40;&lt;b>Good Day!!&lt;/b>&#41;</span><br />}</code><br />")
+    if (time < 10){
+        document.write("<b>Good Morning!</b><br />")
+    }
+    else{
+		document.write("<b>Good Day!!</b><br />")
+    }
+</script><hr />
+
+<h2>The "if.. / ..else if.. / ..else" Statement</h2>
+<script type="text/javascript">
+    document.write("<code><span style='color:black'>if</span>&#40;<span style='color:blue'>time</span>&lt;10&#41;{<br /><span style='margin-left:30px'>document.write&#40;&lt;b>Good Morning!&lt;/b>&#41;</span><br />}</code><br />")
+    document.write("<code><span style='color:black'>else if</span>&#40;<span style='color:blue'>time</span>&gt;=10 &amp;&amp; <span style='color:blue'>time</span>&lt;16&#41;{<br /><span style='margin-left:30px'>document.write&#40;&lt;b>Good Day!!&lt;/b>&#41;</span><br />}</code><br />")
+    document.write("<code><span style='color:black'>else</span>{<br /><span style='margin-left:30px'>document.write&#40;&lt;b>Good Evening!!!&lt;/b>&#41;</span><br />}</code><br />")
+
+    if (time<10){
+        document.write("<b>Good Morning!</b>")
+    }
+    else if (time>=10 && time<16){
+        document.write("<b>Good Day!!</b>")
+    }
+    else{
+        document.write("<b>Good Evening!!!</b>")
+    }
+</script><hr />
+    
+<h2>Switch Statement</h2>
+
+<script type="text/javascript">
+var d = new Date()
+var WeekDay = d.getDay()
+
+    document.write("<code>var d = new Date&#40;&#41;</code><br />")
+    document.write("<code>var <span style='color:blue'>WeekDay</span> = d.getDay&#40;&#41;</code><br />")
+    document.write("<br /><b>.getDay</b> - returns a value within 0(Sunday)-6(Saturday)<br />")
+
+document.write("<br /><code>switch&#40;<span style='color:blue'>WeekDay</span>&#41;{<br /><span style='color:brown'>case 0:</span><br /><span style='margin-left:30px'>document.write&#40;&quot;&lt;b>Today is Sunday&amp;#40;0&amp;#41;&lt;/b>&quot;&#41;</span><br />break<br /><span style='color:brown'>case 1:</span><br /><span style='margin-left:30px'>document.write&#40;&quot;&lt;b>Today is Monday&amp;#40;1&amp;#41;&lt;/b>&quot;&#41;</span><br />break<br /><span style='color:brown'>case 6:</span><br /><span style='margin-left:30px'>document.write&#40;&quot;&lt;b>Today is Saturday&amp;#40;6&amp;#41;&lt;/b>&quot;&#41;</span><br />break<br />default:<br /><span style='margin-left:30px'>document.write&#40;&quot;&lt;b>Today is neither Sunday&amp#40;0&amp#41;, Monday&amp#40;1&amp#41;, nor Saturday&amp#40;6&amp#41;&lt;/b>&quot;&#41;</span><br />}</code><br />")
+
+switch(WeekDay){
+case 0:
+   document.write("<b>TOday is Sunday&#40;0&#41;</b>")
+break
+case 1:
+   document.write("<b>Today is Monday&#40;1&#41;</b>")
+break
+case 6:
+   document.write("<b>Today is Saturday&#40;6&#41;</b>")
+break   
+default:
+   document.write("<b>Today is neither Sunday&#40;0&#41;, Monday&#40;1&#41;, nor Saturday&#40;6&#41;.</b>")
+}
+
+</script><hr />
+
+<h2>Operators</h2>
+<ul type="square">
+  <li>Arithmetic Operators<br /><code>+,-,*,/,%,++,--</code></li>
+  <li>Assignment Operators<br /><code>=,+=,-=,*=,/=,%=</code></li>
+  <li>Comparison Operators<br /><code>==,===,!=,&gt;,&lt;,&gt;=,&lt;=<br />===</code> checks for both value and type<br /><b>Example: </b><code>x=5;y="5"; x==y returns true x===y returns false</code></li>
+  <li>Logical Operators<br /><code>&amp;&amp;,||,!</code></li>
+  <li>String Operator<br /><b>Example: </b><code>String = "string content"</code></li>
+  <li>Conditional Operator<br /><b>Syntax: </b><code>variablename=(condition)?value1:value2</code></li>
+</ul><hr />
+
+<h2>Popup Boxes</h2>
+<input type="button" value="Display Alert Box" onclick="disp_alert()" />&nbsp;<code>&lt;input type="button" value="Display alert box" onclick="disp_alert()" /></code><br /><br />
+<input type="button" value="Display Confirm Box" onclick="disp_confirm()" />&nbsp;<code>&lt;input type="button" value="Display Confirm Box" onclick="disp_Confirm()" /></code><br /><br />
+<input type="button" value="Display Prompt Box" onclick="disp_prompt()" />&nbsp;<code>&lt;input type="button" value="Display Prompt Box" onclick="disp_prompt()" /></code><br /><br />
+
+<h2>Functions</h2>
+<p>A function is a reusable code-block that will be executed by an event, or when the function is called.</p>
+<script type="text/javascript">
+    document.write("<code><span style='color:blue;font-weight:bold'>function</span> functionName&#40;var1,var2,...,varX&#41;{<br /><span style='margin-left:30px'>Some Code Here for ex: return var1*var2<br /></span>}</code><br />")
+    var no1 = 5
+    var no2 = 4
+    document.write(no1 + " x " + no2 + " = " + multiply_funct(no1,no2))
+    document.write("<br />*Check the funciton used to multiply the numbers above<br />")
+</script>
+
+<h2>Loops</h2>
+<p>Loops in JavaScript are used to execute the same block of code a specified number of times or while a specified condition is true. In JavaScript there are only two different kind of loops:</p>
+<ul type="square">
+   <li><b>for</b> - loops through a block of code a specified number of times</li>
+   <li><b>while</b> - loops through a block of code while a specified condition is true
+     <ul type="circle">
+        <li><b>while loop</b><br />
+        <span style="margin-left:30px">- Use a while loop to run the same block of code while a specified condition is true.</span></li>
+        <li><b>do while loop</b><br />
+        <span style="margin-left:30px">- Use a do...while loop to run the same block of code while a specified condition is true. This loop will always be executed <u>at least once</u>, even if the condition is false, because the statements are executed before the condition is tested.</span></li>
+     </ul>
+   </li>
+</ul><hr />
+<h3>The "for" Loop</h3>
+<b>Syntax: </b><code><span style="font-weight:bold">for</span> (var=startvalue;var&lt;=endvalue;var=var+increment) {code to be executed}</code><br />
+<b>Example: </b><br />
+<code><span style="font-weight:bold">for</span>(i=1;i&lt;=6;i++){<br />
+    <span style="margin-left:30px">document.write("&lt;h"+i+" style='background-color:transparent'>This is for loop "+i+"&lt;/h"+i+">")</span><br /> 
+}</code><br />
+<b>Result of Example Code:</b><br />
+<script type="text/javascript">
+for(i=1;i<=6;i++){
+    document.write("<h"+i+" style='color:blue;background-color:transparent'>This is for loop "+i+"</h"+i+">")  
+}
+</script>
+<hr />
+<h3>The "while" Loop</h3>
+<p>Loops in JavaScript are used to execute the same block of code a specified number of times or while a specified condition is true. The basic syntax is given below:<br />
+<code><span style="font-weight:bold">while</span> (var&lt;=endvalue){code to be executed}</code></p>
+<b>Example: </b>This prints 11 lines of code from i=0 to 10
+<pre><code>var i=0
+<span style="font-weight:bold">while</span> (i&lt;=10){
+  document.write("The number is " + i)
+  document.write("&lt;br />")
+  i=i+1
+}</pre></code>
+<hr />
+<h3>The "do...while" Loop</h3>
+<p>This loop will always be executed <u>at least once</u>, even if the condition is false, because the code is executed before the condition is tested. The basic syntax is given below:<br />
+<pre><code><span style="font-weight:bold">do</span>{
+  code to be executed
+}<span style="font-weight:bold">while</span> (var&lt;=endvalue)</code></pre></p>
+<b>Example: </b>This code yields only one line of code "The number is 0" even if the condition is false
+<pre><code>var i=0
+<span style="font-weight:bold">do</span>{
+  document.write("The number is " + i)
+  document.write("&lt;br />")
+  i=i+1
+}<span style="font-weight:bold">while</span> (i&lt;0)</pre></code><hr />
+
+<h2>Break and Continue</h2>
+<p>There are two special statements that can be used inside loops: <b>break</b> and <b>continue</b>.</p><hr />
+<h3>break</h3>
+<p>The break command will break the loop and continue executing the code that follows after the loop (if any).</p>
+<b>Example: </b>This code only yields 3 lines of code from "The number is 0" to 2 because of the break statement
+<pre><code>var i=0
+for(i=1;i&lt;=10;i++){
+  if(i==3){<span style="font-weight:bold">break</span>}
+    document.write("The number is " + i)
+    document.write("&lt;br />")
+  i=i+1
+}</pre></code><hr />
+
+<h3>continue</h3>
+<p>The continue command will break the current loop and continue with the next value.</p>
+<b>Example: </b>This code skips "The number is 3 because when i==3 it will continue to i=4"
+<pre><code>var i=0
+for (i=0;i&lt;=10;i++){
+  if (i==3){<span style="font-weight:bold">continue</span>}
+    document.write("The number is " + i)
+    document.write("&lt;br />")
+  }
+}</pre></code><hr />
+
+<h2>The "for...in" statement</h2>
+<p>The for...in statement is used to loop (iterate) through the elements of an array or through the properties of an object.The code in the body of the for ... in loop is executed once for each element/property.</p>
+<b>Syntax: </b><code><span style="font-weight:bold">for</span> (variable <span style="font-weight:bold">in</span> object){code to be executed}</code>
+<p>The variable argument can be a named variable, an array element, or a property of an object.</p>
+<b>Example: </b>(Using for...in to loop through an array)
+<pre><code>
+var x
+var <span style="font-weight:bold">mynames</span> = new Array()
+<span style="font-weight:bold">mynames[0]</span> = "Harry"
+<span style="font-weight:bold">mynames[1]</span> = "Roland"
+<span style="font-weight:bold">mynames[2]</span> = "Kunz"
+
+<span style="color:blue;font-weight:bold">for</span> (x <span style="color:blue;font-weight:bold">in </span><span style="font-weight:bold">mynames</span>){
+   document.write(<span style="font-weight:bold">mynames[x]</span> + "&lt;br />")
+}
+</code></pre>
+<b>RESULT:</b><br />
+<script type="text/javascript">
+var x
+var mynames = new Array()
+mynames[0] = "Harry"
+mynames[1] = "Roland"
+mynames[2] = "Kunz"
+
+for (x in mynames){
+   document.write(mynames[x] + "<br />")
+}
+</script>
+
+<h2>Events</h2>
+<p>Events are actions that can be detected by JavaScript.</p><hr />
+<p>Every element on a web page has certain events which can trigger JavaScript 
+functions. For example, we can use the onClick event of a button element to 
+indicate that a function will run when a user clicks on the button. We define 
+the events in the HTML tags.</p>
+
+<p>Examples of events:</p>
+<ul>
+	<li>A mouse click</li>
+	<li>A web page or an image loading</li>
+	<li>Mousing over a hot spot on the web page</li>
+	<li>Selecting an input box in an HTML form</li>
+	<li>Submitting an HTML form</li>
+
+	<li>A keystroke </li>
+</ul>
+
+<p><b>Note:</b> Events are normally used in combination with functions, and the function 
+will not be executed before the event occurs!</p><hr />
+
+<h3>onload and onUnload</h3>
+
+<p>The onload and onUnload events are triggered when the user enters or leaves 
+the page.</p>
+<p>The onload event is often used to check the visitor's browser type and 
+browser version, and load the proper version of the web page based on the 
+information.</p>
+<p>Both the onload and onUnload events are also often used to deal with cookies 
+that should be set when a user enters or leaves a page. For example, you could have a popup asking 
+for the user's name upon 
+his first arrival to your page. The name is then stored in a cookie. Next time the visitor arrives at your page, 
+you could have another popup saying something like: "Welcome John Doe!".</p>
+<hr />
+
+<h3>onFocus, onBlur and onChange</h3>
+<p>The onFocus, onBlur and onChange events are often used in combination with validation 
+of form fields.</p>
+<p>Below is an example of how to use the onChange event. The checkEmail() 
+function will be called whenever the user changes the content of the field:</p>
+<table class="ex" id="table2" border="1" cellspacing="0" width="500px" bgcolor="#FFCCFF">
+    <tbody><tr>
+      <td>
+        <pre>&lt;input type="text" size="30"
+id="email" onchange="checkEmail()"&gt;;</pre>
+      </td>
+    </tr>
+</tbody></table>
+<br>
+<hr />
+
+<h3>onSubmit</h3>
+<p>The onSubmit event is used to validate ALL form fields  
+before submitting it.</p>
+
+<p>Below is an example of how to use the onSubmit event. The checkForm() 
+function will be called when the user clicks the submit button in the form. If the 
+field values are not accepted, the submit should be 
+cancelled. The function checkForm() returns either true or false. If it returns true the 
+form will be submitted, otherwise the submit will be cancelled:</p>
+<table class="ex" id="table3" border="1" cellspacing="0" width="500px" bgcolor="#FFCCFF">
+    <tbody><tr>
+      <td>
+        <pre>&lt;form method="post" action="xxx.htm"
+onsubmit="return checkForm()"&gt;</pre>
+      </td>
+    </tr>
+</tbody></table>
+<br>
+<hr>
+
+<h3>onMouseOver and onMouseOut</h3>
+<p>onMouseOver and onMouseOut are often used to create 
+"animated" buttons.</p>
+<p>Below is an example of an onMouseOver event. An alert box appears when an onMouseOver 
+event is detected:</p>
+<table class="ex" id="table4" border="1" cellspacing="0" width="500px" bgcolor="#FFCCFF">
+    <tbody><tr>
+      <td>
+        <pre>&lt;a href="http://www.w3schools.com"
+onmouseover="alert('An onMouseOver event');return false"&gt;
+&lt;img src="w3schools.gif" width="100" height="30"&gt;&lt;/a&gt;</pre>
+</table>
+<hr />
+
+<h2>The "try...catch" Statement</h2>
+<p>The try...catch statement allows you to test a block of code for errors.</p><hr />
+
+<p>There are two ways of catching errors in a Web page:</p>
+
+<ul>
+	<li>By using the <b>try...catch</b> statement (available in IE5+, Mozilla 
+	1.0, and Netscape 6)</li>
+	<li>By using the <b>onerror</b> event. This is the old standard solution to catch errors 
+	(available since Netscape 3)</li>
+</ul>
+
+<p><b>Syntax: </b><br />
+<code><span style="font-weight:bold">try</span>{<br />
+&nbsp;&nbsp;//Run some code here<br />
+}<br />
+<code><span style="font-weight:bold">catch</span>(err){<br />
+&nbsp;&nbsp;//Handle errors here. err is the variable<br />
+}</code></p>
+The function called by the button <input type="button" value="Error Generator" onclick="try_catch()" /> is given below:<br />
+<pre><code>    function try_catch(){
+      var txt=""
+      <span style="font-weight:bold">try</span>{
+        <span style="font-weight:bold">adddlert</span>("Welcome guest!")
+        //alert wrong spelling is intended to demonstrate the try...catch block.
+      }
+      <span style="font-weight:bold">catch</span>(err){
+        txt="There was an error on this page.(wrong spelling: 'adddlert')\n\n"
+        txt+="Click OK to continue viewing this page,\n
+              or Cancel to return to the home page."
+        if(!confirm(txt)){
+          document.location.href="http://www.w3schools.com/"
+        }
+      }
+    }</pre></code>
+
+<hr />
+
+<h2>The Throw Statement</h2>
+<p>The throw statement allows you to create an exception. If you use this statement together with the try...catch statement, you can control program flow and generate accurate error messages.<br />
+<b>Syntax: </b><code><span style="font-weight:bold">throw</span>(exception)</code></p>
+
+The exception can be a <b>string</b>, <b>integer</b>, <b>Boolean</b> or an <b>object</b>.
+<p>The button <input type="button" value="Input Valid Values" onclick="throw_funct()"> prompts a valid input.
+<pre><code>
+  function throw_funct(){
+    var x=prompt("Enter a number between 5 and 10:","")
+    <span style="font-weight:bold">try</span>{ 
+      if(x&gt;10) <span style="font-weight:bold">throw </span>"Err1" 
+      else if(x&lt;-10) <span style="font-weight:bold">throw </span>"Err2"
+      else if(isNaN(x)) <span style="font-weight:bold">throw </span>"Err3"
+    }
+    <span style="font-weight:bold">catch</span>(er){
+      if(er=="Err1") alert("Error! The value is too high")
+      if(er == "Err2") alert("Error! The value is too low") 
+      if(er == "Err3") alert("Error! The value is not a number") 
+    }
+  }
+</code></pre><hr />
+
+<h2>The onerror Event</h2>
+<p>*Using the onerror event is the old standard solution to catch errors in a web page.<br />
+*The onerror event is fired whenever there is a script error in the page.</p>
+<p>To use the onerror event, you must create a function to handle the errors.<br />Then you call the function with the onerror event handler.<br /><span style="color:blue">The event handler is called with 3 arguments:</span><br /><span style="margin-left:30px"><b>msg</b> (error message)</span><br /><span style="margin-left:30px"><b>url</b> (the url of the page that caused the error)</span><br /><span style="margin-left:30px"><b>line</b> (the line where the error occurred).</span></p>
+<pre><b><big>Syntax: (in &lt;head>&lt;JScript>)</big></b><code>
+<b>onerror</b> = <b>handleErr</b>
+function <b>handleErr</b>(<b>msg</b>,<b>url</b>,<b>line</b>){
+  //Handle the error here
+  return <b>true/false</b>
+}</code></pre>
+<p>The value returned by onerror determines whether the browser displays a standard error message. If you return <b>false</b>, the browser displays the standard error message in the JavaScript console. If you return <b>true</b>, the browser does not display the standard error message.
+<pre><code>
+&lt;script type="text/javascript">
+<b>onerror</b> = <b>handleErr</b>
+var txt=""
+
+function <b>handleErr</b>(<b>msg</b>,<b>url</b>,<b>line</b>){
+  txt="There was an error on this page.\n\n"
+  txt+="Error: " + <b>msg</b> + "\n"
+  txt+="URL: " + <b>url</b> + "\n"
+  txt+="Line: " + <b>line</b> + "\n\n"
+  txt+="Click OK to continue.\n\n"
+  alert(txt)
+  return <b>true/false</b>
+}
+
+function <b>message()</b>{
+  <b>adddlert</b>("Welcome guest! Wrong SPelling")
+}
+&lt;/script>
+&lt;/head>
+
+&lt;body>
+  &lt;input type="button" value="View message" onclick="<b>message()</b>" />
+&lt;/body>
+</code></pre></p><hr />
+
+<h2>Special Characters</h2>
+<p>The backslash (\) is used to insert apostrophes, new lines, quotes, and other special characters into a text string.</p>
+<hr />
+<p>The table below lists other special characters that can be added to a text 
+string with the backslash sign:</p>
+<table style="font-family:courier new" class="ex" id="table3" border="1" cellspacing="0" width="500px"><tbody><tr>
+	<th bgcolor="#99FF99" align="left">
+Code</th><th bgcolor="#99FF99" align="left">
+Outputs</th></tr><tr><td>
+\'</td><td>
+single quote</td></tr><tr><td>
+\"</td><td>
+double quote</td></tr><tr><td>
+\&amp;</td><td>
+ampersand</td></tr><tr><td>
+\\</td><td>
+backslash</td></tr><tr><td>
+\n</td><td>
+new line</td></tr><tr><td>
+\r</td><td>
+carriage return</td></tr><tr><td>
+\t</td><td>
+tab</td></tr><tr><td>
+\b</td><td>
+backspace</td></tr><tr><td>
+\f</td><td>
+form feed</td></tr></tbody></table>
+<hr />
+<h2>JScript Guidelines</h2>
+<ul>
+  <li><b>JavaScript is case-sensitive</b><br />
+- a function name Message() is different from message()<br />
+- a variable name aBc is different from ABc</li>
+  <li><b>JScript ignores white spaces</b><br />
+- <code>MyName = "Harry"</code> is the same as <code>MyName="Harry"</code></li>
+  <li><b>Breaking up code in JScript</b><br />
+Legal Code Break:<br />
+<code>document.write("Hello \<br />
+World!")</code><br />
+Illegal Code Break:<br />
+<code>document.write \<br />
+("Hello World!")</code></li>
+  <li><b>JScript Comments</b><br />
+<code>//This is a single line comment in JScript<br />
+/*<br />
+This is a<br />
+multi line<br />
+comment in JScript<br />
+*/</code></li>
+</ul><hr />
+
+</body>
+</html>

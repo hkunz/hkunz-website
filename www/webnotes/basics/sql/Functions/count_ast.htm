@@ -1,0 +1,99 @@
+<!-- if this DTD is enabled the page displays incorrectly the <code> sections
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+
+<head>
+<title>SQL COUNT_AST Function</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:blue;color:white;}
+table{background-color:#FFFF99}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#CCFFFF">
+<h2>SQL COUNT(*) Function</h2>
+
+<p>The COUNT(*) function returns the number of selected rows in a selection.</p>
+
+<h3>Syntax</h3>
+<table class="ex" border="1" cellpadding="3" cellspacing="0" width="100%"> 
+  <tbody><tr>
+    <td valign="top">
+
+    <pre>SELECT COUNT(*) FROM table</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<p><b>Example</b></p>
+<p>With this "Persons" Table:</p>
+<table class="ex" border="1" cellspacing="0" width="100%">
+  <tbody><tr>
+    <th align="left">Name</th>
+
+    <th align="left">Age</th>
+  </tr>
+  <tr>
+    <td>Hansen, Ola</td>
+    <td>34</td>
+  </tr>
+  <tr>
+
+    <td>Svendson, Tove</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <td>Pettersen, Kari</td>
+    <td>19</td>
+  </tr>
+
+</tbody></table>
+<p>This example returns the number of rows in the table:</p>
+<table class="ex" border="1" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td>
+    <pre>SELECT COUNT(*) FROM Persons</pre>
+    </td>
+  </tr>
+</tbody></table>
+<p><b>Result:</b></p>
+
+<table class="ex" border="1" cellspacing="0" width="50%">
+  <tbody><tr>
+    <td>
+    <pre>3</pre>
+    </td>
+  </tr>
+</tbody></table>
+
+<p><b>Example</b></p>
+<p>Return the number of persons that are older than 20 years:</p>
+
+<table class="ex" border="1" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td>
+    <pre>SELECT COUNT(*) FROM Persons WHERE Age&gt;20</pre>
+    </td>
+  </tr>
+</tbody></table>
+<p><b>Result:</b></p>
+<table class="ex" border="1" cellspacing="0" width="50%">
+
+  <tbody><tr>
+    <td>
+    <pre>2</pre>
+    </td>
+  </tr>
+</tbody></table>
+<br />
+<hr />
+
+</body>
+</html>

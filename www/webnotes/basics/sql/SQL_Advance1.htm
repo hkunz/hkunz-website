@@ -1,0 +1,535 @@
+<!-- if this DTD is enabled the page displays incorrectly the <code> sections
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+-->
+<html>
+<!-- 
+    DISCUSSIONS:  
+	SQL Order By
+	SQL and & or
+	SQL In
+	SQL Between
+	SQL Aliases
+	SQL Join (like Intersection)
+	SQL Union
+-->
+<head>
+<title>(2/3) SQL Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background-color:lime}
+h2:first-letter{float: top;width: 0.7em; font-size: 200%; font-family: algerian;}
+code{font-size:18;color:red;}
+-->
+</style>
+
+</head>
+
+<body bgcolor="#FFFF99">
+
+<h2>SQL ORDER BY</h2>
+<p>The ORDER BY keyword is used to sort the result.</p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s) </i><b>FROM </b><i>table_name </i><br />&nbsp;<b>ORDER BY </b><i>column_name(s)</i></code></td></tr>
+</tbody></table>
+
+<p><b>NOTE: </b>Including more than 1 column_name after "ORDER BY" statement, sorts the first stated column and then the next columns ONLY IF there are duplicated values like the "<u>W3schools</u>" in the 1<sup>st</sup> sort column (in "Orders" Table below) or IF there are a handful of nulls.</p>
+<hr />
+<p><b>Example "Orders" table</b></p>
+<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left">Company</th>
+    <th align="left">OrderNumber</th>
+  </tr><tr>
+    <td>Sega</td>
+    <td>3412</td>
+  </tr><tr>
+    <td>ABC Shop</td>
+    <td>5678</td>
+  </tr><tr>
+    <td>W3Schools</td>
+    <td>6798</td>
+  </tr><tr>
+    <td>W3Schools</td>
+    <td>2312</td>
+  </tr>
+</tbody></table><br />
+
+Code Sorts Company Name in <b>ASC</b>ending [default] order)
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Company, OrderNumber </i><b>FROM </b><i>Orders </i><br />&nbsp;<b>ORDER BY </b><i>Company</i></code></td></tr>
+</tbody></table><br />
+Code Sorts Company in <b>DESC</b>ending order and OrderNumber in <b>ASC</b>ending order
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Company, OrderNumber </i><b>FROM </b><i>Orders </i><br />&nbsp;<b>ORDER BY </b><i>Company </i><b>DESC</b>, OrderNumber </i><b>ASC</b></code></td></tr>
+</tbody></table>
+
+<p><b>Result-Set of latter code:</b></p>
+<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left">Company</th>
+    <th align="left">OrderNumber</th>
+  </tr><tr>
+    <td>W3Schools</td>
+    <td>2312</td>
+  </tr><tr>
+    <td>W3Schools</td>
+    <td>6798</td>
+  </tr><tr>
+    <td>Sega</td>
+    <td>3412</td>
+  </tr><tr>
+    <td>ABC Shop</td>
+    <td>5678</td></tr>
+</tbody></table><br /><hr />
+
+<h2>SQL AND &amp; OR Operators</h2>
+<p><b>AND</b> and <b>OR</b> join two or more conditions in a <b>WHERE</b> clause.</p>
+<p><b>AND operator</b> - displays a Record (row) if <b>ALL</b> conditions listed are true<br />
+<b>OR operator</b> - displays a Record (row) if <b>ANY</b> of the conditions listed are true.</p>
+<hr />
+<p><b>Example Statement:</b></p>
+<table class="ex" border="1" cellspacing="0" width="650" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s)</i>&nbsp;<b>FROM </b><i>table_name </i><br />
+&nbsp;<b>WHERE&nbsp;(</b><i>column_name1=Value1</i>&nbsp;<b>OR</b>&nbsp;<i>column_name2=Value2</i><b>)</b><br />
+&nbsp;<b>AND</b>&nbsp;<i>column_name3=Value3</i></code></td></tr>
+</tbody></table><br /><hr />
+
+<h2>SQL IN Operator</h2>
+<p>The <b>IN Operator</b> may be used if you know the exact value you want to return for at least one of the columns.</p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s)</i>&nbsp;<b>FROM </b><i>table_name </i><br />
+&nbsp;<b>WHERE</b>&nbsp;<i>column_name</i><b> IN </b><i>(value1,value2,..)</i></code></td></tr>
+</tbody></table><br /><hr />
+
+<p><b>Example Statement:</b></p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT</b>&nbsp;*&nbsp;<b>FROM</b>&nbsp;<i>Persons</i><br />
+&nbsp;<b>WHERE</b>&nbsp;<i>LastName</i><b> IN </b><i>('Gutierrez','Kunz')</i></code></td></tr>
+</tbody></table>
+<p>Displays the 2 rows: one with 'Gutierrez' and the other with 'Kunz'</p><hr />
+
+<h2>SQL BETWEEN...AND Operator</h2>
+<p>The <b>BETWEEN ... AND operator</b> selects a range of data between two values. These values can be numbers, text, or dates.</p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s)</i>&nbsp;<b>FROM </b><i>table_name&nbsp;</i><br />
+&nbsp;<b>WHERE</b>&nbsp;<i>column_name</i><br />
+<b>&nbsp;BETWEEN&nbsp;</b><i>value1</i>&nbsp;<b>AND</b>&nbsp;<i>value2</i></code></td></tr>
+</tbody></table><br /><hr />
+
+<p>To display in "Persons" table the persons alphabetically between (and including) "Gutierrez" and exclusive "Kyla", use the following SQL:</p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b>*&nbsp;<b>FROM </b><i>Persons&nbsp;</i><br />
+&nbsp;<b>WHERE</b>&nbsp;<i>LastName</i><br />
+<b>&nbsp;BETWEEN&nbsp;</b><i>'Gutierrez'</i>&nbsp;<b>AND</b>&nbsp;<i>'Kyza'</i></code></td></tr>
+</tbody></table>
+<p>This displays persons from 'Gutierrez' G,H,I,J and LastNames BEFORE 'Kyla' like 'Kunz' because 'Ku' is before 'Ky'</p><hr />
+<p>To display the persons outside the range used in the previous example, use the <b>NOT operator</b>:</p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b>*&nbsp;<b>FROM </b><i>Persons&nbsp;</i><br />
+&nbsp;<b>WHERE</b>&nbsp;<i>LastName</i><br />
+<b>&nbsp;NOT BETWEEN&nbsp;</b><i>'Gutierrez'</i>&nbsp;<b>AND</b>&nbsp;<i>'Kyza'</i></code></td></tr>
+</tbody></table><br /><hr />
+<p><b>IMPORTANT!</b>&nbsp;The BETWEEN...AND operator is treated differently in different databases. With some databases a person with the LastName of "Gutierrez" or "Kyla" will not be listed (BETWEEN..AND only selects fields that are between and excluding the test values). With some databases a person with the last name of "Gutierrez" or "Kyla" will be listed (BETWEEN..AND selects fields that are between and including the test values). With other databases a person with the last name of "Gutierrez" will be listed, but "Kyla" will not be listed (BETWEEN..AND selects fields between the test values, including the first test value and excluding the last test value). <b>Therefore: </b>Check how your database treats the BETWEEN....AND operator!</p><hr />
+<h2>SQL Alias</h2>
+<p>With SQL, <b>aliases</b> can be used for column names and table names.</p>
+<h3>Column Name Alias Syntax</h3>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name</i>&nbsp;<b>AS</b>&nbsp;<i>column_alias</i><br />
+&nbsp;<b>FROM </b><i>table_name&nbsp;</i></code></td></tr>
+</tbody></table>
+<h3>Table Name Alias Syntax</h3>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s)</i><br />
+&nbsp;<b>FROM </b><i>table_name&nbsp;<b>AS</b>&nbsp;<i>table_alias</i></i></code></td></tr>
+</tbody></table>
+<hr />
+<p><b>Sample "<span style="color:blue">Persons</span>" Table</b></p>
+<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<th align="left" style="color:blue">LastName</th>
+    <th align="left" style="color:blue">FirstName</th>
+    <th align="left">Address</th>
+    <th align="left">City</th>
+  </tr><tr>
+    <td>Gutierrez</td>
+    <td>Hanna</td>
+    <td>SanF 10</td>
+    <td>Millbrae</td>
+  </tr><tr>
+    <td>Kunz</td>
+    <td>Harry</td>
+    <td>Dauin 44</td>
+    <td>Hessen</td>
+  </tr>
+</table>
+<p><table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>LastName</i>&nbsp;<b>AS</b>&nbsp;<i>Family</i>,<i>FirstName</i>&nbsp;<b>AS</b>&nbsp;<i>Name</i><br />&nbsp;<b>FROM </b><i>table_name&nbsp;</i></code></td></tr>
+</tbody></table><p/>
+<p><b>Result-Set of code: ("Persons" Table)</b></p>
+<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<th align="left" style="color:blue">Family</th>
+    <th align="left" style="color:blue">Name</th>
+  </tr><tr>
+    <td>Gutierrez</td>
+    <td>Hanna</td>
+  </tr><tr>
+    <td>Kunz</td>
+    <td>Harry</td>
+  </tr>
+</table><br /><hr />
+
+<p><table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>LastName, FirstName</i><br />
+&nbsp;<b>FROM </b><i>Persons&nbsp;<b>AS</b>&nbsp;<i>Employees</i></i></code></td></tr>
+</tbody></table></p>
+<p><b>Result-Set of code: ("<span style="color:blue">Employees</span>" Table)</b></p>
+<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<th align="left">LastName</th>
+    <th align="left">FirstName</th>
+  </tr><tr>
+    <td>Gutierrez</td>
+    <td>Hanna</td>
+  </tr><tr>
+    <td>Kunz</td>
+    <td>Harry</td>
+  </tr>
+</table><br /><hr /><br />
+
+<h2>SQL JOINS &amp; KEYS</h2>
+<p><code><b>two possible ways: (1)<a  style="text-decoration:none" href="#refer_tables">Referring to Two Tables</a>;</b> and <b>(2)<a  style="text-decoration:none" href="#join_keyword">By use of JOIN Keyword</a></b></code></p><hr />
+<p>Sometimes we have to select data from two or more tables to make our result complete.
+We have to perform a <b>join</b>.Tables in a database can be related to each other with <b>keys</b>.</p>
+<p><b>primary key</b> - is a column with a unique value for each row. Each primary key value must be unique within 
+the table. The purpose is to bind data together, across tables, without
+repeating all of the data in every table.
+</p> 
+
+<p>In the "<b>Employees</b>" table below, the "<b>Employee_ID</b>" column is the
+<b>primary key</b>, meaning that <b>NO</b> two rows can have the same Employee_ID. The Employee_ID distinguishes two persons even if they have the same name.
+</p>
+<ul>
+  <li>The "<b>Employee_ID</b>" column is the <b>primary key</b> of the "Employees"
+    table</li>
+  <li>The "<b>Prod_ID</b>" column is the primary key of the "Orders"
+    table</li>
+  <li>The "<b>Employee_ID</b>" column in the "Orders" table is used to refer to the
+    persons in the "Employees" table without using their names</li>
+
+</ul>
+
+<p><b>Employees</b>:</p>
+<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr align="center">
+    <th width="25%">Employee_ID</th>
+    <th width="35%">Name</th>
+  </tr><tr align="center">
+    <td>01</td>
+    <td>Kunz, Harry Roland</td>
+  </tr><tr align="center">
+    <td>02</td>
+    <td>Svendson, Tove</td>
+  </tr><tr align="center">
+    <td>03</td>
+    <td>Gutierrez, Hanna</td>
+  </tr><tr align="center">
+    <td>04</td>
+    <td>Pettersen, Kari</td>
+  </tr>
+</tbody></table>
+
+<p><b>Orders:</b></p>
+<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr align="center">
+    <th width="15%">Prod_ID</th>
+    <th width="20%">Product</th>
+    <th width="25%">Employee_ID</th>
+  </tr><tr align="center">
+    <td>234</td>
+    <td>Printer</td>
+    <td>01</td>
+  </tr><tr align="center">
+    <td>657</td>
+    <td>Table</td>
+    <td>03</td>
+  </tr><tr align="center">
+    <td>865</td>
+    <td>Chair</td>
+    <td>03</td>
+  </tr>
+</tbody></table><br /><hr />
+
+<h3 id="refer_tables" style="background:rgb(255, 69, 0)">Referring to Two Tables (Examples)</h3>
+<p><b>We can select data from two tables by referring to two tables, like this:</b></p>
+<p>Who has ordered a product, and what did they order?</p>
+<p><table class="ex" border="1" cellspacing="0" width="550" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name, Orders.Product</i><br />
+&nbsp;<b>FROM </b><i>Employees, Orders</i><br />
+&nbsp;<b>WHERE&nbsp;</b><i>Employees.Employee_ID=Orders.Employee_ID</i></code></td></tr>
+</tbody></table></p>
+<p><b>Result-Set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr>
+    <th align="left" width="35%"><b>Name</b></th>
+    <th align="left" width="25%">Product</th>
+  </tr><tr>
+    <td>Kunz, Harry Roland</td>
+    <td>Printer</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Table</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Chair</td>
+  </tr>
+</tbody></table></p><hr />
+
+<p>Who ordered a printer?</p>
+<p><table class="ex" border="1" cellspacing="0" width="550" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name</i><br />
+&nbsp;<b>FROM </b><i>Employees, Orders&nbsp;</i><br />
+&nbsp;<b>WHERE&nbsp;</b><i>Employees.Employee_ID=Orders.Employee_ID</i><br />
+&nbsp;<b>AND&nbsp;</b><i>Orders.Product='Printer'</i></code></td></tr>
+</tbody></table></p>
+
+<p><b>Result-Set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left"><b>Name</b></th></tr><tr><td>Kunz, Harry Roland</td></tr>
+</tbody></table></p><hr />
+
+<h3 id="join_keyword" style="background:rgb(255, 69, 0)">INNER JOIN</h3>
+<p><b>Or we can select data from two tables with the JOIN keyword, like this:</b></p>
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>field1, field2, ... ,field(n)</i><br />
+&nbsp;<b>FROM </b><i>first_table</i><br />
+&nbsp;<b>INNER JOIN</b>&nbsp;<i>second_table</i><br />
+&nbsp;<b>ON</b>&nbsp;<i>first_table.keyfield = second_table.foreign_keyfield</i></code></td></tr>
+</tbody></table></p>
+<p>The <b>INNER JOIN</b> returns all rows from both tables where there is a match. If there are rows in Employees that do not have matches in Orders, those rows will not be listed.</p><hr />
+
+<p>Who has ordered a product, and what did they order?</p>
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name, Orders.Product</i><br />
+&nbsp;<b>FROM </b><i>Employees</i><br />
+&nbsp;<b>INNER JOIN&nbsp;</b><i>Orders</i><br />
+&nbsp;<b>ON&nbsp;</b><i>Employees.Employee_ID=Orders.Employee_ID</i></code></td></tr>
+</tbody></table></p>
+<p><b>Result-Set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr>
+    <th align="left" width="35%"><b>Name</b></th>
+    <th align="left" width="25%">Product</th>
+  </tr><tr>
+    <td>Kunz, Harry Roland</td>
+    <td>Printer</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Table</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Chair</td>
+  </tr>
+</tbody></table></p><hr />
+
+<p>Who ordered a printer?</p>
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name</i><br />
+&nbsp;<b>FROM </b><i>Employees</i><br />
+&nbsp;<b>INNER JOIN&nbsp;</b><i>Orders</i><br />
+&nbsp;<b>ON&nbsp;</b><i>Employees.Employee_ID=Orders.Employee_ID</i><br />
+&nbsp;<b>WHERE&nbsp;</b><i>Orders.Product='Printer'</i></code></td></tr>
+
+</tbody></table></p>
+<p><b>Result-Set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left"><b>Name</b></th></tr><tr><td>Kunz, Harry Roland</td></tr>
+</tbody></table></p>
+
+<hr />
+
+<h3 style="background:rgb(255, 69, 0)">LEFT JOIN</h3>
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>field1, field2, ... ,field(n)</i><br />
+&nbsp;<b>FROM </b><i>first_table</i><br />
+&nbsp;<b>LEFT JOIN</b>&nbsp;<i>second_table</i><br />
+&nbsp;<b>ON</b>&nbsp;<i>first_table.keyfield = second_table.foreign_keyfield</i></code></td></tr>
+</tbody></table></p>
+<p>The <b>LEFT JOIN</b> returns all the rows from the first table (Employees), even if there are no matches in the second table (Orders). If there are rows in Employees that do not have matches in Orders, those rows also will be listed.</p>
+<hr />
+
+<p>List all employees, and their orders - if any.</p>
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name, Orders.Product</i><br />
+&nbsp;<b>FROM </b><i>Employees</i><br />
+&nbsp;<b>LEFT JOIN&nbsp;</b><i>Orders</i><br />
+&nbsp;<b>ON&nbsp;</b><i>Employees.Employee_ID=Orders.Employee_ID</i></code></td></tr>
+</tbody></table></p>
+<p><b>Result-Set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left" width="35%"><b>Name</b></th>
+    <th align="left" width="25%">Product</th>
+  </tr>
+  <tr>
+    <td>Kunz, Harry</td>
+    <td>Printer</td>
+</tr><tr>
+    <td>Svendson, Tove</td>
+    <td>&nbsp;</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Table</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Chair</td>
+  </tr><tr>
+    <td>Pettersen, Kari</td>
+<td>&nbsp;</td></tr>
+</tbody></table>
+
+
+<h3 style="background:rgb(255, 69, 0)">RIGHT JOIN</h3>
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>field1, field2, ... ,field(n)</i><br />
+&nbsp;<b>FROM </b><i>first_table</i><br />
+&nbsp;<b>RIGHT JOIN</b>&nbsp;<i>second_table</i><br />
+&nbsp;<b>ON</b>&nbsp;<i>first_table.keyfield = second_table.foreign_keyfield</i></code></td></tr>
+</tbody></table></p>
+<p>The <b>RIGHT JOIN</b> returns all the rows from the second table (Orders), even if there are no matches in the first table (Employees). If there had been any rows in Orders that did not have matches in Employees, those rows also would have been listed.</p><hr />
+
+<p><table class="ex" border="1" cellspacing="0" width="650" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name, Orders.Product</i><br />
+&nbsp;<b>FROM </b><i>Employees</i><br />
+&nbsp;<b>RIGHT JOIN&nbsp;</b><i>Orders</i><br />
+&nbsp;<b>ON&nbsp;</b><i>Employees.Employee_ID=Orders.Employee_ID</i></code></td></tr>
+</tbody></table></p>
+
+<p><b>Result-Set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr>
+    <th align="left" width="35%"><b>Name</b></th>
+    <th align="left" width="25%">Product</th>
+  </tr><tr>
+    <td>Kunz, Harry Roland</td>
+    <td>Printer</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Table</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+    <td>Chair</td>
+  </tr>
+</tbody></table></p><hr />
+
+<h2>SQL UNION and UNION ALL</h2>
+<p>The <b>UNION command</b> is used to select related information from two tables, much like the JOIN command. However, when using the UNION command all selected columns need to be of the same data type.</p>
+
+<p><b>Note: </b>With <b>UNION</b>, only distinct values are selected while </b>With <b>UNION ALL</b>, all values are selected including duplicated values.</p>
+<p><table class="ex" border="1" cellspacing="0" width="200" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<i>SQL Statement 1</i><br />&nbsp;<b>UNION</b><br />&nbsp;<i>SQL Statement 2</i></code></td></tr></tbody></table></p>
+<p><table class="ex" border="1" cellspacing="0" width="200" bgcolor="#FFFFCC">
+  <tbody><tr><td><code>&nbsp;<i>SQL Statement 1</i><br />&nbsp;<b>UNION ALL</b><br />&nbsp;<i>SQL Statement 2</i></code></td></tr></tbody></table></p>
+<hr />
+<p><b>Employees_Germany</b>:</p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr>
+    <th align="left" width="25%">E_ID</th>
+    <th align="left" width="35%">E_Name</th>
+  </tr><tr>
+    <td>01</td>
+    <td>Kunz, Harry Roland</td>
+  </tr><tr>
+    <td>02</td>
+    <td>Svendson, Tove</td>
+  </tr><tr>
+    <td>03</td>
+    <td>Gutierrez, Hanna</td>
+  </tr><tr>
+    <td>04</td>
+    <td>Pettersen, Kari</td>
+  </tr>
+</tbody></table></p>
+
+<p><b>Employees_USA</b>:</p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+  <tbody><tr>
+    <th align="left" width="25%">E_ID</th>
+    <th align="left" width="35%">E_Name</th>
+  </tr><tr>
+    <td>01</td>
+    <td>Turner, Sally</td>
+  </tr><tr>
+    <td>02</td>
+    <td>Kent, Clark</td>
+  </tr><tr>
+    <td>03</td>
+    <td>Gutierrez, Hanna</td>
+</tr><tr>
+    <td>04</td>
+    <td>Scott, Stephen</td>
+  </tr>
+</tbody></table></p><hr />
+
+<p>List all different employee names in Germany and USA:</p>
+<p><table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>E_Name </i><b>FROM </b><i>Employees_Germany</i><br />&nbsp;<b>UNION</b><br />&nbsp;<b>SELECT </b><i>E_Name </i><b>FROM </b><i>Employees_USA</i></code></td></tr></tbody></table></p>
+
+<p><b>Result-set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left" width="35%"><b>E_Name</b></th>
+  </tr><tr>
+    <td>Kunz, Harry Roland</td>
+  </tr><tr>
+    <td>Svendson, Tove</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+  </tr><tr>
+    <td>Pettersen, Kari</td>
+  </tr><tr>
+    <td>Turner, Sally</td>
+  </tr><tr>
+    <td>Kent, Clark</td>
+  </tr><tr>
+    <td>Scott, Stephen</td>
+  </tr>
+</tbody></table></p>
+
+<p><b>Note:</b> This command cannot be used to list all employees in Germany and 
+USA. In the example above we have two employees with equal names (Gutierrez, Hanna), and only one 
+of them is listed. The UNION command only selects distinct values.</p>
+<hr />
+<p>List all employees in Germany and USA:</p>
+<p><table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+  <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>E_Name </i><b>FROM </b><i>Employees_Germany</i><br />&nbsp;<b>UNION ALL</b><br />&nbsp;<b>SELECT </b><i>E_Name </i><b>FROM </b><i>Employees_USA</i></code></td></tr></tbody></table></p>
+<p><b>Result-set: </b></p>
+<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<tbody><tr>
+    <th align="left" width="35%"><b>E_Name</b></th>
+  </tr><tr>
+    <td>Kunz, Harry Roland</td>
+  </tr><tr>
+    <td>Svendson, Tove</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+  </tr><tr>
+    <td>Pettersen, Kari</td>
+  </tr><tr>
+    <td>Turner, Sally</td>
+  </tr><tr>
+    <td>Kent, Clark</td>
+  </tr><tr>
+    <td>Gutierrez, Hanna</td>
+  </tr><tr>
+    <td>Scott, Stephen</td>
+  </tr>
+</tbody></table></p>
+
+<p><b>Note: </b>The UNION ALL command is equal to the UNION command, except that <b>UNION ALL</b> selects <b>ALL</b> values.</p>
+<hr />
+
+</body>
+</html>

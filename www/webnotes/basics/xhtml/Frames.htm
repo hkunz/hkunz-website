@@ -1,0 +1,75 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!--
+With frames, you can display more than one HTML document in the same browser window.
+Each HTML document is called a frame, and each frame is independent of the others.
+
+The disadvantages of using frames are:
+
+    * The web developer must keep track of more HTML documents
+    * It is difficult to print the entire page
+-->
+
+<html>
+<head>
+<title>Title: Frames Tutorial</title>
+</head>
+
+<!-- VERTICAL FRAME SET 
+<frameset cols="25%,50%,25%">
+
+  <frame src="HTML_Notes1.htm">
+  <frame src="Entities.htm">
+  <frame src="AnotherSite.htm">
+
+</frameset>
+-->
+
+<!-- HORIZONTAL FRAME SET 
+<frameset rows="25%,50%,25%">
+
+  <frame src="HTML_Notes1.htm">
+  <frame src="Entities.htm">
+  <frame src="AnotherSite.htm">
+
+</frameset>
+-->
+
+<!-- MIXED FRAME SET (HORIZONTAL AND VERTICAL) 
+<frameset rows="25%,50%,25%">
+ <frame noresize="noresize" src="HTML_Notes1.htm"> >
+   <frameset cols="50%,50%">
+     <frameset rows="50%,50%">
+      <frame src="Entities.htm#ISO_8859">
+      <frame src="AnotherSite.htm">
+     </frameset>
+     <frame src="HTML_Notes1.htm">
+   </frameset>
+ <frame src="Entities.htm">
+
+<noframes>
+<body>Your browser does not handle frames!</body>
+</noframes>
+
+</frameset> -->
+
+
+<!-- FRAMES NAVIGATION -->
+<!-- Use Frames.htm to test navigation
+HTML_Notes1.htm document contains the Site Links and
+Frames.htm is the Parent HTML document loading HTML_Notes1.htm in the first Frame
+name showframe is in this page while target showframe in HTML_Notes1.htm-->
+<frameset cols="50%,*">
+
+<frame src="HTML_Notes1.htm">
+<frame src="URLEncRef.htm" name="FrameName">
+
+</frameset>
+
+<!--
+Important: You cannot use the <body></body> tags together with the <frameset></frameset> tags!
+However, if you add a <noframes> tag containing some text for browsers that do not support frames,
+you will have to enclose the text in <body></body> tags! Like in the MIXED FRAMES EXAMPLE
+-->
+</html>

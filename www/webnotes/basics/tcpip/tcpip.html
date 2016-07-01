@@ -1,0 +1,302 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html>
+<!--
+	DISCUSSIONS:
+	TCP/IP Intro
+	TCP/IP Addressing
+	TCP/IP Protocols
+	TCP/IP Email
+-->
+<head>
+<title>TCP/IP Tutorials</title>
+<style type="text/css">
+<!--
+body{font-family:arial}
+h2{background:lime}
+h3{background:#CCCCFF}
+-->
+</style>
+</head>
+<body>
+<h2>TCP/IP Tutorial</h2>
+<p><b><big><big>*</big></big>TCP/IP is the communication protocol for the Internet.<br /></b>
+<b><big><big>*</big></big>In this tutorial you will learn what TCP/IP is, and how it works.</b></p><hr />
+
+<h3 class="tutheader">TCP/IP is the Internet Communication Protocol</h3>
+<p>A communication protocol is a description of the rules computers 
+must follow to communicate with each other. The Internet communication protocol 
+defines the rules for computer communication over the Internet.</p>
+
+<h3 class="tutheader">Your Browser and Your Server Use TCP/IP</h3>
+<p>Internet browsers and Internet servers use TCP/IP to connect to the Internet. 
+Your browser uses TCP/IP to access Internet servers, and servers use TCP/IP to 
+send HTML back to your browser.</p>
+
+<h3 class="tutheader">Your E-Mail Uses TCP/IP</h3>
+
+<p>Your e-mail program uses TCP/IP to connect to the Internet for sending and receiving e-mails.</p>
+
+<h3 class="tutheader">Your Internet Address is TCP/IP</h3>
+<p>Your Internet address "222.127.49.19" is a part of the standard TCP/IP protocol. 
+(And so is your domain name "www.someonesplace.com")</p>
+
+<h2>Introduction to TCP/IP</h2>
+<p class="intro">TCP/IP is the communication protocol for the Internet.</p>
+<hr />
+
+<h3>Computer Communication Protocol</h3>
+<p>A computer communication protocol is a description of the rules computers 
+must follow to communicate with each other.</p>
+
+<h3>What is TCP/IP?</h3>
+<p>TCP/IP is the communication protocol for 
+communication between computers connected to the Internet.</p>
+<p>TCP/IP stands for <b>T</b>ransmission <b>C</b>ontrol <b>P</b>rotocol / <b>I</b>nternet
+
+<b>P</b>rotocol.</p>
+<p>The standard defines how electronic devices (like computers) should be 
+connected to the Internet, and how data should be transmitted between them.</p>
+
+<h3>Inside TCP/IP</h3>
+
+<p>Hiding inside the TCP/IP standard there are a number of protocols for handling 
+data communication:</p>
+
+<ul>
+	<li>TCP (Transmission Control Protocol) communication between applications</li>
+
+	<li>UDP (User Datagram Protocol) simple communication between applications</li>
+	<li>IP (Internet Protocol) communication between computers</li>
+	<li>ICMP (Internet Control Message Protocol) for errors and statistics</li>
+	<li>DHCP (Dynamic Host Configuration Protocol) for dynamic addressing</li>
+</ul>
+
+<p>You will learn more about these standards later in this tutorial.</p>
+
+<hr>
+<h2>TCP Uses a Fixed Connection</h2>
+<p>TCP is for communication between applications.</p>
+<p>When an application wants to communicate with another application via TCP, it 
+sends a communication request. This request must be sent to an exact  
+address. After a "handshake" between the two applications, TCP will setup a 
+"full-duplex" communication between the two applications.</p>
+<p>The "full-duplex" communication will occupy the communication line between 
+the two computers until it is closed by one of the two applications.</p>
+<p>UDP is very similar to TCP, but is simpler and less reliable.</p>
+
+<h3>IP is Connection-Less</h3>
+<p>IP is for communication between computers.</p>
+
+<p>IP is a "connection-less" communication protocol. It does not occupy the 
+communication line between two communicating computers. This way IP reduces the 
+need for network lines. Each line can be used for communication between many 
+different computers at the same time.</p>
+<p>With IP, messages (or other data) are broken up into small independent 
+"packets" and sent between computers via the Internet.</p>
+<p>IP is responsible for "routing" each packet to its destination. </p>
+
+<h3>IP Routers</h3>
+<p>When an IP packet is sent from a computer, it arrives at an IP router.</p>
+<p>The IP router is responsible for "routing" the packet to its destination, 
+directly or via another router. </p>
+<p>The path the packet will follow might be different from other packets of the 
+same communication. The router is responsible for the right addressing depending 
+on traffic volume, errors in the network, or other parameters.</p>
+
+<h3>Connection-Less Analogy</h3>
+<p>Communicating via  IP is like sending a long letter as a large number of 
+small postcards, each finding its own (often different) way to the receiver.</p>
+
+<h3>TCP/IP</h3>
+<p>TCP/IP is TCP and IP working together.</p>
+<p>TCP takes care of the communication between your application software (i.e. 
+your browser) and your network software.</p>
+<p>IP takes care of the communication with other computers.</p>
+<p>TCP is responsible for breaking data down into IP packets before they are 
+sent, and for assembling the packets when they arrive.</p>
+
+<p>IP is responsible for sending the packets to the receiver.</p>
+<hr />
+
+<h2>TCP/IP Addressing</h2>
+
+<p class="intro">TCP/IP uses 32 bits, or 4 numbers between 0 and 255 to address a 
+computer.</p><hr />
+
+<h3>IP Addresses</h3>
+<p>Each computer must have an IP address before it can connect to the Internet.</p>
+
+<p>Each IP packet must have an address before it can be sent to another 
+computer.</p>
+<p>This is an IP address: 192.68.20.50.<br>
+This might be the same IP address:&nbsp;
+<a href="http://www.w3schools.com">www.w3schools.com</a> </p>
+<p>You will learn more about IP addresses and IP names in the next chapter of 
+this tutorial.</p>
+
+<h3>An IP Address Contains 4 Numbers.</h3>
+
+<p>This is your  IP address: <b>222.127.49.19</b></p>
+
+<p>TCP/IP uses 4 numbers to address a computer. Each computer must have a unique 
+4 number address.</p>
+
+<p>The numbers are always between 0 and 255. Addresses are normally written as four 
+numbers separated by a period like this: <b>192.168.1.50</b>.</p>
+
+<h3>32 Bits = 4 Bytes</h3>
+<p>TCP/IP uses 32 bits addressing. One computer byte is 8 bits. So TCP/IP uses 4 
+computer bytes.</p>
+<p>A computer byte can contain 256 different values:</p>
+<p>00000000, 00000001, 00000010, 00000011, 00000100, 00000101, 00000110, 
+00000111, 00001000 .......and all the way up to 11111111.</p>
+<p>Now you know why a TCP/IP address is 4 numbers between 0 and 255 </p>
+
+<h3>Domain Names</h3>
+
+<p>12 digit numbers are hard to remember. Using a name is easier.</p>
+<p>Names used for TCP/IP addresses are called domain names. w3schools.com is a 
+domain name. </p>
+<p>When you address a web site like <a href="http://www.w3schools.com">
+http://www.w3schools.com</a>, the name is translated to a number by a DNS 
+process (Domain Name Server).</p>
+<p>All over the world, a large number of DNS servers are connected to the 
+Internet. DNS servers are responsible for translating domain names into TCP/IP 
+addresses and update each other with new domain names.</p>
+<p>When a new domain name is registered together with a TCP/IP address, DNS 
+servers all over the world are updated with this information.</p><hr />
+
+<h2>TCP/IP Protocols</h2>
+<p class="intro">TCP/IP is a large collection of different communication protocols.</p>
+<hr />
+
+<h3>A Family of Protocols</h3>
+<p>TCP/IP is a large collection of different communication protocols based upon 
+the two original protocols TCP and IP.</p><hr />
+
+<h4>TCP - Transmission Control Protocol</h4>
+<p>TCP is used for transmission of data from an application to 
+the network.</p>
+<p>TCP is responsible for breaking data down into IP packets before they are 
+sent, and for assembling the packets when they arrive.</p><hr />
+
+<h4>IP - Internet Protocol</h4>
+<p>IP takes care of the communication with other computers.</p>
+<p>IP is responsible for the sending and receiving data packets over the 
+Internet.</p><hr />
+
+<h4>HTTP - Hyper Text Transfer Protocol</h4>
+<p>HTTP takes care of the communication between a web server and a 
+web browser.</p>
+<p>HTTP is used for sending requests from a web client (a browser) 
+to a web server, returning web content (web pages) from the server back to the 
+client.</p><hr />
+
+<h4>HTTPS - Secure HTTP</h4>
+<p>HTTPS takes care of secure communication between a web server 
+and a web browser.</p>
+<p>HTTPS typically handles credit card transactions and other 
+sensitive data.</p><hr />
+
+<h4>SSL - Secure Sockets Layer</h4>
+<p>The SSL protocol is used for encryption of data for secure data transmission.</p><hr />
+
+<h4>SMTP - Simple Mail Transfer Protocol</h4>
+<p>SMTP is used for transmission of e-mails.</p><hr />
+
+<h4>MIME - Multi-purpose Internet Mail Extensions</h4>
+<p>The MIME protocol lets SMTP transmit multimedia files including voice, audio, 
+and binary data across TCP/IP networks.</p><hr />
+
+<h4>IMAP - Internet Message Access Protocol</h4>
+<p>IMAP is used for storing and retrieving e-mails.</p><hr />
+
+<h4>POP - Post Office Protocol</h4>
+<p>POP is used for downloading e-mails from an e-mail server to a 
+personal computer.</p><hr />
+
+<h4>FTP - File Transfer Protocol</h4>
+<p>FTP takes care of transmission of files between computers.</p><hr />
+
+<h4>NTP - Network Time Protocol</h4>
+<p>NTP is used to synchronize the time (the clock) between 
+computers.</p><hr />
+
+<h4>DHCP - Dynamic Host Configuration Protocol</h4>
+<p>DHCP is used for allocation of dynamic IP addresses to computers 
+in a network.</p><hr />
+
+<h4>SNMP - Simple Network Management Protocol</h4>
+<p>SNMP is used for administration of computer networks.</p><hr />
+
+<h4>LDAP - Lightweight Directory Access Protocol</h4>
+<p>LDAP is used for collecting information about users and e-mail 
+addresses from the internet.</p><hr />
+
+<h4>ICMP - Internet Control Message Protocol</h4>
+<p>ICMP takes care of error handling in the network.</p><hr />
+
+<h4>ARP - Address Resolution Protocol</h4>
+<p>ARP is used by IP to find the hardware address of a computer 
+network card based on the IP address.</p><hr />
+
+<h4>RARP - Reverse Address Resolution Protocol</h4>
+<p>RARP is used by IP to find the IP address based on the hardware 
+address of a computer network card.</p><hr />
+
+<h4>BOOTP - Boot Protocol</h4>
+<p>BOOTP is used for booting (starting) computers from the network.</p><hr />
+
+<h4>PPTP - Point to Point Tunneling Protocol</h4>
+<p>PPTP is used for setting up a connection (tunnel) between 
+private networks.</p><hr />
+
+<h2>TCP/IP Email</h2>
+Email is one of the most important uses of TCP/IP.<hr />
+
+<h3>You Don't  </h3>
+<p>When you write an email, you don't use TCP/IP.</p>
+<p>When you write an email, you use an email program like Lotus Notes, Microsoft 
+Outlook or Netscape Communicator.</p>
+
+<h3>Your Email Program Does</h3>
+<p>Your email program uses different TCP/IP protocols:</p>
+<ul>
+	<li>It sends your emails using SMTP</li>
+
+	<li>It can download your emails from an email server using POP</li>
+	<li>It can connect to an email server using IMAP</li>
+</ul>
+
+<h3>SMTP - Simple Mail Transfer Protocol</h3>
+<p>The SMTP protocol is used for the transmission of e-mails. SMTP takes care of 
+sending your email to another computer.</p>
+<p>Normally your email is sent to an email server (SMTP server), and then to 
+another server or servers, and finally to its destination.</p>
+<p>SMTP can only transmit pure text. It cannot transmit binary data like pictures, sounds or 
+movies.</p>
+<p>SMTP uses the MIME protocol to send binary data across TCP/IP networks. The 
+MIME protocol converts binary data to pure text.</p>
+
+<h3>POP - Post Office Protocol</h3>
+<p>The POP protocol is used by email programs (like Microsoft Outlook) to 
+retrieve emails from an email server.</p>
+<p>If your email program uses POP, all your emails are downloaded to your email 
+program (also called email client), each time it connects to your email server.</p>
+
+<h3>IMAP - Internet Message Access Protocol</h3>
+<p>The IMAP protocol is used by email programs (like Microsoft Outlook) just 
+like the POP protocol.</p>
+<p>The main difference between the IMAP protocol and the POP protocol is that 
+the IMAP protocol will not automatically download all your emails each time your 
+email program connects to your email server.</p>
+<p>The IMAP protocol allows you to see through your email messages at the email 
+server before you download them. With IMAP you can choose to download your 
+messages or just delete them. This way IMAP is perfect if you need to connect to 
+your email server from different locations, but only want to download your 
+messages when you are back in your office.<hr />
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- HTML stands for Hyper Text Markup Language -->
+<!-- An HTML file is a text file containing small markup tags -->
+<!-- The markup tags tell the Web browser how to display the page -->
+<!-- HTML Elements start with a Start Tag and end with an End Tag -->
+<!-- The text between the start and end tags is the Element Content -->
+<html>
+<!-- DISCUSSIONS:
+     HTML Introduction
+     HTML Elements
+     HTML Basic Tags
+     HTML Formatting
+     HTML Entities
+     HTML Links
+     HTML Frames - in coordination with Frames.htm
+     HTML Tables
+     HTML Lists -->
+<head>
+<title>(1/3) HTML Tutorials</title>
+
+<style type="text/css">
+	h2 {background:lime}
+</style>
+
+</head>
+
+<body bgcolor="lightblue"> <!-- this defines the document's body -->
+
+<h2>Introductino to HTML</h2>
+<h1><a id="Top_Section" name="Top_Section">This is the biggest header</a></h1> <!-- NOTE: name is an anchor attribute -->
+<h6>This is the smallest header</h6>
+<p>This is a <b>Paragraph</b>. Paragraphs, Headers,
+and <b>Horizontal Rules</b> (the line below)
+all have 1 free space above and below.<hr></p>
+
+<!-- the <br> is an empty tag for a Line Break -->
+<b>this text is bold </b>(&lt;b>)<br>
+<strong>this text is strong </strong>(&lt;strong>)<br>
+<i>this text is italic </i>(&lt;i>)<br>
+<em>this text is emphasized</em> (&lt;em>)<br>
+<u>this text is underlined</u> (&lt;u>)<br>
+<small>this text is small</small> (&lt;small>)<br>
+<big>this text is big</big> (&lt;big>)<br>
+this text contains a <sup>superscript</sup> (&lt;sup>)<br>
+this text contains a <sub>subscript</sub> (&lt;sub>)<br>
+
+<!-- The famous E=mc2 equation stated below: -->
+<big>E</big><sub><small>energy</small></sub><big>=mc</big><sup><small>2</small></sup><br>
+
+<!-- Attributes always come in name/value pairs like this: name="value".-->
+<!-- Attributes are always specified in the Start Tag of an HTML element.-->
+<!-- World Wide Web Consortium (W3C) demands lower case letters use for tags-->
+<h3 align="center">(Centered Header)</h3>
+<hr/>
+
+<h2>The Pre Tag (&lt;pre>)</h2>
+<pre>
+This is
+    preformatted    text.It preserves      both <b>spaces</b>
+            and <b>line breaks</b>.
+</pre>
+
+<p>The pre tag is good for displaying computer code:</p>
+
+<pre>
+for i = 1 to 10
+     print i
+next i
+</pre>
+<hr/>
+
+<h2>These tags are often used to display computer/programming code.</h2>
+<!-- <listing>,<plaintext>,and <xmp> have been deprecated. Use <pre> instead -->
+<code>Computer code </code>(&lt;code>)<br>
+<kbd>Keyboard input </kbd>(&lt;kbd>)<br>
+<tt>Teletype text </tt>(&lt;tt>)<br>
+<samp>Sample text </samp>(&lt;samp>)<br>
+<var>Computer variable </var>(&lt;var>)<br>
+<hr/>
+
+<h2>The Address Tag (&lt;address>)</h2>
+<address>
+    Donald Duck<br>
+    BOX 555<br>
+    Disneyland<br>
+    USA
+</address>
+<hr/>
+
+<h2>Abbreviations and Acronyms</h2>
+<b>Roll mouse over the abbr and acronym to view full meaning</b><br>
+<abbr title="United Nations">UN </abbr><br/>
+<big><code>&lt;abbr title="United Nations">UN&lt;/abbr></code></big><br>
+<acronym title="World Wide Web">WWW </acronym><br />
+<big><code>&lt;acronym title="World Wide Web">WWW&lt;/acronym></code></big>
+<hr/>
+
+<h2>rtl - right to left</h2>
+<p>If browser supports <b>bi-directional override (bdo)</b>,<br/>
+"Here is some Hebrew text" will be written reversed:</p>
+
+<bdo dir="rtl">Here is some Hebrew text</bdo><br />
+<big><code>&lt;bdo dir="rtl">Here is some Hebrew text&lt;/bdo>)</code></big>
+<hr/>
+
+<h2>Long and Short Quotations</h2>
+Here comes a long quotation: (&lt;blockquote>)
+<blockquote>
+    This is a long quotation. This is a long quotation. This is a long quotation.  
+    This is a long quotation. This is a long quotation. This is a long quotation.
+    This is a long quotation. This is a long quotation. This is a long quotation.
+    This is a long quotation. This is a long quotation. This is a long quotation.
+</blockquote>
+Here comes a short quotation: (&lt;q>)
+<q>This is a short quotation</q>
+<hr/>
+
+<h2>Deleted and Inserted Text</h2>
+<p>a dozen is <del>twenty</del> <ins>twelve</ins> pieces<br />
+<big><code>&lt;del>twenty&lt;/del></code></big> and <big><code>&lt;ins>twelve&lt;/ins></code></big></p>
+<cite>Defines a citation</cite> (&lt;cite>)<br>
+<dfn>Defines a definition term</dfn> (&lt;dfn>)<br>
+<hr/>
+
+<h2>Character Entites</h2>
+A character entity has three parts:<br>
+1. <b>an ampersand (&amp;)</b><br>
+2. <b>an (entity name) or a (# sign and an entity no.)</b><br>
+3. <b>and finally a semicolon (;)</b><br>
+This is a less than <b>&lt;</b> symbol  represented by <b>&amp;lt;</b><br>
+This is a less than  <b>&#60;</b> symbol represented by <b>&amp;#60;</b>
+<div><br/>Click <a href="Entities.htm"><b>THIS LINK</b></a> for a list of <b>Character Entities</b></div>
+<hr/>
+
+<h2>HTML Links: The anchor Tag and href attribute</h2>
+<!-- An anchor can point to any resource on the Web: an HTML page, an image, a sound file, a movie, etc. -->
+<p><a href="http://www.friendster.com" target="_blank">This text</a>
+leads you to the friendster home page in a <b>NEW window</b></p>
+<p>This picture leads to the Rihanna home page in <b>SAME window</b>
+<a href="http://www.Rihanna.com"><img src="http://www.freewebs.com/har_rki219_mc2e/pictures/CL.JPG"
+height="20" width="60" boarder="2"></a></p>
+basic LINK structure:<br/>
+<big><code>&lt;a href="URL">Picture or Text Link Here&lt;/a></code></big>
+<hr/>
+
+<h2>Named Anchors</h2>
+<a href="#Top_Section">Jump to "This is the biggest Header"</a><br>
+<big><code>&lt;a href="#Top_section">Jump to "This is the biggest Header"</code></big><br />
+<!-- NOTE: the Top_Section Anchor is at the "This is the biggest Header" Section at the top -->
+<!-- Example of anchor on another page: <a href="http://www.AnotherSite.com/Site.htm#top">leads to anchor name "top" of Site.htm page</a> -->
+<br />Locked in a frame? This example demonstrates how to break out of a frame, if your site is locked in a frame.<br>
+<a href="http://www.w3schools.com/" target="_top">Click here!</a>
+<hr/>
+
+<h2>Send Mail</h2>
+<p>This is a mail link:<a href="mailto:hajie18@eudoramail.com?subject=Hello%20again">Send Mail</a></p>
+<p><b>Note:</b> Spaces between words should be replaced by %20 to <b>ensure</b>
+that the browser will display your text properly.</p>
+<p>This is another mailto link:<a href="mailto:hajie@eudoramail.com?cc=har_rki219_mc2e@yahoo.com&bcc=mltan30@yahoo.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!">Send mail!</a></p>
+<hr/>
+
+<h2>Frame Navigation</h2>
+<p>To use Frame Navigation, run the Frames.htm document which will load this document.
+"FrameName" is the target frame name in Frames.htm which contains a frame with name FrameName</p>
+<a href="HTML_Notes2.htm" target="FrameName">Frame of HTML_Notes2</a><br>
+<a href="HTML_Advance.htm" target="FrameName">Frame of HTML_Advance</a><br>
+<a href="Entities.htm#ISO_8859" target="FrameName">Frame of Entities</a><br>
+<hr/>
+
+<h2>Inline Frames or iframes and jumps</h2>
+<iframe src="Entities.htm#ISO_8859" width="40%" height="40%"></iframe>
+<p>Website loads into an inline frame and points to the name anchor ISO_8859.
+Some older browsers don't support iframes.
+If they don't, the iframe will not be visible.</p>
+<hr/>
+
+<h2>Tables: Cellpadding, Cellspacing, Spanning, and other Attributes</h2>
+<!-- The <th> tag is like <td> but is a header data cell -->
+<!-- Cellpadding is used to create more white space between the cell content and its borders. -->
+<!-- Cellspacing is used to increase the distance between the cells. -->
+<table border="6" cellpadding="10" background="Images/Mario.jpg">
+<caption><b>Table w/ Background image (This is a Table Caption &lt;caption>)</b></caption>
+  <tr>
+    <th style="color:yellow;font-family:Arial Black">Column 1 Table Heading</th>
+    <th style="color:yellow;font-family:Arial Black">Column 2 Table Heading</th>
+  </tr>
+  <tr>
+    <td style="color:white;font-family:Arial Black">Data R1,C1</td>
+    <td style="color:white;font-family:Arial Black">Data R1,C2</td>
+  </tr>
+  <tr>
+    <td style="color:white;font-family:Arial Black">Data R2,C1</td>
+    <td style="color:white;font-family:Arial Black">Data R2,C2</td>
+  </tr>
+</table>
+
+<h4>Cell that spans two columns with cellspacing 10 (with green bgcolor):</h4>
+<table border="1" cellspacing="10" bgcolor="lightgreen">
+<tr>
+  <th>Name</th>
+  <th colspan="2" align="right">Telephone</th>
+</tr>
+<tr>
+  <td>Bill Gates</td>
+  <td>555 77 854</td>
+  <td>555 77 855</td>
+</tr>
+</table>
+
+<h4>Cell that spans two rows (with cell image and cell bgcolor):</h4>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <td bgcolor="pink">Harry Kunz</td>
+  </tr>
+  <tr>
+    <th rowspan="2" background="Images/Mario.jpg">Telephone#
+    <td>425-2144</td>
+  </tr>
+  <tr>
+    <td>422-5197</td>
+  </tr>
+</table>
+
+<!-- The <thead>,<tbody> and <tfoot> elements are seldom used,
+because of bad browser support. Expect this to change in future versions of XHTML. -->
+
+<p>
+If you see no frames around the tables in these examples, your browser is too old, or does not support it.
+</p>
+<hr/>
+
+<h2>Frame Attribute to control Borders around Tables</h2>
+<h4>Table with attribute frame="box"</h4>
+<table frame="box">
+  <tr>
+    <th>Header Row1</th>
+    <td>Row 1 Col 1</td>
+    <td>Row 1 Col 2</td>
+  </tr>
+  <tr>
+    <th>Header Row2</th>
+    <td>Row 2 Col1</td>
+    <td>Row 2 Col2</td>
+  </tr>
+</table>
+<p>the <b>frame</b> attribute can take on values:<br>
+<ol>
+  <li>"border" - used for frame around</li>
+  <li>"box" - used for frame around</li>
+  <li>"void" - no frame at all"</li>
+  <li>"above" - line border at lower table side</li>
+  <li>"below" - line border at upper table side</li>
+  <li>"hsides" - line borders at horizontal table sides</li>
+  <li>"vsides" - line borders at vertical table sides</li>
+  <li>"lhs" - line border at left table side</li>
+  <li>"rhs" - line border at right table side</li>
+</ol>
+<hr/>
+
+<h2>Frames and Boarders combined</h2>
+<table frame="hsides" border="3">
+<tr>
+  <td>First row</td>
+</tr>   
+</table>
+<br />
+<table frame="vsides" border="3">
+<tr>
+  <td>First row</td>
+</tr>   
+</table>
+<p>If you see no frames around the tables in these examples, your browser does not support the frame attribute.</p>
+<hr/>
+
+<h2>Colgroup and col Attributes</h2>
+<table border="1">
+<colgroup span="3" style="color:#FF0000;">
+<col width="200"></col>
+<col width="50"></col>
+<col width="80"></col>
+</colgroup>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+<hr/>
+
+<h2>The &lt;thead>, &lt;tbody>, and &lt;tfoot> Attributes</h2>
+<b>Definition and Usage</b>
+<p>The thead, tfoot and tbody elements enable you to group rows in a table.
+When you create a table, you might want to have a header row, some rows with data,
+and a row with totals at bottom. This division enables browsers to support
+scrolling of table bodies independently of the table header and footer.
+When long tables are printed, the table header and footer information may be
+repeated on each page that contains table data.</p>
+<p>
+<b>Note:</b> The &lt;tbody> must have a &lt;tr> tag inside!<br>
+<b>Note:</b> If you use the thead, tfoot and tbody elements, you must use every element.
+They should appear in this order: &lt;thead>, &lt;tfoot> and &lt;tbody>, so that browsers
+can render the foot before receiving all the data. You must use these tags within the table element.</p>
+<table border = "1">
+<thead>
+  <tr>
+    <td>This text is in the THEAD</td>
+  </tr>
+</thead>
+<tfoot>
+  <tr>
+    <td>This text is in the TFOOT</td>
+  </tr>
+</tfoot>
+<tbody>
+  <tr>
+    <td> This text is in the TBODY</td> 
+  </tr>
+</tbody>
+</table>
+<hr/>
+
+<h2>Types of Lists</h2>
+<p>Lists can also be nested within lists.<br/>
+<b>&lt;dir></b> and <b>&lt;menu></b> are deprecated tags, use <b>&lt;ul></b> instead.<br />
+under each type of list, listings are placed w/in <b>&lt;li> elements</b></p>
+<big><b>Unordered Lists &lt;ol></b></big>
+<ul type="square">
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Lemons</li>
+</ul>
+
+<big><b>Ordered list &lt;ol> (Numbered list):</b></big>
+<ol>
+ <li>Apples</li>
+ <li>Bananas</li>
+ <li>Lemons</li>
+</ol>  
+
+<big><b>Letters list &lt;ol type="A">:</b></big>
+<ol type="A">
+ <li>Apples</li>
+ <li>Bananas</li>
+ <li>Lemons</li>
+</ol>  
+<p>the <b>type</b> attribute for <b>ordered lists</b> can take <b>values "A","a","I","i"</b>. By default it is numbered;<br>
+the <b>type</b> attribute for <b>unordered lists</b> can take <b>values "disc" "circle" "square"</b>. By default it is "disc"</p>
+
+<big><b>Definition Lists: </b></big><u>List</u> starts with <b>&lt;dl></b> followed by <u>term</u> <b>&lt;dt></b> then <u>definition</u><b> &lt;dd></b>
+<!-- is not a list of items but definition list [dl] of terms [dt] and definitions [dd] -->
+<dl>
+<dt>Apples-</dt>
+<dd>are red sweet or sour fruits</dd>
+<dt>Bananas-</dt>
+<dd>are yellow sweet fruits</dd>
+<dt>Lemons-</dt>
+<dd>are yellow sour fruits</dd>
+</dl>
+
+</body>
+</html>

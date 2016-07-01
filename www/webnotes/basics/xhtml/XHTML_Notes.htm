@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+	DISCUSSIONS:
+	XHTML Introduction
+	XHTML Why
+	XHTML v HTML
+	XHTML Syntax
+	XHTML DTD
+	XHTML HowTo
+	XHTML Validation
+	XHTML Modules
+	XHTML Attributes
+	XHTML Events
+-->
+<head>
+  <title>XHTML Tutorial</title>
+  <style type="text/css">
+	h2 {
+	  font-family:Arial;
+	  background:lime;
+	  color:black;
+	}
+	p {
+	  font-family:Arial;
+	  /*margin:50px;*/
+	}
+  </style>
+</head>
+
+<body bgcolor="#CFFFFF">
+<h2>&nbsp;XHTML Introduction</h2>
+<p><b>XHTML</b> is a stricter and cleaner version of HTML.</p>
+
+<ul type="square" style="font-family:Arial">
+  <li>XHTML stands for E<b>X</b>tensible <b>H</b>yper<b>T</b>ext <b>M</b>arkup<b>L</b>anguage</li>
+  <li>XHTML is aimed to <b> replace</b> HTML</li>
+  <li>XHTML is almost <b> identical</b> to HTML 4.01</li>
+  <li>XHTML is a <b> stricter and cleaner</b> version of HTML</li>
+  <li>XHTML is HTML defined as an <b> XML application</b></li>
+  <li>XHTML is a W3C Recommendation</li>
+</ul>
+
+<p><b>XHTML</b> is a combination of <b>HTML</b> and <b>XML</b> (EXtensible Markup Language).<br />
+<b>XHTML</b> consists of all the elements in <b>HTML 4.01</b> combined with the syntax of <b>XML</b>.
+
+<h2>&nbsp;The Most Important Differences:</h2>
+<ul type="square" style="font-family:Arial">
+  <li>XHTML elements must be <b> properly nested</b></li>
+  <li>XHTML elements must always be <b> closed</b></li>
+  <li>XHTML elements must be in <b> lowercase</b></li>
+  <li>XHTML documents must have <b>one root element</b></li>
+</ul>
+<p>Source code of this document contains examples that are w/in Comments</p>
+<!-- EXAMPLES PROPER NESTING 
+<big><b><i>This is proper nesting</i></b></big>
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+-->
+<!-- PROPER TAG CLOSING Empty Elements must have also a closing but place a space before the "/>" sign
+A break: <br />
+A horizontal rule: <hr />
+An image: <img src="happy.gif" alt="Happy face" />
+-->
+<!-- XHTML must have ONLY ONE Root Element: 1 <html> element
+<html>
+<head> ... </head>
+<body> ... </body>
+</html>
+-->
+<hr />
+<h2>&nbsp;XHTML Syntax</h2>
+<h3>&nbsp;Some More XHTML Syntax Rules:</h3>
+
+<ul>
+
+<li>Attribute names must be in <b>lower case</b></li>
+<li>Attribute values must be <b> quoted</b></li>
+<li>Attribute minimization is <b> forbidden</b></li>
+<!--
+This is wrong:      This is correct:
+<input checked>     <input checked="checked" />
+<option selected>   <option selected="selected" />
+<frame noresize>    <frame noresize="noresize" />
+-->
+<li>The id attribute <b> replaces</b> the name attribute</li>
+<li>The XHTML DTD defines <b>mandatory</b> elements</li>
+</ul>
+<p>Source code of this document contains examples that are w/in Comments</p><hr />
+
+<p>Here is a list of the minimized attributes in HTML and how they should be written in XHTML:</p>
+<table bgcolor="#FFFFCC" class="ex" border="1" cellspacing="0" width="320"><tbody><tr><td>
+<pre>HTML            XHTML 
+compact 	compact="compact"
+checked 	checked="checked"
+declare 	declare="declare"
+readonly 	readonly="readonly"
+disabled 	disabled="disabled"
+selected 	selected="selected"
+defer 	        defer="defer"
+ismap 	        ismap="ismap"
+nohref 	        nohref="nohref"
+noshade 	noshade="noshade"
+nowrap 	        nowrap="nowrap"
+multiple 	multiple="multiple"
+noresize 	noresize="noresize"
+</pre>
+</td></tr></tbody></table>
+
+<p>The <b>id</b> Attribute Replaces The <b>name</b> Attribute. XHTML has deprecated the name attribute<br />
+<b>Note: </b>To interoperate with older browsers for a while, <u>you should use both name and id</u>, with identical attribute values, like this:<br /><code>&lt;img src="picture.gif" id="picture1" name="picture1" /></code></p><hr />
+
+<h3>The Lang Attribute</h3>
+<p>The lang attribute applies to almost every XHTML element. It specifies the language of the content within an element.If you use the lang attribute in an element, you must add the xml:lang attribute, like this:<br /><code>&lt;div lang="no" xml:lang="no">Heia Norge!&lt;/div></code></p><hr />
+
+<h3>Mandatory XHTML Elements</h3>
+<p>All XHTML documents must have a DOCTYPE declaration. The html, head and body elements must be present, and the title must be present inside the head element. Example used in dreameweaver:</p>
+
+<table bgcolor="#FFFFCC" class="ex" border="1" cellspacing="0" width="510"><tbody><tr><td>
+<pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"></pre>
+</td></tr></tbody></table>
+
+<!-- Minimum XHTML document template:
+!DOCTYPE Doctype goes here>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Title goes here</title>
+</head>
+-->
+<p><b>Note: </b>The DOCTYPE declaration is not a part of the XHTML document itself. It is not an XHTML element, and it should not have a closing tag.</p>
+
+<p><b>Note: </b>The xmlns attribute inside the &lt;html> tag is required in XHTML. However, the validator on w3.org does not complain when this attribute is missing in an XHTML document. This is because "xmlns=http://www.w3.org/1999/xhtml" is a fixed value and will be added to the &lt;html> tag even if you do not include it.</p><hr />
+<h2>XHTML Document Type Definition (DTD)</h2>
+<p>The XHTML standard defines 3 Document Type Definitions.<br />
+The most common is the <b>XHTML Transitional</b>.</p>
+
+An XHTML doc consists of 3 main parts:
+<ol>
+  <li>the DOCTYPE - this declaration should always be in the first line of doc</li>
+  <li>the Head</li>
+  <li>the Body</li>
+</ol>
+<!--
+The basic document structure is:
+<!DOCTYPE ...>
+<html>
+<head>
+<title>... </title>
+</head>
+<body> ... </body>
+</html>
+-->
+<p>The DOCTYPE declaration defines the document type:<br />
+<pre>&lt;!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"></pre>
+</p>
+<hr />
+<big><b>The 3 Document Type Definitions</b></big>
+<ul type="square">
+  <li>DTD specifies the syntax of a web page in SGML.</li>
+  <li>DTD is used by SGML applications, such as HTML, to specify rules that apply to the markup of documents of a particular type, including a set of element and entity declarations.</li>
+  <li>XHTML is specified in an SGML document type definition or 'DTD'.</li>
+  <li>An XHTML DTD describes in precise, computer-readable language, the allowed syntax and grammar of XHTML markup.</li>
+</ul>
+<big><b>There are currently 3 XHTML document types:</b></big>
+<ul type="square" style="font-family:Arial">
+  <li>Strict</li>
+  <li>Transitional</li>
+  <li>Frameset</li>
+</ul>
+
+<p>XHTML 1.0 specifies three XML document types that correspond to three DTDs: Strict, Transitional, and Frameset.</p>
+
+<h3 style="color:red;font-size:120%">XHTML 1.0 Strict</h3>
+
+<table bgcolor="#FFFFCC" class="ex" border="1" cellspacing="0" width="500"><tbody><tr><td>
+<pre>&lt;!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</pre>
+</td></tr></tbody></table>
+
+<p>Use this when you want really clean markup, free of presentational clutter.
+Use this together with Cascading Style Sheets.</p>
+
+<h3 style="color:red;font-size:120%">XHTML 1.0 Strict>XHTML 1.0 Transitional</h3>
+<table bgcolor="#FFFFCC" class="ex" border="1" cellspacing="0" width="500"><tbody><tr><td>
+<pre>&lt;!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre>
+</td></tr></tbody></table>
+
+<p>Use this when you need to take advantage of HTML's presentational features
+and when you want to support browsers that don't understand
+Cascading Style Sheets.</p>
+
+<h3 style="color:red;font-size:120%">XHTML 1.0 Strict>XHTML 1.0 Frameset</h3>
+<table bgcolor="#FFFFCC" class="ex" border="1" cellspacing="0" width="500"><tbody><tr><td>
+<pre>&lt;!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</pre>
+</td></tr></tbody></table>
+<p>Use this when you want to use HTML Frames to partition the browser window
+into two or more frames.</p><hr />
+
+<h2><a href="http://www.w3schools.com/xhtml/xhtml_howto.asp">Converting from HTML to XHTML</a></h2>
+<hr />
+
+<h2>XHTML Validation</h2>
+<p style="font-family:Arial"><b>An XHTML document is validated against a Document Type Definition.</b><hr />
+<h3>Validate XHTML With A DTD</h3>
+<p>An XHTML document is validated against a Document Type Definition (DTD). Before an XHTML file can be properly validated, a correct DTD must be added as the first line of the file.</p><hr />
+
+<h2>XHTML Modularization</h2>
+<b>The XHTML modularization-model defines the modules of XHTML.</b><hr />
+
+<h2>Why XHTML Modularization?</h2>
+<p>XHTML is a simple, but large language. XHTML contains most of the functionality a 
+web developer will need.</p>
+
+<p>For some purposes XHTML is too large and complex, and for other purposes it's too simple.</p>
+<p>By splitting XHTML into modules, the W3C (World Wide web Consortium) has 
+created small and well-defined sets of XHTML elements that can be used 
+separately for small devices, or combined with other XML standards into 
+larger and more complex applications.</p>
+<p>With modular XHTML, designers can:</p>
+<ul>
+	<li>Choose the elements to be supported by a device using standard XHTML 
+	building blocks</li>
+	<li>Add extensions to XHTML, using XML, without breaking the XHTML standard</li>
+	<li>Simplify XHTML for devices like hand held computers, mobile phones, TV, 
+	and home appliances</li>
+	<li>Extend XHTML for complex applications by adding new XML functionality (like MathML, 
+	SVG, Voice and Multimedia)</li>
+
+	<li>Define XHTML profiles like XHTML Basic (a subset of XHTML for mobile 
+	devices)</li>
+</ul>
+<hr />
+
+<h3>XHTML Modules</h3>
+<p>W3C has split the definition of XHTML into 28 modules:</p>
+<table bgcolor="#FFFFCC" class="ex" border="1" cellspacing="0" width="600">
+  <tbody><tr>
+    <th align="left" valign="top" width="35%">Module name</th>
+    <th align="left" valign="top" width="65%">Description</th>
+  </tr>
+  <tr>
+    <td valign="top">Applet Module</td>
+    <td valign="top">Defines the deprecated* applet element</td>
+  </tr>
+  <tr>
+    <td valign="top">Base Module</td>
+    <td valign="top">Defines the base element</td>
+  </tr>
+  <tr>
+    <td valign="top">Basic Forms Module</td>
+    <td valign="top">Defines the basic forms elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Basic Tables Module</td>
+    <td valign="top">Defines the basic table elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Bi-directional Text Module</td>
+    <td valign="top">Defines the bdo element</td>
+  </tr>
+  <tr>
+    <td valign="top">Client Image Map Module</td>
+    <td valign="top">Defines browser side image map elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Edit Module</td>
+    <td valign="top">Defines the editing elements del and ins</td>
+  </tr>
+  <tr>
+    <td valign="top">Forms Module</td>
+    <td valign="top">Defines all elements used in forms</td>
+  </tr>
+  <tr>
+    <td valign="top">Frames Module</td>
+    <td valign="top">Defines the frameset elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Hypertext Module</td>
+    <td valign="top">Defines the a element</td>
+  </tr>
+  <tr>
+    <td valign="top">Iframe Module</td>
+    <td valign="top">Defines the iframe element</td>
+  </tr>
+  <tr>
+    <td valign="top">Image Module</td>
+    <td valign="top">Defines the img element</td>
+  </tr>
+  <tr>
+    <td valign="top">Intrinsic Events Module</td>
+    <td valign="top">Defines event attributes like onblur and onchange</td>
+  </tr>
+  <tr>
+    <td valign="top">Legacy Module</td>
+    <td valign="top">Defines deprecated* elements and attributes</td>
+  </tr>
+  <tr>
+    <td valign="top">Link Module</td>
+    <td valign="top">Defines the link element</td>
+  </tr>
+  <tr>
+    <td valign="top">List Module</td>
+    <td valign="top">Defines the list elements ol, li, ul, dd, dt, and dl</td>
+  </tr>
+  <tr>
+    <td valign="top">Metainformation Module</td>
+    <td valign="top">Defines the meta element</td>
+  </tr>
+  <tr>
+    <td valign="top">Name Identification Module</td>
+    <td valign="top">Defines the deprecated* name attribute</td>
+  </tr>
+  <tr>
+    <td valign="top">Object Module</td>
+    <td valign="top">Defines the object and param elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Presentation Module</td>
+    <td valign="top">Defines presentation elements like b and i</td>
+  </tr>
+  <tr>
+    <td valign="top">Scripting Module</td>
+    <td valign="top">Defines the script and noscript elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Server Image Map Module</td>
+    <td valign="top">Defines server side image map elements</td>
+  </tr>
+  <tr>
+    <td valign="top">Structure Module</td>
+    <td valign="top">Defines the elements html, head, title and body</td>
+  </tr>
+  <tr>
+    <td valign="top">Style Attribute Module</td>
+    <td valign="top">Defines the style attribute</td>
+  </tr>
+  <tr>
+    <td valign="top">Style Sheet Module</td>
+    <td valign="top">Defines the style element</td>
+  </tr>
+  <tr>
+    <td valign="top">Tables Module</td>
+    <td valign="top">Defines the elements used in tables</td>
+  </tr>
+  <tr>
+    <td valign="top">Target Module</td>
+    <td valign="top">Defines the target attribute</td>
+  </tr>
+  <tr>
+    <td valign="top">Text Module</td>
+    <td valign="top">Defines text container elements like p and h1</td>
+  </tr>
+</tbody></table>
+<p>* Deprecated elements should not be used in XHTML.</p><hr />
+
+<h2>XHTML Standard Attributes</h2>
+<p>It is the same with HTML Attributes. Click <a href="AdvanceHTML.htm#HTML_Attributes">THIS LINK</a> to go to HTML Attributes</p><hr />
+<h2>XHTML Event Attributes</h2>
+<p>It is the same with HTML Events. Click <a href="AdvanceHTML.htm#HTML_Events">THIS LINK</a> to go to HTML Events</p><hr />
+
+</body>
+
+</html>
