@@ -65,7 +65,7 @@
 												<div class="middle">
 													<ul class="menu">
 <?php echo "<li class='menuHeader'><a href='" . $root . "blog/' title=''><h5>Blog</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "blog/' title=''><p>My Blog</p></a></li>"; ?>
+<?php echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>"; ?>
 <?php echo "<li class='menuHeader'><a href='" . $root . "about/' title=''><h5>About</h5></a></li>"; ?>
 <?php echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>hkunz.com</p></a></li>"; ?>
 <?php echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>"; ?>
