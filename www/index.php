@@ -3,7 +3,7 @@
 ?>
 
 <div>
-	<p>This website is still under construction.<br />Thank you for visiting.<br />Get to know me more <a href="http://www.hkunz.com/about/hkunz/"><b>HERE</b></a>.</p>
+	<p>This website is still under construction.<br />Thank you for visiting.<br />Get to know me more <a href="about/hkunz/"><b>HERE</b></a>.</p>
 </div>
 
 <?php
