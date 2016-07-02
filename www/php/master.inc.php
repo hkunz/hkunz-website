@@ -64,29 +64,30 @@
 											<div class="right">
 												<div class="middle">
 													<ul class="menu">
-<?php echo "<li class='menuHeader'><a href='#' title=''><h5>Blog</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>"; ?>
-<?php echo "<li class='menuHeader'><a href='#' title=''><h5>About</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>hkunz.com</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>"; ?>
-<?php echo "<li class='menuHeader'><a href='#' title=''><h5>Portfolio</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/lexmark/' title=''><p>Lexmark Pro-905</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/cbakiosk/' title=''><p>CBA Kiosk</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/seafight/' title=''><p>Seafight</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/createswf/' title=''><p>CreateSWF</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/pacman/' title=''><p>Pac-Man</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/skinzone/' title=''><p>SkinZone</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "portfolio/stockchart/' title=''><p>StockChart</p></a></li>"; ?>
-<?php echo "<li class='menuHeader'><a href='#' title=''><h5>Generators</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "generators/htmlcss/CodeHighlighter.php' title=''><p>Code Highlighter</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "generators/flash/DotMatrix.php' title=''><p>Dot-Matrix</p></a></li>"; ?>
-<?php echo "<li class='menuHeader'><a href='#' title=''><h5>Source Files</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "sourcefiles/as2/colorpicker/'><p>ColorPicker (AS2.0)</p></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "sourcefiles/as3/polygon/'><p>Polygon (AS3.0)</p></a></li>"; ?>
-<?php echo "<li class='menuHeader'><a href='#' title=''><h5>Web Notes</h5></a></li>"; ?>
-<?php echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p></a></li>"; ?>
+<?php
+echo "<li class='menuHeader'><a href='#' title=''><h5>Blog</h5></a></li>";
+echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>";
+echo "<li class='menuHeader'><a href='#' title=''><h5>About</h5></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>hkunz.com</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>";
+echo "<li class='menuHeader'><a href='#' title=''><h5>Portfolio</h5></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/lexmark/' title=''><p>Lexmark Pro-905</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/cbakiosk/' title=''><p>CBA Kiosk</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/seafight/' title=''><p>Seafight</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/createswf/' title=''><p>CreateSWF</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/pacman/' title=''><p>Pac-Man</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/skinzone/' title=''><p>SkinZone</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "portfolio/stockchart/' title=''><p>StockChart</p></a></li>";
+echo "<li class='menuHeader'><a href='#' title=''><h5>Generators</h5></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "generators/htmlcss/CodeHighlighter.php' title=''><p>Code Highlighter</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "generators/flash/DotMatrix.php' title=''><p>Dot-Matrix</p></a></li>";
+echo "<li class='menuHeader'><a href='#' title=''><h5>Source Files</h5></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "sourcefiles/as2/colorpicker/'><p>ColorPicker (AS2.0)</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "sourcefiles/as3/polygon/'><p>Polygon (AS3.0)</p></a></li>";
+echo "<li class='menuHeader'><a href='#' title=''><h5>Web Notes</h5></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p></a></li>";
+?>
 													</ul>
-
 												</div>
 											</div>
 										</div>
