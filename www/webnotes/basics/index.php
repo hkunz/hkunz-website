@@ -28,10 +28,14 @@ These are just some notes i took from <a class='basicLink' href='http://w3school
 <ol><a class='basicLink' href='css/CSS_Advance1.htm' target="_blank">CSS Notes Advanced 1</a></ol>
 <ol><a class='basicLink' href='css/CSS_Advance2.htm' target="_blank">CSS Notes Advanced 2</a></ol>
 <ol><a class='basicLink' href='tcpip/tcpip.html' target="_blank">TCP/IP Notes</a></ol>
-<!-- TODO add sql notes -->
+<ol><a class='basicLink' href='sql/SQL_Notes.htm' target="_blank">SQL Notes</a></ol>
+<ol><a class='basicLink' href='sql/SQL_Advance1.htm' target="_blank">SQL Advanced Notes 1</a></ol>
+<ol><a class='basicLink' href='sql/SQL_Advance2.htm' target="_blank">SQL Advanced Notes 2</a></ol>
+<ol><a class='basicLink' href='sql/SQL_QuickRef.htm' target="_blank">SQL Quick Reference</a></ol>
+<ol><a class='basicLink' href='sql/' target="_blank">SQL Arithmetics Notes</a></ol>
 	</ul>
 </div>
-	
+
 <?php
 	$pageTitle = "Web Notes Basics";
 	$pageSubTitle = "Web Notes Basics";
