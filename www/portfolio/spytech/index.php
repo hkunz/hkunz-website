@@ -54,12 +54,12 @@
 	<h4 class='heading'>Application Software</h4>
 	<p>The Visual Basic 6 Program is capable of accepting keyboard inputs from the user for robotic control. Not only is the user able to control it through the keys but through mouse over actions as well. Since the software incorporates an SWF file at the right upper side of the GUI, the user may move the mouse over any robotic control and thus control the robot through mouse movement. It depends on the user whether what is more convenient to him to use.</p>
 	<?php echo createImageLightbox("img/spy-software.png", 460); ?>
-	<ul class="block">
-<ol><b>[1]</b> Camera Display</ol>
-<ol><b>[2]</b> Camera Control</ol>
-<ol><b>[2]</b> Robot Directional Control</ol>
-<ol><b>[4]</b> Video Operation</ol>
-	</ul>
+	<ol start="563455345435435435345">
+<li><b>[1]</b> Camera Display</li>
+<li><b>[2]</b> Camera Control</li>
+<li><b>[1]</b> Robot Directional Control</li>
+<li><b>[2]</b> Video Operation</li>
+	</ol>
 	<h4 class='heading'>Team Members</h4>
 	<ul class="block">
 <ol>* Jay Duhaylungsod</ol>

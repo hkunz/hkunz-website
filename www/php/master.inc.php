@@ -14,6 +14,7 @@
 	<meta name="author" content="" />
 	<meta name="rating" content="general" />
 	<meta name="robots" content="all" />
+	<script src="https://apis.google.com/js/platform.js"></script>
 	<!--
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="icon" type="image/gif" href="animated_favicon1.gif" />
@@ -31,14 +32,27 @@
 	?>
 </head>
 <body>
-	<div id="top" name="top">
-		<div id="nav" name="nav" class="nav">
-			<div class="loadingImg" style='width:0px;height:0px;'></div> <!-- Image preloaded -->
+	<div id="fb-root"></div>
+	<script>(
+		function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=140396069306658";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div id="top" align="right">
+		<div id="nav" class="nav">
+			<div style="display:inline-block;vertical-align:middle">
+				<!-- <div class="fb-follow" data-href="https://www.facebook.com/harrymckenzietv/" data-layout="button" data-size="large" data-show-faces="true"></div>-->
+				<div class="g-ytsubscribe" data-channel="hkunz219" data-layout="default" data-count="default"></div>
+			</div>
 			<p>&nbsp;</p>
 		</div>
 	</div> <!-- [#top] -->
-	<div id="container" name="container">
-		<div id="header" name="header">
+	<div id="container">
+		<div id="header">
 			<div class="headerTop"></div>
 			<div class="headerContent">
 				<div class="left"></div>
@@ -47,10 +61,10 @@
 			</div> <!-- [headerRepeat] -->
 			<div class="headerBottom"></div>
 		</div> <!-- [header] -->
-		<div id="bottomShade" name="bottomShade">
-			<div id="outer" name="outer">
-				<div id="inner" name="inner">
-					<div id="bodyContent" name="bodyContent" class="bodyContent">
+		<div id="bottomShade">
+			<div id="outer">
+				<div id="inner">
+					<div id="bodyContent" class="bodyContent">
 						<div class="bodyMain">
 							<div class="sidebar">
 								<div class="box">
@@ -107,7 +121,7 @@ echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p>
 									<div class="right"></div>
 								</div>
 
-								<div id="boxContainer" name="boxContainer" class="center">
+								<div id="boxContainer" class="center">
 									<div class="left">
 										<div class="right">
 											<div class="middle">
@@ -131,9 +145,9 @@ echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p>
 				</div> <!-- [#inner] -->
 			</div> <!-- [#outer] -->
 		</div> <!-- [#bottomShade] -->
-		<div id="footer" name="footer">
+		<div id="footer">
 			<div class="content">
-				<p><span class="hkunz">hkunz<span>.com</p>
+				<p><span class="hkunz">hkunz</span><span class="hkunz" style="color:#000;">.com</span></p>
 				<p>Harry Kunz &#169;2016</p>
 				<p>ABN: 72 721 734 033</p>
 			</div>

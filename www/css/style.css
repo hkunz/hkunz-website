@@ -93,7 +93,7 @@ ul.menu li.menuHeader a {text-decoration:none;}
 ul.menu li.menuLeaf {color:#f77;width:100%;display:block;margin-right:10px;}
 ul.menu li.menuLeaf p {font-size:14px;padding-left:10px;}
 ul.menu li.menuLeaf a p:link {color:yellow;}
-ul.menu li.menuLeaf a p:hover {color:#f00;background-color:#F0EFC4;text-decoration:none;}
+ul.menu li.menuLeaf a p:hover {color:#f00;background-color:#EEEEEE;text-decoration:none;}
 ul.menu li.menuLeaf a p:active {}
 ul.menu li.menuLeaf a p:visited {}
 
@@ -107,10 +107,17 @@ caption,th,td {text-align:center;vertical-align:middle;font-weight:normal;}
 blockquote,q {quotes:"" "";}
 blockquote:before,blockquote:after,q:before,q:after {content:"";}
 option,select {min-width:2em;}
-ol li {list-style:decimal;}
-ul li {list-style:disc;}
-ins {text-decoration:none;}
-del {text-decoration:line-through;}
+
+ol {
+	list-style: none;
+	list-style-type:none;
+}
+
+ol li {
+	list-style: none;
+	list-style-type: none;
+	display: list-item;
+}
 
 div.flashContent {margin-left:auto;margin-right:auto;width:450px;height:auto;}
 div.showTell {width:auto;height:auto;margin-left:auto;margin-right:auto;}
@@ -124,7 +131,7 @@ textarea.codeText {font-size:12px;font-weight:normal;font-style:normal;line-heig
 textarea.default {}
 
 #top {width:100%;}
-#top .nav {height:40px;background:url('img/bg/Footer.png') #fff repeat-x;border-bottom:3px solid #fff;}
+#top .nav {height:25px;background:url('img/bg/Footer.png') #fff repeat-x;border-bottom:5px solid #fff;}
 #container {width:100%;background:url('img/bg/TopShade.png') repeat-x;}
 #header {width:100%;background-color:transparent;margin-right;padding-top:10px;}
 #header .headerContent {width:900px;height:170px;background:url('img/header/MainPicture.png');margin:auto;} /*height:142px*/
@@ -186,7 +193,7 @@ textarea.default {}
 
 #footer {width:100%;border-top:3px solid #fff;}
 #footer .content {height:150px;background:url('img/bg/Footer.png') #fff repeat-x;padding-top:10px;}
-#footer .content p {font-size:13px;color:#9B7C18;text-align:center;}
+#footer .content p {font-size:13px;color:#444444;text-align:center;}
 
 /*
 .button {display:block;float:left;clear:left;width:auto;height:30px;background:url('img/buttonR.png') right top no-repeat;padding:0 19px 0 0;line-height:28px;font-weight: normal;font-style: normal;font-family: 'PTSansNarrowRegular', helvetica, arial, sans-serif;font-size-adjust: 0.54;text-transform:uppercase;font-size:14px;text-decoration:none;color:#fff;word-spacing:0px}
