@@ -47,3 +47,15 @@ function ajaxFormatMultiCode(url, codes, type){
 		}
 	});
 }
+
+function getRed(hex) {
+	return (hex >> 16) & 255;
+}
+
+function getGreen(hex) {
+	return (hex >> 8) & 255;
+}
+
+function getBlue(hex) {
+	return hex & 255;
+}

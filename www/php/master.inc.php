@@ -79,10 +79,11 @@
 												<div class="middle">
 													<ul class="menu">
 <?php
-echo "<li class='menuHeader'><a href='#' title=''><h5>Blog</h5></a></li>";
+echo "<li class='menuHeader'><a href='" . $root . "' title=''><h5>Main</h5></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "'><p>Home</p></a></li>";
 echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>";
 echo "<li class='menuHeader'><a href='#' title=''><h5>About</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>hkunz.com</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>Me</p></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>";
 echo "<li class='menuHeader'><a href='#' title=''><h5>Portfolio</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "portfolio/lexmark/' title=''><p>Lexmark Pro-905</p></a></li>";
