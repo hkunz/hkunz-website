@@ -21,6 +21,7 @@
 
 <?php
 	$pageTitle = "Stock Chart";
+	$pageSubTitle = "Random Stock Chart";
 	$headers = "";
 	$pageMainContent = ob_get_contents();
 	ob_end_clean();

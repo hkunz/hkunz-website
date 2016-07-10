@@ -79,6 +79,7 @@
 echo "<li class='menuHeader'><a href='" . $root . "' title=''><h5>Main</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "'><p>Home</p></a></li>";
 echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "blog/'><p>Blog</p></a></li>";
 echo "<li class='menuHeader'><a href='#' title=''><h5>About</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>Me</p></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>";
@@ -126,6 +127,9 @@ echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p>
 												<h3 class='heading'><?php echo $pageSubTitle; ?></h3>
 												<div class='date'>
 													<p class='postDate'>Post: <?php echo $postDate; ?> <b>|</b> Last Update: <?php echo $lastUpdateDate; ?></p>
+												</div>
+												<div class="block">
+													<div class="fb-like" data-href="<?php $_SERVER['REQUEST_URI'];?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 												</div>
 												<?php echo $pageMainContent; ?>
 											</div>
