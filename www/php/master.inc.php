@@ -24,8 +24,13 @@
 	?>
 </head>
 <body>
+<!--
+<div style="position: fixed; z-index: -99; width: 100%; height: 100%; opacity:0.1">
+	<iframe height="100%" width="100%" src="https://youtube.com/embed/aHRnbYFZiCE?autoplay=1&controls=0&showinfo=0&autohide=1"></iframe>
+</div>
+ -->
 	<div id="fb-root"></div>
-	<script>(
+	<script type="text/javascript">(
 		function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
