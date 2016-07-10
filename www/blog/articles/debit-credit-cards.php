@@ -8,7 +8,7 @@
 	You may have wondered what the digits on your credit or debit card represent. The string of seemingly unique random digits reveal more than you may probably have thought. Here is a sample of how your credit card or debit card might look like:
 	</p>
 	<div class="block" style="outline:0;">
-		<?php echo createImageLightbox("img/creditcard.jpg"); ?>
+		<?php echo createImageLightbox("img/creditcard.jpg", 354); ?>
 	</div>
 	<p class="block">
 	<b>[1.] Industry Identifier</b> - The first digit represents the category of the industry that issued the card. Most likely you will see a 4 or a 5 for VISA or MasterCard which means the card is issued from a financial industry. The American Express card uses number 3 because it is in the category of travel.
