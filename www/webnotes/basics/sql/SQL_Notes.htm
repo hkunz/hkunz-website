@@ -1,8 +1,4 @@
-<!-- if this DTD is enabled the page displays incorrectly the <code> sections
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
--->
+<!DOCTYPE html>
 <html>
 <!-- 
     DISCUSSIONS: 
@@ -75,13 +71,13 @@ and impose constraints between database tables.</p>
 <p>The <b>SELECT statement</b> is used to select data from a table.<br />
 The tabular result is stored in a result table (called the <b>result-set</b>).</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s) </i><b>FROM </b><i>table_name</i></code></td></tr>
 </tbody>
 </table><hr />
 
-<b>Example: The database table "Persons":</b></p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<b>Example: The database table "Persons":</b>
+<table class="ex" border="1">
   <tbody><tr>
     <th align="left">LastName</th>
     <th align="left">FirstName</th>
@@ -111,7 +107,7 @@ The tabular result is stored in a result table (called the <b>result-set</b>).</
 <code>&nbsp;<b>SELECT </b>LastName,FirstName <b>FROM </b>Persons</code>
 
 <p><b>result-set</b></p>
-<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <th align="left">LastName</th>
     <th align="left">FirstName</th>
@@ -143,7 +139,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 <h3 style="background:#FF4500">The SELECT DISTINCT Statement</h3>
 <p>The DISTINCT keyword is used to return only distinct (different) values.</p>
 <b>Example: "Orders" table</b>
-<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <th align="left">Company</th>
     <th align="left">OrderNumber</th>
@@ -166,8 +162,8 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
   </tr>
 </tbody></table>
 <p><code>&nbsp;<b>SELECT DISTINCT </b>Company <b>FROM</b> Orders</code></p>
-<b>Result-Set:</b></p>
-<table class="ex" border="1" cellspacing="0" width="125" bgcolor="#CCFFCC">
+<b>Result-Set:</b>
+<table class="ex" border="1">
   <tbody><tr>
     <th align="left">Company</th>
   </tr>
@@ -183,12 +179,12 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 
 <h2>SQL WHERE Statement</h2>
 <p>The WHERE clause is used to specify a selection criterion.To conditionally select data from a table, a WHERE clause can be added to the SELECT statement.</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s) </i><b>FROM </b>table<br />&nbsp;<b>WHERE </b><i>column_name (operator) value</i></code></td></tr>
 </tbody>
 </table><hr />
 <p><b>Operators:</b></p>
-<table class="ex" border="1" cellspacing="" width="450" bgcolor="#FFFF99">
+<table class="ex" border="1">
   <tbody><tr>
     <th valign="top"><b>Operator</b></th>
     <th><b>Description</b></th>
@@ -219,7 +215,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
   </tr>
   <tr>
     <td valign="top" align="center"><code><b>&nbsp;BETWEEN&nbsp;</b></code></td>
-    <td><code style="color:blue">&nbsp;Between an inclusive range</code></code></td>
+    <td><code style="color:blue">&nbsp;Between an inclusive range</code></td>
   </tr>
   <tr>
     <td valign="top" align="center"><code><b>LIKE</b></code></td>
@@ -238,7 +234,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 <code><b>&nbsp;SELECT </b>* <b>FROM </b>Persons <b>WHERE </b>City='Sandnes'</code></p>
 <p><b>Result-Set:</b></p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr>
     <th align="left">LastName</th>
     <th align="left">FirstName</th>
@@ -263,7 +259,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 
 <h3 style="background:#FF4500">The LIKE Condition</h3>
 <p>The LIKE condition is used to specify a search for a pattern in a column.</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s) </i><b>FROM </b><i>table_name</i><br />
 &nbsp;<b>WHERE </b><i>column_name </i><b>LIKE </b><i>pattern</i></code></td></tr>
 </tbody></table>
@@ -272,7 +268,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 <p>The following SQL statement will return persons with first names that start with the letter 
 '<b>K</b>':</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <td><code>&nbsp;<b>SELECT </b> * <b>FROM</b> Persons<br />&nbsp;<b>WHERE</b> FirstName <b>LIKE</b> 'K%'</code></td>
 
@@ -280,7 +276,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 </tbody></table>
 <p>The following SQL statement will return persons with first names that end with an '<b>e</b>':</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <td><code>&nbsp;<b>SELECT </b> * <b>FROM</b> Persons<br />&nbsp;<b>WHERE</b> FirstName <b>LIKE</b> '%e'</code></td>
   </tr>
@@ -289,7 +285,7 @@ our <a href="http://www.w3schools.com/ado/default.asp">ADO tutorial</a>. </p>
 The following SQL statement will return persons with first names that contain the 
 pattern '<b>ga</b>':</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <td><code>&nbsp;<b>SELECT </b> * <b>FROM</b> Persons<br />&nbsp;<b>WHERE</b> FirstName <b>LIKE</b> '%ga%'</code></td>
   </tr>
@@ -297,17 +293,17 @@ pattern '<b>ga</b>':</p>
 
 <h2>SQL INSERT INTO Statement</h2>
 <p>The INSERT INTO statement is used to insert new rows into a table.</p>
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>INSERT INTO </b><i>table_name<br /></i><b>&nbsp;VALUES </b><i>(value1, value2,...)</i>
 </code></td></tr></tbody></table>
 <p>You can also specify the columns for which you want to insert data:</p>
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>INSERT INTO </b><i>table_name <i>(column1, column2,...)</i><br /></i><b>&nbsp;VALUES </b><i>(value1, value2, ...)</i></code></td></tr>
 </tbody></table>
 <hr />
 
 <h3>Insert a New Row (Example: "Persons" Table)</h3>
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#CCFFCC">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left">LastName</th>
       <th align="left">FirstName</th>
@@ -320,20 +316,20 @@ pattern '<b>ga</b>':</p>
       <td>Millbrae</td></tr>
 </tbody></table><br />
 
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <td><code>&nbsp;<b>INSERT INTO </b>Persons<br />&nbsp;<b>VALUES </b>('Kunz','Harry','1944 Su','Dauin')</code></td>
   </tr>
 </tbody></table>
 <hr />
 <h3>Insert Data in Specified Columns (Example: "Persons" Table)</h3>
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr>
     <td><code>&nbsp;<b>INSERT INTO </b>Persons (Lastname,Address)<br />&nbsp;<b>VALUES </b>('Rudolf','Hessen 47')</code></td>
   </tr>
 </tbody></table><br />
 <b>Final Table Output: ("Persons" Table)</b>
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr>
       <th align="left">LastName</th>
       <th align="left">FirstName</th>
@@ -359,21 +355,21 @@ pattern '<b>ga</b>':</p>
 
 <h2>SQL UPDATE Statement</h2>
 <p>The UPDATE statement is used to modify the data in a table.</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>UPDATE </b><i>table_name</i><br />
-<b>&nbsp;SET </b><i>column_name = new_value</i><br /></i><b>&nbsp;WHERE </b><i>column_name = some_value</i>
+<b>&nbsp;SET </b><i>column_name = new_value</i><br /><b>&nbsp;WHERE </b><i>column_name = some_value</i>
 </code></td></tr></tbody></table>
 <hr />
-<h3>Update <u>one Column</u> in a Row (latest "Persons" Table)</h3>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<h3>Update one Column in a Row (latest "Persons" Table)</h3>
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>UPDATE </b><i>Persons</i><b>&nbsp;SET </b><i>Firstname = 'Rita'</i><br /><b>&nbsp;WHERE </b><i>Lastname = 'Rudolf'</i></code></td></tr></tbody></table>
 <hr />
-<h3>Update <u>several Columns</u> in a Row (latest "Persons" Table)</h3>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<h3>Update several Columns in a Row (latest "Persons" Table)</h3>
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>UPDATE </b><i>Persons</i><b><br />&nbsp;SET </b><i>Address='Semmel 17', City='Frankfurt'</i><br /><b>&nbsp;WHERE </b><i>Lastname = 'Rudolf'</i></code></td></tr></tbody></table>
 <hr />
 <b>Final Table Output: ("Persons" Table)</b>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr>
       <th align="left">LastName</th>
       <th align="left">FirstName</th>
@@ -399,23 +395,23 @@ pattern '<b>ga</b>':</p>
 
 <h2>SQL DELETE Statement</h2>
 <p>The DELETE statement is used to delete rows in a table.</p>
-<table class="ex" border="1" cellspacing="0" width="380" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DELETE FROM </b><i>table_name</i><br />
 &nbsp;<b>WHERE </b><i>column_name = some_value</i>
 </code></td></tr></tbody></table>
 <hr />
 <h3>Delete a Row (Example: "Persons" Table)</h3>
-<table class="ex" border="1" cellspacing="0" width="380" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DELETE FROM </b><i>Persons</i><br />
 &nbsp;<b>WHERE </b><i>Lastname = 'Rudolf'</i>
 </code></td></tr></tbody></table><hr />
 <h3>Delete All Rows</h3>
 <p>It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:</p>
-<table class="ex" border="1" cellspacing="0" width="380" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DELETE FROM </b><i>table_name</i><br />or<br />
 &nbsp;<b>DELETE&nbsp;</b>*&nbsp;<b>FROM</b>&nbsp;<i>table_name</i>
 </code></td></tr></tbody></table><hr />
-<p><big><b>Visit <a href="http://www.w3schools.com/sql/sql_tryit.asp">THIS LINK</a> for a "Try it" of the use of SELECT statement</big></b></p>
+<p><b>Visit <a href="http://www.w3schools.com/sql/sql_tryit.asp">THIS LINK</a> for a "Try it" of the use of SELECT statement</b></p>
 <hr />
 
 

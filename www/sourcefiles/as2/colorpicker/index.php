@@ -4,26 +4,26 @@
 
 <div>
 	<p class='block'>I wrote the ColorPicker class for AS2.0 almost 3 years ago. All the graphics in the flash file below are dynamically drawn through methods <b>moveTo</b> and <b>lineTo</b></p>
-	<div><div id='flashContent' name='flashContent' class='flashContent'></div></div>
+	<div><div id='flashContent' class='flashContent'></div></div>
 	<h4 class='heading'>Code at Work</h4>
 	<p class='block'>The quality of the code may not look so professional as this is really old, it could have probably been written with fewer lines of code and not using the weird naming convention i adopted at my first company. But feel free to use this code, it can become handy for AS2. AS3 already has a built-in ColorPicker class</p>
-	<div id='colorPickerCode' name='colorPickerCode'></div>
+	<div id='colorPickerCode'></div>
 	<h4 class='heading'>Class Usage</h4>
 	<p class='block'>First we need to import the class and create an instance of it. You may also like to add a "package path" like com.path.ColorPicker. In it's simplest form do:</p>
-	<div id='codeStep1' name='codeStep1'></div>
+	<div id='codeStep1'></div>
 	<p class='block'>The first parameter to the ColorPicker constructor is the container MovieClip followed by the x &amp; y corrdinates. The fourth parameter is the default color you want to see. You can also add listeners for [1] picker click; [2] color hover in &amp; out; [3] color click</p>
-	<div id='codeStep2' name='codeStep2'></div>
+	<div id='codeStep2'></div>
 	<p class='block'>Then write the callback functions with the code you want executed after the specific listener is invoked</p>
-	<div id='codeStep3' name='codeStep3'></div>
+	<div id='codeStep3'></div>
 	<p class='block'>Here's a list of the most common setters/getters you will most probably need to use</p>
-	<div id='codeStep4' name='codeStep4'></div>
+	<div id='codeStep4'></div>
 	<p class='block'>The setter function <b>setQuadrant</b> accepts either of 4 values (1,2,3,4) each pertaining to the position of the color palette as seen in a Cartesian coordinate system where value 1 corresponds to the upper right corner. The default value is 2 which corresponds to the lower right corner</p>
 	<h4 class='heading'>Download Source Files</h4>
 	<p class='block'>Download class file: <a class='basicLink' href='ColorPicker.as' target='_blank'>ColorPicker.as</a> and sample usage <a class='basicLink' href='ColorPicker.fla'>ColorPicker.fla</a>
 	</p>
 </div>
 
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 	var root = '../../../';
 	var codeFormatter = root + 'php/CodeFormatter.php';
 	var multiCodeFormatter = root + 'php/MultiCodeFormatter.php';

@@ -1,6 +1,4 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html>
 <html>
 <!-- 
 	DISCUSSIONS:
@@ -13,7 +11,6 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 <head>
 <title>(2/3) CSS Tutorials</title>
 <style type="text/css">
-<!--
     h2,h5,h6 {background:lime;}
     body{font-family:Arial;background-color:#FFFF99;}
     
@@ -72,10 +69,10 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
     h2:after{
         content: url(tick.wav);
     }
--->
 </style>
 
 </head>
+
 <body>
 
 <h2>CSS Dimension</h2>
@@ -93,8 +90,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 <p>The CSS classification properties allow you to control how to display an element, set where an image will appear in another element, position an element relative to its normal position, position an element using an absolute value, and how to control the visibility of an element.</p>
 <ul type="square">
   <li style="display:none">display: none; this is not displayed on the page</li>
-  <li><b>disply:none;</b> - there is a hidden line suppo - this line is inline even if it's &lt;p&gt;</span>
-  <span><b>display:block;</b> - this line is connected to the previous but blocked</span>
+  <li><b>disply:none;</b> - there is a hidden line suppo - this line is inline even if it's &lt;p&gt;</li>
+  <li><b>display:block;</b> - this line is connected to the previous but blocked</li>
   <li><div style="width=100px;float:right;border:5px dotted red;margin:0 0 15px 20px;padding:15px;text-align:center"><img src="Images/venus.gif" /><br />Planet Venus</div><b>float:right</b> - this makes the image float at right of this text no matter how long the text.</li>
   <li style="max-width:200px"><span style="float:left;width:0.7em;font-size:400%;font-family:algerian,courier;line-height:80%">T</span>he "T" is set to have a size that is 0.7 times that of the current font</li>
 </ul>
@@ -111,13 +108,13 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
   <li style="position:relative; left:-20px"><b>position:relative; left:-20px;</b></li>
   <li style="position:absolute;left:100px"><b>position:absolute;left:100px;top:150px;</b></li>
   <li><br />&lt;br /&gt; (because of the absolute pos of the above) <span style="visibility:hidden">This text is invisible</span></li>
-  <li style="visiblility:visible"><b>visiblility:visible/hidden;collapse(table);</b> - The blank line above has a hidden text</b></li>
+  <li style="visiblility:visible"><b>visiblility:visible/hidden;collapse(table);</b> - The blank line above has a hidden text</li>
 </ul>
 <p>float:left;<b>clear:both</b> (Venus picture)</p>
-<img src="Images/venus.gif" style="float:left;clear:both">
-<img src="Images/venus.gif" style="float:left;clear:both">
-<img src="Images/venus.gif" style="float:left;clear:both">
-<img src="Images/venus.gif" style="float:left;clear:both">
+<img src="Images/venus.gif" style="float:left;clear:both"/>
+<img src="Images/venus.gif" style="float:left;clear:both"/>
+<img src="Images/venus.gif" style="float:left;clear:both"/>
+<img src="Images/venus.gif" style="float:left;clear:both"/>
 <hr />
 
 <p>Move the mouse over the words to see the cursor change:</p>
@@ -161,31 +158,31 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
 <p><b>CSS pseudo-classes are used to add special effects to some selectors.</b></p>
 <hr />
 <h3>Syntax</h3>
-<p>The syntax of pseudo-classes: <code><big><b style="color:red">selector:pseudo-class {property: value}</b></big></code></p>
-<p>CSS classes can also be used with pseudo-classes: <code><big><b style="color:red">selector.class:pseudo-class {property: value}</b></big></code></p><hr />
+<p>The syntax of pseudo-classes: <code><b><b style="color:red">selector:pseudo-class {property: value}</b></b></code></p>
+<p>CSS classes can also be used with pseudo-classes: <code><b><b style="color:red">selector.class:pseudo-class {property: value}</b></b></code></p><hr />
 
 <h3>Anchor Pseudo-Classes</h3>
 <ul type="square">
-  <li><code><big>a:link {color: #FF0000}</big></code>     /* unvisited link  */ </li>
-  <li><code><big>a:visited {color: #00FF00}</big></code>  /* visited link    */ </li>
-  <li><code><big>a:hover {color: #FF00FF}</big></code>    /* mouse over link */ </li>
-  <li><code><big>a:active {color: #0000FF}</big></code>   /* selected link   */ </li>
+  <li><code><b>a:link {color: #FF0000}</b></code>     /* unvisited link  */ </li>
+  <li><code><b>a:visited {color: #00FF00}</b></code>  /* visited link    */ </li>
+  <li><code><b>a:hover {color: #FF00FF}</b></code>    /* mouse over link */ </li>
+  <li><code><b>a:active {color: #0000FF}</b></code>   /* selected link   */ </li>
 </ul><hr />
 
 <h3>:first-child Pseudo-class</h3>
 
-<span>
+<!-- <span> --> <!--  bad practice -->
 <div>
 <!-- If another tag intervenes then :first-child will not work -->
 <p>
-First paragraph in <code><big><b style="color:red">span > div > p:first-child{text-indent:25px}</b></big></code>
+First paragraph in <code><b><b style="color:red">span > div > p:first-child{text-indent:25px}</b></b></code>
 This paragraph will be indented.
 </p>
 <p>
 Second paragraph in div. This paragraph and other suceeding paragraphs will not be indented.
 </p>
 </div>
-</span>
+<!-- </span> -->
 
 <div><i>This is the first <em>em</em> element in the paragraph. And this is the second <em>em</em> element.</i></div>
 
@@ -196,9 +193,9 @@ this Link <a class="aboutFC" href="http://www.w3schools.com">W3Schools</a> is no
 <hr />
 
 <h3>:lang Pseudo-class</h3>
-<p>The short quote: <q lang="no">da di, da da, da du</q> uses CSS <code><big style="color:red">q:lang(no){quotes: "~" "~"}</big></code></p>
+<p>The short quote: <q lang="no">da di, da da, da du</q> uses CSS <code><b style="color:red">q:lang(no){quotes: "~" "~"}</b></code></p>
 
-<table width="700px" border="1" frame="box" padding="1">
+<table border="1">
   <tr>
     <th>Pseudo-Class</th>
     <th>Purpose</th>
@@ -229,13 +226,13 @@ this Link <a class="aboutFC" href="http://www.w3schools.com">W3Schools</a> is no
 
 <h2>Pseudo-Element</h2>
 <h3>Syntax</h3>
-<p><code><big>selector:pseudo-element {property: value}<br />
-selector.class:pseudo-element {property: value}</big></code></p><hr />
+<p><code><b>selector:pseudo-element {property: value}<br />
+selector.class:pseudo-element {property: value}</b></code></p><hr />
 
-<p class="firstline" style="max-width:500px">Only the first line of this text is formatted according to the <code><big style="color:red">p:first-line{...}</big></code> pseudo element within a paragraph. Since it has been defined within the <code><big style="color:red">class="firstline"</big></code> therefore the code becomes <code><big style="color:red">p.firstline:first-line{...}</big></code></p>
-<p>The first letter in the paragraph above uses <code><big style="color:red">p.firstline:first-letter{...}</big></code></p>
+<p class="firstline" style="max-width:500px">Only the first line of this text is formatted according to the <code><b style="color:red">p:first-line{...}</b></code> pseudo element within a paragraph. Since it has been defined within the <code><b style="color:red">class="firstline"</b></code> therefore the code becomes <code><b style="color:red">p.firstline:first-line{...}</b></code></p>
+<p>The first letter in the paragraph above uses <code><b style="color:red">p.firstline:first-letter{...}</b></code></p>
 
-<table width="700px" border="1" frame="box" padding="1">
+<table border="1">
   <tr>
     <th>Pseudo-Element</th>
     <th>Purpose</th>
@@ -250,7 +247,7 @@ selector.class:pseudo-element {property: value}</big></code></p><hr />
         </ul>
     </td>
     <td>
-       <ul type="none">
+       <ul>
           <li>Adds special style to the first letter of a text</li>
           <li>Adds special style to the first line of a text</li>
           <li>Inserts some content before an element</li>

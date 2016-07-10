@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" />
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta charset="UTF-8"/>
 <title>Stock Graph</title>
-<script language="javascript">AC_FL_RunContent = 0;</script>
-<script src="Library/Javascript/AC_RunActiveContent.js" language="javascript"></script>
+<script type="text/javascript">AC_FL_RunContent = 0;</script>
+<script type="text/javascript" src="Library/Javascript/AC_RunActiveContent.js"></script>
 <script type="text/javascript" src="library/js/swfobject.js"></script>
 <style type="text/css">
 #flashcontent {
@@ -95,7 +95,7 @@ html, body {
 	classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="700" height="520" id="SzSystem" align="top">
 	<param name="allowScriptAccess" value="sameDomain" />
 	<param name="allowFullScreen" value="false" />
-	<param name="movie" value="Preloader.swf" /><param name="quality" value="high" /><param name="salign" value="lt" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" />	<embed src="Preloader.swf" quality="high" salign="lt" wmode="transparent" bgcolor="#ffffff" width="700" height="520" name="SzSystem" align="top" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	<param name="movie" value="Preloader.swf" /><param name="quality" value="high" /><param name="salign" value="lt" /><param name="wmode" value="transparent" /><param name="bgcolor" value="#ffffff" />	<embed src="Preloader.swf" width="700" height="520" align="top" type="application/x-shockwave-flash"/>
 	</object>
 </div>
    </div> </div>

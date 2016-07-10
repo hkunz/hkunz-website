@@ -1,8 +1,4 @@
-<!-- if this DTD is enabled the page displays incorrectly the <code> sections
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
--->
+<!DOCTYPE html>
 <html>
 <!-- 
      DISCUSSIONS:
@@ -152,7 +148,7 @@ The type attribute is used to define the scripting language:<br /><code>&lt;scri
 
 <hr />
 <script src="ExtScript.js"></script>
-</p>The above bold text was retrieved from an external file<br />
+<p>The above bold text was retrieved from an external file<br />
 It uses the code: <code>&lt;script src="ExtScript.js">&lt;/script></code></p>
 <hr />
 
@@ -267,7 +263,7 @@ default:
         <li><b>while loop</b><br />
         <span style="margin-left:30px">- Use a while loop to run the same block of code while a specified condition is true.</span></li>
         <li><b>do while loop</b><br />
-        <span style="margin-left:30px">- Use a do...while loop to run the same block of code while a specified condition is true. This loop will always be executed <u>at least once</u>, even if the condition is false, because the statements are executed before the condition is tested.</span></li>
+        <span style="margin-left:30px">- Use a do...while loop to run the same block of code while a specified condition is true. This loop will always be executed <i>at least once</i>, even if the condition is false, because the statements are executed before the condition is tested.</span></li>
      </ul>
    </li>
 </ul><hr />
@@ -293,20 +289,20 @@ for(i=1;i<=6;i++){
   document.write("The number is " + i)
   document.write("&lt;br />")
   i=i+1
-}</pre></code>
+}</code></pre>
 <hr />
 <h3>The "do...while" Loop</h3>
-<p>This loop will always be executed <u>at least once</u>, even if the condition is false, because the code is executed before the condition is tested. The basic syntax is given below:<br />
+<p>This loop will always be executed <i>at least once</i>, even if the condition is false, because the code is executed before the condition is tested. The basic syntax is given below:<br />
 <pre><code><span style="font-weight:bold">do</span>{
   code to be executed
-}<span style="font-weight:bold">while</span> (var&lt;=endvalue)</code></pre></p>
+}<span style="font-weight:bold">while</span> (var&lt;=endvalue)</code></pre>
 <b>Example: </b>This code yields only one line of code "The number is 0" even if the condition is false
 <pre><code>var i=0
 <span style="font-weight:bold">do</span>{
   document.write("The number is " + i)
   document.write("&lt;br />")
   i=i+1
-}<span style="font-weight:bold">while</span> (i&lt;0)</pre></code><hr />
+}<span style="font-weight:bold">while</span> (i&lt;0)</code></pre><hr />
 
 <h2>Break and Continue</h2>
 <p>There are two special statements that can be used inside loops: <b>break</b> and <b>continue</b>.</p><hr />
@@ -319,7 +315,7 @@ for(i=1;i&lt;=10;i++){
     document.write("The number is " + i)
     document.write("&lt;br />")
   i=i+1
-}</pre></code><hr />
+}</code></pre><hr />
 
 <h3>continue</h3>
 <p>The continue command will break the current loop and continue with the next value.</p>
@@ -330,7 +326,7 @@ for (i=0;i&lt;=10;i++){
     document.write("The number is " + i)
     document.write("&lt;br />")
   }
-}</pre></code><hr />
+}</code></pre><hr />
 
 <h2>The "for...in" statement</h2>
 <p>The for...in statement is used to loop (iterate) through the elements of an array or through the properties of an object.The code in the body of the for ... in loop is executed once for each element/property.</p>
@@ -401,7 +397,7 @@ you could have another popup saying something like: "Welcome John Doe!".</p>
 of form fields.</p>
 <p>Below is an example of how to use the onChange event. The checkEmail() 
 function will be called whenever the user changes the content of the field:</p>
-<table class="ex" id="table2" border="1" cellspacing="0" width="500px" bgcolor="#FFCCFF">
+<table class="ex" id="table2" border="1">
     <tbody><tr>
       <td>
         <pre>&lt;input type="text" size="30"
@@ -421,7 +417,7 @@ function will be called when the user clicks the submit button in the form. If t
 field values are not accepted, the submit should be 
 cancelled. The function checkForm() returns either true or false. If it returns true the 
 form will be submitted, otherwise the submit will be cancelled:</p>
-<table class="ex" id="table3" border="1" cellspacing="0" width="500px" bgcolor="#FFCCFF">
+<table class="ex" id="table3" border="1">
     <tbody><tr>
       <td>
         <pre>&lt;form method="post" action="xxx.htm"
@@ -437,7 +433,7 @@ onsubmit="return checkForm()"&gt;</pre>
 "animated" buttons.</p>
 <p>Below is an example of an onMouseOver event. An alert box appears when an onMouseOver 
 event is detected:</p>
-<table class="ex" id="table4" border="1" cellspacing="0" width="500px" bgcolor="#FFCCFF">
+<table class="ex" id="table4" border="1">
     <tbody><tr>
       <td>
         <pre>&lt;a href="http://www.w3schools.com"
@@ -461,7 +457,7 @@ onmouseover="alert('An onMouseOver event');return false"&gt;
 <p><b>Syntax: </b><br />
 <code><span style="font-weight:bold">try</span>{<br />
 &nbsp;&nbsp;//Run some code here<br />
-}<br />
+}</code><br />
 <code><span style="font-weight:bold">catch</span>(err){<br />
 &nbsp;&nbsp;//Handle errors here. err is the variable<br />
 }</code></p>
@@ -480,7 +476,7 @@ The function called by the button <input type="button" value="Error Generator" o
           document.location.href="http://www.w3schools.com/"
         }
       }
-    }</pre></code>
+    }</code></pre>
 
 <hr />
 
@@ -510,7 +506,7 @@ The exception can be a <b>string</b>, <b>integer</b>, <b>Boolean</b> or an <b>ob
 <p>*Using the onerror event is the old standard solution to catch errors in a web page.<br />
 *The onerror event is fired whenever there is a script error in the page.</p>
 <p>To use the onerror event, you must create a function to handle the errors.<br />Then you call the function with the onerror event handler.<br /><span style="color:blue">The event handler is called with 3 arguments:</span><br /><span style="margin-left:30px"><b>msg</b> (error message)</span><br /><span style="margin-left:30px"><b>url</b> (the url of the page that caused the error)</span><br /><span style="margin-left:30px"><b>line</b> (the line where the error occurred).</span></p>
-<pre><b><big>Syntax: (in &lt;head>&lt;JScript>)</big></b><code>
+<pre><b><i>Syntax: (in &lt;head>&lt;JScript>)</i></b><code>
 <b>onerror</b> = <b>handleErr</b>
 function <b>handleErr</b>(<b>msg</b>,<b>url</b>,<b>line</b>){
   //Handle the error here
@@ -541,14 +537,14 @@ function <b>message()</b>{
 &lt;body>
   &lt;input type="button" value="View message" onclick="<b>message()</b>" />
 &lt;/body>
-</code></pre></p><hr />
+</code></pre><hr />
 
 <h2>Special Characters</h2>
 <p>The backslash (\) is used to insert apostrophes, new lines, quotes, and other special characters into a text string.</p>
 <hr />
 <p>The table below lists other special characters that can be added to a text 
 string with the backslash sign:</p>
-<table style="font-family:courier new" class="ex" id="table3" border="1" cellspacing="0" width="500px"><tbody><tr>
+<table style="font-family:courier new" class="ex" id="table3" border="1"><tbody><tr>
 	<th bgcolor="#99FF99" align="left">
 Code</th><th bgcolor="#99FF99" align="left">
 Outputs</th></tr><tr><td>

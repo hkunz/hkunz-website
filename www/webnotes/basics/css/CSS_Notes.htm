@@ -1,6 +1,4 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<!DOCTYPE html>
 <!--
 Cascading Style Sheets (CSS) are a collection of formatting rules
 that control the appearance of content on a web page. When you use
@@ -56,7 +54,7 @@ It is possible to prevent an old browser from displaying the content by hiding i
     }
     h2,h5,h6 {background:lime;}
     body{font-family:Arial;}
-    NewTag{color:maroon;font-family:impact;}     /*  used in the section: Tag Selector [2 Types]  */
+    new-tag{color:maroon;font-family:impact;}     /*  used in the section: Tag Selector [2 Types]  */
     i.orangy{color:#FF8C00;}					 /*  used in the section: The Class Selector      */
     i.pinkish{color:#FF00FF;} 					 /*  used in the section: The Class Selector      */
     .fonty{font-family:"Cooper Black";} 	     /*  used in the section: The Class Selector      */
@@ -123,7 +121,7 @@ Generally speaking we can say that all the styles will "cascade" into a new "vir
 <pre>
    1. Browser default
    2. External style sheet
-   3. Internal style sheet (inside the <head> tag)
+   3. Internal style sheet (inside the &lt;head&gt; tag)
    4. Inline style (inside an HTML element)
 </pre>Learn about <b>External</b>, Internal, and Inline Styles in section <b>HTML Styles</b> within <b>AdvanceHTML.htm</b>
 <hr />
@@ -131,46 +129,49 @@ Generally speaking we can say that all the styles will "cascade" into a new "vir
 
 <h2>CSS Syntax</h2>
 <p>The CSS syntax is made up of three parts:<br />
-<code><big>selector {property: value}</big></code></p>
+<code><span>selector {property: value}</span></code></p>
 <p><b>Note: </b>If  the value is multiple words, put quotes around the value:<br />
-<code><big>p,h2,table {font-family: "sans serif";color:red}</big></code><br /><br />
+<code><span>p,h2,table {font-family: "sans serif";color:red}</span></code><br /><br />
 Separate multiple properties by a semicolon (;). Selectors can be grouped by separating by commas</p><hr />
 
 <h3>Tag Selector [ 2 Types ]</h3>
-<p>The header <b>"CSS Syntax"</b> uses the existing tag &lt;h2&gt; as selector with style:<br /><code><big>h6 {background:lime}</big></code></p>
-<NewTag>This text uses a custom-made &lt;NewTag&gt; tag as selector with style:<br /><code><big>NewTag {color:maroon;font-family:impact}</big></code></NewTag><hr />
+<p>The header <b>"CSS Syntax"</b> uses the existing tag &lt;h2&gt; as selector with style:<br /><code><span>h6 {background:lime}</span></code></p>
+<!-- custom tag not working -->
+<!-- <new-tag>This text uses a custom-made &lt;new-tag&gt; tag as selector with style:<br /><code><span>new-tag {color:maroon;font-family:impact}</span></code></new-tag>-->
+<hr />
 
 <h3>Class Selector</h3>
 <p>With the <b>class selector</b> you can define different styles for the same type of HTML element.<br />
 <i class="orangy">This text uses the <b>orangy class</b> declared in the styles for &lt;i&gt; element</i><br />
-<code><big style="color:#FF8C00">i.orangy{color:#FF8C00}</big></code><br />
+<code><span style="color:#FF8C00">i.orangy{color:#FF8C00}</span></code><br />
 <i class="pinkish">This text uses the <b>pinkish class</b> declared in the styles for &lt;i&gt; element</i><br />
-<code><big style="color:#FF00FF">i.pinkish{color:#FF00FF}</big></code><br />
-<u class="fonty">This text uses <big><code>class="fonty"</code></big> that can be used for any tag/element</u><br />
-<code><big>.fonty{font-family:"Cooper Black"}</big></code></p>
-<p class="fonty greenish">Combining two classes, <code><big style="color:black">&lt;x class="fonty greenish"&gt; </big></code>where x is any tag/element<br />
-<code><big style="color:black">.fonty{font-family:"Cooper Black"} and .greenish{color:lime}</big></code></p><hr />
+<code><span style="color:#FF00FF">i.pinkish{color:#FF00FF}</span></code><br />
+<i class="fonty">This text uses <span><code>class="fonty"</code></span> that can be used for any tag/element</i><br />
+<code><span>.fonty{font-family:"Cooper Black"}</span></code></p>
+<p class="fonty greenish">Combining two classes, <code><span style="color:black">&lt;x class="fonty greenish"&gt; </span></code>where x is any tag/element<br />
+<code><span style="color:black">.fonty{font-family:"Cooper Black"} and .greenish{color:lime}</span></code></p><hr />
 
 <h3>ID Selector</h3>
 
 <p id="sample1_id">This text uses CSS defined by the id name "sample1_id" which only matches the &lt;p&gt; tag<br />
-<code><big>&lt;p id="sample1_id"&gt; - CSS: p#sample1_id{...}</big></code></p>
+<code><span>&lt;p id="sample1_id"&gt; - CSS: p#sample1_id{...}</span></code></p>
 <p id="sample2_id">This text uses CSS defined by the id name "sample2_id" which matches with any tag<br />
-<code><big style="text-decoration:none">&lt;x id="sample2_id"&gt; CSS: #sample2_id{...}</big></code></p>
+<code><span style="text-decoration:none">&lt;x id="sample2_id"&gt; CSS: #sample2_id{...}</span></code></p>
 <hr />
 
 <h3>Add Styles to Elements with Particular Attributes</h3>
 <p>This textbox's background color is described by the input tag's attribute type="text"<br />
-<code><big>input[type="text"] {background-color: blue}</big></code>&nbsp;<input type="text" /><hr />
+<code><span>input[type="text"] {background-color: blue}</span></code>&nbsp;<input type="text"></input></p>
+<hr />
 
 <h2>Add Styles to Links</h2>
 <a href="http://www.SOmeWebSite.com" target="_blank">This is Link One</a><br />
 <a href="http://www.AnotherWebsite.com" target="_blank">This is Link Two</a>
 <ul type="square">
-  <li><code><big>a:link {color:red}</big></code> - Link is red if not visited yet</li>
-  <li><code><big>a:visited{color:orange}</big></code> - Link is orange when already visited</li>
-  <li><code><big>a:hover {color:yellow;background:black}</big></code> - on mouse over</li>
-  <li><code><big>a:active {color:blue;background:red}</big></code> - when clicked but if release outside remains like THIS!!</li>
+  <li><code><span>a:link {color:red}</span></code> - Link is red if not visited yet</li>
+  <li><code><span>a:visited{color:orange}</span></code> - Link is orange when already visited</li>
+  <li><code><span>a:hover {color:yellow;background:black}</span></code> - on mouse over</li>
+  <li><code><span>a:active {color:blue;background:red}</span></code> - when clicked but if release outside remains like THIS!!</li>
 </ul><hr />
 
 <h2>CSS Background</h2>
@@ -179,7 +180,7 @@ Separate multiple properties by a semicolon (;). Selectors can be grouped by sep
 <h2>CSS Text</h2>
 <h3>Letter Spacing</h3>
 <p><span class="hilyt">This text is highlighted.</span> This text is not highlighted.<span class="hilyt"> But this text is</span>. And this ones not.</p>
-<p class="letter_space1">This text has a letter spacing of -4px<br /><span class="letter_space2">This text has a <code><big style="letter-spacing:0px;color:red">letter-spacing:0.3cm</big></code></span></p><hr />
+<p class="letter_space1">This text has a letter spacing of -4px<br /><span class="letter_space2">This text has a <code><span style="letter-spacing:0px;color:red">letter-spacing:0.3cm</span></code></span></p><hr />
 
 <h3>Line Height and Indention</h3>
 <p class="text_indent">
@@ -188,22 +189,22 @@ This is a paragraph with a standard line-height.<br />
 The default line height in most browsers is about 110% to 120%.</p>
 <p class="line_height1 text_indent">
 &lt;p class=line_height1&gt;<br />
-This uses CSS property <code><big style="color:red">line-height:90%;</big></code><br />
+This uses CSS property <code><span style="color:red">line-height:90%;</span></code><br />
 This is a paragraph with a smaller line-height.
 </p>
 <p class="line_height2 text_indent">
 &lt;p class=line_height2&gt;<br />
-This uses CSS property <code><big style="color:red">line-height:200%</big></code><br />
+This uses CSS property <code><span style="color:red">line-height:200%</span></code><br />
 This is a paragraph with a bigger line-height.
 </p><hr />
 
 
-<p class="uppercase"><b>Controlling the letters in a text</b><span style="text-transform:none;color:red"> <code><big>(text-transform:uppercase;)</big></code></p>
-<p class="lowercase">Controlling the letters in a text<code><big> (text-transform:lowercase;)</big></code></p>
-<p class="capitalize">Controlling the letters in a texth<code><big> (text-transform:capitalize;)</big></code></p><hr />
+<p class="uppercase"><b>Controlling the letters in a text</b><span style="text-transform:none;color:red"> <code>(text-transform:uppercase;)</code></span></p>
+<p class="lowercase">Controlling the letters in a text<code><span> (text-transform:lowercase;)</span></code></p>
+<p class="capitalize">Controlling the letters in a texth<code><span> (text-transform:capitalize;)</span></code></p><hr />
 
-<p class="word_space">White spaces increased by CSS property <b><code><big style="word-spacing:0px;color:red">word-spacing:30px</big></code></b></p>
-<p class="continueline"><code><big><span style="color:red">white-space: nowrap; </span>the line is not wrapped<br /> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</big></code></p>
+<p class="word_space">White spaces increased by CSS property <b><code><span style="word-spacing:0px;color:red">word-spacing:30px</span></code></b></p>
+<p class="continueline"><code><span><span style="color:red">white-space: nowrap; </span>the line is not wrapped<br /> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></code></p>
 <b>Visit <a href="http://www.w3schools.com/css/css_text.asp">THIS LINK</a> for a list of CSS Text Properties and possible property values</b><hr />
 
 <h2>CSS Fonts</h2>

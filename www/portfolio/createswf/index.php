@@ -9,11 +9,11 @@
         <p class="block"></p>
 	</div><?php echo createImageLightbox("img/createswf-perl.png", 460); ?>
 	<p class="block">A <a class='basicLink' href='https://en.wikipedia.org/wiki/Makefile' target='_blank'><b>Makefile</b></a> target with the pattern <b>%.swf</b> searches the assets directories with the specified name and then compiles the assets into an swf file with the same name</p>
-	<div id='codeStep1' name='codeStep1'></div>
+	<div id='codeStep1'></div>
 	<p class="block">When no path is given to the executable, it will open in GUI mode where you can pick the directory you want to compile</p>
 	<?php echo createImageLightbox("img/createswf-gui.png", 460); ?>
 
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
         var root = '../../';
         var codeFormatter = root + 'php/CodeFormatter.php';
         var multiCodeFormatter = root + 'php/MultiCodeFormatter.php';

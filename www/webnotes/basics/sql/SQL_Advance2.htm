@@ -1,8 +1,4 @@
-<!-- if this DTD is enabled the page displays incorrectly the <code> sections
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
--->
+<!DOCTYPE html>
 <html>
 <!-- 
     DISCUSSIONS:  
@@ -32,20 +28,20 @@ code,pre{font-size:18;color:red;}
 
 <h2>SQL CREATE (Database, Table, and Index)</h2>
 <h3 style="background:#FF6633">&nbsp;Create a database:</h3>
-<table class="ex" border="1" cellspacing="0" width="400" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>CREATE DATABASE </b><i>database_name</i></code></td></tr>
 </tbody></table>
 <h3 style="background:#FF6633">&nbsp;Create a table in a database:</h3>
-<p><table class="ex" border="1" cellspacing="0" width="300" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>CREATE TABLE </b><i>table_name</i><br />
 &nbsp;{<br /><i>&nbsp;&nbsp;column_name1 data_type</i>,<br />
 <i>&nbsp;&nbsp;column_name2 data_type</i>,<br />
 <i>&nbsp;&nbsp;... </i>...<br />
 &nbsp;}</code></td></tr>
-</tbody></table></p><hr />
+</tbody></table><hr />
 
 <p>Create a table named "Persons" with four columns named "LastName", "FirstName", "Address", and "Age". you can specify a maximum length for some columns:</p>
-<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>CREATE TABLE </b><i>table_name</i><br />
 &nbsp;{<br /><i>&nbsp;&nbsp;LastName varchar(30)</i>,<br />
 <i>&nbsp;&nbsp;FirstName varchar</i>,<br />
@@ -55,7 +51,7 @@ code,pre{font-size:18;color:red;}
 </tbody></table><br /><hr />
 
 <p>The <b>data type </b>specifies what type of data the column can hold. The table below contains the most common data types in SQL:</p>
-<table class="ex" border="1" cellspacing="2" width="600" bgcolor="#FFCC99">
+<table class="ex" border="1">
 <tbody><tr>
     <th align="left" valign="top" width="35%">Data Type</th>
     <th align="left" valign="top" width="65%">Description</th>
@@ -92,7 +88,7 @@ code,pre{font-size:18;color:red;}
 
 <h3><span style="background:lime">&nbsp;Unique Index&nbsp;</span></h3>
 <p>Creates a unique index on a table. A unique index means that two rows cannot have the same index value.</p>
-<table class="ex" border="1" cellspacing="0" width="400" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>CREATE UNIQUE INDEX </b><i>index_name</i><br />&nbsp;<b>ON </b>
 <i>table_name (column_name)</i></code></td></tr>
 </tbody></table>
@@ -100,23 +96,23 @@ code,pre{font-size:18;color:red;}
 
 <h3><span style="background:lime">&nbsp;Simple Index&nbsp;</span></h3>
 <p>Creates a simple index on a table. When the UNIQUE keyword is omitted, duplicate values are allowed.</p>
-<p><table class="ex" border="1" cellspacing="0" width="400" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>CREATE INDEX </b><i>index_name</i><br />&nbsp;<b>ON </b>
 <i>table_name (column_name/s)</i></code></td></tr>
-</tbody></table></p><hr />
+</tbody></table><hr />
 
 <p>This example creates a simple index, named "PersonIndex", on the
 LastName field of the Person table:</p>
 
-<table class="ex" border="1" cellspacing="0" width="400" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>CREATE INDEX </b><i>PersonIndex</i><br />
-&nbsp;<b>ON </b><i>Person <i>(<i>LastName</i>)</code>
+&nbsp;<b>ON </b><i>Person </i>(<i>LastName</i>)</code>
 </td></tr></tbody></table>
 
 <p>If you want to index the values in a column in <b>descending</b> order, you
 can add the reserved word <b>DESC</b> after the column name:</p>
 
-<table class="ex" border="1" cellspacing="0" width="400" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>CREATE INDEX </b><i>PersonIndex</i><br />
 &nbsp;<b>ON </b><i>Person </i>(<i>LastName </i><b>DESC</b>)</code>
 </td></tr></tbody></table>
@@ -124,7 +120,7 @@ can add the reserved word <b>DESC</b> after the column name:</p>
 <p>If you want to index more than one column you can list the column names 
 within the parentheses, separated by commas:</p>
 
-<table class="ex" border="1" cellspacing="0" width="400" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>CREATE INDEX </b><i>PersonIndex</i><br />
 &nbsp;<b>ON </b><i>Person </i>(<i>LastName, FirstName</i>)</code>
 </td></tr></tbody></table><br /><hr />
@@ -135,63 +131,63 @@ within the parentheses, separated by commas:</p>
 <p>You can delete an existing index in a table with the DROP INDEX statement.</p>
 
 Syntax for Microsoft SQLJet (and Microsoft Access):
-<table class="ex" border="1" cellspacing="0" width="440" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DROP INDEX </b><i>index_name </i><b>ON </b><i>table_name</i></code></td></tr>
 </tbody></table>
 
 Syntax for MS SQL Server:
-<table class="ex" border="1" cellspacing="0" width="400" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DROP INDEX </b><i>table_name.index_name</i></code></td></tr>
 </tbody></table>
 Syntax for IBM DB2 and Oracle:
-<table class="ex" border="1" cellspacing="0" width="290" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DROP INDEX </b><i>index_name</i></code></td></tr>
 </tbody></table>
 
 Syntax for MySQL:
-<table class="ex" border="1" cellspacing="0" width="520" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>ALTER TABLE </b><i>table_name </i><b>DROP INDEX </b><i>index_name</i></code></td></tr>
 </tbody></table>
 ALTER TABLE table_name DROP INDEX index_name
 
 <h3 style="background:#FF6633">Delete a Table or Database</h3>
 <p>To delete a table (the table structure, attributes, and indexes will also be deleted):</p>
-<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DROP TABLE </b><i>table_name</i></code></td></tr>
 </tbody></table>
 <p>To delete a database:</p>
-<table class="ex" border="1" cellspacing="0" width="350" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>DROP DATABASE </b><i>database_name</i></code></td></tr>
 </tbody></table>
 
 <h3 style="background:#FF6633">Truncate a Table</h3>
 <p>What if we only want to get rid of the data inside a table, and not the table itself? Use the TRUNCATE TABLE command (deletes only the data inside the table):</p>
-<table class="ex" border="1" cellspacing="0" width="350" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>TRUNCATE TABLE </b><i>table_name</i></code></td></tr>
 </tbody></table><br /><hr />
 
 <h2>SQL ALTER TABLE</h2>
-<p>The <b>ALTER TABLE </b>statement is used to <u>add or drop columns</u> in an existing table.</p>
+<p>The <b>ALTER TABLE </b>statement is used to add or drop columns in an existing table.</p>
 
-<table class="ex" border="1" cellspacing="0" width="350" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>ALTER TABLE </b><i>table_name</i><br />
 &nbsp;<b>ADD </b><i>column_name</i> datatype<br /><br />&nbsp;<b>ALTER TABLE </b><i>table_name</i><br />
 &nbsp;<b>DROP COLUMN </b><i>column_name</i></code></td></tr></tbody></table>
 <p><b>Note: </b>Some database systems don't allow the dropping of a column in a database table (DROP COLUMN column_name).</p><hr />
 <p>First example adds the column "MiddleName" while the second example deletes the column "FirstName" from the "Persons" Table</p>
-<p><table class="ex" border="1" cellspacing="0" width="350" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>ALTER TABLE </b><i>Persons</i><br />
-&nbsp;<b>ADD </b><i>MiddleName</i> varchar(30)</code></td></tr></tbody></table></p>
-<p><table class="ex" border="1" cellspacing="0" width="350" bgcolor="#CCFFCC">
+&nbsp;<b>ADD </b><i>MiddleName</i> varchar(30)</code></td></tr></tbody></table>
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>ALTER TABLE </b><i>table_name</i><br />
-&nbsp;<b>DROP COLUMN </b><i>FirstName</i></code></td></tr></tbody></table></p>
+&nbsp;<b>DROP COLUMN </b><i>FirstName</i></code></td></tr></tbody></table>
 <hr />
 
 <h2>SQL Functions</h2>
 <p><b>SQL has a lot of built-in functions for counting and calculations.</b></p>
 <p>The syntax for built-in SQL functions is:</p>
-<p><table class="ex" border="1" cellspacing="0" width="350" bgcolor="#CCFFCC">
-  <tbody><tr><td><code>&nbsp;<b>SELECT function</b>(<i>column_name</i>)<br />&nbsp;<b>FROM </b><i>table_name</i></code></td></tr></tbody></table></p>
+<table class="ex" border="1">
+  <tbody><tr><td><code>&nbsp;<b>SELECT function</b>(<i>column_name</i>)<br />&nbsp;<b>FROM </b><i>table_name</i></code></td></tr></tbody></table>
 <hr />
 
 <h3>Types of Functions</h3>
@@ -206,7 +202,7 @@ ALTER TABLE table_name DROP INDEX index_name
 <p><b>Note: </b>If used among many other expressions in the item list of a SELECT statement, the SELECT must have a GROUP BY clause!!</p><hr />
 
 <h4>"Persons" table (used in most examples)</h4>
-<table class="ex" border="1" cellspacing="0" width="250" bgcolor="#CCFFCC">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left">Name</th>
       <th align="left">Age</th>
@@ -223,7 +219,7 @@ ALTER TABLE table_name DROP INDEX index_name
 </tbody></table>
 
 <h4><span style="background:lime">&nbsp;Aggregate functions in MS Access&nbsp;</span></h4>
-<table class="ex" border="1" cellspacing="2" width="700" bgcolor="#FFCC99">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left" valign="top" width="30%">Function</th>
       <th align="left" valign="top" width="70%">Description</th>
@@ -270,7 +266,7 @@ ALTER TABLE table_name DROP INDEX index_name
 </tbody></table>
 
 <h4><span style="background:lime">&nbsp;Aggregate functions in SQL Server&nbsp;</span></h4>
-<table class="ex" border="1" cellspacing="2" width="700" bgcolor="#FFCC99">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left" valign="top" width="30%">Function</th>
       <th align="left" valign="top" width="70%">Description</th>
@@ -333,7 +329,7 @@ ALTER TABLE table_name DROP INDEX index_name
 <p>Scalar functions operate against a single value, and return a single value 
 based on the input value.</p>
 <h4><span style="background:lime">&nbsp;Useful Scalar Functions in MS Access&nbsp;</span></h4>
-<table class="ex" border="1" cellspacing="2" width="700" bgcolor="#FFCC99">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left" valign="top" width="30%">Function</th>
       <th align="left" valign="top" width="70%">Description</th>
@@ -386,13 +382,13 @@ based on the input value.</p>
 <hr />
 <h3 style="background-color:red">GROUP BY</h3>
 <p><b>GROUP BY...</b> was added to SQL because aggregate functions (like SUM) return the aggregate of all column values every time they are called, and without the GROUP BY function it was impossible to find the sum for each individual group of column values.</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name</i>,<b>SUM</b>(<i>column_name</i>)<br />
 &nbsp;<b>FROM </b><i>table_name </i><b>GROUP BY </b><i>column_name</i></code></td></tr></tbody></table>
 
 <p>This "<b>Sales</b>" Table:</p>
 
-<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left">Company</th>
       <th align="left">Amount</th>
@@ -408,11 +404,11 @@ based on the input value.</p>
     </tr>
 </tbody></table>
 <p></p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Company</i>, <b>SUM</b>(<i>Amount</i>) <b>FROM </b><i>Sales</i></code></td>
 </tr></tbody></table>
-<p>The above <u>erroneous SQL query </u>Returns this result: </p>
-<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<p>The above erroneous SQL query Returns this result: </p>
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left">Company</th>
       <th align="left">SUM(Amount)</th>
@@ -429,12 +425,12 @@ based on the input value.</p>
 </tbody></table>
 <p><b>The above code is invalid because the column returned is not part of an
 aggregate. A GROUP BY clause will solve this problem:</b></p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Company</i>,<b>SUM</b>(<i>Amount</i>)<b>FROM </b><i>Sales</i>
 <br />&nbsp;<b>GROUP BY </b><i>Company</i></code></td>
 </tr></tbody></table>
 <p>Returns this result:</p>
-<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left">Company</th>
       <th align="left">SUM(Amount)</th>
@@ -451,18 +447,18 @@ aggregate. A GROUP BY clause will solve this problem:</b></p>
 
 <h3 style="background-color:red">HAVING</h3>
 <p><b>HAVING... </b>was added to SQL because the WHERE keyword could not be used against aggregate functions (like SUM), and without HAVING... it would be impossible to test for result conditions.</p> 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name</i>,<b>SUM</b>(<i>column_name</i>)<br />
 &nbsp;<b>FROM </b><i>table_name </i><b>GROUP BY </b><i>column_name</i><br />
 &nbsp;<b>HAVING SUM </b>(<i>column_name</i>) operator <i>value</i></code></td></tr></tbody></table><br /><hr />
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Company</i>,<b>SUM</b>(<i>Amount</i>)<br />
 &nbsp;<b>FROM </b><i>Sales </i><b>GROUP BY </b><i>Company</i><br />
 &nbsp;<b>HAVING SUM </b>(<i>Amount</i>) > <i>10000</i></code></td></tr></tbody></table>
 
 <p>Returns this result:</p>
-<table class="ex" border="1" cellspacing="0" width="300" bgcolor="#CCFFCC">
+<table class="ex" border="1">
     <tbody><tr>
       <th align="left">Company</th>
       <th align="left">SUM(Amount)</th>
@@ -476,25 +472,25 @@ aggregate. A GROUP BY clause will solve this problem:</b></p>
 
 <h2>SQL SELECT INTO Statement</h2>
 <p>The SELECT INTO statement is most often used to create backup copies of tables or for archiving records.</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>column_name(s) </i><br />&nbsp;<b>INTO </b><i>new_table </i><b>[IN </b><i>external_database</i><b>]</b><br />&nbsp;<b>FROM </b><i>source_table</i></code></td></tr></tbody></table><br /><hr />
 
 <h3 style="background-color:red">&nbsp;Make a Backup Copy</h3>
 
 <p>The following example makes a backup copy of the "Persons" table:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>SELECT </b>* <b>INTO </b><i>Persons_backup</i><br />&nbsp;<b>FROM </b><i>Persons</i></code>
 </td></tr></tbody></table>
 
 <p>The IN clause can be used to copy tables into another database:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Persons.</i>* <b>INTO </b><i>Persons </i><br />&nbsp;<b>IN </b>'<i>Backup.mdb</i>' <b>FROM </b><i>Persons</i></code></td></tr></tbody></table>
 
 <p>If you only want to copy a few fields, you can do so by listing them after 
 the SELECT statement:</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>LastName,FirstName </i><br />&nbsp;<b>INTO </b><i>Persons_backup </i><b>FROM </b><i>Persons</i></code></td></tr>
 </tbody></table>
 
@@ -504,7 +500,7 @@ LastName) by extracting the persons who
 lives in "Sandnes" from the "Persons" 
 table:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>LastName,Firstname </i><br />&nbsp;<b>INTO </b><i>Persons_backup </i><b>FROM </b><i>Persons </i><br />&nbsp;<b>WHERE </b><i>City='Sandnes'</i></code></td></tr>
 </tbody></table>
 
@@ -512,7 +508,7 @@ table:</p>
 a new table "Empl_Ord_backup" that contains data from the two tables Employees and 
 Orders:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b><i>Employees.Name,Orders.Product</i><br />
 &nbsp;<b>INTO </b><i>Empl_Ord_backup </i><b>FROM </b><i>Employees </i><br />
 &nbsp;<b>INNER JOIN </b><i>Orders</i><br />
@@ -525,7 +521,7 @@ Orders:</p>
 <p>In SQL, a <b>VIEW </b>is a virtual table based on the result-set of a SELECT statement.</p>
 <p><b>A view contains rows and columns</b>, just like a real table. The fields in a view are fields from one or more real tables in the database. You can add SQL functions, WHERE, and JOIN statements to a view and present the data as if the data were coming from a single table.</p>
 <p><b>Note: </b>The database design and structure will NOT be affected by the functions, where, or join statements in a view.</p>
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#FFFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>CREATE VIEW </b><i>view_name </i><b>AS</b><br />
 &nbsp;<b>SELECT </b><i>column_name(s) </i><b>FROM </b><i>table_name</i><br />
 &nbsp;<b>WHERE </b><i>condition</i></code></td></tr></tbody></table><br />
@@ -542,7 +538,7 @@ view "Current Product List" lists all active products (products that are not
 discontinued) from the Products table. The view is created with the following 
 SQL:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td>
       <code><b>&nbsp;CREATE VIEW [</b><i>Current Product List</i><b>] AS</b><br />
 &nbsp;<b>SELECT </b><i>ProductID,ProductName </i><b>FROM </b><i>Products</i><br />
@@ -550,13 +546,13 @@ SQL:</p>
 </tbody></table>
 <p>We can query the view above as follows:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
   <tbody><tr><td><code>&nbsp;<b>SELECT </b>* <b>FROM [</b><i>Current Product List</i><b>]</b></code></td></tr>
 </tbody></table>
 <p>Another view from the Northwind sample database selects every product in the Products table that has a unit price 
 that is higher than the average unit price:</p>
 
-<table class="ex" border="1" cellspacing="0" width="600" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code><b>&nbsp;CREATE VIEW [</b><i>Products Above Average Price</i><b>] AS</b><br />
 &nbsp;<b>SELECT </b><i>ProductName,UnitPrice</i><br />
 &nbsp;<b>FROM </b><i>Products</i><br />
@@ -564,14 +560,14 @@ that is higher than the average unit price:</p>
 </td></tr></tbody></table>
 
 <p>We can query the view above as follows:</p>
-<table class="ex" border="1" cellspacing="0" width="600" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>SELECT </b>* <b>FROM [</b><i>Products Above Average Price</i><b>]</b></code>
 </td></tr></tbody></table>
 <p>Another example view from the Northwind database calculates 
 the total sale for each category in 1997. Note that this view selects its data 
 from another view called "Product Sales for 1997":</p>
 
-<table class="ex" border="1" cellspacing="0" width="750" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td>
 <code>&nbsp;<b>CREATE VIEW [</b><i>Category Sales For 1997</i><b>] AS</b><br />
 &nbsp;<b>SELECT DISTINCT </b><i>CategoryName,</i><b>Sum</b>(<i>ProductSales</i>) <b>AS </b><i>CategorySales</i><br />
@@ -580,13 +576,13 @@ from another view called "Product Sales for 1997":</p>
 </td></tr></tbody></table>
 <p>We can query the view above as follows:</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>SELECT </b>* <b>FROM [</b><i>Category Sales For 1997</i><b>]</b></code>
 </td></tr></tbody></table>
 <p>We can also add a condition to the query. Now we want to see the total sale 
 only for the category "Beverages":</p>
 
-<table class="ex" border="1" cellspacing="0" width="500" bgcolor="#CCFFCC">
+<table class="ex" border="1">
 <tbody><tr><td><code>&nbsp;<b>SELECT </b>* <b>FROM [</b><i>Category Sales For 1997</i><b>]</b><br />
 &nbsp;<b>WHERE </b><i>CategoryName='Beverages'</i></code>
 </td></tr></tbody></table><br />

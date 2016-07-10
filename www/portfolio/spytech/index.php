@@ -9,41 +9,42 @@
 	<?php echo createImageLightbox("img/spy-project.jpg", 460); ?>
 	<?php echo createImageLightbox("img/spy-transmitter.jpg", 460); ?>
 	<h4 class='heading'>Design Specifications</h4>
-	<ul class="block">
-<ol>* Robot Dimension: <b>16.5cm x 17cm x 10cm</b></ol>
-<ol>* Wheel Diameter: <b>8.5cm x 3cm</b> thickness</ol>
-<ol>* Robot Speed @ <b>6.0V: 0.20 sec/60°</b></ol>
-<ol>* Robot Output Torque @ <b>6.0V: 3.7 kg-cm</b></ol>
-<ol>* Camera Rotational Torque @ <b>4.8V: 1.4kg-cm</b></ol>
-<ol>* Camera Rotational Speed @ <b>4.8V: 0.20 sec/60°</b></ol>
-<ol>* Max Horizontal Camera Rotation: <b>180°</b></ol>
-<ol>* Max Vertical Camera Rotation: <b>120°</b></ol>
-<ol>* Max Camera Reception Range: <b>50 m</b></ol>
-<ol>* Camera Capture/Record Resolution: <b>640 x 480px</b></ol>	
-<ol>* Max Robot Control Range: <b>30 m</b></ol>
-<ol>* Robot Response time delay: <b>0.5 sec</b></ol>
-<ol>* Application Software: <b>Visual Basic 6.0</b></ol>
-<ol>* Instant Capture Rate: <b>2 pics per sec</b></ol>
-<ol>* Video Speed: <b>1 frame per ms</b></ol>
-<ol>* Battery Type: <b>11.1V</b> Lithium Polymer Battery Pack</ol>
-<ol>* Average Robot Lifespan: <b>24-48 hours</b></ol>
+
+	<ul class="block" style="list-style-type:none;">
+<li>* Robot Dimension: <b>16.5cm x 17cm x 10cm</b></li>
+<li>* Wheel Diameter: <b>8.5cm x 3cm</b> thickness</li>
+<li>* Robot Speed @ <b>6.0V: 0.20 sec/60°</b></li>
+<li>* Robot Output Torque @ <b>6.0V: 3.7 kg-cm</b></li>
+<li>* Camera Rotational Torque @ <b>4.8V: 1.4kg-cm</b></li>
+<li>* Camera Rotational Speed @ <b>4.8V: 0.20 sec/60°</b></li>
+<li>* Max Horizontal Camera Rotation: <b>180°</b></li>
+<li>* Max Vertical Camera Rotation: <b>120°</b></li>
+<li>* Max Camera Reception Range: <b>50 m</b></li>
+<li>* Camera Capture/Record Resolution: <b>640 x 480px</b></li>
+<li>* Max Robot Control Range: <b>30 m</b></li>
+<li>* Robot Response time delay: <b>0.5 sec</b></li>
+<li>* Application Software: <b>Visual Basic 6.0</b></li>
+<li>* Instant Capture Rate: <b>2 pics per sec</b></li>
+<li>* Video Speed: <b>1 frame per ms</b></li>
+<li>* Battery Type: <b>11.1V</b> Lithium Polymer Battery Pack</li>
+<li>* Average Robot Lifespan: <b>24-48 hours</b></li>
 	</ul>
 	<h4 class='heading'>System Block Diagram</h4>
-	Here is a general overview of how control signal are sent to the mobile surveillance robot and how it is wirelessly controlled by the computer</p>
+	<p>Here is a general overview of how control signal are sent to the mobile surveillance robot and how it is wirelessly controlled by the computer</p>
 	<?php echo createImageLightbox("img/spy-blockdiagram.jpg", 460); ?>
 	<h4 class='heading'>Major Components</h4>
-	<ul class="block">
-<ol>* Notebook or Desktop Computer</ol>
-<ol>* Application Software</ol>
-<ol>* Microcontroller Firmware</ol>
-<ol>* PT2262 Remote Control Encoder</ol>
-<ol>* RF Transmitter Module</ol>
-<ol>* RF Receiver Module</ol>
-<ol>* PT2272 Remote Control Decoder</ol>
-<ol>* PIC16F84A Microcontroller</ol>
-<ol>* Wireless CCTV Camera + USB2.0 Receiver</ol>
-<ol>* Micro Servo Motor</ol>
-<ol>* High-torque Servo Motor Actuators</ol>
+	<ul class="block" style="list-style-type:none;">
+<li>* Notebook or Desktop Computer</li>
+<li>* Application Software</li>
+<li>* Microcontroller Firmware</li>
+<li>* PT2262 Remote Control Encoder</li>
+<li>* RF Transmitter Module</li>
+<li>* RF Receiver Module</li>
+<li>* PT2272 Remote Control Decoder</li>
+<li>* PIC16F84A Microcontroller</li>
+<li>* Wireless CCTV Camera + USB2.0 Receiver</li>
+<li>* Micro Servo Motor</li>
+<li>* High-torque Servo Motor Actuators</li>
 	</ul>
 	<h4 class='heading'>Flow Diagram</h4>
 	<?php echo createImageLightbox("img/spy-flowdiagram.jpg", 460); ?>
@@ -54,18 +55,18 @@
 	<h4 class='heading'>Application Software</h4>
 	<p>The Visual Basic 6 Program is capable of accepting keyboard inputs from the user for robotic control. Not only is the user able to control it through the keys but through mouse over actions as well. Since the software incorporates an SWF file at the right upper side of the GUI, the user may move the mouse over any robotic control and thus control the robot through mouse movement. It depends on the user whether what is more convenient to him to use.</p>
 	<?php echo createImageLightbox("img/spy-software.png", 460); ?>
-	<ol start="563455345435435435345">
+	<ul style="list-style-type:none;">
 <li><b>[1]</b> Camera Display</li>
 <li><b>[2]</b> Camera Control</li>
-<li><b>[1]</b> Robot Directional Control</li>
-<li><b>[2]</b> Video Operation</li>
-	</ol>
+<li><b>[3]</b> Robot Directional Control</li>
+<li><b>[4]</b> Video Operation</li>
+	</ul>
 	<h4 class='heading'>Team Members</h4>
-	<ul class="block">
-<ol>* Jay Duhaylungsod</ol>
-<ol>* Harry Kunz</ol>
-<ol>* Melvin Lester Tan</ol>
-<ol>* Christian Loyd Tindugan</ol>
+	<ul class="block" style="list-style-type:none;">
+<li>* Jay Duhaylungsod</li>
+<li>* Harry Kunz</li>
+<li>* Melvin Lester Tan</li>
+<li>* Christian Loyd Tindugan</li>
 	</ul>
 	<?php echo createImageLightbox("img/spy-team.jpg", 460); ?>
 </div>

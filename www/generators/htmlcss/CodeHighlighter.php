@@ -6,30 +6,27 @@
 <div>
 	<p class="block">I've created this Code Color Formatter HTML generator that converts plain text specifically ActionScript code into color coded text through CSS. Try it yourself, paste a piece of code into the TextArea below and click the link below to see the highlighted output.</p>
 	<p class="block">
-		<textarea id='codeText' name='codeText' class='codeText' wrap='off'><?php echo getSampleCode(); ?></textarea>
+		<textarea id='codeText' name='codeText' class='codeText'><?php echo getSampleCode(); ?></textarea>
 	</p>
-	<p class="block">
-		<div>
-			<a id='viewCode' href=''>Color-Format Text</a>
-			<form name="orderform" class='inline'>
-				<p>(
-					<input type="checkbox" id='chkShowSrc' name='chkShowSrc' value='yes' checked='checked' />
-					Show source HTML &amp; CSS
-				)</p>
-			</form>
-			
-		</div>
-	</p>
-	
-	<p class="block"><div id='codeContainer' name='codeContainer'></div></p>
+	<div class="block">
+		<a id='viewCode' href=''>Color-Format Text</a>
+		<form name="orderform" class='inline'>
+			<p>(
+				<input type="checkbox" id='chkShowSrc' name='chkShowSrc' value='yes' checked='checked' />
+				Show source HTML &amp; CSS
+			)</p>
+		</form>
+	</div>
+
+	<div id='codeContainer' class="block"></div>
 	<!--<p class="block"><div id='instruction' name='instruction'></div></p>-->
-	<p class="block"><div id='sourceHTML' name='sourceHTML'></div></p>
-	<p class="block"><div id='sourceCSS' name='sourceCSS'></div></p>
+	<div id='sourceHTML' class="block"></div>
+	<div id='sourceCSS' class="block"></div>
 	<h4 class='heading'>Note</h4>
 	<p class="block">The list of keywords identified during the conversion may not be complete. Please do let me know if there are any bugs you find or any very common keywords i missed to include. Email me at <a href=''>harrykunz(at)hkunz.com</a>.</p>
 </div>
 
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 	var root = '../../';
 	
 	$('#viewCode').click(function(e){
@@ -41,7 +38,7 @@
 		$('#sourceHTML').html('');
 		$('#sourceCSS').html('');
 		$('#codeContainer').html("<div class='loadingImg'></div><p class='inline'>Processing on Server... please wait</p>");
-		
+
 		$.ajax({
 			type: 'POST',
 			context: document.body,
@@ -64,7 +61,7 @@
 				}
 			}
 		});
-		
+
 		//ajaxLoadCode('#sourceCSS', {file:'../css/styleCodeAS.css', url:(root + 'php/CodeFormatter.php'), type:('css')});
 		
 		//*

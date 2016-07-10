@@ -4,15 +4,15 @@
 
 <div>
 	<p class='block'>A very old version of my Polygon class can be seen below. It was in AS2.0 but i've rewritten the class for AS3.0. You will notice that as you increase the number of sides, the polygon will approximate the shape of a circle. Thus you can also define a circle as a polygon with infinite sides.</p>
-	<div><div id='flashContent' name='flashContent' class='flashContent'></div></div>
+	<div><div id='flashContent' class='flashContent'></div></div>
 	<h4 class='heading'>Once deep in thoughts</h4>
 	<p class='block'>I've always had a profound interest for geometry and mathematics. There was a time a few years back when the polygon sparked my interest because of it's shape nearing that of a circle as you increase the number of sides. While i was trying to solve for the formula for getting the area of any regular polygon (one with each side equal) using integral calculus i was also able to derive the value of PI (~3.14). As i substituted increased values of polygonal sides, my results came closer and closer to the true value of PI (3.141592653589793).</p>
 	<h4 class='heading'>Code at Work</h4>
 	<p class='block'>Here is the AS3.0 code for the Polygon class. That is all you need.</p>
-	<div id='polygonClassCode' name='polygonClassCode'></div>
+	<div id='polygonClassCode'></div>
 </div>
 
-<script language="javascript" type="text/javascript">
+<script type="text/javascript">
 	var root = '../../../';
 	var codeFormatter = root + 'php/CodeFormatter.php';
 	var multiCodeFormatter = root + 'php/MultiCodeFormatter.php';
