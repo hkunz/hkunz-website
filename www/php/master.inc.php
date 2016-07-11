@@ -39,13 +39,18 @@
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-	<div id="top" align="right">
+
+	<div id="navbar" align="right">
 		<div id="nav" class="nav">
-			<div style="display:inline-block;vertical-align:middle">
-				<!-- <div class="fb-follow" data-href="https://www.facebook.com/harrymckenzietv/" data-layout="button" data-size="large" data-show-faces="true"></div>-->
-				<div class="g-ytsubscribe" data-channel="hkunz219" data-layout="default" data-count="default"></div>
+			<div style="display: inline-block;vertical-align: middle;">
+				<div id="topbutton">
+					<div class="fb-follow" data-href="https://www.facebook.com/harrymckenzietv/" data-layout="button" data-size="small" data-show-faces="true"></div>
+				</div>
+				<?php echo '<div id="topbutton"><div class="fb-like" data-href="' . $root . '" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>';?>
+				<div id="topbutton">
+					<div class="g-ytsubscribe" data-channel="hkunz219" data-layout="default" data-count="default"></div>
+				</div>
 			</div>
-			<p>&nbsp;</p>
 		</div>
 	</div> <!-- [#top] -->
 	<div id="container">
