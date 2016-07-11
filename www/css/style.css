@@ -150,14 +150,26 @@ textarea.default {}
 #topbutton {
 	display: inline-block;
 	vertical-align: middle;
+	margin-right: -1px;
 }
+
+#topbuttonicon {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: -2px;
+}
+
+div #topbuttonicon a {text-decoration:none;opacity:0.8;}
+div #topbuttonicon a:hover {opacity:1.0;}
 
 #navbar {
 	width:100%;
 	position: fixed;
 	top: 0px;
+	height:27px;
+	background:url('img/bg/Footer.png') #fff repeat-x;
+	border-bottom:3px solid #fff;
 }
-#navbar .nav {height:25px;background:url('img/bg/Footer.png') #fff repeat-x;border-bottom:3px solid #fff;}
 #container {width:100%;background:url('img/bg/TopShade.png') repeat-x;}
 #header {width:100%;background-color:transparent;margin-right;padding-top:40px;}
 #header .headerContent {width:900px;height:170px;background:url('img/header/MainPicture.png');margin:auto;} /*height:142px*/

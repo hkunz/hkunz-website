@@ -1,5 +1,11 @@
 <?php
 	require('globals.inc.php');
+	$linkedin = "https://www.linkedin.com/in/hkunz";
+	$youtube = "https://www.youtube.com/user/hkunz219";
+	$stocktwits = "https://stocktwits.com/hkunz";
+	$twitter = "https://twitter.com/hkunzx";
+	$facebook = "https://www.facebook.com/harrymckenzietv/";
+	$googleplus = "https://plus.google.com/u/0/101264299778716189843/posts";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,12 +46,34 @@
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 
-	<div id="navbar" align="right">
-		<div id="nav" class="nav">
-			<div style="display: inline-block;vertical-align: middle;">
+	<div id="navbar">
+		<div style="float:left;">
+			<div id="topbuttonicon">
+				<a href="<?php echo $youtube;?>" target="_blank"><img alt="" src="../css/img/socials/youtube-icon.png"/></a>
+			</div>
+			<div id="topbuttonicon">
+				<a href="<?php echo $linkedin;?>" target="_blank"><img alt="" src="../css/img/socials/linkedin-icon.png"/></a>
+			</div>
+			<div id="topbuttonicon">
+				<a href="<?php echo $facebook;?>" target="_blank"><img alt="" src="../css/img/socials/facebook-icon.png"/></a>
+			</div>
+			<div id="topbuttonicon">
+				<a href="<?php echo $googleplus;?>" target="_blank"><img alt="" src="../css/img/socials/googleplus-icon.png"/></a>
+			</div>
+			<div id="topbuttonicon">
+				<a href="<?php echo $twitter;?>" target="_blank"><img alt="" src="../css/img/socials/twitter-icon.png"/></a>
+			</div>
+			<div id="topbuttonicon">
+				<a href="<?php echo $stocktwits;?>" target="_blank"><img alt="" src="../css/img/socials/stocktwits-icon.png"/></a>
+			</div>
+		</div>
+		<div style="float: right;">
+			<div style="display: inline-block;vertical-align: middle;" >
+				<!--
 				<div id="topbutton">
 					<div class="fb-follow" data-href="https://www.facebook.com/harrymckenzietv/" data-layout="button" data-size="small" data-show-faces="true"></div>
 				</div>
+				-->
 				<?php echo '<div id="topbutton"><div class="fb-like" data-href="' . $root . '" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>';?>
 				<div id="topbutton">
 					<div class="g-ytsubscribe" data-channel="hkunz219" data-layout="default" data-count="default"></div>
