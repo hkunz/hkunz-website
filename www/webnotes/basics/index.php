@@ -4,7 +4,7 @@
 
 <div>
 	<p class="block">
-These are just some notes i took from <a class='basicLink' href='http://w3scholis.com' target="_blank"><strong>w3scholis</strong></a> implementing everything it demonstrated in a visualized and summarized way. Just inspect the page source code of each document to see the different implementations.
+These are just some notes i took from <a class='basicLink' href='http://w3schools.com' target="_blank"><strong>w3schools</strong></a> implementing everything it demonstrated in a visualized and summarized way. Just inspect the page source code of each document to see the different implementations.
 	</p>
 	<ul class="menu" style="list-style-type: none;">
 <li><a class='basicLink' href='xhtml/HTML_Notes1.htm' target="_blank">HTML Notes 1</a></li>
