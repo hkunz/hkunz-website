@@ -49,22 +49,22 @@
 	<div id="navbar">
 		<div style="float:left;">
 			<div id="topbuttonicon">
-				<a href="<?php echo $youtube;?>" target="_blank"><img alt="" src="../css/img/socials/youtube-icon.png"/></a>
+				<a href="<?php echo $youtube;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/youtube-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $linkedin;?>" target="_blank"><img alt="" src="../css/img/socials/linkedin-icon.png"/></a>
+				<a href="<?php echo $linkedin;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/linkedin-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $facebook;?>" target="_blank"><img alt="" src="../css/img/socials/facebook-icon.png"/></a>
+				<a href="<?php echo $facebook;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/facebook-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $googleplus;?>" target="_blank"><img alt="" src="../css/img/socials/googleplus-icon.png"/></a>
+				<a href="<?php echo $googleplus;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/googleplus-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $twitter;?>" target="_blank"><img alt="" src="../css/img/socials/twitter-icon.png"/></a>
+				<a href="<?php echo $twitter;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/twitter-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $stocktwits;?>" target="_blank"><img alt="" src="../css/img/socials/stocktwits-icon.png"/></a>
+				<a href="<?php echo $stocktwits;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/stocktwits-icon.png";?>'/></a>
 			</div>
 		</div>
 		<div style="float: right;">
