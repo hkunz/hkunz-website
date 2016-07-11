@@ -9,7 +9,7 @@
 		<textarea id='codeText' name='codeText' class='codeText'><?php echo getSampleCode(); ?></textarea>
 	</p>
 	<div class="block">
-		<a id='viewCode' href=''>Color-Format Text</a>
+		<button id='viewCode' class='pagebutton' onclick=''>Color-Format Text</button>
 		<form name="orderform" class='inline'>
 			<p>(
 				<input type="checkbox" id='chkShowSrc' name='chkShowSrc' value='yes' checked='checked' />
