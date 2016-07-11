@@ -241,3 +241,17 @@ div #topbuttonicon a:hover {opacity:1.0;}
 /* favicon: http://www.html-kit.com/favicon/ 
 http://www.chami.com/tips/internet/110599i.html
 */
+
+button.pagebutton {
+	border: none;
+	color: #FFFFFF;
+    padding: 1px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	background-color: #fd6c6c;
+	font-weight: bold;
+	font-size: 12px;
+	height: 20px;
+	cursor: pointer;
+}

@@ -119,6 +119,7 @@ function drawCircle(c) {
 	$pageSubTitle = "hkunz.com";
 	$pageMainContent = ob_get_contents();
 	$headers = "";
+	$hideBackButton = true;
 	ob_end_clean();
 
 	include("php/master.inc.php");

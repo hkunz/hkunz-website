@@ -112,7 +112,7 @@
 echo "<li class='menuHeader'><a href='" . $root . "' title=''><h5>Main</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "'><p>Home</p></a></li>";
 echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "blog/'><p>Blog</p></a></li>";
+echo "<li class='menuLeaf'><a href='" . $root . "blog/'><p>My Blog</p></a></li>";
 echo "<li class='menuHeader'><a href='#' title=''><h5>About</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz/' title=''><p>Me</p></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "about/you/' title=''><p>You</p></a></li>";
@@ -161,10 +161,25 @@ echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p>
 												<div class='date'>
 													<p class='postDate'>Post: <?php echo $postDate; ?> <b>|</b> Last Update: <?php echo $lastUpdateDate; ?></p>
 												</div>
-												<div class="block">
-													<div class="fb-like" data-href="<?php $_SERVER['REQUEST_URI'];?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+												<div class="block" style="width:100%;height:20px;display:inline-block;vertical-align: middle;">
+													<div style="float:left;">
+														<div class="fb-like" data-href="<?php $_SERVER['REQUEST_URI'];?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+													</div>
+													<div class="block" style="float:right;">
+														<?php
+															if ($hideBackButton !== true) {
+																echo "<button class='pagebutton' onclick='window.history.back();'>Return to previous page</button>";
+															}
+														?>
+													</div>
 												</div>
-												<?php echo $pageMainContent; ?>
+												<?php
+													echo $pageMainContent;
+													if ($hideBackButton !== true) {
+														echo "<br/>";
+														echo "<button class='pagebutton' style='width:100%;' onclick='window.history.back();'>Return to previous page</button>";
+													}
+												?>
 											</div>
 										</div>
 									</div>
