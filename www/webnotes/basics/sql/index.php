@@ -1,5 +1,7 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("SQL Arithmetics");
 ?>
 
 <div>
@@ -20,11 +22,5 @@ SQL Arithmetics Notes
 </div>
 
 <?php
-	$pageTitle = "SQL Arithmetics";
-	$pageSubTitle = "SQL Arithmetics";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-
-	include("../../../php/master.inc.php");
+	$page->render($page);
 ?>

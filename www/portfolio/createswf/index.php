@@ -1,11 +1,12 @@
 <?php
-	ob_start();
-	$link = "<a class='basicLink' href='https://github.com/hkunz/createswf' target='_blank'><b>CreateSWF</b></a>";
-	include '../../php/createImageLightbox.inc.php';
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	include $root . '/php/createImageLightbox.inc.php';
+	$page = new PageContent("CreateSWF");
 ?>
 
 <div>
-	<p class="block"><?php echo $link;?> is a tool to compile assets contained in a target folder directly into an SWF file. It is meant to be used for creating runtime SWF libraries without the hassle of using a Flash IDE to manually import assets. CreateSWF was originally written in Perl and currently ported to C++. To use it, make sure that the environment variable FLEX_HOME is defined and pointing to the Flex SDK.</p>
+	<p class="block"><a class='basicLink' href='https://github.com/hkunz/createswf' target='_blank'><b>CreateSWF</b></a> is a tool to compile assets contained in a target folder directly into an SWF file. It is meant to be used for creating runtime SWF libraries without the hassle of using a Flash IDE to manually import assets. CreateSWF was originally written in Perl and currently ported to C++. To use it, make sure that the environment variable FLEX_HOME is defined and pointing to the Flex SDK.</p>
         <p class="block"></p>
 	</div><?php echo createImageLightbox("img/createswf-perl.png", 460); ?>
 	<p class="block">A <a class='basicLink' href='https://en.wikipedia.org/wiki/Makefile' target='_blank'><b>Makefile</b></a> target with the pattern <b>%.swf</b> searches the assets directories with the specified name and then compiles the assets into an swf file with the same name</p>
@@ -29,11 +30,5 @@
 </script>
 
 <?php
-	$pageTitle = "CreateSWF";
-	$pageSubTitle = "CreateSWF";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

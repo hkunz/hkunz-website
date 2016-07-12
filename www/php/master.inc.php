@@ -1,17 +1,11 @@
 <?php
 	require('globals.inc.php');
-	$linkedin = "https://www.linkedin.com/in/hkunz";
-	$youtube = "https://www.youtube.com/user/hkunz219";
-	$stocktwits = "https://stocktwits.com/hkunz";
-	$twitter = "https://twitter.com/hkunzx";
-	$facebook = "https://www.facebook.com/harrymckenzietv/";
-	$googleplus = "https://plus.google.com/u/0/101264299778716189843/posts";
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8"/>
-	<title><?php echo $pageTitle; ?></title>
+	<title><?php echo $page->getWindowTitle() ?></title>
 	<script src="https://apis.google.com/js/platform.js"></script>
 	<!--
 	<link rel="shortcut icon" href="favicon.ico" />
@@ -49,22 +43,22 @@
 	<div id="navbar">
 		<div style="float:left;">
 			<div id="topbuttonicon">
-				<a href="<?php echo $youtube;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/youtube-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_YOUTUBE;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/youtube-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $linkedin;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/linkedin-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_LINKEDIN;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/linkedin-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $facebook;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/facebook-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_FACEBOOK;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/facebook-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $googleplus;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/googleplus-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_GOOGLEPLUS;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/googleplus-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $twitter;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/twitter-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_TWITTER;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/twitter-icon.png";?>'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo $stocktwits;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/stocktwits-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_STOCKTWITS?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/stocktwits-icon.png";?>'/></a>
 			</div>
 		</div>
 		<div style="float: right;">
@@ -157,9 +151,9 @@ echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p>
 									<div class="left">
 										<div class="right">
 											<div class="middle">
-												<h3 class='heading'><?php echo $pageSubTitle; ?></h3>
+												<h3 class='heading'><?php echo $page->getPageTitle(); ?></h3>
 												<div class='date'>
-													<p class='postDate'>Post: <?php echo $postDate; ?> <b>|</b> Last Update: <?php echo $lastUpdateDate; ?></p>
+													<p class='postDate'>Post: <?php echo $page->getPostDate(); ?> <b>|</b> Last Update: <?php echo $page->getPostUpdated(); ?></p>
 												</div>
 												<div class="block" style="width:100%;height:20px;display:inline-block;vertical-align: middle;">
 													<div style="float:left;">
@@ -167,15 +161,15 @@ echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics/'><p>Basics</p>
 													</div>
 													<div class="block" style="float:right;">
 														<?php
-															if ($hideBackButton !== true) {
+															if ($page->isBackButtonVisible()) {
 																echo "<button class='pagebutton' onclick='window.history.back();'>Return to previous page</button>";
 															}
 														?>
 													</div>
 												</div>
 												<?php
-													echo $pageMainContent;
-													if ($hideBackButton !== true) {
+													echo $page->getPageContent();
+													if ($page->isBackButtonVisible()) {
 														echo "<br/>";
 														echo "<button class='pagebutton' style='width:100%;' onclick='window.history.back();'>Return to previous page</button>";
 													}

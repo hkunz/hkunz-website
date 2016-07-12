@@ -1,5 +1,9 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("Polygon for AS3.0");
+	$page->setPostDate("November 30, 2010");
+	$page->setPostUpdated("November 30, 2010");
 ?>
 
 <div>
@@ -19,30 +23,22 @@
 	var type = 'actionscript';
 	var so = new SWFObject(root + "flash/FlashLoader.swf?url=Polygon.swf", "theMovie", "420", "265", "8");
 	var codes = {codeStep1:getCodeStep1()};
-	
+
 	so.addParam("allowScriptAccess", "always");
 	so.addParam("wmode", "transparent", "middle");
 	so.write("flashContent");
-	
+
 	ajaxLoadFormatCode('#polygonClassCode', {file:'../sourcefiles/as3/polygon/Polygon.as', url:codeFormatter, type:type});
 	ajaxFormatMultiCode(multiCodeFormatter, codes, type);
-	
+
 	//$('#codeStep1').html(formattedCode1.code1);
-	
-	
+
 	function getCodeStep1(){
 		return 'var numSides:Number = 5;var radius:Number = 100;\nvar container:MovieClip = this.createEmptyMovieClip("pentagon", 0);\nvar polygon:Polygon = new Polygon(0, 0, radius, numSides, container, this.getNextHighestDepth(), 3, 0x000000, 100, 0x0066FF, 80);';
 	}
 
 </script>
-	
+
 <?php
-	$postDate = "November 30, 2010";
-	$lastUpdateDate = "November 30, 2010";
-	$pageTitle = "Polygon for AS3.0";
-	$pageSubTitle = "Polygon for AS3.0";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	include('../../../php/master.inc.php');
+	$page->render($page);
 ?>

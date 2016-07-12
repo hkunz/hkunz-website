@@ -1,6 +1,8 @@
 <?php
-	ob_start();
-	include '../../php/createImageLightbox.inc.php';
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	include $root . '/php/createImageLightbox.inc.php';
+	$page = new PageContent("Debit & Credit Card Numbers");
 ?>
 
 <div>
@@ -37,10 +39,5 @@
 </div>
 
 <?php
-	$pageTitle = "Debit & Credit Card Numbers";
-	$pageSubTitle = "Debit & Credit Card Numbers";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

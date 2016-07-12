@@ -1,11 +1,12 @@
 <?php
-	ob_start();
-	$link = "<a class='basicLink' href='http://seafight.com' target='_blank'>Seafight</a>";
-	include '../../php/createImageLightbox.inc.php';
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	include $root . '/php/createImageLightbox.inc.php';
+	$page = new PageContent("Seafight");
 ?>
 
 <div>
-	<p class="block">The <?php echo $link;?> game client written in <a href='https://en.wikipedia.org/wiki/ActionScript' target='_blank'>ActionScript 3.0</a> communicating with a Java based game server.</p>
+	<p class="block">The <a class='basicLink' href='http://seafight.com' target='_blank'>Seafight</a> game client written in <a href='https://en.wikipedia.org/wiki/ActionScript' target='_blank'>ActionScript 3.0</a> communicating with a Java based game server.</p>
 	<?php echo createImageLightbox("img/sf-logo.gif", 460); ?>
 	<?php echo createImageLightbox("img/bigpoint-logo.png", 460); ?>
 	<p class="block">Seafight ingame view within the safe-haven</p>
@@ -31,11 +32,5 @@
 </div>
 
 <?php
-	$pageTitle = "Seafight";
-	$pageSubTitle = "Seafight";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

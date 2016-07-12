@@ -1,17 +1,13 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("Web Notes");
 ?>
 
 <div>
 	<p><b>Basics</b></p>
 </div>
-	
+
 <?php
-	$pageTitle = "Web Notes";
-	$pageSubTitle = "Web Notes";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../php/master.inc.php");
+	$page->render($page);
 ?>

@@ -1,5 +1,7 @@
 <?php
-  ob_start(); //Buffer larger content areas like the main page content
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("Error 404: Non-Existent Page");
 ?>
 
 <div>
@@ -7,11 +9,5 @@
 </div>
 
 <?php
-	$pageTitle = "Error 404";
-	$pageSubTitle = "Non-Existent Page";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-
-	include("../php/master.inc.php");
+	$page->render($page);
 ?>

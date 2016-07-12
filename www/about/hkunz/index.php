@@ -1,11 +1,13 @@
 <?php
-	ob_start();
-	include '../../php/createImageLightbox.inc.php';
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	include $root . '/php/createImageLightbox.inc.php';
+	$page = new PageContent("About hkunz");
 ?>
 
 <div>
 	<p class="block">My name is <b>Harry Kunz</b>, i'm a Senior Software Developer and Active Investor in the financial markets. I love using the console, can't live without it. You can view all my projects under <a class='basicLink' href='https://github.com/hkunz/'><b>Github</b></a>. Please feel free to connect with me on <a class='basicLink' href='https://de.linkedin.com/in/hkunz'><b>Linked-In</b></a></p>
-        <?php echo createImageLightbox("img/hkunz-about.jpg", 460); ?>
+	<?php echo createImageLightbox("img/hkunz-about.jpg", 460); ?>
 	<p class="block">* <b>7 years</b> Financial Markets Experience:<br/>
 * <b>7 years</b> software development experience<br/>
 * <b>2 years</b> firmware development experience<br/>
@@ -26,15 +28,10 @@ Languages &amp; Scriptings:<br/>
 *Perl<br/>
 *ActionScript 2.0/3.0, JSFL<br/>
 *Flex 4<br/>
-*Qt5</p>
+*Qt5<br/>
+*PHP, HTML, CSS, JavaScript</p>
 </div>
-	
+
 <?php
-	$pageTitle = "hkunz.com: About";
-	$pageSubTitle = "About hkunz";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

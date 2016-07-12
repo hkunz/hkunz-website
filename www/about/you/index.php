@@ -1,5 +1,7 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("About You");
 ?>
 
 <script type="application/javascript">
@@ -68,13 +70,7 @@ function drawCircle(c) {
 
 <canvas id="canvas" width="460" height="348">
 </canvas>
-	
+
 <?php
-	$pageTitle = "About You";
-	$pageSubTitle = "About You";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

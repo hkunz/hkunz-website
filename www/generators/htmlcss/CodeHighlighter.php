@@ -1,6 +1,10 @@
 <?php
-	require("../../php/TextLoader.class.php");
-	ob_start(); //Buffer larger content areas like the main page content
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	include $root . '/php/TextLoader.class.php';
+	$page = new PageContent("Code Highlighter");
+	$page->setPostDate("November 27, 2010");
+	$page->setPostUpdated("November 30, 2010");
 ?>
 
 <div>
@@ -108,13 +112,7 @@
 </script>
 
 <?php
-	$postDate = "November 27, 2010";
-	$lastUpdateDate = "November 30, 2010";
-	$pageTitle = "Code Highlighter";
-	$pageSubTitle = "Code Highlighter";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
+	$page->render($page);
 
 	function getSampleCode(){
 		$loader = new TextLoader("../../flash/as3/SampleFile.as");

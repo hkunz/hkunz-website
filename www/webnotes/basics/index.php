@@ -1,5 +1,7 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("Web Notes Basics");
 ?>
 
 <div>
@@ -36,11 +38,5 @@ These are just some notes i took from <a class='basicLink' href='http://w3school
 </div>
 
 <?php
-	$pageTitle = "Web Notes Basics";
-	$pageSubTitle = "Web Notes Basics";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

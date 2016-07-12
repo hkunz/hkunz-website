@@ -1,7 +1,8 @@
 <?php
-	ob_start();
-	$link = "<a class='basicLink' href='https://www.commbank.com.au/' target='_blank'>Commonwealth Bank of Australia</a>";
-	include '../../php/createImageLightbox.inc.php';
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	include $root . '/php/createImageLightbox.inc.php';
+	$page = new PageContent("SpyTech School Project");
 ?>
 
 <div>
@@ -72,10 +73,5 @@
 </div>
 
 <?php
-	$pageTitle = "SpyTech School Project";
-	$pageSubTitle = "SpyTech School Project";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

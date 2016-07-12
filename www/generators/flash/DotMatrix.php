@@ -1,5 +1,7 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("3D Dot-Matrix");
 ?>
 
 <div>
@@ -10,7 +12,7 @@
 <script type="text/javascript">
 	var root = '../../';
 	var type = 'actionscript';
-	var so = new SWFObject(root + "flash/FlashLoader.swf?url=DotMatrix3d.swf", "theMovie", "445", "590", "8");
+	var so = new SWFObject(root + "flash/FlashLoader.swf?url=DotMatrix3d.swf", "theMovie", "445", "400", "8");
 	
 	so.addParam("allowScriptAccess", "always");
 	so.addParam("wmode", "transparent", "middle");
@@ -18,11 +20,5 @@
 </script>
 
 <?php
-	$pageTitle = "3D Dot-Matrix";
-	$pageSubTitle = "3D Dot-Matrix";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	
-	include("../../php/master.inc.php");
+	$page->render($page);
 ?>

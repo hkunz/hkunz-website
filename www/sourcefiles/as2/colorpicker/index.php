@@ -1,5 +1,9 @@
 <?php
-	ob_start();
+	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+	include $root . '/php/PageContent.php';
+	$page = new PageContent("ColorPicker for AS2.0");
+	$page->setPostDate("November 27, 2010");
+	$page->setPostUpdated("November 30, 2010");
 ?>
 
 <div>
@@ -30,41 +34,33 @@
 	var type = 'actionscript';
 	var so = new SWFObject(root + "flash/FlashLoader.swf?url=ColorPicker.swf", "theMovie", "450", "250", "8");
 	var codes = {codeStep1:getCodeStep1(),codeStep2:getCodeStep2(),codeStep3:getCodeStep3(),codeStep4:getCodeStep4()};
-	
+
 	so.addParam("allowScriptAccess", "always");
 	so.addParam("wmode", "transparent", "middle");
 	so.write("flashContent"); //'../sourcefiles/as2/colorpicker/ColorPicker.as'
-	
+
 	ajaxLoadFormatCode('#colorPickerCode', {file:'../sourcefiles/as2/colorpicker/ColorPicker.as', url:codeFormatter, type:type});
 	ajaxFormatMultiCode(multiCodeFormatter, codes, type);
-	
+
 	//$('#codeStep1').html(formattedCode1.code1);
-	
-	
+
 	function getCodeStep1(){
 		return 'import ColorPicker.as;\n\nvar container:MovieClip = this.createEmptyMovieClip("picker_mc", 0);\nvar picker:ColorPicker = new ColorPicker(container, 30, 60, 0x0066FF);';
 	}
-	
+
 	function getCodeStep2(){
 		return 'picker.addListener({\n   onColorPick:colorPickCallback, //listener on color selection click\n   onColorDisplay:colorDisplayCallback, //listener on ColorPicker click\n   onColorHover:swatchHoverCallback, //listener on color swatch roll over\n   onColorRollOut:swatchRolloutCallback //listener on color swatch roll out\n});';
 	}
-	
+
 	function getCodeStep3(){
 		return 'function colorPickCallback():Void {/*code to execute when you select a color*/}\nfunction colorDisplayCallback():Void {/*code to execute when the color Palette appears*/}\nfunction swatchHoverCallback():Void {/*code to execute when you hover on a color swatch*/}\nfunction swatchRolloutCallback():Void {/*code to execute when you roll out*/}';
 	}
-	
+
 	function getCodeStep4(){
 		return 'public function getColor():Number //returns currently selected color\npublic function getHoveredColor():Number //returns actively hovered color\npublic function showColorPalette():Void //directly displays the color palette\npublic function hideColorPalette():Void //hides/removes the color palette\npublic function setQuadrant(nQuadPos:Number):Void //sets the position of the color palette';
 	}
 </script>
-	
+
 <?php
-	$postDate = "November 27, 2010";
-	$lastUpdateDate = "November 30, 2010";
-	$pageTitle = "ColorPicker for AS2.0";
-	$pageSubTitle = "ColorPicker for AS2.0";
-	$pageMainContent = ob_get_contents();
-	$headers = "";
-	ob_end_clean();
-	include('../../../php/master.inc.php');
+	$page->render($page);
 ?>
