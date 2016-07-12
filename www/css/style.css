@@ -3,7 +3,14 @@
 @import url("styleCodeHTML.css");
 
 html,body,div,object,span,h1,h2,h3,h4,h5,h6,p,iframe,blockquote,q,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,samp,small,strike,strong,sub,sup,tt,var,b,i,u,dd,dl,dt,ol,ul,li,form,fieldset,hr,label,legend,caption,table,thead,tbody,tfoot,tr,th,td {border:0;margin:0;outline:0;padding:0;vertical-align:baseline;}
-html {height:100%;}
+html {
+	height:100%;
+	background: url(img/bgstripes.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
 @font-face{
 	font-family:'PTSansNarrowRegular';
@@ -70,7 +77,6 @@ body {
 	min-height:100%;
 	background:white;
 	color:black;
-	background:#fffffe;
 	font-weight:inherit;
 	font-style:normal;
 	font-size:100%;
