@@ -23,5 +23,5 @@
 </script>
 
 <?php
-	$page->render($page);
+	$page->render();
 ?>

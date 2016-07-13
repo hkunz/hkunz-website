@@ -22,5 +22,5 @@ SQL Arithmetics Notes
 </div>
 
 <?php
-	$page->render($page);
+	$page->render();
 ?>

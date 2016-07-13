@@ -32,5 +32,5 @@
 </div>
 
 <?php
-	$page->render($page);
+	$page->render();
 ?>

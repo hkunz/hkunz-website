@@ -25,7 +25,8 @@ class PageContent {
 		ob_start();
 	}
 
-	public function render($page) {
+	public function render() {
+		$page = $this;
 		$this->content = ob_get_contents();
 		ob_end_clean();
 		include("master.inc.php");

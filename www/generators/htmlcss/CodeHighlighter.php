@@ -112,7 +112,7 @@
 </script>
 
 <?php
-	$page->render($page);
+	$page->render();
 
 	function getSampleCode(){
 		$loader = new TextLoader("../../flash/as3/SampleFile.as");

@@ -72,5 +72,5 @@ function drawCircle(c) {
 </canvas>
 
 <?php
-	$page->render($page);
+	$page->render();
 ?>

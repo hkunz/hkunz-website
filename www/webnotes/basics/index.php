@@ -38,5 +38,5 @@ These are just some notes i took from <a class='basicLink' href='http://w3school
 </div>
 
 <?php
-	$page->render($page);
+	$page->render();
 ?>

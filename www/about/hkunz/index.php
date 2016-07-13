@@ -33,5 +33,5 @@ Languages &amp; Scriptings:<br/>
 </div>
 
 <?php
-	$page->render($page);
+	$page->render();
 ?>
