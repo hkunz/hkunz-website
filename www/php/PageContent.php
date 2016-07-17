@@ -16,7 +16,7 @@ class PageContent {
 	private $postupdated;
 	private $imgpath;
 
-	public function PageContent($pagetitle, $imgpath) {
+	public function PageContent($pagetitle = NULL, $imgpath = NULL) {
 		$this->title = "hkunz.com";
 		$this->pagetitle = $pagetitle;
 		$this->imgpath = $imgpath;
