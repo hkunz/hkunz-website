@@ -14,10 +14,12 @@ class PageContent {
 	private $backbutton;
 	private $postdate;
 	private $postupdated;
+	private $imgpath;
 
-	public function PageContent($pagetitle) {
+	public function PageContent($pagetitle, $imgpath) {
 		$this->title = "hkunz.com";
 		$this->pagetitle = $pagetitle;
+		$this->imgpath = $imgpath;
 		$this->headers = "";
 		$this->backbutton = true;
 		$this->postdate = "";
@@ -30,6 +32,14 @@ class PageContent {
 		$this->content = ob_get_contents();
 		ob_end_clean();
 		include("master.inc.php");
+	}
+
+	public function setPageTitle($title) {
+		$this->pagetitle = $title;
+	}
+
+	public function setImagePath($imgpath) {
+		$this->imgpath = $imgpath;
 	}
 
 	public function setBackButtonVisible($visible) {
@@ -62,6 +72,10 @@ class PageContent {
 
 	public function getPageContent() {
 		return $this->content;
+	}
+
+	public function getImagePath() {
+		return $this->imgpath;
 	}
 
 	public function getPostDate() {

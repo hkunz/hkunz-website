@@ -1,1 +1,18 @@
-ErrorDocument 404 http://hkunz.com/error/error404.php
+# To enable PHP routing RewriteEngine must be on and
+# ensure /etc/apache2/apache2.conf -> "AllowOverride All"
+# sudo a2enmod rewrite && sudo service apache2 restart
+
+Options -Indexes
+Options +FollowSymLinks
+IndexIgnore */*
+
+RewriteEngine on
+
+RewriteCond %{REMOTE_ADDR} ^(12\.34\.56\.789)$
+RewriteRule (.*) - [F,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+
+ErrorDocument 404 /error/error404.php

@@ -1,8 +1,28 @@
 <?php
-	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-	include $root . '/php/PageContent.php';
-	$page = new PageContent("hkunz.com");
-	$page->setBackButtonVisible(false);
+	include "constants.php";
+	include "php/PageContent.php";
+	include "php/PortfolioContentsController.php";
+	include "php/createImageLightbox.inc.php";
+
+	$requestURI = explode('/', $_SERVER['REQUEST_URI']);
+	$scriptName = explode('/', $_SERVER['SCRIPT_NAME']);
+	$routes = array_diff_assoc($requestURI, $scriptName);
+
+	switch ($routes[1]) {
+		case "portfolio":
+			$p = new PortfolioContentsController($BASE_URL, $routes[2], $IMAGE_PATH . "/portfolio");
+			break;
+		default:
+			break;
+	}
+
+	if ($p != NULL && $p->renderable()) {
+		$p->render();
+		return;
+	} else {
+		$page = new PageContent("hkunz.com");
+		$page->setBackButtonVisible(false);
+	}
 ?>
 
 <style type="text/css">

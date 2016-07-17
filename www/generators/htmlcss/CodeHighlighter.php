@@ -172,6 +172,4 @@
 	  print '</script>';
 	}
 	*/
-	
-	include("../../php/master.inc.php");
 ?>
