@@ -1,17 +1,33 @@
 <?php
 	include "constants.php";
 	include "php/PageContent.php";
-	include "php/PortfolioContentsController.php";
+	include "php/PageContentRenderer.php";
 	include "php/createImageLightbox.inc.php";
 
 	$requestURI = explode('/', $_SERVER['REQUEST_URI']);
 	$scriptName = explode('/', $_SERVER['SCRIPT_NAME']);
 	$routes = array_diff_assoc($requestURI, $scriptName);
+	$category = $routes[1];
+	$topic = $routes[2];
+	$subtopic = $routes[3];
 
-	switch ($routes[1]) {
+	switch ($category) {
 		case "portfolio":
-			$p = new PortfolioContentsController($BASE_URL, $routes[2], $IMAGE_PATH . "/portfolio");
+		case "about":
+		case "error":
+			$file = $BASE_URL . "/content/" . $category . "/content-" . $topic . ".php";
+			$imgpath = $IMAGE_PATH . "/" . $category . "/" . $topic . "/";
+			$p = new PageContentRenderer($file, $imgpath);
 			break;
+		case "webnotes":
+		case "blog":
+			if ($subtopic == NULL) {
+				$file = $BASE_URL . "/content/" . $category . "/content-index.php";
+			} else {
+				$file = $BASE_URL . "/content/" . $category . "/" . $topic . "/content-" . $subtopic . ".php";
+				$imgpath = $IMAGE_PATH . "/" . $category . "/" . $topic . "/";
+			}
+			$p = new PageContentRenderer($file, $imgpath);
 		default:
 			break;
 	}

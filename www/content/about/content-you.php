@@ -1,7 +1,6 @@
 <?php
-	$root = realpath($_SERVER["DOCUMENT_ROOT"]);
-	include $root . '/php/PageContent.php';
-	$page = new PageContent("About You");
+	$page->setPageTitle("About You");
+	$img = $page->getImagePath();
 ?>
 
 <script type="application/javascript">
@@ -70,7 +69,3 @@ function drawCircle(c) {
 
 <canvas id="canvas" width="460" height="348">
 </canvas>
-
-<?php
-	$page->render();
-?>
