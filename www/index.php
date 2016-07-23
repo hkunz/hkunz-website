@@ -34,9 +34,10 @@
 			break;
 	}
 
+	//FIXME: use htaccess to route to /error/404 instead of doing this manually
 	if ($category != NULL && count($routes) > 0) {
 		if ($p == NULL || !$p->renderable()) {
-			$p = new PageContentRenderer($BASE_URL . "/content/error/content-404.php");
+			$p = new PageContentRenderer($BASE_URL . "/content/error/content-404.php", $IMAGE_PATH . "/error/");
 		}
 	}
 
