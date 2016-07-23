@@ -1,26 +1,23 @@
-<?php
-	require('globals.inc.php');
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8"/>
-	<title><?php echo $page->getWindowTitle() ?></title>
+	<title><?php echo $page->getWindowTitle(); ?></title>
 	<script src="https://apis.google.com/js/platform.js"></script>
 	<!--
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="icon" type="image/gif" href="animated_favicon1.gif" />
 	-->
 	<?php 
-		echo "<link rel='shortcut icon' href='" . $root . "favicon.ico' />";
-		echo "<link rel='icon' href='" . $root . "animated_favicon1.gif' />";
-		echo "<link rel='stylesheet' href='" . $root . "css/style.css' type='text/css' media='screen, projection' />";
-		echo "<link rel='stylesheet' href='" . $root . "css/styleLightbox.css' type='text/css' media='screen, projection' />";
-		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/jquery.js'></script>";
-		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/swfobject.js'></script>";
-		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/globals.js'></script>";
-		echo "<script language='javascript' type='text/javascript' src='" . $root . "js/lightbox.js'></script>";
-		echo $headers; //other headers
+		echo "<link rel='shortcut icon' href='/assets/images/favicon.ico' />";
+		echo "<link rel='icon' href='/assets/images/animated_favicon1.gif' />";
+		echo "<link rel='stylesheet' href='/css/style.css' type='text/css' media='screen, projection' />";
+		echo "<link rel='stylesheet' href='/css/styleLightbox.css' type='text/css' media='screen, projection' />";
+		echo "<script language='javascript' type='text/javascript' src='/js/jquery.js'></script>";
+		echo "<script language='javascript' type='text/javascript' src='/js/swfobject.js'></script>";
+		echo "<script language='javascript' type='text/javascript' src='/js/globals.js'></script>";
+		echo "<script language='javascript' type='text/javascript' src='/js/lightbox.js'></script>";
+		echo $page->getHeaders(); //other headers
 	?>
 </head>
 <body>
@@ -43,22 +40,22 @@
 	<div id="navbar">
 		<div style="float:left;">
 			<div id="topbuttonicon">
-				<a href="<?php echo PageContent::$PAGE_YOUTUBE;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/youtube-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_YOUTUBE;?>" target="_blank"><img alt="" src='/css/img/socials/youtube-icon.png'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo PageContent::$PAGE_LINKEDIN;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/linkedin-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_LINKEDIN;?>" target="_blank"><img alt="" src='/css/img/socials/linkedin-icon.png'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo PageContent::$PAGE_FACEBOOK;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/facebook-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_FACEBOOK;?>" target="_blank"><img alt="" src='/css/img/socials/facebook-icon.png'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo PageContent::$PAGE_GOOGLEPLUS;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/googleplus-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_GOOGLEPLUS;?>" target="_blank"><img alt="" src='/css/img/socials/googleplus-icon.png'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo PageContent::$PAGE_TWITTER;?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/twitter-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_TWITTER;?>" target="_blank"><img alt="" src='/css/img/socials/twitter-icon.png'/></a>
 			</div>
 			<div id="topbuttonicon">
-				<a href="<?php echo PageContent::$PAGE_STOCKTWITS?>" target="_blank"><img alt="" src='<?php echo $root . "css/img/socials/stocktwits-icon.png";?>'/></a>
+				<a href="<?php echo PageContent::$PAGE_STOCKTWITS?>" target="_blank"><img alt="" src='/css/img/socials/stocktwits-icon.png'/></a>
 			</div>
 		</div>
 		<div style="float: right;">
@@ -68,7 +65,7 @@
 					<div class="fb-follow" data-href="https://www.facebook.com/harrymckenzietv/" data-layout="button" data-size="small" data-show-faces="true"></div>
 				</div>
 				-->
-				<?php echo '<div id="topbutton"><div class="fb-like" data-href="' . $root . '" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>';?>
+				<div id="topbutton"><div class="fb-like" data-href="/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div></div>
 				<div id="topbutton">
 					<div class="g-ytsubscribe" data-channel="hkunz219" data-layout="default" data-count="default"></div>
 				</div>
@@ -102,29 +99,27 @@
 											<div class="right">
 												<div class="middle">
 													<ul class="menu">
-<?php
-echo "<li class='menuHeader'><a href='" . $root . "' title=''><h5>Main</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "'><p>Home</p></a></li>";
-echo "<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'><p>My V-Log</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "blog'><p>My Blog</p></a></li>";
-echo "<li class='menuHeader'><a href='#' title=''><h5>About</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "about/hkunz' title=''><p>Me</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "about/you' title=''><p>You</p></a></li>";
-echo "<li class='menuHeader'><a href='#' title=''><h5>Portfolio</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/lexmark' title=''><p>Lexmark Pro-905</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/cbakiosk' title=''><p>CBA Kiosk</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/seafight' title=''><p>Seafight</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/createswf' title=''><p>CreateSWF</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/spytech' title=''><p>SpyTech</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "assets/bin/portfolio/content-pacman.php' title=''><p>Pac-Man</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/skinzone' title=''><p>SkinZone</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "portfolio/stockchart' title=''><p>StockChart</p></a></li>";
-echo "<li class='menuHeader'><a href='#' title=''><h5>Generators</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "generators/htmlcss/CodeHighlighter.php' title=''><p>Code Highlighter</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "generators/flash/DotMatrix.php' title=''><p>Dot-Matrix</p></a></li>";
-echo "<li class='menuHeader'><a href='#' title=''><h5>Web Notes</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics'><p>Basics</p></a></li>";
-?>
+<li class='menuHeader'><h5><a href='/' title=''>Main</a></h5></li>
+<li class='menuLeaf'><a href='/'>Home</a></li>
+<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'>My V-Log</a></li>
+<li class='menuLeaf'><a href='/blog'>My Blog</a></li>
+<li class='menuHeader'><h5><a href='#' title=''>About</a></h5></li>
+<li class='menuLeaf'><a href='/about/hkunz' title=''>Me</a></li>
+<li class='menuLeaf'><a href='/about/you' title=''>You</a></li>
+<li class='menuHeader'><h5><a href='#' title=''>Portfolio</a></h5></li>
+<li class='menuLeaf'><a href='/portfolio/lexmark' title=''>Lexmark Pro-905</a></li>
+<li class='menuLeaf'><a href='/portfolio/cbakiosk' title=''>CBA Kiosk</a></li>
+<li class='menuLeaf'><a href='/portfolio/seafight' title=''>Seafight</a></li>
+<li class='menuLeaf'><a href='/portfolio/createswf' title=''>CreateSWF</a></li>
+<li class='menuLeaf'><a href='/portfolio/spytech' title=''>SpyTech</a></li>
+<li class='menuLeaf'><a href='/assets/bin/portfolio/content-pacman.php' title=''>Pac-Man</a></li>
+<li class='menuLeaf'><a href='/portfolio/skinzone' title=''>SkinZone</a></li>
+<li class='menuLeaf'><a href='/portfolio/stockchart' title=''>StockChart</a></li>
+<li class='menuHeader'><h5><a href='#' title=''>Generators</a></h5></li>
+<li class='menuLeaf'><a href='/generators/htmlcss/CodeHighlighter.php' title=''>Code Highlighter</a></li>
+<li class='menuLeaf'><a href='/generators/flash/DotMatrix.php' title=''>Dot-Matrix</a></li>
+<li class='menuHeader'><h5><a href='#' title=''>Web Notes</a></h5></li>
+<li class='menuLeaf'><a class="block" href='/webnotes/basics'>Basics</a></li>
 													</ul>
 												</div>
 											</div>

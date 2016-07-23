@@ -114,11 +114,11 @@ ul.menu {}
 ul.menu li.menuHeader {color:#000;border-bottom:1px dotted #ccc;margin-bottom:0px;background-color:#ffe;list-style-type:none;text-transform:uppercase;}
 ul.menu li.menuHeader a {text-decoration:none;}
 ul.menu li.menuLeaf {color:#f77;width:100%;display:block;margin-right:10px;}
-ul.menu li.menuLeaf p {font-size:14px;padding-left:10px;}
-ul.menu li.menuLeaf a p:link {color:yellow;}
-ul.menu li.menuLeaf a p:hover {color:#f00;background-color:#EEEEEE;text-decoration:none;}
-ul.menu li.menuLeaf a p:active {}
-ul.menu li.menuLeaf a p:visited {}
+ul.menu li.menuLeaf a {color:#333;}
+ul.menu li.menuLeaf a:link {font-weight:normal; display: block;font-size:14px;padding-left:10px;color:#333;}
+ul.menu li.menuLeaf a:hover {color:#f00;background-color:#EEEEEE;text-decoration:none;}
+ul.menu li.menuLeaf a:active {}
+ul.menu li.menuLeaf a:visited {}
 
 a.basicLink:link {color:red;}
 a.basicLink:hover {text-decoration:underline;}
