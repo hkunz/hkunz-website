@@ -2,70 +2,10 @@
 	$page->setPageTitle("About You");
 	$img = $page->getImagePath();
 ?>
-
-<script type="application/javascript">
-
-var Circle = function (x, y, r, color, vx, vy) {
-	this.x = x;
-	this.y = y;
-	this.r = r;
-	this.color = color;
-	this.vx = vx;
-	this.vy = vy;
-}
-
-var canvas;
-var ctx;
-var frame = 0;
-var circles = [];
-
-window.onload = function() {
-	logo = new Image();
-	logo.src = "images/Logo.png";
-	canvas = document.getElementById('canvas');
-	ctx = canvas.getContext('2d');
-
-	for (var i = 0; i < 3; ++i) {
-		var r = random(100, 200);
-		var c = new Circle(random(0, canvas.width), random(0, canvas.height), r, random(0xFF0000, 0xFF3333), 0, 0);
-		circles.push(c);
-	}
-	draw();
-}
-
-function draw() {
-	onEnterFrame();
-}
-
-function random(min, max) {
-	return Math.floor((Math.random() * (max - min)) + min);
-}
-
-function onEnterFrame() {
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	for (var i = 0; i < circles.length; ++i) {
-		var c = circles[i];
-		var r = c.r;
-		drawCircle(c);
-	}
-}
-
-function drawCircle(c) {
-	var r = (c.color >> 16) & 255;
-    var g = (c.color >> 8) & 255;
-    var b = c.color & 255;
-	ctx.fillStyle = 'rgba(' + r + ',' + b + ',' + g + ', 0.2)';
-	ctx.lineWidth = 3;
-	ctx.beginPath();
-	ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2, true);
-	ctx.closePath();
-	ctx.fill();
-}
-</script>
-
 <div>
-	<p><b>YOU ARE YOU! :)</b></p>
-</div>
+<pre style="white-space:pre-wrap;"><b>for s in $(echo "
 
-<canvas id="canvas" width="460" height="348">
-</canvas>
+4865 6c6c 6f20 7468 6572 652c 206d 7920 6e61 6d65 2069 7320 4a61 636f 6220 526f 7468 7363 6869 6c64 2e20 4d79 2066 616d 696c 7920 6973 2077 6f72 7468 2035 3030 2074 7269 6c6c 696f 6e20 646f 6c6c 6172 732e 2057 6520 6f77 6e20 6e65 6172 6c79 2065 7665 7279 2063 656e 7472 616c 2062 616e 6b20 696e 2074 6865 2077 6f72 6c64 2e20 7765 2066 696e 616e 6365 6420 626f 7468 2073 6964 6573 206f 6620 6576 6572 7920 7761 7220 7369 6e63 6520 4e61 706f 6c65 6f6e 2e20 5765 206f 776e 2079 6f75 7220 6e65 7773 2c20 7468 6520 6d65 6469 612c 2079 6f75 7220 6f69 6c2c 2061 6e64 2079 6f75 7220 676f 7665 726e 6d65 6e74 2e20 596f 7520 6876 6165 2070 726f 6261 626c 7920 6e65 7665 7220 6865 6172 6420 6f66 206d 652e 0a
+
+"); do echo 0x$s | xxd -r; done</b></pre>
+</div>
