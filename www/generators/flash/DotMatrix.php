@@ -11,9 +11,9 @@
 
 <script type="text/javascript">
 	var root = '../../';
+	var flash = root + "assets/bin/";
 	var type = 'actionscript';
-	var so = new SWFObject(root + "flash/FlashLoader.swf?url=DotMatrix3d.swf", "theMovie", "445", "400", "8");
-	
+	var so = new SWFObject(flash + "portfolio/flashloader.swf?url=DotMatrix3d.swf", "theMovie", "445", "400", "8");
 	so.addParam("allowScriptAccess", "always");
 	so.addParam("wmode", "transparent", "middle");
 	so.write("flashContent");

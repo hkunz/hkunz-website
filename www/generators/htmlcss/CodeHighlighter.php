@@ -115,7 +115,7 @@
 	$page->render();
 
 	function getSampleCode(){
-		$loader = new TextLoader("../../flash/as3/SampleFile.as");
+		$loader = new TextLoader("SampleFile.as");
 		$loader->load();
 		return $loader->getData();
 	}

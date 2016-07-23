@@ -122,9 +122,6 @@ echo "<li class='menuLeaf'><a href='" . $root . "portfolio/stockchart' title=''>
 echo "<li class='menuHeader'><a href='#' title=''><h5>Generators</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "generators/htmlcss/CodeHighlighter.php' title=''><p>Code Highlighter</p></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "generators/flash/DotMatrix.php' title=''><p>Dot-Matrix</p></a></li>";
-echo "<li class='menuHeader'><a href='#' title=''><h5>Source Files</h5></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "sourcefiles/as2/colorpicker'><p>ColorPicker (AS2.0)</p></a></li>";
-echo "<li class='menuLeaf'><a href='" . $root . "sourcefiles/as3/polygon'><p>Polygon (AS3.0)</p></a></li>";
 echo "<li class='menuHeader'><a href='#' title=''><h5>Web Notes</h5></a></li>";
 echo "<li class='menuLeaf'><a href='" . $root . "webnotes/basics'><p>Basics</p></a></li>";
 ?>
