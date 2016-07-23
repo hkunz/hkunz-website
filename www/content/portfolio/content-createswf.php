@@ -11,7 +11,6 @@
 
 <script type="text/javascript">
 	var root = '../../';
-	var codeFormatter = root + 'php/CodeFormatter.php';
 	var multiCodeFormatter = root + 'php/MultiCodeFormatter.php';
 	var type = 'actionscript';
 	var codes = {codeStep1:getCodeStep1()};
