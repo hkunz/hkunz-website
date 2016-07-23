@@ -141,7 +141,18 @@
 											<div class="middle">
 												<h3 class='heading'><?php echo $page->getPageTitle(); ?></h3>
 												<div class='date'>
-													<p class='postDate'>Post: <?php echo $page->getPostDate(); ?> <b>|</b> Last Update: <?php echo $page->getPostUpdated(); ?></p>
+													<p class='postDate'>
+													<?php
+														$post = $page->getPostDate();
+														if ($post != NULL) {
+															echo "Post: <b>" . $page->getPostDate() . "</b>";
+														}
+														$lastup = $page->getPostUpdated();
+														if ($lastup != NULL) {
+															echo "<b> | </b> Last Update: " . $lastup;
+														}
+													?>
+													</p>
 												</div>
 												<div class="block" style="width:100%;height:20px;display:inline-block;vertical-align: middle;">
 													<div style="float:left;">

@@ -71,7 +71,7 @@
 </canvas>
 
 <div>
-	<p><b>Thank you</b> for visiting. More about me <a href="about/hkunz/"><b>here</b></a>.</p>
+	<p><b>Thank you</b> for visiting. More about me <a href="/about/hkunz"><b>here</b></a>.</p>
 </div>
 
 <?php

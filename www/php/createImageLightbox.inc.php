@@ -13,4 +13,7 @@
         	echo '<div class="fade" id="' . $fade . '" onClick="lightbox_close(' . $light_ . ", " . $fade . ');"></div>';
         	echo '<p class="block"></p>';
 	}
+	function createYoutubeVideo($id) {
+		echo '<br/><div class=".block"><iframe width="100%" height="400" src="http://www.youtube.com/embed/' . $id . '" allowfullscreen="allowfullscreen" data-link="http://www.youtube.com/watch?v=' . $id . '"></iframe></div>';
+	}
 ?>

@@ -46,12 +46,12 @@ class PageContent {
 		$this->backbutton = $visible;
 	}
 
-	public function setPostDate($value) {
-		$this->postdate = $value;
+	public function setPostDate($year, $month, $day) {
+		$this->postdate = date('F d, Y',strtotime($month . '/' . $day . '/' . $year));
 	}
 
-	public function setPostUpdated($value) {
-		$this->postupdated = $value;
+	public function setPostUpdated($year, $month, $day) {
+		$this->postupdated = date('F d, Y',strtotime($month . '/' . $day . '/' . $year));
 	}
 
 	public function isBackButtonVisible() {
