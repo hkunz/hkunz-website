@@ -3,20 +3,16 @@
 <head>
 	<meta charset="UTF-8"/>
 	<title><?php echo $page->getWindowTitle(); ?></title>
-	<script src="https://apis.google.com/js/platform.js"></script>
-	<!--
-	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="icon" type="image/gif" href="animated_favicon1.gif" />
-	-->
+	<link rel='shortcut icon' href='/assets/images/favicon.ico' />
+	<link rel='icon' href='/assets/images/animated_favicon1.gif' />
+	<link rel='stylesheet' href='/css/style.css' type='text/css' media='screen, projection' />
+	<link rel='stylesheet' href='/css/styleLightbox.css' type='text/css' media='screen, projection' />
+	<script type='text/javascript' src="https://apis.google.com/js/platform.js"></script>
+	<script type='text/javascript' src='/js/jquery.js'></script>
+	<script type='text/javascript' src='/js/swfobject.js'></script>
+	<script type='text/javascript' src='/js/globals.js'></script>
+	<script type='text/javascript' src='/js/lightbox.js'></script>
 	<?php 
-		echo "<link rel='shortcut icon' href='/assets/images/favicon.ico' />";
-		echo "<link rel='icon' href='/assets/images/animated_favicon1.gif' />";
-		echo "<link rel='stylesheet' href='/css/style.css' type='text/css' media='screen, projection' />";
-		echo "<link rel='stylesheet' href='/css/styleLightbox.css' type='text/css' media='screen, projection' />";
-		echo "<script language='javascript' type='text/javascript' src='/js/jquery.js'></script>";
-		echo "<script language='javascript' type='text/javascript' src='/js/swfobject.js'></script>";
-		echo "<script language='javascript' type='text/javascript' src='/js/globals.js'></script>";
-		echo "<script language='javascript' type='text/javascript' src='/js/lightbox.js'></script>";
 		echo $page->getHeaders(); //other headers
 	?>
 </head>
