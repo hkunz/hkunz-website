@@ -3,8 +3,7 @@
 	include $root . '/php/PageContent.php';
 	include $root . '/php/TextLoader.class.php';
 	$page = new PageContent("Code Highlighter");
-	$page->setPostDate("November 27, 2010");
-	$page->setPostUpdated("November 30, 2010");
+	$page->setPostDate(2010, 10, 27);
 ?>
 
 <div>
