@@ -59,7 +59,7 @@
 
 <script type="text/javascript" src="/js/bouncingballs.js"></script>
 <script type="text/javascript">
-	bouncingballs.init();
+	bouncingballs.init("homecanvas");
 </script>
 
 <div onload="init();">
@@ -67,7 +67,7 @@
 	<p>Please use the menu on the left to navigate this site</p>
 </div>
 
-<canvas id="canvas" width="460" height="310">
+<canvas id="homecanvas" width="460" height="310">
 </canvas>
 
 <div>

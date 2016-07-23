@@ -24,23 +24,21 @@ var bouncingballs = {
 	frame: 0,
 	circles: [],
 
-	init: function() {
-		window.onload = bouncingballs.onload;
-	},
+	init: function(canvasId) {
+		window.onload =  function () {
+			var canvas = bouncingballs.canvas = document.getElementById(canvasId);
+			random = bouncingballs.random;
+			bouncingballs.logo = new Image();
+			bouncingballs.logo.src = "images/Logo.png";
+			bouncingballs.ctx = canvas.getContext('2d');
 
-	onload: function () {
-		random = bouncingballs.random;
-		bouncingballs.logo = new Image();
-		bouncingballs.logo.src = "images/Logo.png";
-		bouncingballs.canvas = document.getElementById('canvas');
-		bouncingballs.ctx = canvas.getContext('2d');
-
-		for (var i = 0; i < 25; ++i) {
-			var r = Math.random() > 0.9 ? random(50, 80) : random(30, 40);
-			var c = new bouncingballs.Circle(random(r, canvas.width - r), random(r, canvas.height - r), r, random(0xFF0000, 0xFF6666), random(-5, 5), random(-5, 5));
-			bouncingballs.circles.push(c);
+			for (var i = 0; i < 25; ++i) {
+				var r = Math.random() > 0.9 ? random(50, 80) : random(30, 40);
+				var c = new bouncingballs.Circle(random(r, canvas.width - r), random(r, canvas.height - r), r, random(0xFF0000, 0xFF6666), random(-5, 5), random(-5, 5));
+				bouncingballs.circles.push(c);
+			}
+			bouncingballs.draw();
 		}
-		bouncingballs.draw();
 	},
 
 	random: function (min, max) {
@@ -60,6 +58,7 @@ var bouncingballs = {
 	},
 
 	onEnterFrame: function() {
+		var canvas = bouncingballs.canvas;
 		bouncingballs.ctx.clearRect(0, 0, canvas.width, canvas.height);
 		if (bouncingballs.logo.naturalWidth > 0 && bouncingballs.logo.naturalHeight > 0) {
 			//bouncingballs.ctx.drawImage(bouncingballs.logo, (canvas.width - bouncingballs.logo.naturalWidth) * 0.5, (canvas.height - bouncingballs.logo.naturalHeight) * 0.5);
