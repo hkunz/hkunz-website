@@ -10,35 +10,43 @@
 	$category = $routes[1];
 	$topic = $routes[2];
 	$subtopic = $routes[3];
+	$file = $BASE_URL . "/content/" . $category;
 
 	switch ($category) {
 		case "portfolio":
 		case "about":
 		case "error":
-			$file = $BASE_URL . "/content/" . $category . "/content-" . $topic . ".php";
+			$file = $file . "/content-" . $topic . ".php";
 			$imgpath = $IMAGE_PATH . "/" . $category . "/" . $topic . "/";
 			$p = new PageContentRenderer($file, $imgpath);
 			break;
 		case "webnotes":
 		case "blog":
 			if ($subtopic == NULL) {
-				$file = $BASE_URL . "/content/" . $category . "/content-index.php";
+				$file = $file . "/content-index.php";
 			} else {
-				$file = $BASE_URL . "/content/" . $category . "/" . $topic . "/content-" . $subtopic . ".php";
+				$file = $file . "/" . $topic . "/content-" . $subtopic . ".php";
 				$imgpath = $IMAGE_PATH . "/" . $category . "/" . $topic . "/";
 			}
 			$p = new PageContentRenderer($file, $imgpath);
+			break;
 		default:
 			break;
+	}
+
+	if ($category != NULL && count($routes) > 0) {
+		if ($p == NULL || !$p->renderable()) {
+			$p = new PageContentRenderer($BASE_URL . "/content/error/content-404.php");
+		}
 	}
 
 	if ($p != NULL && $p->renderable()) {
 		$p->render();
 		return;
-	} else {
-		$page = new PageContent("hkunz.com");
-		$page->setBackButtonVisible(false);
 	}
+
+	$page = new PageContent("hkunz.com");
+	$page->setBackButtonVisible(false);
 ?>
 
 <style type="text/css">

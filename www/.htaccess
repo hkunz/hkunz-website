@@ -2,17 +2,20 @@
 # ensure /etc/apache2/apache2.conf -> "AllowOverride All"
 # sudo a2enmod rewrite && sudo service apache2 restart
 
+ErrorDocument 404 /error/error-404
+
 Options -Indexes
 Options +FollowSymLinks
 IndexIgnore */*
 
 RewriteEngine on
+RewriteBase /
 
 RewriteCond %{REMOTE_ADDR} ^(12\.34\.56\.789)$
 RewriteRule (.*) - [F,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . index.php
+RewriteCond %{REQUEST_FILENAME} !-l
 
-ErrorDocument 404 /content/error/content-error-404.php
+RewriteRule . /index.php [QSA,L]
+
