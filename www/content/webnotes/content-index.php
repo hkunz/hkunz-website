@@ -31,5 +31,5 @@
 	<li><a class='basicLink' href='<?php echo $base ?>sql/SQL_Advance1.htm' target="_blank">SQL Advanced Notes 1</a></li>
 	<li><a class='basicLink' href='<?php echo $base ?>sql/SQL_Advance2.htm' target="_blank">SQL Advanced Notes 2</a></li>
 	<li><a class='basicLink' href='<?php echo $base ?>sql/SQL_QuickRef.htm' target="_blank">SQL Quick Reference</a></li>
-	<li><a class='basicLink' href='<?php echo $base ?>sql/'>SQL Arithmetics Notes</a></li>
+	<li><a class='basicLink' href='<?php echo $base ?>sql/index.php'>SQL Arithmetics Notes</a></li>
 </ul>
