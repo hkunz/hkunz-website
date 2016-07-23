@@ -31,7 +31,7 @@ class PageContent {
 		$page = $this;
 		$this->content = ob_get_contents();
 		ob_end_clean();
-		include("master.inc.php");
+		include("template.inc.php");
 	}
 
 	public function setPageTitle($title) {
