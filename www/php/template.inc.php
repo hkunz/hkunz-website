@@ -171,7 +171,7 @@
 												</div>
 												<div id="pageContent">
 												<script type="text/javascript">
-													$("#pageContent").hide();
+													$("#pageContent").css("visibility", "hidden");
 												</script>
 												<?php
 													echo $page->getPageContent();
@@ -206,8 +206,7 @@
 	</div> <!-- [#container] -->
 	<script type="text/javascript" src="/js/main.js"></script>
 	<script type="text/javascript">
-		$("#pageContent").show();
+		$("#pageContent").css("visibility", "visible");
 	</script>
-	
 </body>
 </html>
