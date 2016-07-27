@@ -14,9 +14,9 @@
 <br/>
 
 <ul class="block" style="list-style-type:none;">
-	<li>* Linux (at work)/li>
-	<li>* Mac OS X Snow Leopard (at home w/ my personal projects)/li>
-	<li>* WinXP, Windows 7 (testing cross-platform apps on windows)/li>
+	<li>* Linux (at work)</li>
+	<li>* Mac OS X Snow Leopard (at home w/ my personal projects)</li>
+	<li>* WinXP, Windows 7 (testing cross-platform apps on windows)</li>
 </ul>
 
 <ul class="block" style="list-style-type:none;">
