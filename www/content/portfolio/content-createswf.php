@@ -19,5 +19,5 @@
 
 	function getCodeStep1(){
 		return '%.swf: SWF_DIR=$(shell find ${ASSETS_PATH} -type d -name $*)\n%.swf:\n\t$(eval DEFINITION_XML=${SWF_DIR}/definition.xml)\n\t$(eval EXE_OPTIONS=$(shell if [ -f ${DEFINITION_XML} ] && [ ${CREATESWF_PEARL} ]; then echo "-m 1"; else echo ""; fi))\n\t$(eval SWF=$(shell find ${SWF_PATH} -type f -name $@))\n\t${CREATESWF_EXE} ${EXE_OPTIONS} ${SWF_DIR}\n\tmv $@ ${SWF};'
-	}
+	} 
 </script>

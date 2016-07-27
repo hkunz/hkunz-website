@@ -9,9 +9,11 @@
 	<link rel='stylesheet' href='/css/styleLightbox.css' type='text/css' media='screen, projection' />
 	<script type='text/javascript' src="https://apis.google.com/js/platform.js"></script>
 	<script type='text/javascript' src='/js/jquery.js'></script>
+	<!-- FIXME: use this instead of above <script type='text/javascript' src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
 	<script type='text/javascript' src='/js/swfobject.js'></script>
 	<script type='text/javascript' src='/js/globals.js'></script>
 	<script type='text/javascript' src='/js/lightbox.js'></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 	<?php 
 		echo $page->getHeaders(); //other headers
 	?>
@@ -23,6 +25,7 @@
 </div>
  -->
 	<div id="fb-root"></div>
+	
 	<script type="text/javascript">(
 		function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0];
@@ -139,7 +142,7 @@
 									<div class="left">
 										<div class="right">
 											<div class="middle">
-												<h3 class='heading'><?php echo $page->getPageTitle(); ?></h3>
+												<h3 id="pageTitle" class='heading'><?php echo $page->getPageTitle(); ?></h3>
 												<div class='date'>
 													<p class='postDate'>
 													<?php
@@ -166,6 +169,10 @@
 														?>
 													</div>
 												</div>
+												<div id="pageContent">
+												<script type="text/javascript">
+													$("#pageContent").hide();
+												</script>
 												<?php
 													echo $page->getPageContent();
 													if ($page->isBackButtonVisible()) {
@@ -173,6 +180,7 @@
 														echo "<button class='pagebutton' style='width:100%;' onclick='window.history.back();'>Return to previous page</button>";
 													}
 												?>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -196,5 +204,10 @@
 			</div>
 		</div> <!-- [#footer] -->
 	</div> <!-- [#container] -->
+	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript">
+		$("#pageContent").show();
+	</script>
+	
 </body>
 </html>
