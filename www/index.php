@@ -57,9 +57,10 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/bouncingballs.js"></script>
+<script type="text/javascript" src="/js/animations/bouncingballs.js"></script>
 <script type="text/javascript">
-	bouncingballs.init("homecanvas");
+	var b = new animations.BouncingBalls();
+	b.init("homecanvas2");
 </script>
 
 <div onload="init();">
@@ -67,7 +68,7 @@
 	<p>Please use the menu on the left to navigate this site</p>
 </div>
 
-<canvas id="homecanvas" width="460" height="310">
+<canvas id="homecanvas2" width="460" height="310">
 </canvas>
 
 <div>

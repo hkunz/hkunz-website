@@ -35,7 +35,10 @@
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
-
+	<div style="position:fixed; width:100%; height:100%; float: left;z-index: -1">
+		<canvas id="bgcanvas" width="800" height="500" style="width:100%; height:100%">
+		</canvas>
+	</div>
 	<div id="navbar">
 		<div style="float:left;">
 			<div id="topbuttonicon">
@@ -205,8 +208,11 @@
 		</div> <!-- [#footer] -->
 	</div> <!-- [#container] -->
 	<script type="text/javascript" src="/js/main.js"></script>
+	<script type="text/javascript" src="/js/animations/bouncingballs.js"></script>
 	<script type="text/javascript">
 		$("#pageContent").css("visibility", "visible");
+		//var a = new animations.BouncingBalls();
+		//a.init("bgcanvas");
 	</script>
 </body>
 </html>
