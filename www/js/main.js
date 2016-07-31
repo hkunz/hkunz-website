@@ -69,6 +69,9 @@ function initBackgroundScene() {
 	background.camera = new BABYLON.FreeCamera("camera", ctarget, background.scene);
 	background.camera.setTarget(ctarget);
 	background.camera.attachControl(background.canvas); //FreeCamera
+	background.camera.position.x = 0;
+	background.camera.position.y = 0;
+	background.camera.position.z = 0;
 	var light = new BABYLON.PointLight("light", new BABYLON.Vector3(0,0,0), background.scene);
 	background.engine.runRenderLoop(onRenderLoop);
 }
@@ -79,7 +82,6 @@ function onRenderLoop() {
 	background.scene.render();
 	background.camera.rotation.y += 0.0005;
 	background.camera.rotation.x += inc;
-	background.camera.rotation.z += 0.1;
 	if (background.camera.rotation.x > 1 || background.camera.rotation.x < -1) {
 		inc = -inc;
 	}
@@ -94,10 +96,6 @@ function initBackgroundSceneProperties() {
 	skyboxMaterial.reflectionTexture = new BABYLON.CubeTexture("/assets/models/skybox/cubemap", background.scene);
 	skyboxMaterial.reflectionTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
 	skybox.material = skyboxMaterial;
-
-	background.camera.position.x = 0;
-	background.camera.position.y = 0;
-	background.camera.position.z = 0;
 
 	/*for (var i = 0; i < 1000; ++i) {
 		var sphere = BABYLON.Mesh.CreateSphere("sphere1", 16, 2, background.scene);
