@@ -4,12 +4,16 @@
 
 html,body,div,object,span,h1,h2,h3,h4,h5,h6,p,iframe,blockquote,q,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,samp,small,strike,strong,sub,sup,tt,var,b,i,u,dd,dl,dt,ol,ul,li,form,fieldset,hr,label,legend,caption,table,thead,tbody,tfoot,tr,th,td {border:0;margin:0;outline:0;padding:0;vertical-align:baseline;}
 html {
-	height:100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	/*
 	background: url(img/bgstripes.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	*/
 }
 
 @font-face{
@@ -75,6 +79,10 @@ html {
 
 body {
 	min-height:100%;
+	width: 100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
 	background:white;
 	color:black;
 	font-weight:inherit;
@@ -83,11 +91,11 @@ body {
 	font-family:'PTSansNarrowRegular',arial,sans-serif;
 	letter-spacing:0;
 	font-size-adjust:0.54;
-	background: url(img/background.png) no-repeat center center fixed;
+	/*background: url(img/background.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
 }
 
 h1,h2,h3,h4,h5,h6 {font-weight:normal;font-style:normal;line-height:normal;font-family:'PTSansNarrowBold',arial,sans-serif;font-size-adjust:0.54;}
@@ -99,6 +107,14 @@ h4 {font-size: 18px;color:#333;}
 h5 {font-size: 14px;}
 h6 {font-size: 10px;}
 p {color:#000;font-size:15px;line-height:normal;}
+
+#bgcanvas {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	opacity: 0.4;
+}
 
 *:focus {outline:0;}
 a {color:#ff0000;cursor:pointer;text-decoration:none;}
@@ -175,8 +191,9 @@ div #topbuttonicon a:hover {opacity:1.0;}
 	height:27px;
 	background:url('img/bg/Footer.png') #fff repeat-x;
 	border-bottom:3px solid #fff;
+	opacity: 0.8;
 }
-#container {width:100%;background:url('img/bg/TopShade.png') repeat-x;}
+#container {width:100%;/*background:url('img/bg/TopShade.png') repeat-x;*/}
 #header {width:100%;background-color:transparent;margin-right;padding-top:40px;}
 #header .headerContent {width:900px;height:170px;background:url('img/header/MainPicture.png');margin:auto;} /*height:142px*/
 /*
@@ -236,7 +253,7 @@ div #topbuttonicon a:hover {opacity:1.0;}
 #inner .bodyContent .sidebar .box .center {height:auto;}
 
 #footer {width:100%;border-top:3px solid #fff;}
-#footer .content {height:300px;background:url('img/bg/Footer.png') #fff repeat-x;padding-top:10px;}
+#footer .content {height:300px;background:url('img/bg/Footer.png') #fff repeat-x;padding-top:10px;opacity:0.8;}
 #footer .content p {font-size:13px;color:#444444;text-align:center;}
 
 /*

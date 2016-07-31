@@ -60,7 +60,7 @@
 <script type="text/javascript" src="/js/animations/bouncingballs.js"></script>
 <script type="text/javascript">
 	var b = new animations.BouncingBalls();
-	b.init("homecanvas2");
+	b.init("homecanvas");
 </script>
 
 <div onload="init();">
@@ -68,7 +68,7 @@
 	<p>Please use the menu on the left to navigate this site</p>
 </div>
 
-<canvas id="homecanvas2" width="460" height="310">
+<canvas id="homecanvas" width="460" height="310">
 </canvas>
 
 <div>
