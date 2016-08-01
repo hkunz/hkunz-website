@@ -206,7 +206,9 @@
 			</div>
 		</div> <!-- [#footer] -->
 	</div> <!-- [#container] -->
-	<script type="text/javascript" src="/js/animations/bouncingballs.js"></script>
+	<script type="text/javascript" src="/js/animations/BouncingBalls.js"></script>
+	<script type="text/javascript" src="/js/animations/BackgroundAnimation.js"></script>
+	<script type="text/javascript" src="/js/animations/ContentAnimator.js"></script>
 	<script type="text/javascript" src="/js/libraries/babylon.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 	<script type="text/javascript">

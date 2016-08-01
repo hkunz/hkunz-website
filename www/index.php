@@ -57,10 +57,12 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/animations/bouncingballs.js"></script>
+<script type="text/javascript" src="/js/animations/BouncingBalls.js"></script>
+<script type="text/javascript" src="/js/animations/HomePageAnimation.js"></script>
 <script type="text/javascript">
 	var b = new animations.BouncingBalls();
 	b.init("homecanvas");
+	//new animations.HomePageAnimation("homecanvas");
 </script>
 
 <div onload="init();">
