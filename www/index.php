@@ -58,11 +58,11 @@
 </style>
 
 <script type="text/javascript" src="/js/animations/BouncingBalls.js"></script>
-<script type="text/javascript" src="/js/animations/HomePageAnimation.js"></script>
+<script type="text/javascript" src="/js/animations/HomePageWebAnimation.js"></script>
 <script type="text/javascript">
-	var b = new animations.BouncingBalls();
-	b.init("homecanvas");
-	//new animations.HomePageAnimation("homecanvas");
+	//var b = new animations.BouncingBalls();
+	//b.init("homecanvas");
+	new animations.HomePageWebAnimation("homecanvas");
 </script>
 
 <div onload="init();">

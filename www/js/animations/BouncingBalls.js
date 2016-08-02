@@ -90,9 +90,9 @@ animations.BouncingBalls.prototype.onEnterFrame = function() {
 
 animations.BouncingBalls.prototype.drawCircle = function (c) {
 	var r = (c.color >> 16) & 255;
-    var g = (c.color >> 8) & 255;
-    var b = c.color & 255;
-    var ctx = this.ctx;
+	var g = (c.color >> 8) & 255;
+	var b = c.color & 255;
+	var ctx = this.ctx;
 	ctx.fillStyle = 'rgba(' + r + ',' + b + ',' + g + ', 0.2)';
 	ctx.lineWidth = 3;
 	ctx.beginPath();
