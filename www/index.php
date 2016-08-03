@@ -70,7 +70,7 @@
 	<p>Please use the menu on the left to navigate this site</p>
 </div>
 
-<canvas id="homecanvas" width="460" height="310">
+<canvas id="homecanvas">
 </canvas>
 
 <div>
