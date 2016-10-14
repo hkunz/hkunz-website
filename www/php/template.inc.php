@@ -113,6 +113,7 @@
 <li class='menuLeaf'><a href='/portfolio/seafight' title=''>Seafight</a></li>
 <li class='menuLeaf'><a href='/portfolio/createswf' title=''>CreateSWF</a></li>
 <li class='menuLeaf'><a href='/portfolio/spytech' title=''>SpyTech</a></li>
+<li class='menuLeaf'><a href='/portfolio/aftereffects' title=''>Adobe After Effects</a></li>
 <li class='menuLeaf'><a href='/assets/bin/portfolio/content-pacman.php' title=''>Pac-Man</a></li>
 <li class='menuLeaf'><a href='/portfolio/skinzone' title=''>SkinZone</a></li>
 <li class='menuLeaf'><a href='/portfolio/stockchart' title=''>StockChart</a></li>
