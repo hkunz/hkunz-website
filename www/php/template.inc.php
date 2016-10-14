@@ -102,7 +102,7 @@
 													<ul class="menu">
 <li class='menuHeader'><h5><a href='/' title=''>Main</a></h5></li>
 <li class='menuLeaf'><a href='/'>Home</a></li>
-<li class='menuLeaf'><a href='https://www.youtube.com/user/hkunz219' target='_blank'>My V-Log</a></li>
+<li class='menuLeaf'><a href='https://www.youtube.com/c/HarryMcKenzieTV' target='_blank'>My V-Log</a></li>
 <li class='menuLeaf'><a href='/blog'>My Blog</a></li>
 <li class='menuHeader'><h5><a href='#' title=''>About</a></h5></li>
 <li class='menuLeaf'><a href='/about/hkunz' title=''>Me</a></li>

@@ -1,7 +1,7 @@
 <?php
 class PageContent {
 	public static $PAGE_LINKEDIN = "https://www.linkedin.com/in/hkunz";
-	public static $PAGE_YOUTUBE = "https://www.youtube.com/user/hkunz219";
+	public static $PAGE_YOUTUBE = "https://www.youtube.com/c/HarryMcKenzieTV";
 	public static $PAGE_STOCKTWITS = "https://stocktwits.com/hkunz";
 	public static $PAGE_TWITTER = "https://twitter.com/hkunzx";
 	public static $PAGE_FACEBOOK = "https://www.facebook.com/harrymckenzietv/";
