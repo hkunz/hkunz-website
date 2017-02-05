@@ -2,7 +2,7 @@
 	$page->setPageTitle("Seafight");
 	$img = $page->getImagePath();
 ?>
-<p class="block">The <a class='basicLink' href='http://seafight.com' target='_blank'><b>Seafight</b></a> game client written in <a href='https://en.wikipedia.org/wiki/ActionScript' target='_blank'>ActionScript 3.0</a> communicating with a Java based game server.</p>
+<p class="block">The <a class='basicLink' href='http://seafight.com' target='_blank'><b>Seafight</b></a> game looks simple but the complexities behind are enormous. The game client, written in pure hard-core <a href='https://en.wikipedia.org/wiki/ActionScript' target='_blank'>ActionScript 3.0</a>, communicates with a <a class='basicLink' href='https://en.wikipedia.org/wiki/Java' target='_blank'>Java</a> based game server through a special custom-made protocol library similar to <a href='https://developers.google.com/protocol-buffers/' target="_blank">Protocol Buffers</a> but much better. Our project also has a set of complex tools written in C++ that we continually expand and maintain to help us test and speed up development.</p>
 <?php echo createImageLightbox($img . "sf-logo.gif", 460); ?>
 <?php echo createImageLightbox($img . "bigpoint-logo.png", 460); ?>
 <p class="block">Seafight ingame view within the safe-haven</p>
@@ -21,7 +21,6 @@
 <?php echo createImageLightbox($img . "sf-mateys-list.png", 460); ?>
 <p class="block">Cauldron Window: Throw mojos into the cauldron to get some random loot and bonus map pieces</p>
 <?php echo createImageLightbox($img . "sf-cauldron.png", 460); ?>
-<p class="block">Map Editor: I have written in C++ which we use for creating and modifying the maps we have ingame</p>
+<p class="block">Our project has a set of tools written in C++ that we continually expand and maintain to help us test and speed up development. Here we have a sample view of our map editor which has helped game design create maps easily</p>
 <?php echo createImageLightbox($img . "sf-rcon-mapeditor.png", 460); ?>
-<p class="block">Tile Editor: Also written in C++ to specify which tiles are blocked</p>
 <?php echo createImageLightbox($img . "sf-rcon-tile-editor.png", 460); ?>
