@@ -24,3 +24,5 @@
 <p class="block">Our project has a set of tools written in C++ that we continually expand and maintain to help us test and speed up development. Here we have a sample view of our map editor which has helped game design create maps easily</p>
 <?php echo createImageLightbox($img . "sf-rcon-mapeditor.png", 460); ?>
 <?php echo createImageLightbox($img . "sf-rcon-tile-editor.png", 460); ?>
+<p class="block">Another tool which i have written for making my life easier at work is <a href='/portfolio/createswf' title=''>CreateSWF</a></p>
+<?php echo createImageLightbox($img . "createswf-perl.png", 460); ?>
