@@ -19,5 +19,8 @@ The video contents in the blog posts can also be found on our <a href="<?php ech
 	<div class="g-ytsubscribe" data-channel="hkunz219" data-layout="default" data-count="default"></div>
 </div>
 <h4 class='heading'>Articles</h4>
-<p><a class='basicLink' href='/blog/articles/debit-credit-cards'>Debit &amp; Credit Card Numbers</a></p>
-<p><a class='basicLink' href='/portfolio/aftereffects'>Broken World - by Harry McKenzie</a></p>
+<ul class="menu" style="list-style-type: none;">
+	<li><a class='basicLink' href='/blog/articles/2017-03-permanent-residence-australia'>Australian Permanent Residence - Visa Subclass 189</a></li>
+	<li><a class='basicLink' href='/blog/articles/debit-credit-cards'>Debit &amp; Credit Card Numbers</a></li>
+	<li><a class='basicLink' href='/portfolio/aftereffects'>Broken World - by Harry McKenzie</a></li>
+</ul>
