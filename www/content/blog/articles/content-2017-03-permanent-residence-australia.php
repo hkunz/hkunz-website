@@ -5,7 +5,7 @@
 ?>
 <h4 class='heading'>Skilled Independent Visa (subclass 189)</h4>
 <p class="pblock">
-I have been fortunate to have been granted an Australian <a href="https://en.wikipedia.org/wiki/Permanent_residency" target="_blank">Permanent Residence</a> (<b>PR</b>) visa <a href="https://www.border.gov.au/Trav/Visa-1/189-" target="_blank">subclass 189</a> by the <a href="https://en.wikipedia.org/wiki/Department_of_Immigration_and_Border_Protection" target="_blank">Department of Immigration and Border Protection</a> (<b>DIBP</b>) on March 21, 2017 which allows one to live and work in Australia on a permanent basis. I have taken the time to provide some documentation as to the steps i have taken to achieve this. I am no professional so please do your <b>own due dilligence</b> before you apply for this visa.
+I have been fortunate to have been granted an Australian <a href="https://en.wikipedia.org/wiki/Permanent_residency" target="_blank">Permanent Residence</a> (<b>PR</b>) visa <a href="https://www.border.gov.au/Trav/Visa-1/189-" target="_blank">subclass 189</a> by the <a href="https://en.wikipedia.org/wiki/Department_of_Immigration_and_Border_Protection" target="_blank">Department of Immigration and Border Protection</a> (<b>DIBP</b>) on March 21, 2017 which allows one to live and work in Australia on a permanent basis. I have taken the time to provide some documentation as to the steps i have taken to achieve this. I am no professional so please do your <b>own due diligence</b> before you apply for this visa.
 </p>
 <br/>
 <p class="pblock" style="background-color:#fdd;padding:10px;">
@@ -53,7 +53,7 @@ After you have paid the fee, arrange a <a href="https://www.border.gov.au/Trav/V
 </p>
 <br/>
 <p class="pblock">
-You can also start attaching documentation for which you have claimed points for. The attachments don't need to be certified. You can attach high quality color scans in PDF format which must be less than <b>5 MB</b> in file size. You only need to provide documents as evidence for categories you claim points for. For example, If you do not want to claim points for work experience, then you would not need to attach evidence for it. But note that you have to claim exactly those points you claimed in your EOI or else your visa application may be rejected. Be careful and make sure you are attaching the right documents in the right evidence category because you <b>CANNOT remove documents</b> once you have confirmed the attachment. DIBP does not entertain questions about removing or deleting docuements that were incorrectly attached. They are all <b>FINAL</b>.
+You can also start attaching documentation for which you have claimed points for. The attachments don't need to be certified. You can attach high quality color scans in PDF format which must be less than <b>5 MB</b> in file size. You only need to provide documents as evidence for categories you claim points for. For example, If you do not want to claim points for work experience, then you would not need to attach evidence for it. But note that you have to claim exactly those points you claimed in your EOI or else your visa application may be rejected. Be careful and make sure you are attaching the right documents in the right evidence category because you <b>CANNOT remove documents</b> once you have confirmed the attachment. DIBP does not entertain questions about removing or deleting documents that were incorrectly attached. They are all <b>FINAL</b>.
 </p>
 <h4 class='heading'>Recommended Documents Checklist</h4>
 <p class="pblock">
