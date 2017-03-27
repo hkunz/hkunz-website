@@ -284,3 +284,11 @@ button.pagebutton {
 	height: 20px;
 	cursor: pointer;
 }
+
+hr {
+	clear: both;
+	display: block;
+	width: 100%;
+	background-color: #ddd;
+	height: 3px;
+}

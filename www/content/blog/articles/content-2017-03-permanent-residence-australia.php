@@ -77,6 +77,8 @@ Electronically filled-up and signed <a href="https://www.border.gov.au/Forms/Doc
 If you already have completed all the required health tests in a previous visa application within the past one year, you may be able to use that as evidence.<br/>
 </p>
 <br/>
+<hr/>
+<br/>
 <p class="pblock">
 Although it is not part of the requirements, the <b>Case Officer</b> often asks you to fill out <b>Form 80</b>. So i recommend you fill it out in advance. It's a bit lengthy so do it as soon as you can. You can electronically fill it up and even electornically sign it using <a href="https://get.adobe.com/reader/" target="_blank">Acrobat Reader DC</a>. This is easier than filling up the form, printing and signing it, and then scanning it back to computer.
 </p>
