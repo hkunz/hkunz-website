@@ -3,10 +3,10 @@
 	$page->setPostDate(2017, 3, 26);
 	$page->setOgTitle("How To Apply For Australian Permanent Residence");
 	$page->setOgDescription("The Skilled Independent Visa (subclass 189) lets you work and live in Australia on a permanent basis");
-	$page->setOgImagePath("https://image.ibb.co/foCiQa/australian_flag_75_70.jpg");
+	$page->setOgImagePath("https://image.ibb.co/ivyMdv/australian_flag_600x315.jpg");
 	$img = $page->getImagePath();
 ?>
-<img src="<?php echo $page->getOgImagePath(); ?>" alt="" border="0" width="100%" height="150"/>
+<img src="https://image.ibb.co/foCiQa/australian_flag_75_70.jpg" alt="" border="0" width="100%" height="150"/>
 <h4 class='heading'>Skilled Independent Visa (subclass 189)</h4>
 <p class="pblock">
 I have been fortunate to have been granted an Australian <a href="https://en.wikipedia.org/wiki/Permanent_residency" target="_blank">Permanent Residence</a> (<b>PR</b>) visa <a href="https://www.border.gov.au/Trav/Visa-1/189-" target="_blank">subclass 189</a> by the <a href="https://en.wikipedia.org/wiki/Department_of_Immigration_and_Border_Protection" target="_blank">Department of Immigration and Border Protection</a> (<b>DIBP</b>) on March 21, 2017 which allows one to live and work in Australia on a permanent basis. I have taken the time to provide some documentation as to the steps i have taken to achieve this. I am no professional so please do your <b>own due diligence</b> before you apply for this visa.
