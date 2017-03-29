@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8"/>
+	<?php echo "<meta property='og:title' content='" . $page->getWindowTitle() . "' />\n";?>
+	<!-- <meta property="og:type" content="video.movie" /> -->
+	<!-- <meta property="og:url" content="http://www.imdb.com/title/tt0117500/" /> -->
+	<!-- <meta property="og:app_id" content="http://www.imdb.com/title/tt0117500/" /> -->
+	<?php
+		if ($page->getOgImagePath()) {
+			echo "<meta property='og:image' content='" . $page->getOgImagePath() . "'/>\n";
+		}
+	?>
 	<title><?php echo $page->getWindowTitle(); ?></title>
 	<link rel='shortcut icon' href='/assets/images/favicon.ico' />
 	<link rel='icon' href='/assets/images/animated_favicon1.gif' />

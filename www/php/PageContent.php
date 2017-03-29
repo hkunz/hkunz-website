@@ -15,6 +15,7 @@ class PageContent {
 	private $postdate;
 	private $postupdated;
 	private $imgpath;
+	private $ogimgpath;
 
 	public function PageContent($pagetitle = NULL, $imgpath = NULL) {
 		$this->title = "hkunz.com";
@@ -54,6 +55,10 @@ class PageContent {
 		$this->postupdated = date('F d, Y',strtotime($month . '/' . $day . '/' . $year));
 	}
 
+	public function setOgImagePath($path) {
+		$this->ogimgpath = $path;
+	}
+
 	public function isBackButtonVisible() {
 		return $this->backbutton;
 	}
@@ -84,6 +89,10 @@ class PageContent {
 
 	public function getPostUpdated() {
 		return $this->postupdated;
+	}
+
+	public function getOgImagePath() {
+		return $this->ogimgpath;
 	}
 
 	public function __toString() {
