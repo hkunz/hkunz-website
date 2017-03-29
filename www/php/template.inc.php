@@ -11,8 +11,6 @@
 		}
 		if ($page->getOgImagePath()) {
 			echo "<meta property='og:image' content='" . $page->getOgImagePath() . "'/>\n";
-			echo "<meta property='og:image:width' content='600' />\n";
-			echo "<meta property='og:image:height' content='315' />\n";
 		}
 	?>
 	<!-- <meta property="og:type" content="video.movie" /> -->
