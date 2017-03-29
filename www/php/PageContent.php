@@ -15,7 +15,9 @@ class PageContent {
 	private $postdate;
 	private $postupdated;
 	private $imgpath;
+	private $ogtitle;
 	private $ogimgpath;
+	private $ogdescription;
 
 	public function PageContent($pagetitle = NULL, $imgpath = NULL) {
 		$this->title = "hkunz.com";
@@ -55,8 +57,16 @@ class PageContent {
 		$this->postupdated = date('F d, Y',strtotime($month . '/' . $day . '/' . $year));
 	}
 
+	public function setOgTitle($title) {
+		$this->ogtitle = $title;
+	}
+
 	public function setOgImagePath($path) {
 		$this->ogimgpath = $path;
+	}
+
+	public function setOgDescription($desc) {
+		$this->ogdescription = $desc;
 	}
 
 	public function isBackButtonVisible() {
@@ -91,8 +101,16 @@ class PageContent {
 		return $this->postupdated;
 	}
 
+	public function getOgTitle() {
+		return $this->ogtitle;
+	}
+
 	public function getOgImagePath() {
 		return $this->ogimgpath;
+	}
+
+	public function getOgDescription() {
+		return $this->ogdescription;
 	}
 
 	public function __toString() {

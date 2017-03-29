@@ -1,6 +1,8 @@
 <?php
 	$page->setPageTitle("Australian Permanent Residence");
 	$page->setPostDate(2017, 3, 26);
+	$page->setOgTitle("How To Apply For Australian Permanent Residence");
+	$page->setOgDescription("The Skilled Independent Visa (subclass 189) lets you work and live in Australia on a permanent basis");
 	$page->setOgImagePath("https://image.ibb.co/foCiQa/australian_flag_75_70.jpg");
 	$img = $page->getImagePath();
 ?>
