@@ -10,7 +10,7 @@
 	<li>* 2 years firmware development experience</li>
 </ul>
 <br/>
-* Typing master <b>~100 WPM</b> == <a class='basicLink' href='https://10fastfingers.com/user/1000652/' target="_blank"><b>https://10fastfingers.com/user/1000652/</b></a><br/>
+* Typing Expert <b>~100 WPM</b> == <a class='basicLink' href='https://10fastfingers.com/user/1000652/' target="_blank">https://10fastfingers.com/user/1000652/</a><br/>
 <br/>
 
 <ul class="block" style="list-style-type:none;">
