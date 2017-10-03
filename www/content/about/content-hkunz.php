@@ -2,7 +2,7 @@
 	$page->setPageTitle("About hkunz");
 	$img = $page->getImagePath();
 ?>
-<p class="block">My name is <b>Harry Kunz</b>, i'm a Senior Software Developer and Active Investor in the financial markets. I love using the console, can't live without it. You can view all my projects under <a class='basicLink' href='https://github.com/hkunz/'><b>Github</b></a>. Please feel free to connect with me on <a class='basicLink' href='https://de.linkedin.com/in/hkunz'><b>Linked-In</b></a></p>
+<p class="block">My name is <b>Harry Kunz</b>, i'm a Senior Software Developer and Active Investor in the financial markets. I love using the console, can't live without it. You can view all my projects under <a class='basicLink' href='https://github.com/hkunz/' target="_blank"><b>Github</b></a>. Please feel free to connect with me on <a class='basicLink' href='https://de.linkedin.com/in/hkunz' target="_blank"><b>Linked-In</b></a></p>
 <?php echo createImageLightbox($img . "hkunz-about.jpg", 460); ?>
 <ul class="block" style="list-style-type:none;">
 	<li>* 8 years Financial Markets Experience</li>
@@ -10,7 +10,7 @@
 	<li>* 2 years firmware development experience</li>
 </ul>
 <br/>
-* Typing master <b>>400 cpm</b> (80-90 words per minute)<br/>
+* Typing master <b>~100 WPM</b> == <a class='basicLink' href='https://10fastfingers.com/user/1000652/' target="_blank"><b>https://10fastfingers.com/user/1000652/</b></a><br/>
 <br/>
 
 <ul class="block" style="list-style-type:none;">
@@ -28,4 +28,5 @@
 	<li>* Flex 4</li>
 	<li>* Qt5</li>
 	<li>* PHP, HTML, CSS, JavaScript</li>
+	<li>* Adobe After Effects</li>
 </ul>
